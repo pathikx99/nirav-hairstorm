@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "L'Oréal Professionnel",
+    "slug": "loreal-india",
+    "country_of_origin": "France",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://www.lorealprofessionnel.in",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "source_documents": [
+    {
+      "key": "majirel_technical_manual",
+      "title": "L'Oréal Professionnel Majirel Technical Manual & Shade Chart India",
+      "publisher": "L'Oréal Professionnel",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

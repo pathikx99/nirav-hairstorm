@@ -1,0 +1,219 @@
+[
+  {
+    "product_name": "Blondor Multi-Blonde Powder",
+    "product_code": "BLONDOR-MBP",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "Anti-Yellow Molecules, Dual Persulfate System",
+    "dust_free": true,
+    "on_scalp_suitable": true,
+    "in_foil_suitable": true,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1:1.5 to 1:2",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "on_scalp_max_developer_percent": 6.0,
+    "development_time_max_minutes": 50,
+    "heat_allowed": false,
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "BlondorPlex",
+    "product_code": "BLONDOR-PLEX",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "Bond Builder Technology included, up to 97% less breakage",
+    "dust_free": true,
+    "on_scalp_suitable": true,
+    "in_foil_suitable": true,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1:1.5 to 1:2",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "on_scalp_max_developer_percent": 6.0,
+    "development_time_max_minutes": 50,
+    "heat_allowed": false,
+    "post_treatment_requirement": "Always complete BlondorPlex service with WellaPlex No. 2 for 10 minutes",
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Multi-Blonde Granules",
+    "product_code": "BLONDOR-MBG",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "White granules for true underlying pigment visibility, coconut fragrance",
+    "dust_free": true,
+    "on_scalp_suitable": true,
+    "in_foil_suitable": true,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1:1.5",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "on_scalp_max_developer_percent": 6.0,
+    "development_time_max_minutes": 50,
+    "heat_allowed": false,
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Soft Blonde Cream",
+    "product_code": "BLONDOR-SBC",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "Rich creamy texture, high lipid concentration, chamomile for soothing",
+    "on_scalp_suitable": true,
+    "in_foil_suitable": true,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1:1.5 to 1:2",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "on_scalp_max_developer_percent": 6.0,
+    "development_time_max_minutes": 50,
+    "heat_allowed": false,
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Freelights White Lightening Powder",
+    "product_code": "BLONDOR-FL-POWDER",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "ACTIFUSE network: flexible and adhesive clay network with reduced swelling",
+    "on_scalp_suitable": false,
+    "in_foil_suitable": false,
+    "free_hand_suitable": true,
+    "closed_system": true,
+    "default_mixing_ratio": "1:1.5 to 1:3",
+    "compatible_developers": [
+      "Blondor Freelights Developer 6%",
+      "Blondor Freelights Developer 9%",
+      "Blondor Freelights Developer 12%"
+    ],
+    "development_time_max_minutes": 50,
+    "heat_allowed": false,
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Meches",
+    "product_code": "BLONDOR-MECHES",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 5,
+    "technology": "Auto-Control System (slows lightening after 15 min with heat, 45 min without), ammonia-free cream",
+    "on_scalp_suitable": false,
+    "in_foil_suitable": true,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1 sachet powder (30g) + 1 tube cream (30g) + 30-60g Welloxon Perfect (1:1:1 to 1:1:2)",
+    "compatible_developers": [
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "development_time_max_minutes": 45,
+    "heat_development_time_minutes": 15,
+    "heat_allowed": true,
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Extra Cool Blonde",
+    "product_code": "BLONDOR-ECB",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 7,
+    "technology": "Dual lightening and matte toning in one step",
+    "on_scalp_suitable": true,
+    "in_foil_suitable": true,
+    "free_hand_suitable": true,
+    "default_mixing_ratio": "1:1.5 to 1:2",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%"
+    ],
+    "development_time_max_minutes": 50,
+    "intermixable_ratio": "1:2 with other Blondor lighteners (not with Magma)",
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Base Breakers",
+    "product_code": "BLONDOR-BB",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 1,
+    "technology": "Silk Blend consistency, express 10-minute base breaking and gentle toning",
+    "on_scalp_suitable": true,
+    "in_foil_suitable": false,
+    "free_hand_suitable": false,
+    "default_mixing_ratio": "1:1 with 1.9% (soft) or 3% (intense)",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 4%"
+    ],
+    "development_time_max_minutes": 10,
+    "heat_allowed": false,
+    "contraindication": "Do not mix with WellaPlex",
+    "shades": [
+      {
+        "shade_code": "/19",
+        "shade_name": "Cool",
+        "description": "Soft ash cendre tone ideal for natural hair 6/0 to 8/0 and neutralizing yellow"
+      },
+      {
+        "shade_code": "/86",
+        "shade_name": "Extra Cool",
+        "description": "Intense pearl violet tone ideal for natural hair 6/0 to 8/0 and neutralizing yellow orange"
+      }
+    ],
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Magma by Blondor",
+    "product_code": "BLONDOR-MAGMA",
+    "product_type": "LIGHTENER",
+    "max_lift_levels": 6,
+    "technology": "SpectraLift Technology: internal lift with external direct-dye deposit in 1 step",
+    "on_scalp_suitable": false,
+    "in_foil_suitable": true,
+    "free_hand_suitable": true,
+    "default_mixing_ratio": "1:1.5 (foil) or 1:1.5 to 1:2 (freehand)",
+    "compatible_developers": [
+      "Welloxon Perfect 1.9%",
+      "Welloxon Perfect 6%",
+      "Welloxon Perfect 9%",
+      "Welloxon Perfect 12%",
+      "Blondor Freelights Developer 6%",
+      "Blondor Freelights Developer 9%",
+      "Blondor Freelights Developer 12%"
+    ],
+    "development_time_max_minutes": 60,
+    "heat_allowed": true,
+    "contraindication": "Never apply on scalp. Never intermix with Blondor Extra Cool Blonde.",
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  }
+]

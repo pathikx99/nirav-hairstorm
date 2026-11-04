@@ -1,0 +1,26 @@
+[
+  {
+    "product_name": "L'Oréal Professionnel Oxydant Crème 20 Vol (6%)",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["1_to_2_levels_lift", "grey_coverage", "darkening"],
+      "volume_equivalent": 20
+    },
+    "source_doc_key": "majirel_technical_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "L'Oréal Professionnel Oxydant Crème 30 Vol (9%)",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["up_to_3_levels_lift"],
+      "volume_equivalent": 30
+    },
+    "source_doc_key": "majirel_technical_manual",
+    "verification_status": "VERIFIED"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "rule_code": "LOREAL-MAJIREL-MIX",
+    "product_family": "Majirel",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Majirel",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.5
+      },
+      "example": "50ml Majirel + 75ml L'Oréal Oxydant Crème (20 or 30 Vol)"
+    },
+    "source_section": "Majirel Technical Manual - Mixing Guidelines",
+    "source_doc_key": "majirel_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "LOREAL-MAJIREL-DEV-LIFT",
+    "product_family": "Majirel",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "DEVELOPER_COMPATIBILITY",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Majirel"
+    },
+    "actions": {
+      "developer_choices": {
+        "20 Vol (6%)": {"target_lift": 2, "notes": "Up to 2 levels of lift, covers 100% white hair"},
+        "30 Vol (9%)": {"target_lift": 3, "notes": "Up to 3 levels of lift"}
+      }
+    },
+    "source_section": "Majirel Technical Manual - Developer Selection",
+    "source_doc_key": "majirel_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "LOREAL-MAJIREL-TIME",
+    "product_family": "Majirel",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 3,
+    "conditions": {
+      "product_line": "Majirel"
+    },
+    "actions": {
+      "development_time_minutes": 35,
+      "heat_allowed": false
+    },
+    "source_section": "Majirel Technical Manual - Development Time",
+    "source_doc_key": "majirel_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

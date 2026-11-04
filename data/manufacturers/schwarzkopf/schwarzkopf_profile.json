@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "Schwarzkopf Professional",
+    "slug": "schwarzkopf-india",
+    "country_of_origin": "Germany",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://www.schwarzkopf-professional.in",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "source_documents": [
+    {
+      "key": "igora_royal_technical_manual",
+      "title": "Schwarzkopf Professional Igora Royal Technical Manual & Shade Guide India",
+      "publisher": "Henkel Schwarzkopf Professional",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

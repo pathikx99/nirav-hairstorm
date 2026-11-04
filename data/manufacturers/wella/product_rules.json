@@ -1,0 +1,356 @@
+[
+  {
+    "rule_code": "WELLA-KP-MIX-STANDARD",
+    "product_family": "Koleston Perfect ME+",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_family_in": ["Pure Naturals", "Rich Naturals", "Vibrant Reds", "Deep Browns"],
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0
+      },
+      "example": "60ml Koleston Perfect + 60ml Welloxon Perfect"
+    },
+    "source_section": "Usage Guidelines Page 2 - Full-head / Regrowth 1:1",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-MIX-SPECIAL-BLONDE",
+    "product_family": "Koleston Perfect Special Blonde",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_family": "Special Blonde",
+      "shade_series": "12/"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 2.0
+      },
+      "example": "60ml Koleston Perfect Special Blonde + 120ml Welloxon Perfect"
+    },
+    "source_section": "Usage Guidelines Page 2 - Lightening with Special Blonde 1:2",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-DEV-LIFT-STANDARD",
+    "product_family": "Koleston Perfect ME+",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "DEVELOPER_COMPATIBILITY",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_family_in": ["Pure Naturals", "Rich Naturals", "Vibrant Reds", "Deep Browns"]
+    },
+    "actions": {
+      "developer_choices": {
+        "1.9%": {"target_lift": 0, "notes": "Colour balancing, blonde toning, glossing"},
+        "4%": {"target_lift": 0, "notes": "Same depth or darker; deeper results on natural hair with no grey coverage"},
+        "6%": {"target_lift": 1, "grey_coverage": true, "notes": "1 level of lift, grey coverage, same depth/darker"},
+        "9%": {"target_lift": 2, "notes": "2 levels of lift"},
+        "12%": {"target_lift": 3, "notes": "3 levels of lift"}
+      }
+    },
+    "source_section": "Usage Guidelines Page 2 - Welloxon Perfect Lift Guidelines",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-DEV-LIFT-SPECIAL-BLONDE",
+    "product_family": "Koleston Perfect Special Blonde",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "DEVELOPER_COMPATIBILITY",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_family": "Special Blonde",
+      "shade_series": "12/"
+    },
+    "actions": {
+      "developer_choices": {
+        "9%": {"target_lift": 3, "notes": "3 levels of lift with Special Blonde"},
+        "12%": {"target_lift": 5, "notes": "4-5 levels of lift with Special Blonde"}
+      }
+    },
+    "source_section": "Usage Guidelines Page 2 - Welloxon Perfect for Special Blonde",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-GREY-COVERAGE",
+    "product_family": "Koleston Perfect ME+",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "GREY_COVERAGE",
+    "market": "IN",
+    "priority": 3,
+    "conditions": {
+      "has_grey_hair": true
+    },
+    "actions": {
+      "rules": [
+        {
+          "min_grey_percent": 30,
+          "max_grey_percent": 50,
+          "instruction": "Add 1/3 of a Pure Naturals shade",
+          "ratio": "15g 7/0 + 45g fashion shade + 60g 6% Welloxon Perfect"
+        },
+        {
+          "min_grey_percent": 50,
+          "max_grey_percent": 100,
+          "instruction": "Add 1/2 of a Pure Naturals shade",
+          "ratio": "30g 7/0 + 30g fashion shade + 60g 6% Welloxon Perfect"
+        },
+        {
+          "tone_family": "Vibrant Reds",
+          "min_grey_percent": 50,
+          "instruction": "Mix 2 parts red shade to 1 part Pure Natural shade",
+          "example": "1/2 tube red + 1/4 tube natural"
+        }
+      ]
+    },
+    "source_section": "Usage Guidelines Page 2 - Coloring grey hair",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-TIME-STANDARD",
+    "product_family": "Koleston Perfect ME+",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 4,
+    "conditions": {
+      "product_family_in": ["Pure Naturals", "Rich Naturals", "Vibrant Reds", "Deep Browns"]
+    },
+    "actions": {
+      "without_heat_minutes": [30, 40],
+      "with_climazon_minutes": [15, 25]
+    },
+    "source_section": "Usage Guidelines Page 2 - Full-head / Regrowth application",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-TIME-SPECIAL-BLONDE",
+    "product_family": "Koleston Perfect Special Blonde",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 4,
+    "conditions": {
+      "product_family": "Special Blonde"
+    },
+    "actions": {
+      "without_heat_minutes": [50, 60],
+      "with_climazon_minutes": [25, 35]
+    },
+    "source_section": "Usage Guidelines Page 2 - Lightening with Special Blonde",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-SPECIAL-MIX-CALCULATION",
+    "product_family": "Koleston Perfect Special Mix",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "SPECIAL_MIX",
+    "market": "IN",
+    "priority": 5,
+    "conditions": {
+      "includes_additive": true
+    },
+    "actions": {
+      "calculation_basis": "Grams of Special Mix per 30g of Koleston Perfect cream",
+      "cm_to_grams_table": {
+        "12": {"cm": 3.0, "grams": 1.5},
+        "11": {"cm": 2.0, "grams": 1.0},
+        "10": {"cm": 1.0, "grams": 0.5},
+        "9": {"cm": 2.0, "grams": 1.0},
+        "8": {"cm": 3.0, "grams": 1.5},
+        "7": {"cm": 4.0, "grams": 2.0},
+        "6": {"cm": 5.0, "grams": 2.5},
+        "5": {"cm": 6.0, "grams": 3.0},
+        "4": {"cm": 7.0, "grams": 3.5},
+        "3": {"cm": 8.0, "grams": 4.0},
+        "2": {"cm": 9.0, "grams": 4.5}
+      },
+      "developer_ratio": "1 part Color Cream (Koleston + Special Mix) : 1 part Welloxon Perfect (except 0/43 which is 1:2)"
+    },
+    "source_section": "Usage Guidelines Page 3 - Special Mix calculation table",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-KP-PASTEL-TONING",
+    "product_family": "Koleston Perfect ME+",
+    "service_type": "TONER",
+    "rule_type": "APPLICATION_METHOD",
+    "market": "IN",
+    "priority": 5,
+    "conditions": {
+      "service_type": "TONER",
+      "target_shades_in": ["10/1", "10/03", "10/16", "10/3", "10/38", "10/8", "9/03", "9/16", "9/17", "9/38", "9/7"]
+    },
+    "actions": {
+      "prerequisite": "Evenly pre-lightened hair (1/2 level lighter than target) or natural hair 9/0+",
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 2.0
+      },
+      "developer": "Welloxon Perfect Pastel 1.9% or Color Touch Emulsion 1.9%",
+      "development_time_max_minutes": 15,
+      "comb_interval_minutes": 5,
+      "heat_allowed": false
+    },
+    "source_section": "Usage Guidelines Page 3 - Pastel Toning",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-BLONDOR-POWDER-MIX",
+    "product_family": "Blondor",
+    "service_type": "LIGHTENER",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_code_in": ["BLONDOR-MBP", "BLONDOR-PLEX", "BLONDOR-SBC"]
+    },
+    "actions": {
+      "mixing_ratio_range": {
+        "powder_parts": 1.0,
+        "developer_parts_min": 1.5,
+        "developer_parts_max": 2.0
+      },
+      "compatible_developer": "Welloxon Perfect (1.9%, 4%, 6%, 9%, 12%)"
+    },
+    "source_section": "Blondor Technical Folder - User Guide (1:1.5 up to 2)",
+    "source_doc_key": "blondor_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-BLONDOR-SCALP-SAFETY",
+    "product_family": "Blondor",
+    "service_type": "LIGHTENER",
+    "rule_type": "PROCESSING_CONDITIONS",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "application_area": "ON_SCALP",
+      "service_type": "LIGHTENER"
+    },
+    "actions": {
+      "max_developer_strength_percent": 6.0,
+      "heat_allowed": false,
+      "development_time_max_minutes": 50,
+      "warning": "When applying lightener on scalp, maximum developer strength is 6% (20 Vol). Never use heat."
+    },
+    "source_section": "Blondor Technical Folder Page 7, 10, 14",
+    "source_doc_key": "blondor_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-BLONDOR-BB-CONTRAINDICATION",
+    "product_family": "Blondor Base Breakers",
+    "service_type": "LIGHTENER",
+    "rule_type": "CONTRAINDICATION",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_code": "BLONDOR-BB",
+      "additive": "WellaPlex"
+    },
+    "actions": {
+      "is_blocked": true,
+      "reason": "WellaPlex is NOT recommended to be mixed with Blondor Base Breakers due to specific formulation and shading."
+    },
+    "source_section": "Blondor Technical Folder Page 17 Note",
+    "source_doc_key": "blondor_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-BLONDOR-MAGMA-CONTRAINDICATION",
+    "product_family": "Magma by Blondor",
+    "service_type": "LIGHTENER",
+    "rule_type": "CONTRAINDICATION",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_code": "BLONDOR-MAGMA",
+      "application_area": "ON_SCALP"
+    },
+    "actions": {
+      "is_blocked": true,
+      "reason": "Magma by Blondor must NEVER be applied directly to the scalp. Use in foil or freehand techniques only."
+    },
+    "source_section": "Blondor Technical Folder Page 21 Services Table",
+    "source_doc_key": "blondor_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-BLONDOR-FREELIGHTS-CLOSED-SYSTEM",
+    "product_family": "Blondor Freelights",
+    "service_type": "LIGHTENER",
+    "rule_type": "DEVELOPER_COMPATIBILITY",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_code": "BLONDOR-FL-POWDER"
+    },
+    "actions": {
+      "mandatory_developer": "Blondor Freelights Developer",
+      "disallowed_developers": ["Welloxon Perfect"],
+      "application_technique": "FREEHAND_ONLY",
+      "foil_allowed": false,
+      "on_scalp_allowed": false,
+      "reason": "Freelights is a closed system: ACTIFUSE network requires Freelights Powder + Freelights Developer."
+    },
+    "source_section": "Blondor Technical Folder Page 18-19",
+    "source_doc_key": "blondor_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-SAFETY-ALLERGY-ALERT-TEST",
+    "product_family": "All Wella Products",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "CONTRAINDICATION",
+    "market": "IN",
+    "priority": 0,
+    "conditions": {
+      "prior_allergy_history": true
+    },
+    "actions": {
+      "is_blocked": true,
+      "protocol": "Skin Allergy Test 48 hours prior to service: 5g color + 5g developer on 1cm2 below crook of elbow for 45 min.",
+      "warning": "If client shows any signs of redness, burning, itching, or has ever experienced an allergic reaction to hair colorants, do not color."
+    },
+    "source_section": "Koleston Perfect Usage Booklet Page 4 / Leaflet Page 25",
+    "source_doc_key": "kp_usage_guidelines",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

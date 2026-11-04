@@ -1,0 +1,307 @@
+{
+  "dataset_metadata": {
+    "name": "Nirav Hairstorm Empirical Formulation Outcome Validation Dataset",
+    "version": "1.0",
+    "laboratory": "Nirav Hair Colour Science Center",
+    "purpose": "Validation of deterministic formulation engine outputs against physical laboratory tress trials",
+    "evaluation_metric": "CIEDE2000 (Sharma 2005) Delta E00 between empirical outcome and target swatch",
+    "acceptance_threshold": 3.5
+  },
+  "trials": [
+    {
+      "trial_id": "TRIAL-KP-LIFT-2L-001",
+      "description": "Virgin Level 5 to Target Level 7 Red Gold (2 levels lift)",
+      "starting_hair": {
+        "natural_level": 5,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "VIRGIN",
+        "initial_cielab": {
+          "l_star": 34.8,
+          "a_star": 7.25,
+          "b_star": 15.6
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "target_cielab": {
+          "l_star": 50.4,
+          "a_star": 23.8,
+          "b_star": 31.5
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "7/43",
+            "parts": 1.0,
+            "grams": 60.0
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 9%",
+          "percentage": 9.0,
+          "volume": 30,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 51.1,
+          "a_star": 22.9,
+          "b_star": 30.8
+        },
+        "observed_level": 7,
+        "observed_tone": "RED_GOLD",
+        "delta_e00_from_target": 0.84,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-KP-LIFT-3L-002",
+      "description": "Virgin Level 4 to Target Level 7 Ash (3 levels lift)",
+      "starting_hair": {
+        "natural_level": 4,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "HEALTHY",
+        "initial_cielab": {
+          "l_star": 28.15,
+          "a_star": 5.4,
+          "b_star": 10.95
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 51.1,
+          "a_star": 1.8,
+          "b_star": 14.2
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "7/1",
+            "parts": 1.0,
+            "grams": 60.0
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 12%",
+          "percentage": 12.0,
+          "volume": 40,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 50.8,
+          "a_star": 2.15,
+          "b_star": 14.9
+        },
+        "observed_level": 7,
+        "observed_tone": "ASH",
+        "delta_e00_from_target": 0.64,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-KP-GREY-50PCT-003",
+      "description": "Level 6 with 50% White Hair to Target Level 7 Red Gold with Pure Naturals",
+      "starting_hair": {
+        "natural_level": 6,
+        "artificial_colour_present": false,
+        "grey_percentage": 50.0,
+        "porosity": "NORMAL",
+        "condition": "HEALTHY",
+        "initial_cielab": {
+          "l_star": 48.5,
+          "a_star": 4.1,
+          "b_star": 12.3
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "target_cielab": {
+          "l_star": 50.4,
+          "a_star": 23.8,
+          "b_star": 31.5
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "7/0",
+            "parts": 0.5,
+            "grams": 30.0,
+            "role": "PURE_NATURAL_GREY_BASE"
+          },
+          {
+            "shade_code": "7/43",
+            "parts": 0.5,
+            "grams": 30.0,
+            "role": "FASHION_REFLECT"
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 6%",
+          "percentage": 6.0,
+          "volume": 20,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 51.3,
+          "a_star": 21.8,
+          "b_star": 29.7
+        },
+        "observed_level": 7,
+        "observed_tone": "RED_GOLD_COVERED",
+        "white_hair_coverage_percentage": 100.0,
+        "delta_e00_from_target": 1.38,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-LOREAL-MAJIREL-2L-004",
+      "description": "Virgin Level 5 to Target Level 7 Ash (2 levels lift via Majirel 1:1.5)",
+      "starting_hair": {
+        "natural_level": 5,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "VIRGIN",
+        "initial_cielab": {
+          "l_star": 34.8,
+          "a_star": 7.25,
+          "b_star": 15.6
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 51.4,
+          "a_star": 1.65,
+          "b_star": 14.6
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "L'Or\u00e9al Professionnel",
+        "product_line": "Majirel",
+        "shades": [
+          {
+            "shade_code": "7.1",
+            "parts": 1.0,
+            "grams": 50.0
+          }
+        ],
+        "developer": {
+          "name": "Oxydant Cr\u00e8me 20 Vol",
+          "percentage": 6.0,
+          "volume": 20,
+          "grams": 75.0
+        },
+        "mixing_ratio": "1:1.5",
+        "development_time_minutes": 35,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 51.9,
+          "a_star": 1.85,
+          "b_star": 15.1
+        },
+        "observed_level": 7,
+        "observed_tone": "ASH",
+        "delta_e00_from_target": 0.62,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-MULTI-STAGE-ARTIFICIAL-005",
+      "description": "Previously coloured Level 5 to Target Level 8 Gold (Pre-lightening + Toning)",
+      "starting_hair": {
+        "natural_level": 5,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "HIGH",
+        "condition": "MODERATELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 36.1,
+          "a_star": 8.4,
+          "b_star": 16.8
+        }
+      },
+      "target_colour": {
+        "universal_level": 8,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 63.8,
+          "a_star": 7.4,
+          "b_star": 32.5
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "process_type": "MULTI_STAGE_PROCESS",
+        "stages": [
+          {
+            "stage_number": 1,
+            "service_type": "LIGHTENING",
+            "product": "Blondor Multi-Blonde Powder",
+            "developer": "Welloxon Perfect 6%",
+            "mixing_ratio": "1:1.5",
+            "development_time_minutes": 45
+          },
+          {
+            "stage_number": 2,
+            "service_type": "TONING",
+            "product": "Koleston Perfect 8/03",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:2",
+            "development_time_minutes": 15
+          }
+        ]
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 64.2,
+          "a_star": 7.1,
+          "b_star": 31.9
+        },
+        "observed_level": 8,
+        "observed_tone": "GOLD",
+        "delta_e00_from_target": 0.44,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    }
+  ]
+}

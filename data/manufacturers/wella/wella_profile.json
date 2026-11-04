@@ -1,0 +1,41 @@
+{
+  "manufacturer": {
+    "name": "Wella Professionals",
+    "slug": "wella-india",
+    "country_of_origin": "Germany",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://www.wella.com",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "source_documents": [
+    {
+      "key": "kp_usage_guidelines",
+      "title": "Koleston Perfect Usage Guidelines & Technical Folder",
+      "publisher": "Wella Professionals",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "key": "blondor_technical_folder",
+      "title": "Blondor Technical Folder & Services Guide",
+      "publisher": "Wella Professionals",
+      "document_type": "LIGHTENER_GUIDE",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

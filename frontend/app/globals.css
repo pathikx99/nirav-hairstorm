@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Modern Web Guidance: validate-input-after-interaction
+   Defer error visual cues until user blur or commitment via :user-invalid */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.08) !important;
+}
+
+input:user-valid,
+select:user-valid {
+  border-color: #10b981;
+}
+
+/* Accessible focus ring indicators */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}

@@ -1,0 +1,89 @@
+[
+  {
+    "rule_code": "SCHWARZKOPF-IGORA-MIX-STANDARD",
+    "product_family": "Igora Royal",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Igora Royal",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0
+      },
+      "example": "60g Igora Royal colour + 60g Igora Royal Oil Developer"
+    },
+    "source_section": "Igora Royal Technical Manual - Mixing Guidelines",
+    "source_doc_key": "igora_royal_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "SCHWARZKOPF-IGORA-DEV-LIFT",
+    "product_family": "Igora Royal",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "DEVELOPER_COMPATIBILITY",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Igora Royal"
+    },
+    "actions": {
+      "developer_choices": {
+        "3% (10 Vol)": {"target_lift": 0, "notes": "Darker or tone-on-tone"},
+        "6% (20 Vol)": {"target_lift": 2, "notes": "Up to 2 levels of lift, 100% white hair coverage"},
+        "9% (30 Vol)": {"target_lift": 3, "notes": "Up to 3 levels of lift"},
+        "12% (40 Vol)": {"target_lift": 4, "notes": "Up to 4 levels of lift"}
+      }
+    },
+    "source_section": "Igora Royal Technical Manual - Developer Selection",
+    "source_doc_key": "igora_royal_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "SCHWARZKOPF-IGORA-TIME",
+    "product_family": "Igora Royal",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 3,
+    "conditions": {
+      "product_line": "Igora Royal"
+    },
+    "actions": {
+      "standard_time_minutes": 35,
+      "time_range": "30–45 min without heat",
+      "heat_permitted": false
+    },
+    "source_section": "Igora Royal Technical Manual - Development Times",
+    "source_doc_key": "igora_royal_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "SCHWARZKOPF-IGORA-GREY-COVERAGE",
+    "product_family": "Igora Royal",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "GREY_COVERAGE",
+    "market": "IN",
+    "priority": 4,
+    "conditions": {
+      "product_line": "Igora Royal",
+      "grey_percentage_min": 50
+    },
+    "actions": {
+      "grey_strategy": "ADD_NATURAL_BASE",
+      "ratio": "1:1 with -0 or -00 shade",
+      "recommended_developer": "6% (20 Vol) or 9% (30 Vol for resistant hair)"
+    },
+    "source_section": "Igora Royal Technical Manual - White Hair Coverage",
+    "source_doc_key": "igora_royal_technical_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

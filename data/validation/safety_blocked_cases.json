@@ -1,0 +1,249 @@
+{
+  "benchmark_metadata": {
+    "name": "Nirav Hairstorm Safety and Blocked-Case Benchmark Suite",
+    "version": "1.0",
+    "purpose": "Validation of hard safety constraints, clinical contraindications, and chemical invariant enforcement in the formulation engine",
+    "specification_reference": "Nirav Hairstorm Technical Specification v1.0 §5.7, §5.8, §8.3, §8.4",
+    "total_cases": 10,
+    "expected_outcome": "100% REJECTION (BLOCKED status with 0 executable stages)"
+  },
+  "cases": [
+    {
+      "case_id": "BLOCKED-01-ALLERGY-HISTORY",
+      "name": "Documented PPD / Hair Dye Allergy History",
+      "description": "Client reports severe prior allergic reaction (swelling, dermatitis) to oxidative hair colour.",
+      "category": "CLINICAL_CONTRAINDICATION",
+      "inputs": {
+        "history": {
+          "has_allergy_history": true,
+          "patch_test_completed_48h": false,
+          "scalp_condition": "normal",
+          "has_metallic_salts_or_henna": false,
+          "has_sodium_hydroxide_relaxer": false,
+          "previous_chemical_services": ["permanent_colour"]
+        },
+        "starting_hair": {
+          "roots": { "level": 4, "condition": "VIRGIN" },
+          "mid_lengths": { "level": 4, "condition": "VIRGIN" },
+          "ends": { "level": 4, "condition": "VIRGIN" }
+        },
+        "target_colour": {
+          "universal_level": 6,
+          "primary_tone": "GOLD",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_ALLERGY_KNOWN_HISTORY",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-02-SCALP-LESIONS",
+      "name": "Active Scalp Lesions and Broken Skin",
+      "description": "Scalp examination shows abrasions and active dermatitis. Direct chemical contact poses acute risk of chemical burns and systemic exposure.",
+      "category": "CLINICAL_CONTRAINDICATION",
+      "inputs": {
+        "history": {
+          "has_allergy_history": false,
+          "patch_test_completed_48h": true,
+          "scalp_condition": "broken_skin",
+          "has_metallic_salts_or_henna": false,
+          "has_sodium_hydroxide_relaxer": false,
+          "previous_chemical_services": []
+        },
+        "starting_hair": {
+          "roots": { "level": 5, "condition": "VIRGIN" },
+          "mid_lengths": { "level": 5, "condition": "VIRGIN" },
+          "ends": { "level": 5, "condition": "VIRGIN" }
+        },
+        "target_colour": {
+          "universal_level": 7,
+          "primary_tone": "ASH",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_SCALP_INTEGRITY",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-03-HENNA-LIGHTENING",
+      "name": "Metallic Salts / Henna with Persulfate Bleach",
+      "description": "Hair treated with metallic salts/compound henna subjected to oxidative lifting or bleaching, creating violent exothermic thermal reaction and hair destruction.",
+      "category": "CHEMICAL_INCOMPATIBILITY",
+      "inputs": {
+        "history": {
+          "has_allergy_history": false,
+          "patch_test_completed_48h": true,
+          "scalp_condition": "normal",
+          "has_metallic_salts_or_henna": true,
+          "has_sodium_hydroxide_relaxer": false,
+          "previous_chemical_services": ["henna"]
+        },
+        "starting_hair": {
+          "roots": { "level": 4, "condition": "GOOD" },
+          "mid_lengths": { "level": 4, "condition": "GOOD" },
+          "ends": { "level": 4, "condition": "GOOD" }
+        },
+        "target_colour": {
+          "universal_level": 9,
+          "primary_tone": "PEARL",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_HENNA_METALLIC_SALTS",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-04-LYE-RELAXER-BLEACH",
+      "name": "Sodium Hydroxide (Lye) Relaxer with Bleach",
+      "description": "Hair treated with sodium hydroxide (lye) chemical straightener subjected to persulfate decolorizer. Causes instant lanthionine bond dissolution and hair melt.",
+      "category": "CHEMICAL_INCOMPATIBILITY",
+      "inputs": {
+        "history": {
+          "has_allergy_history": false,
+          "patch_test_completed_48h": true,
+          "scalp_condition": "normal",
+          "has_metallic_salts_or_henna": false,
+          "has_sodium_hydroxide_relaxer": true,
+          "previous_chemical_services": ["sodium hydroxide relaxer"]
+        },
+        "starting_hair": {
+          "roots": { "level": 3, "condition": "CHEMICALLY_TREATED" },
+          "mid_lengths": { "level": 3, "condition": "CHEMICALLY_TREATED" },
+          "ends": { "level": 3, "condition": "CHEMICALLY_TREATED" }
+        },
+        "target_colour": {
+          "universal_level": 10,
+          "primary_tone": "NATURAL",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_SODIUM_HYDROXIDE_BLEACH",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-05-SEVERELY-DAMAGED-FIBER",
+      "name": "Severely Damaged Hair subjected to Oxidative Lift",
+      "description": "Mid-lengths and ends categorized as SEVERELY_DAMAGED with spongy cortex and split ends. Strong lifting or bleach risks total structural disintegration.",
+      "category": "FIBER_INTEGRITY",
+      "inputs": {
+        "history": {
+          "has_allergy_history": false,
+          "patch_test_completed_48h": true,
+          "scalp_condition": "normal",
+          "has_metallic_salts_or_henna": false,
+          "has_sodium_hydroxide_relaxer": false,
+          "previous_chemical_services": ["multiple_bleaching"]
+        },
+        "starting_hair": {
+          "roots": { "level": 6, "condition": "GOOD" },
+          "mid_lengths": { "level": 6, "condition": "SEVERELY_DAMAGED" },
+          "ends": { "level": 6, "condition": "SEVERELY_DAMAGED" }
+        },
+        "target_colour": {
+          "universal_level": 9,
+          "primary_tone": "GOLD",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_SEVERELY_DAMAGED_FIBER",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-06-BLONDOR-SCALP-DEVELOPER-EXCEEDED",
+      "name": "On-Scalp Bleaching with Developer > 6% (20 Vol)",
+      "description": "Blondor on-scalp application requested with 9% (30 Vol) or 12% (40 Vol) peroxide. Violates manufacturer safety rule and causes severe scalp chemical burns.",
+      "category": "APPLICATION_SAFETY",
+      "inputs": {
+        "product_family": "Wella Blondor Multi Blonde Powder",
+        "service_type": "LIGHTENING",
+        "is_on_scalp": true,
+        "developer_percentage": 9.0,
+        "has_wellaplex": false
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_BLONDOR_SCALP_MAX_6PCT",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-07-BLONDOR-BASE-BREAKER-WITH-WELLAPLEX",
+      "name": "Blondor Base Breaker Mixed with WellaPlex",
+      "description": "Explicit manufacturer contraindication: Blondor Base Breaker cannot be mixed with WellaPlex bond builder.",
+      "category": "MANUFACTURER_RULE_CONTRAINDICATION",
+      "inputs": {
+        "product_family": "Wella Blondor Base Breaker",
+        "service_type": "LIGHTENING",
+        "is_on_scalp": false,
+        "developer_percentage": 4.0,
+        "has_wellaplex": true
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_BLONDOR_BB_NO_WELLAPLEX",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-08-MAGMA-DIRECT-ON-SCALP",
+      "name": "Direct On-Scalp Application of Magma Highlighting Colour",
+      "description": "Wella Magma contains direct dyes in alkaline matrix formulated strictly for off-scalp foil highlighting. Scalp contact causes acute staining and chemical irritation.",
+      "category": "APPLICATION_SAFETY",
+      "inputs": {
+        "product_family": "Wella Magma by Blondor",
+        "service_type": "LIGHTENING",
+        "is_on_scalp": true,
+        "developer_percentage": 6.0,
+        "has_wellaplex": false
+      },
+      "expected_safety_status": "BLOCKED",
+      "expected_blocking_code": "SAFETY_MAGMA_ON_SCALP",
+      "allow_executable_stages": false
+    },
+    {
+      "case_id": "BLOCKED-09-ARTIFICIAL-COLOUR-LIFT-BY-TINT",
+      "name": "Attempting Artificial Colour Lift with Permanent Tint Alone",
+      "description": "Chemical invariant violation: Color does not lift color. Pre-existing artificial dye cannot be lightened by oxidative tint alone; requires pre-lightening or colour reduction.",
+      "category": "CHEMICAL_INVARIANT",
+      "inputs": {
+        "history": {
+          "has_allergy_history": false,
+          "patch_test_completed_48h": true,
+          "scalp_condition": "normal",
+          "has_metallic_salts_or_henna": false,
+          "has_sodium_hydroxide_relaxer": false,
+          "previous_chemical_services": ["permanent_colour"]
+        },
+        "starting_hair": {
+          "roots": { "level": 3, "condition": "GOOD", "artificial_colour_present": true },
+          "mid_lengths": { "level": 3, "condition": "GOOD", "artificial_colour_present": true },
+          "ends": { "level": 3, "condition": "GOOD", "artificial_colour_present": true }
+        },
+        "target_colour": {
+          "universal_level": 7,
+          "primary_tone": "GOLD",
+          "secondary_tone": null
+        }
+      },
+      "expected_safety_status": "REQUIRES_MULTI_STAGE_OR_REMOVAL",
+      "expected_service_classification": "MULTI_STAGE_PROCESS",
+      "allow_single_stage_tint": false
+    },
+    {
+      "case_id": "BLOCKED-10-UNVERIFIED-CATALOGUE",
+      "name": "Execution against Unverified Product Catalogue",
+      "description": "Principle 6 violation: Attempting to generate executable formulation from an unverified or incomplete catalogue version.",
+      "category": "CATALOGUE_INTEGRITY",
+      "inputs": {
+        "catalogue_status": "UNVERIFIED",
+        "target_colour": {
+          "universal_level": 6,
+          "primary_tone": "NATURAL"
+        }
+      },
+      "expected_safety_status": "BLOCKED",
+      "allow_executable_stages": false
+    }
+  ]
+}

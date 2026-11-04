@@ -1,0 +1,108 @@
+[
+  {
+    "product_name": "Welloxon Perfect 1.9% (Pastel)",
+    "concentration_percent": 1.9,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["color_balancing", "blonde_toning", "glossing"],
+      "volume_equivalent": 6,
+      "lift_levels": 0
+    },
+    "source_doc_key": "kp_usage_guidelines",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 4% (13 Vol)",
+    "concentration_percent": 4.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["same_depth", "darker", "deeper_results_on_natural_hair_no_grey"],
+      "volume_equivalent": 13,
+      "lift_levels": 0
+    },
+    "source_doc_key": "kp_usage_guidelines",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 6% (20 Vol)",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["1_level_lift", "grey_coverage", "same_depth_or_darker"],
+      "volume_equivalent": 20,
+      "lift_levels": 1
+    },
+    "source_doc_key": "kp_usage_guidelines",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 9% (30 Vol)",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["2_levels_lift", "3_levels_lift_special_blonde"],
+      "volume_equivalent": 30,
+      "lift_levels": 2,
+      "special_blonde_lift_levels": 3
+    },
+    "source_doc_key": "kp_usage_guidelines",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 12% (40 Vol)",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["3_levels_lift", "4_to_5_levels_lift_special_blonde"],
+      "volume_equivalent": 40,
+      "lift_levels": 3,
+      "special_blonde_lift_levels": 5
+    },
+    "source_doc_key": "kp_usage_guidelines",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Freelights Developer 6% (20 Vol)",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["freelights_freehand_lightening"],
+      "closed_system": true,
+      "compatible_with": ["Blondor Freelights White Lightening Powder"]
+    },
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Freelights Developer 9% (30 Vol)",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["freelights_freehand_lightening"],
+      "closed_system": true,
+      "compatible_with": ["Blondor Freelights White Lightening Powder"]
+    },
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Blondor Freelights Developer 12% (40 Vol)",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["freelights_freehand_lightening"],
+      "closed_system": true,
+      "compatible_with": ["Blondor Freelights White Lightening Powder"]
+    },
+    "source_doc_key": "blondor_technical_folder",
+    "verification_status": "VERIFIED"
+  }
+]

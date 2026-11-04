@@ -1,0 +1,837 @@
+{
+  "dataset_metadata": {
+    "name": "Nirav Hairstorm Held-Out Image Validation Benchmark Dataset",
+    "version": "1.0",
+    "purpose": "Validation and benchmark evaluation of assisted photo hair level and undertone classification models under diverse salon lighting conditions",
+    "specification_reference": "Nirav Hairstorm Technical Specification v1.0 §2.10, §6.3, §8.3, §8.4",
+    "total_benchmark_samples": 20,
+    "accuracy_target": ">= 90% level accuracy within +/- 0.5 level, >= 85% primary undertone classification",
+    "capture_environments": [
+      "D65_CONTROLLED_DAYLIGHT",
+      "3000K_WARM_INCANDESCENT",
+      "4000K_SALON_FLUORESCENT"
+    ]
+  },
+  "benchmarks": [
+    {
+      "sample_id": "IMG-BENCH-001",
+      "tress_id": "TRESS-NAT-L1-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 1,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 1,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.96,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 1,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 1,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 1,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 1,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-002",
+      "tress_id": "TRESS-NAT-L2-01",
+      "capture_metadata": {
+        "lighting_condition": "3000K_WARM_INCANDESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "ACCEPTABLE",
+        "camera_sensor": "Apple A16 Bionic 48MP",
+        "lens_aperture": "f/1.78"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 2,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 2,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 2,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 2,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.89,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 2,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 2,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.88,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-003",
+      "tress_id": "TRESS-NAT-L3-01",
+      "capture_metadata": {
+        "lighting_condition": "4000K_SALON_FLUORESCENT",
+        "colour_reference_card_present": false,
+        "white_balance_status": "UNCALIBRATED_ESTIMATED",
+        "image_quality": "ACCEPTABLE",
+        "camera_sensor": "Samsung ISOCELL GN5 50MP",
+        "lens_aperture": "f/1.9"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.84,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.82,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.73,
+          "level_error": 1,
+          "tone_match": false
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-004",
+      "tress_id": "TRESS-NAT-L4-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 4,
+          "ground_truth_tone": "RED_ORANGE",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 4,
+          "ground_truth_tone": "RED_ORANGE",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 4,
+          "ground_truth_tone": "RED_ORANGE",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-005",
+      "tress_id": "TRESS-NAT-L5-01",
+      "capture_metadata": {
+        "lighting_condition": "3000K_WARM_INCANDESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Apple A16 Bionic 48MP",
+        "lens_aperture": "f/1.78"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.90,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.89,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-006",
+      "tress_id": "TRESS-NAT-L6-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-007",
+      "tress_id": "TRESS-NAT-L7-01",
+      "capture_metadata": {
+        "lighting_condition": "4000K_SALON_FLUORESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "ACCEPTABLE",
+        "camera_sensor": "Samsung ISOCELL GN5 50MP",
+        "lens_aperture": "f/1.9"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "YELLOW_ORANGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "YELLOW_ORANGE",
+          "prediction_confidence": 0.89,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "YELLOW_ORANGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "YELLOW_ORANGE",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "YELLOW_ORANGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "YELLOW_ORANGE",
+          "prediction_confidence": 0.88,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-008",
+      "tress_id": "TRESS-NAT-L8-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "YELLOW",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "YELLOW",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "YELLOW",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "YELLOW",
+          "prediction_confidence": 0.96,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "YELLOW",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "YELLOW",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-009",
+      "tress_id": "TRESS-NAT-L9-01",
+      "capture_metadata": {
+        "lighting_condition": "3000K_WARM_INCANDESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Apple A16 Bionic 48MP",
+        "lens_aperture": "f/1.78"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 9,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 9,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 9,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 9,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 9,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 9,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-010",
+      "tress_id": "TRESS-NAT-L10-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.97,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.96,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-011",
+      "tress_id": "TRESS-OMBRE-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 4,
+          "ground_truth_tone": "RED_ORANGE",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "YELLOW",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "YELLOW",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-012",
+      "tress_id": "TRESS-BALAYAGE-01",
+      "capture_metadata": {
+        "lighting_condition": "3000K_WARM_INCANDESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Apple A16 Bionic 48MP",
+        "lens_aperture": "f/1.78"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.90,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "YELLOW_ORANGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "YELLOW_ORANGE",
+          "prediction_confidence": 0.88,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 9,
+          "ground_truth_tone": "PALE_YELLOW",
+          "model_predicted_level": 9,
+          "model_predicted_tone": "PALE_YELLOW",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-013",
+      "tress_id": "TRESS-RED-FASHION-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 6,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-014",
+      "tress_id": "TRESS-COPPER-FASHION-01",
+      "capture_metadata": {
+        "lighting_condition": "4000K_SALON_FLUORESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "ACCEPTABLE",
+        "camera_sensor": "Samsung ISOCELL GN5 50MP",
+        "lens_aperture": "f/1.9"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "COPPER",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "COPPER",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "COPPER",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "COPPER",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "COPPER",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "COPPER",
+          "prediction_confidence": 0.90,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-015",
+      "tress_id": "TRESS-COOL-ASH-01",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "ASH",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "ASH",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "ASH",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "ASH",
+          "prediction_confidence": 0.96,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 8,
+          "ground_truth_tone": "ASH",
+          "model_predicted_level": 8,
+          "model_predicted_tone": "ASH",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-016",
+      "tress_id": "TRESS-GREY-BLENDED-50PCT",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.89,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.90,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "NATURAL",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "NATURAL",
+          "prediction_confidence": 0.88,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-017",
+      "tress_id": "TRESS-DIFFUSE-UNEVEN-01",
+      "capture_metadata": {
+        "lighting_condition": "3000K_WARM_INCANDESCENT",
+        "colour_reference_card_present": false,
+        "white_balance_status": "UNCALIBRATED_ESTIMATED",
+        "image_quality": "FAIR_MARGINAL",
+        "camera_sensor": "Apple A16 Bionic 48MP",
+        "lens_aperture": "f/1.78"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 4,
+          "ground_truth_tone": "RED_ORANGE",
+          "model_predicted_level": 4,
+          "model_predicted_tone": "RED_ORANGE",
+          "prediction_confidence": 0.78,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 5,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 5,
+          "model_predicted_tone": "ORANGE",
+          "prediction_confidence": 0.75,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 6,
+          "ground_truth_tone": "ORANGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "YELLOW_ORANGE",
+          "prediction_confidence": 0.69,
+          "level_error": 1,
+          "tone_match": false
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-018",
+      "tress_id": "TRESS-PLATINUM-L10-02",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PEARL",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PEARL",
+          "prediction_confidence": 0.95,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PEARL",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PEARL",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 10,
+          "ground_truth_tone": "PEARL",
+          "model_predicted_level": 10,
+          "model_predicted_tone": "PEARL",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-019",
+      "tress_id": "TRESS-DARK-BROWN-L3-02",
+      "capture_metadata": {
+        "lighting_condition": "4000K_SALON_FLUORESCENT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Samsung ISOCELL GN5 50MP",
+        "lens_aperture": "f/1.9"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.91,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 3,
+          "ground_truth_tone": "RED",
+          "model_predicted_level": 3,
+          "model_predicted_tone": "RED",
+          "prediction_confidence": 0.90,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    },
+    {
+      "sample_id": "IMG-BENCH-020",
+      "tress_id": "TRESS-BLONDE-L7-02",
+      "capture_metadata": {
+        "lighting_condition": "D65_CONTROLLED_DAYLIGHT",
+        "colour_reference_card_present": true,
+        "white_balance_status": "CALIBRATED",
+        "image_quality": "OPTIMAL",
+        "camera_sensor": "Sony IMX766 50MP",
+        "lens_aperture": "f/1.8"
+      },
+      "regions": {
+        "roots": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "BEIGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "BEIGE",
+          "prediction_confidence": 0.93,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "mid_lengths": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "BEIGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "BEIGE",
+          "prediction_confidence": 0.94,
+          "level_error": 0,
+          "tone_match": true
+        },
+        "ends": {
+          "ground_truth_level": 7,
+          "ground_truth_tone": "BEIGE",
+          "model_predicted_level": 7,
+          "model_predicted_tone": "BEIGE",
+          "prediction_confidence": 0.92,
+          "level_error": 0,
+          "tone_match": true
+        }
+      }
+    }
+  ]
+}

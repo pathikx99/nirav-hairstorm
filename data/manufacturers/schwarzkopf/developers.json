@@ -1,0 +1,50 @@
+[
+  {
+    "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 3% (10 Vol)",
+    "concentration_percent": 3.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["darkening", "deposit_only", "pastel_toning"],
+      "volume_equivalent": 10
+    },
+    "source_doc_key": "igora_royal_technical_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 6% (20 Vol)",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["1_to_2_levels_lift", "grey_coverage", "tone_on_tone"],
+      "volume_equivalent": 20
+    },
+    "source_doc_key": "igora_royal_technical_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 9% (30 Vol)",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["2_to_3_levels_lift", "series_00_grey_coverage"],
+      "volume_equivalent": 30
+    },
+    "source_doc_key": "igora_royal_technical_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 12% (40 Vol)",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": ["3_to_4_levels_lift", "high_lift_series_10_12"],
+      "volume_equivalent": 40
+    },
+    "source_doc_key": "igora_royal_technical_manual",
+    "verification_status": "VERIFIED"
+  }
+]
