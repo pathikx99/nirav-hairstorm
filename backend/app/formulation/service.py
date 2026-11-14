@@ -221,10 +221,16 @@ class FormulationService:
         devs_res = await db.execute(devs_stmt)
         developers = list(devs_res.scalars().all())
 
-        # 5. Fetch verified product rules
-        rules_stmt = select(ProductRule).where(
-            ProductRule.market == market,
-            ProductRule.verification_status == VerificationStatusEnum.VERIFIED,
+        # 5. Fetch verified product rules for this manufacturer
+        rules_stmt = (
+            select(ProductRule)
+            .join(ManufacturerProduct, ProductRule.product_id == ManufacturerProduct.id)
+            .join(ProductLine, ManufacturerProduct.product_line_id == ProductLine.id)
+            .where(
+                ProductLine.manufacturer_id == manufacturer.id,
+                ProductRule.market == market,
+                ProductRule.verification_status == VerificationStatusEnum.VERIFIED,
+            )
         )
         rules_res = await db.execute(rules_stmt)
         rules = list(rules_res.scalars().all())

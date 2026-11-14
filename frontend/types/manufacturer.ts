@@ -8,7 +8,7 @@ export interface Manufacturer {
   id: string;
   name: string;
   slug: string;
-  supported_markets?: string[] | Record<string, any>;
+  supported_markets?: string[] | Record<string, unknown>;
   status: string;
 }
 

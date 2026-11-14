@@ -13,6 +13,7 @@ from backend.app.config import get_settings
 from backend.app.database.session import engine
 
 
+# pyrefly: ignore[deprecated]
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Manage application startup and shutdown.

@@ -237,6 +237,32 @@ class SafetyValidationService:
                     )
                 )
 
+        # -------------------------------------------------------------------
+        # 5. Hard Water & Heavy Metal Deposition (Indian Salon Reality)
+        # -------------------------------------------------------------------
+        has_hard_water = history.has_hard_water or any(
+            "hard water" in s.lower() or "well water" in s.lower() or "borewell" in s.lower()
+            for s in history.previous_chemical_services
+        )
+        if has_hard_water:
+            checks.append(
+                SafetyCheckResult(
+                    check_code="SAFETY_HARD_WATER_METAL_DEPOSIT",
+                    status=SafetyStatusEnum.WARNING,
+                    title="Hard Water & Heavy Metal Deposition",
+                    detail=(
+                        "Client reports exposure to hard water / high TDS mineral water (>800 ppm). "
+                        "Dissolved copper and iron ions trapped in cuticular layers catalyze rapid exothermic peroxide "
+                        "decomposition, risking patchy lift, fiber breakage, and unwanted greenish reflections."
+                    ),
+                    recommendation=(
+                        "Prepend a professional metal chelation / detox pre-treatment stage "
+                        "(e.g., L'Oréal Metal Detox Pre-treatment Spray or Wella Invigo Aqua Pure) "
+                        "prior to applying lightener or oxidative tint."
+                    ),
+                )
+            )
+
         # Determine overall safety status
         if any(c.status == SafetyStatusEnum.BLOCKED for c in checks):
             overall_status = SafetyStatusEnum.BLOCKED

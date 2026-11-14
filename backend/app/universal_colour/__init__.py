@@ -21,6 +21,18 @@ from backend.app.universal_colour.enums import (
     ToneIntensityEnum,
     UniversalLevel,
 )
+from backend.app.universal_colour.kubelka_munk import (
+    calculate_spectrum_ks,
+    calculate_spectrum_reflectance,
+    evaluate_metameric_shift,
+    ks_to_reflectance,
+    predict_mixture_cielab,
+    predict_mixture_reflectance,
+    reflectance_to_ks,
+    spectral_to_cielab,
+    spectral_to_xyz,
+    xyz_to_cielab,
+)
 from backend.app.universal_colour.schemas import (
     CIELABMeasurement,
     CIELChValues,
@@ -59,6 +71,17 @@ __all__ = [
     "validate_lab_values",
     "lab_values_complete",
     "NEUTRALISATION_MAP",
+    # Kubelka-Munk
+    "reflectance_to_ks",
+    "ks_to_reflectance",
+    "calculate_spectrum_ks",
+    "calculate_spectrum_reflectance",
+    "predict_mixture_reflectance",
+    "spectral_to_xyz",
+    "xyz_to_cielab",
+    "spectral_to_cielab",
+    "predict_mixture_cielab",
+    "evaluate_metameric_shift",
     # Schemas
     "CIELABMeasurement",
     "CIELChValues",

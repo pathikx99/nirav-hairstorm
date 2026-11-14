@@ -28,6 +28,8 @@ async def list_shades(
     product_id: UUID | None = Query(None, description="Filter by product UUID"),
     market: str | None = Query(None, description="Filter by market (e.g. IN)"),
     shade_code: str | None = Query(None, description="Exact shade code (e.g. 7/1)"),
+    limit: int = Query(100, ge=1, le=500, description="Max number of shades to return"),
+    offset: int = Query(0, ge=0, description="Number of shades to skip"),
     db: AsyncSession = Depends(get_db),
 ) -> list[ManufacturerShade]:
     """List manufacturer shades, preserving exact shade notation."""
@@ -39,6 +41,7 @@ async def list_shades(
     if shade_code:
         stmt = stmt.where(ManufacturerShade.shade_code == shade_code)
 
+    stmt = stmt.offset(offset).limit(limit)
     res = await db.execute(stmt)
     return list(res.scalars().all())
 

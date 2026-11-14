@@ -13,8 +13,14 @@ from decimal import Decimal
 from backend.app.formulation.classifier import FeasibilityClassifier
 from backend.app.formulation.enums import (
     FormulationResultStatusEnum,
+    PorosityEnum,
     SafetyStatusEnum,
     ServiceClassificationEnum,
+)
+from backend.app.formulation.repigmentation import (
+    build_two_step_repigmentation_stages,
+    calculate_repigmentation_strategy,
+    find_filler_shade,
 )
 from backend.app.formulation.safety import SafetyValidationService
 from backend.app.formulation.schemas import (
@@ -74,7 +80,15 @@ class FormulationEngine:
         # Step 1: Input & Completeness Validation
         # -------------------------------------------------------------------
         # Principle 6: Unverified data must never generate executable formulations
-        if catalogue_version.status not in (CatalogueStatusEnum.APPROVED, CatalogueStatusEnum.PUBLISHED):
+        cat_status_val = (
+            catalogue_version.status.value
+            if hasattr(catalogue_version.status, "value")
+            else str(catalogue_version.status)
+        )
+        if cat_status_val not in (
+            CatalogueStatusEnum.APPROVED.value,
+            CatalogueStatusEnum.PUBLISHED.value,
+        ):
             return FormulationResultResponse(
                 status=FormulationResultStatusEnum.BLOCKED,
                 market=assessment.market,
@@ -88,7 +102,7 @@ class FormulationEngine:
                 regions=[],
                 safety_checks=[],
                 warnings=[
-                    f"Principle 6 Violation: Catalogue version '{catalogue_version.version}' is {catalogue_version.status.value}. Unverified catalogues cannot generate executable formulations."
+                    f"Principle 6 Violation: Catalogue version '{catalogue_version.version}' is {cat_status_val}. Unverified catalogues cannot generate executable formulations."
                 ],
                 missing_information=["VerifiedCatalogue"],
             )
@@ -179,6 +193,7 @@ class FormulationEngine:
             overall_classification=overall_classification,
             region_classes=region_classes,
             manufacturer=manufacturer,
+            shades=shades,
             target_shade=target_shade,
             pure_natural_shade=pure_natural_shade,
             special_mix_shade=special_mix_shade,
@@ -264,9 +279,10 @@ class FormulationEngine:
         special_mix_candidates: list[tuple[int, ManufacturerShade]] = []
 
         for s in shades:
+            s_name = (s.shade_name or "").lower()
             # Check for lightener
             if (
-                "blondor" in s.shade_name.lower() or "lighten" in s.shade_name.lower()
+                "blondor" in s_name or "lighten" in s_name
             ) and lightener_prod is None:
                 lightener_prod = s
 
@@ -393,6 +409,7 @@ class FormulationEngine:
         overall_classification: ServiceClassificationEnum,
         region_classes: dict[HairRegionEnum, ServiceClassificationEnum],
         manufacturer: Manufacturer,
+        shades: list[ManufacturerShade],
         target_shade: ManufacturerShade | None,
         pure_natural_shade: ManufacturerShade | None,
         special_mix_shade: ManufacturerShade | None,
@@ -409,7 +426,7 @@ class FormulationEngine:
         region_plans: list[RegionFormulationPlan] = []
 
         is_wella = "wella" in manufacturer.name.lower()
-        "l'oréal" in manufacturer.name.lower() or "loreal" in manufacturer.name.lower()
+        is_loreal = "l'oréal" in manufacturer.name.lower() or "loreal" in manufacturer.name.lower()
 
         # Check if conditions across regions differ
         roots = assessment.roots
@@ -429,17 +446,66 @@ class FormulationEngine:
         target_lvl = int(target.universal_level)
         roots_lvl = int(roots.observed_level)
         roots_delta = target_lvl - roots_lvl
+        darkening_deltas = [target_lvl - int(r.observed_level) for r in (roots, mid, ends)]
+        max_darkening_delta = min(darkening_deltas)
+
+        stage_counter = 1
+
+        # -------------------------------------------------------------------
+        # Pre-Stage: Hard Water & Heavy Metal Chelation Pre-Treatment
+        # -------------------------------------------------------------------
+        has_hard_water = assessment.history.has_hard_water or any(
+            "hard water" in s.lower() or "well water" in s.lower() or "borewell" in s.lower()
+            for s in assessment.history.previous_chemical_services
+        )
+        if has_hard_water:
+            chelation_stage = FormulationStage(
+                stage_number=stage_counter,
+                service_type=ServiceClassificationEnum.DEPOSIT,
+                stage_description=f"Stage {stage_counter}: Metal Detox & Heavy Metal Chelation Pre-Treatment.",
+                target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
+                products=[
+                    ProductComponentFormula(
+                        product_type="CHELATING_TREATMENT",
+                        product_name="Metal Detox Pre-Treatment Spray"
+                        if is_loreal
+                        else "Wella Invigo Aqua Pure Chelating Treatment",
+                        parts=Decimal("1.0"),
+                        weight_grams=Decimal("20.0"),
+                        notes="Chelating pre-treatment to neutralize copper and mineral deposits prior to chemical oxidation.",
+                    )
+                ],
+                developer=None,
+                mixing_ratio_text="Ready-to-use spray",
+                development_time_minutes=10,
+                development_time_range="5–10 min without heat",
+                heat_permitted=False,
+                application_instructions=(
+                    "Spray evenly from roots to ends on dry hair prior to service. "
+                    "Comb through for uniform saturation. Air-dry or towel-blot excess. Do not rinse."
+                ),
+                rules_applied=["HARD-WATER-METAL-DETOX-PROTOCOL"],
+                source_document_references=["Salon Hard Water & Heavy Metal Safety Guidelines"],
+            )
+            stages.append(chelation_stage)
+            stage_counter += 1
+            source_refs.append("Salon Hard Water & Heavy Metal Safety Guidelines")
 
         # -------------------------------------------------------------------
         # Multi-Stage: Pre-lightening required
-        # (e.g. artificial color lift, or delta > 5 on virgin hair)
+        # (e.g. artificial color lift, or delta > 3 on virgin hair)
         # -------------------------------------------------------------------
-        if overall_classification in (
-            ServiceClassificationEnum.MULTI_STAGE_PROCESS,
-            ServiceClassificationEnum.LIGHTENING,
-            ServiceClassificationEnum.COLOUR_REMOVAL,
-        ) and (any(r.existing_artificial_colour for r in (roots, mid, ends)) or roots_delta > 3):
-            # Stage 1: Lightening / Cleansing
+        if (
+            overall_classification
+            in (
+                ServiceClassificationEnum.MULTI_STAGE_PROCESS,
+                ServiceClassificationEnum.LIGHTENING,
+                ServiceClassificationEnum.COLOUR_REMOVAL,
+            )
+            and (any(r.existing_artificial_colour for r in (roots, mid, ends)) or roots_delta > 3)
+            and roots_delta > 0
+        ):
+            # Stage 1 (or 2 if hard water): Lightening / Cleansing
             dev_6 = cls._resolve_developer(developers, Decimal("6.0"))
             dev_comp_1 = DeveloperComponentFormula(
                 developer_id=dev_6.id if dev_6 else None,
@@ -463,9 +529,9 @@ class FormulationEngine:
             )
 
             stage_1 = FormulationStage(
-                stage_number=1,
+                stage_number=stage_counter,
                 service_type=ServiceClassificationEnum.LIGHTENING,
-                stage_description="Stage 1: Pre-lightening / Cleansing to expose target depth level.",
+                stage_description=f"Stage {stage_counter}: Pre-lightening / Cleansing to expose target depth level.",
                 target_regions=[
                     HairRegionEnum.ROOTS,
                     HairRegionEnum.MID_LENGTHS,
@@ -486,6 +552,7 @@ class FormulationEngine:
                 source_document_references=["Blondor Technical Folder"],
             )
             stages.append(stage_1)
+            stage_counter += 1
             source_refs.append("Blondor Technical Folder Page 7, 10, 14")
 
             # Stage 2: Toning & Depositing
@@ -518,9 +585,9 @@ class FormulationEngine:
             )
 
             stage_2 = FormulationStage(
-                stage_number=2,
+                stage_number=stage_counter,
                 service_type=ServiceClassificationEnum.TONING,
-                stage_description="Stage 2: Tonal Glazing & Neutralisation on pre-lightened hair.",
+                stage_description=f"Stage {stage_counter}: Tonal Glazing & Neutralisation on pre-lightened hair.",
                 target_regions=[
                     HairRegionEnum.ROOTS,
                     HairRegionEnum.MID_LENGTHS,
@@ -551,7 +618,7 @@ class FormulationEngine:
                         target_level=target_lvl,
                         level_delta=target_lvl - int(reg.observed_level),
                         service_classification=region_classes[reg.region],
-                        stages=[stage_1, stage_2],
+                        stages=stages,
                         grey_coverage_notes=None,
                         special_mix_notes="Glaze tone applied across pre-lightened base.",
                     )
@@ -560,14 +627,90 @@ class FormulationEngine:
             return stages, region_plans, False
 
         # -------------------------------------------------------------------
-        # Single-Stage / Standard Oxidative Colouring
+        # Multi-Stage Repigmentation (Darkening by >= 4 levels)
+        # -------------------------------------------------------------------
+        if max_darkening_delta <= -4:
+            darkening_start_lvl = max(int(r.observed_level) for r in (roots, mid, ends))
+            repig_strat = calculate_repigmentation_strategy(darkening_start_lvl, target_lvl, is_porous=True)
+            filler_shade = find_filler_shade(
+                shades, target_lvl, repig_strat["filler_tone"], manufacturer.name
+            )
+            is_porous_overall = any(
+                r.porosity in (PorosityEnum.HIGH, PorosityEnum.EXTREME) for r in (roots, mid, ends)
+            )
+            s1, s2 = build_two_step_repigmentation_stages(
+                start_level=darkening_start_lvl,
+                target_level=target_lvl,
+                target_shade=target_shade,
+                filler_shade=filler_shade,
+                pure_natural_shade=pure_natural_shade,
+                developers=developers,
+                target_regions=[
+                    HairRegionEnum.ROOTS,
+                    HairRegionEnum.MID_LENGTHS,
+                    HairRegionEnum.ENDS,
+                ],
+                manufacturer=manufacturer,
+                is_porous=is_porous_overall,
+            )
+            # Re-number stages based on stage_counter
+            s1 = s1.model_copy(
+                update={
+                    "stage_number": stage_counter,
+                    "stage_description": f"Stage {stage_counter}: Pre-Pigmentation / Repigmentation Warm Filler.",
+                }
+            )
+            stage_counter += 1
+            s2 = s2.model_copy(
+                update={
+                    "stage_number": stage_counter,
+                    "stage_description": f"Stage {stage_counter}: Target Deposit & Depth Lock application.",
+                }
+            )
+            stage_counter += 1
+            stages.extend([s1, s2])
+            source_refs.append("Professional Colour Tint-Back & Filler Guidelines")
+
+            repig_note = repig_strat["rationale"]
+            porosity_comp = None
+            if is_porous_overall:
+                porosity_comp = (
+                    "High porosity detected. Developer limited to 1.9%/3% with reduced processing time on ends. "
+                    "Apply porosity equalising spray before filler application."
+                )
+
+            for reg in (roots, mid, ends):
+                region_plans.append(
+                    RegionFormulationPlan(
+                        region=reg.region,
+                        initial_level=int(reg.observed_level),
+                        target_level=target_lvl,
+                        level_delta=target_lvl - int(reg.observed_level),
+                        service_classification=region_classes[reg.region],
+                        stages=stages,
+                        grey_coverage_notes=None,
+                        special_mix_notes=None,
+                        repigmentation_notes=repig_note,
+                        porosity_compensation_notes=porosity_comp,
+                    )
+                )
+
+            return stages, region_plans, conditions_uniform
+
+        # -------------------------------------------------------------------
+        # Single-Stage / Standard Oxidative Colouring (incl. Lift & Mild Darkening)
         # -------------------------------------------------------------------
         # Calculate developer strength based on roots lift
         req_dev_pct = Decimal("6.0")
         dev_vol = 20
         rule_code = "WELLA-KP-DEV-LIFT-STANDARD" if is_wella else "LOREAL-MAJIREL-DEV-LIFT"
 
-        if roots_delta <= 1:
+        # Developer selection
+        if roots_delta <= 0:
+            # Deposit / darkening: gentle developer
+            req_dev_pct = Decimal("6.0")
+            dev_vol = 20
+        elif roots_delta == 1:
             req_dev_pct = Decimal("6.0")
             dev_vol = 20
         elif roots_delta == 2:
@@ -602,9 +745,107 @@ class FormulationEngine:
         products: list[ProductComponentFormula] = []
         grey_pct = float(roots.grey_percentage)
         grey_notes: str | None = None
+        repig_notes_single: str | None = None
 
-        # Check grey coverage rules
-        if grey_pct >= 50.0 and pure_natural_shade is not None:
+        # Check Repigmentation for -2 or -3 levels darkening
+        if max_darkening_delta == -3:
+            # Delta = -3 levels: 1/3 Copper/Gold priming filler
+            copper_filler = find_filler_shade(
+                shades, target_lvl, ToneFamilyEnum.COPPER, manufacturer.name
+            )
+            filler_code = (
+                copper_filler.shade_code
+                if copper_filler
+                else (f"{target_lvl+1}/43" if is_wella else f"{target_lvl+1}.4")
+            )
+            filler_name = (
+                copper_filler.shade_name
+                if copper_filler
+                else f"Level {target_lvl+1} Copper Priming Filler"
+            )
+
+            repig_notes_single = (
+                f"Darkening by 3 levels (Level {roots_lvl} to Level {target_lvl}): Added 1/3 Copper priming filler "
+                f"({filler_code}) to formula to reconstruct lost warm pheomelanin foundation."
+            )
+            products.append(
+                ProductComponentFormula(
+                    product_type="FILLER",
+                    product_id=copper_filler.product_id if copper_filler else None,
+                    product_name=filler_name,
+                    shade_id=copper_filler.id if copper_filler else None,
+                    shade_code=filler_code,
+                    shade_name=filler_name,
+                    parts=Decimal("0.33"),
+                    weight_grams=Decimal("20.0"),
+                    notes="Copper priming filler to replenish missing underlying warmth.",
+                )
+            )
+            products.append(
+                ProductComponentFormula(
+                    product_type="SHADE",
+                    product_id=target_shade.product_id if target_shade else None,
+                    product_name=target_shade.shade_name if target_shade else "Target Shade",
+                    shade_id=target_shade.id if target_shade else None,
+                    shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                    shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                    parts=Decimal("0.67"),
+                    weight_grams=Decimal("40.0"),
+                    notes="Target fashion reflect.",
+                )
+            )
+            source_refs.append("Professional Colour Tint-Back & Filler Guidelines")
+
+        elif max_darkening_delta == -2:
+            # Delta = -2 levels: 25% Gold warm base addition
+            gold_filler = find_filler_shade(
+                shades, target_lvl, ToneFamilyEnum.GOLD, manufacturer.name
+            )
+            filler_code = (
+                gold_filler.shade_code
+                if gold_filler
+                else (f"{target_lvl}/3" if is_wella else f"{target_lvl}.3")
+            )
+            filler_name = (
+                gold_filler.shade_name
+                if gold_filler
+                else f"Level {target_lvl} Warm Gold Priming Base"
+            )
+
+            repig_notes_single = (
+                f"Darkening by 2 levels (Level {roots_lvl} to Level {target_lvl}): Added 25% Gold warm tone "
+                f"({filler_code}) to formula to replace missing underlying warmth and avoid hollow/khaki cast."
+            )
+            products.append(
+                ProductComponentFormula(
+                    product_type="FILLER",
+                    product_id=gold_filler.product_id if gold_filler else None,
+                    product_name=filler_name,
+                    shade_id=gold_filler.id if gold_filler else None,
+                    shade_code=filler_code,
+                    shade_name=filler_name,
+                    parts=Decimal("0.25"),
+                    weight_grams=Decimal("15.0"),
+                    notes="Warm Gold priming base to prevent hollow tone.",
+                )
+            )
+            products.append(
+                ProductComponentFormula(
+                    product_type="SHADE",
+                    product_id=target_shade.product_id if target_shade else None,
+                    product_name=target_shade.shade_name if target_shade else "Target Shade",
+                    shade_id=target_shade.id if target_shade else None,
+                    shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                    shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                    parts=Decimal("0.75"),
+                    weight_grams=Decimal("45.0"),
+                    notes="Target fashion reflect.",
+                )
+            )
+            source_refs.append("Professional Colour Tint-Back & Filler Guidelines")
+
+        # Standard grey coverage check
+        elif grey_pct >= 50.0 and pure_natural_shade is not None:
             # 50-100% white hair: 1:1 Pure Natural : Fashion Shade
             grey_notes = (
                 f"White hair percentage is {grey_pct:.0f}%. Added 1/2 Pure Naturals ({pure_natural_shade.shade_code}) "
@@ -673,7 +914,7 @@ class FormulationEngine:
             )
             source_refs.append("Koleston Perfect Usage Guidelines Page 2 - Coloring grey hair")
         else:
-            # <30% grey: Full fashion shade
+            # <30% grey and no repigmentation: Full fashion shade
             products.append(
                 ProductComponentFormula(
                     product_type="SHADE",
@@ -734,6 +975,22 @@ class FormulationEngine:
             dev_time = 35
             dev_time_range = "30–40 min without heat"
 
+        # Indian Hair Phenotype Model & Coarse Texture Adjustment
+        is_coarse = (
+            getattr(assessment.history, "hair_texture", "MEDIUM").upper()
+            in ("COARSE", "RESISTANT", "COARSE_RESISTANT")
+        )
+        is_indian_deep = (
+            assessment.market == "IN" and any(int(r.observed_level) <= 3 for r in (roots, mid, ends))
+        )
+        if (is_coarse or is_indian_deep) and roots_delta > 0:
+            dev_time = min(50, dev_time + 10)
+            dev_time_range = f"{dev_time - 5}–{dev_time} min without heat (extended for Indian coarse eumelanin density)"
+            warnings.append(
+                "Indian Hair Phenotype / Coarse Texture: Natural Level 1–3 contains dense eumelanin granules. "
+                "Extended processing time (+10 min) applied to break through the Level 4–5 red-orange wall."
+            )
+
         # Check if verified product rules specify custom development time or mixing ratio
         for r in rules:
             actions = r.actions if hasattr(r, "actions") and isinstance(r.actions, dict) else {}
@@ -743,10 +1000,22 @@ class FormulationEngine:
             if "mixing_ratio" in actions and isinstance(actions["mixing_ratio"], str):
                 mix_ratio = actions["mixing_ratio"]
 
+        # Porosity & Condition Modifiers
+        has_high_porosity = any(
+            r.porosity in (PorosityEnum.HIGH, PorosityEnum.EXTREME) for r in (roots, mid, ends)
+        )
+        porosity_comp_text: str | None = None
+        if has_high_porosity:
+            porosity_comp_text = (
+                "High cuticle porosity detected in lengths/ends. Apply a porosity equalising protein spray "
+                "(e.g., Wella Service Pre-Color Treatment / L'Oréal Metal Detox) prior to chemical application. "
+                "For high porosity ends, reduce dwell time or emulsify during final 10–15 minutes to avoid over-pigmentation."
+            )
+
         stage_single = FormulationStage(
-            stage_number=1,
+            stage_number=stage_counter,
             service_type=overall_classification,
-            stage_description=f"Stage 1: {overall_classification.value} application.",
+            stage_description=f"Stage {stage_counter}: {overall_classification.value} application.",
             target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
             products=products,
             developer=dev_formula,
@@ -780,9 +1049,13 @@ class FormulationEngine:
                     target_level=target_lvl,
                     level_delta=target_lvl - int(reg.observed_level),
                     service_classification=region_classes[reg.region],
-                    stages=[stage_single],
+                    stages=stages,
                     grey_coverage_notes=grey_notes if reg.region == HairRegionEnum.ROOTS else None,
                     special_mix_notes=special_mix_notes,
+                    repigmentation_notes=repig_notes_single,
+                    porosity_compensation_notes=porosity_comp_text
+                    if reg.porosity in (PorosityEnum.HIGH, PorosityEnum.EXTREME)
+                    else None,
                 )
             )
 

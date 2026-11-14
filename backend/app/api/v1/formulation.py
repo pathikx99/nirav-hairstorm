@@ -17,11 +17,11 @@ from backend.app.formulation.schemas import (
 )
 from backend.app.formulation.service import FormulationService
 
-router = APIRouter(prefix="/formulations", tags=["Formulations"])
+router = APIRouter(tags=["Formulations"])
 
 
 @router.post(
-    "/evaluate",
+    "/formulations/evaluate",
     response_model=FormulationResultResponse,
     status_code=status.HTTP_200_OK,
     summary="Evaluate hair colour formulation feasibility and generate technical stages",
@@ -29,6 +29,12 @@ router = APIRouter(prefix="/formulations", tags=["Formulations"])
         "Evaluates process feasibility, executes safety and contraindication checks, "
         "and generates deterministic, reproducible formulation stages based on verified manufacturer rules."
     ),
+)
+@router.post(
+    "/formulation/evaluate",
+    response_model=FormulationResultResponse,
+    status_code=status.HTTP_200_OK,
+    include_in_schema=False,
 )
 async def evaluate_formulation(
     request: FormulationEvaluateRequest,

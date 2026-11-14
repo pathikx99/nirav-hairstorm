@@ -70,6 +70,18 @@ class ClientHistoryInput(BaseModel):
         default=False,
         description="Whether hair has been chemically straightened with sodium hydroxide / lye relaxer.",
     )
+    hair_texture: str = Field(
+        default="MEDIUM",
+        description="Hair fiber diameter/texture: 'FINE', 'MEDIUM', 'COARSE_RESISTANT'.",
+    )
+    has_hard_water: bool = Field(
+        default=False,
+        description="Whether client regularly washes hair with hard or high-TDS mineral water (>800 ppm).",
+    )
+    water_quality_notes: str | None = Field(
+        default=None,
+        description="Optional water quality details (e.g. borewell water, copper pipes, municipal hardness).",
+    )
 
 
 class HairRegionInput(BaseModel):
@@ -431,6 +443,14 @@ class RegionFormulationPlan(BaseModel):
     special_mix_notes: str | None = Field(
         default=None,
         description="Corrective tone or intensifying ribbon calculations.",
+    )
+    repigmentation_notes: str | None = Field(
+        default=None,
+        description="Pre-pigmentation / filler formulation instructions when darkening by >= 2 levels.",
+    )
+    porosity_compensation_notes: str | None = Field(
+        default=None,
+        description="Developer and timing adjustments for high/extreme cuticle porosity.",
     )
 
 

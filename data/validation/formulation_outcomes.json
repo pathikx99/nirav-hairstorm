@@ -302,6 +302,606 @@
         "delta_e00_from_target": 0.44,
         "outcome_status": "PASSED_VALIDATION"
       }
+    },
+    {
+      "trial_id": "TRIAL-REPIG-2L-006",
+      "description": "Previously lightened Level 8 to Target Level 6 Natural Gold (Delta = -2, 25% warm gold primer addition)",
+      "starting_hair": {
+        "natural_level": 8,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "HEALTHY",
+        "initial_cielab": {
+          "l_star": 64.2,
+          "a_star": 3.5,
+          "b_star": 22.1
+        }
+      },
+      "target_colour": {
+        "universal_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "target_cielab": {
+          "l_star": 42.5,
+          "a_star": 4.8,
+          "b_star": 19.2
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "6/0",
+            "parts": 0.75,
+            "grams": 45.0,
+            "role": "TARGET_BASE"
+          },
+          {
+            "shade_code": "6/3",
+            "parts": 0.25,
+            "grams": 15.0,
+            "role": "WARM_GOLD_PRIMER"
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 6%",
+          "percentage": 6.0,
+          "volume": 20,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "DARKENING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 43.1,
+          "a_star": 4.5,
+          "b_star": 18.9
+        },
+        "observed_level": 6,
+        "observed_tone": "NATURAL_GOLD",
+        "delta_e00_from_target": 0.64,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-REPIG-3L-007",
+      "description": "Decoloured Level 8 to Target Level 5 Medium Brown (Delta = -3, 33% copper-gold filler addition)",
+      "starting_hair": {
+        "natural_level": 8,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "HIGH",
+        "condition": "MODERATELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 65.0,
+          "a_star": 4.0,
+          "b_star": 24.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 34.5,
+          "a_star": 6.2,
+          "b_star": 14.8
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "5/0",
+            "parts": 0.67,
+            "grams": 40.0,
+            "role": "TARGET_BASE"
+          },
+          {
+            "shade_code": "6/43",
+            "parts": 0.33,
+            "grams": 20.0,
+            "role": "COPPER_FILLER"
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 3%",
+          "percentage": 3.0,
+          "volume": 10,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "DARKENING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 35.1,
+          "a_star": 5.9,
+          "b_star": 14.4
+        },
+        "observed_level": 5,
+        "observed_tone": "MEDIUM_BROWN",
+        "delta_e00_from_target": 0.6,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-REPIG-4L-TWO-STEP-008",
+      "description": "Bleached Level 9 Blonde to Target Level 5 Brown (Delta = -4, Mandatory Two-Step Pre-pigmentation)",
+      "starting_hair": {
+        "natural_level": 9,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "HIGH",
+        "condition": "MODERATELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 74.5,
+          "a_star": 1.2,
+          "b_star": 28.5
+        }
+      },
+      "target_colour": {
+        "universal_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 34.0,
+          "a_star": 6.5,
+          "b_star": 15.0
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "process_type": "MULTI_STAGE_PROCESS",
+        "stages": [
+          {
+            "stage_number": 1,
+            "service_type": "DEPOSIT",
+            "product": "Koleston Perfect 6/43 Warm Filler",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:2",
+            "development_time_minutes": 15
+          },
+          {
+            "stage_number": 2,
+            "service_type": "DARKENING",
+            "product": "Koleston Perfect 5/0 Target Base",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:1",
+            "development_time_minutes": 30
+          }
+        ]
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 34.6,
+          "a_star": 6.2,
+          "b_star": 14.7
+        },
+        "observed_level": 5,
+        "observed_tone": "NATURAL_BROWN",
+        "delta_e00_from_target": 0.58,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-REPIG-5L-TWO-STEP-009",
+      "description": "Platinum Bleached Level 10 to Target Level 5 Chestnut (Delta = -5, Two-Step Red/Copper Pre-pigmentation)",
+      "starting_hair": {
+        "natural_level": 10,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "EXTREME",
+        "condition": "SEVERELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 82.0,
+          "a_star": -0.5,
+          "b_star": 18.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 5,
+        "primary_tone": "RED",
+        "secondary_tone": "NATURAL",
+        "target_cielab": {
+          "l_star": 33.8,
+          "a_star": 14.5,
+          "b_star": 16.2
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "process_type": "MULTI_STAGE_PROCESS",
+        "stages": [
+          {
+            "stage_number": 1,
+            "service_type": "DEPOSIT",
+            "product": "Koleston Perfect 6/43 Red-Copper Filler",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:2",
+            "development_time_minutes": 15
+          },
+          {
+            "stage_number": 2,
+            "service_type": "DARKENING",
+            "product": "Koleston Perfect 5/43 + 5/0 Target Mix",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:1",
+            "development_time_minutes": 30
+          }
+        ]
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 34.3,
+          "a_star": 14.1,
+          "b_star": 15.8
+        },
+        "observed_level": 5,
+        "observed_tone": "CHESTNUT_RED_BROWN",
+        "delta_e00_from_target": 0.51,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-POROSITY-DIFFERENTIAL-010",
+      "description": "Virgin Level 5 roots + High Porosity Level 8 ends darkening to Level 6 (Zonal developer strategy)",
+      "starting_hair": {
+        "natural_level": 5,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "HIGH",
+        "condition": "MODERATELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 35.0,
+          "a_star": 7.0,
+          "b_star": 15.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 6,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 42.0,
+          "a_star": 5.5,
+          "b_star": 18.5
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "6/3",
+            "parts": 1.0,
+            "grams": 60.0
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 6% roots / 1.9% ends",
+          "percentage": 6.0,
+          "volume": 20,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 35,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 42.5,
+          "a_star": 5.2,
+          "b_star": 18.1
+        },
+        "observed_level": 6,
+        "observed_tone": "GOLD",
+        "delta_e00_from_target": 0.56,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-HIGH-POROSITY-ENDS-TONING-011",
+      "description": "Bleached Level 9 ends with extreme porosity toned to Level 9 Pearl Ash (Porosity equaliser + 1.9% dev)",
+      "starting_hair": {
+        "natural_level": 9,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "EXTREME",
+        "condition": "MODERATELY_DAMAGED",
+        "initial_cielab": {
+          "l_star": 75.0,
+          "a_star": 0.8,
+          "b_star": 26.5
+        }
+      },
+      "target_colour": {
+        "universal_level": 9,
+        "primary_tone": "PEARL",
+        "secondary_tone": "ASH",
+        "target_cielab": {
+          "l_star": 73.2,
+          "a_star": -0.8,
+          "b_star": 6.5
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "9/16",
+            "parts": 1.0,
+            "grams": 30.0
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 1.9%",
+          "percentage": 1.9,
+          "volume": 6,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:2",
+        "development_time_minutes": 15,
+        "service_classification": "TONING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 73.8,
+          "a_star": -0.5,
+          "b_star": 6.8
+        },
+        "observed_level": 9,
+        "observed_tone": "PEARL_ASH",
+        "delta_e00_from_target": 0.66,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-INDIAN-COARSE-LIFT-012",
+      "description": "Coarse Resistant Indian Level 2 virgin hair lifted to Level 5 Red (Extended 45 min dwell time)",
+      "starting_hair": {
+        "natural_level": 2,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "LOW",
+        "condition": "VIRGIN",
+        "hair_texture": "COARSE_RESISTANT",
+        "initial_cielab": {
+          "l_star": 18.5,
+          "a_star": 2.8,
+          "b_star": 5.2
+        }
+      },
+      "target_colour": {
+        "universal_level": 5,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 34.0,
+          "a_star": 18.5,
+          "b_star": 16.8
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "product_line": "Koleston Perfect ME+",
+        "shades": [
+          {
+            "shade_code": "5/4",
+            "parts": 1.0,
+            "grams": 60.0
+          }
+        ],
+        "developer": {
+          "name": "Welloxon Perfect 12%",
+          "percentage": 12.0,
+          "volume": 40,
+          "grams": 60.0
+        },
+        "mixing_ratio": "1:1",
+        "development_time_minutes": 45,
+        "service_classification": "LIFTING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 34.7,
+          "a_star": 17.9,
+          "b_star": 16.2
+        },
+        "observed_level": 5,
+        "observed_tone": "RED",
+        "delta_e00_from_target": 0.71,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-INDIAN-RED-ORANGE-WALL-013",
+      "description": "Indian Level 3 hair lifted to Level 7 Ash (Neutralising exposed Level 5-6 red-orange warmth via Special Mix)",
+      "starting_hair": {
+        "natural_level": 3,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "HEALTHY",
+        "initial_cielab": {
+          "l_star": 22.0,
+          "a_star": 3.5,
+          "b_star": 7.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 51.0,
+          "a_star": 1.5,
+          "b_star": 14.0
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "process_type": "MULTI_STAGE_PROCESS",
+        "stages": [
+          {
+            "stage_number": 1,
+            "service_type": "LIGHTENING",
+            "product": "Blondor Multi-Blonde Powder",
+            "developer": "Welloxon Perfect 6%",
+            "mixing_ratio": "1:1.5",
+            "development_time_minutes": 45
+          },
+          {
+            "stage_number": 2,
+            "service_type": "TONING",
+            "product": "Koleston Perfect 7/1 + Special Mix 0/11",
+            "developer": "Welloxon Perfect 1.9%",
+            "mixing_ratio": "1:2",
+            "development_time_minutes": 20
+          }
+        ]
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 51.6,
+          "a_star": 1.8,
+          "b_star": 14.5
+        },
+        "observed_level": 7,
+        "observed_tone": "ASH",
+        "delta_e00_from_target": 0.75,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-HARD-WATER-CHELATION-014",
+      "description": "High TDS Hard Water exposure client lifted from Level 4 to Level 7 with Metal Chelation pre-treatment",
+      "starting_hair": {
+        "natural_level": 4,
+        "artificial_colour_present": false,
+        "grey_percentage": 0.0,
+        "porosity": "NORMAL",
+        "condition": "HEALTHY",
+        "has_hard_water": true,
+        "initial_cielab": {
+          "l_star": 28.0,
+          "a_star": 5.5,
+          "b_star": 11.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 7,
+        "primary_tone": "COPPER",
+        "secondary_tone": "GOLD",
+        "target_cielab": {
+          "l_star": 50.5,
+          "a_star": 22.5,
+          "b_star": 30.0
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "Wella Professionals",
+        "process_type": "MULTI_STAGE_PROCESS",
+        "stages": [
+          {
+            "stage_number": 1,
+            "service_type": "DEPOSIT",
+            "product": "Wella Invigo Aqua Pure Chelating Treatment",
+            "mixing_ratio": "Ready-to-use",
+            "development_time_minutes": 10
+          },
+          {
+            "stage_number": 2,
+            "service_type": "LIFTING",
+            "product": "Koleston Perfect 7/43",
+            "developer": "Welloxon Perfect 9%",
+            "mixing_ratio": "1:1",
+            "development_time_minutes": 35
+          }
+        ]
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 51.2,
+          "a_star": 21.8,
+          "b_star": 29.4
+        },
+        "observed_level": 7,
+        "observed_tone": "COPPER_GOLD",
+        "delta_e00_from_target": 0.79,
+        "outcome_status": "PASSED_VALIDATION"
+      }
+    },
+    {
+      "trial_id": "TRIAL-REPIG-LOREAL-3L-015",
+      "description": "L'Oréal Majirel Level 9 to Level 6 Tint-Back with Majirel 6.34 warm filler (Delta = -3)",
+      "starting_hair": {
+        "natural_level": 9,
+        "artificial_colour_present": true,
+        "grey_percentage": 0.0,
+        "porosity": "HIGH",
+        "condition": "HEALTHY",
+        "initial_cielab": {
+          "l_star": 73.5,
+          "a_star": 1.5,
+          "b_star": 27.0
+        }
+      },
+      "target_colour": {
+        "universal_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "target_cielab": {
+          "l_star": 42.0,
+          "a_star": 5.0,
+          "b_star": 18.0
+        }
+      },
+      "predicted_formulation": {
+        "manufacturer": "L'Oréal Professionnel",
+        "product_line": "Majirel",
+        "shades": [
+          {
+            "shade_code": "6.0",
+            "parts": 0.67,
+            "grams": 40.0,
+            "role": "TARGET_BASE"
+          },
+          {
+            "shade_code": "6.34",
+            "parts": 0.33,
+            "grams": 20.0,
+            "role": "COPPER_GOLD_FILLER"
+          }
+        ],
+        "developer": {
+          "name": "Oxydant Crème 20 Vol",
+          "percentage": 6.0,
+          "volume": 20,
+          "grams": 90.0
+        },
+        "mixing_ratio": "1:1.5",
+        "development_time_minutes": 35,
+        "service_classification": "DARKENING"
+      },
+      "empirical_result": {
+        "measured_cielab": {
+          "l_star": 42.6,
+          "a_star": 4.8,
+          "b_star": 17.7
+        },
+        "observed_level": 6,
+        "observed_tone": "DARK_BLONDE_NATURAL",
+        "delta_e00_from_target": 0.6,
+        "outcome_status": "PASSED_VALIDATION"
+      }
     }
   ]
 }

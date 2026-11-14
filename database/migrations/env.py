@@ -19,9 +19,9 @@ PROJECT_ROOT = str(Path(__file__).resolve().parents[2])
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
+import backend.app.models  # noqa: F401, E402
 from backend.app.config import get_settings  # noqa: E402
 from backend.app.database.base import Base  # noqa: E402
-import backend.app.models  # noqa: F401, E402
 
 # ---------------------------------------------------------------------------
 # Alembic Config object — provides access to values in alembic.ini.

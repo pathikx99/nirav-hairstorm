@@ -123,6 +123,14 @@ class FeasibilityClassifier:
         if needs_lightening_or_removal:
             return ServiceClassificationEnum.MULTI_STAGE_PROCESS, region_classifications
 
+        # Case: Darkening by >= 4 levels mandates two-step repigmentation (filler + deposit)
+        target_lvl = int(target.universal_level)
+        if any(
+            (int(r.observed_level) - target_lvl) >= 4
+            for r in (assessment.roots, assessment.mid_lengths, assessment.ends)
+        ):
+            return ServiceClassificationEnum.MULTI_STAGE_PROCESS, region_classifications
+
         # Case: Divergent regional needs (e.g., roots lift while ends darken or tone)
         if roots_class != lengths_class or lengths_class != ends_class:
             return ServiceClassificationEnum.MULTI_STAGE_PROCESS, region_classifications

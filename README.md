@@ -100,4 +100,13 @@ Run with coverage:
 pytest --cov=backend
 ```
 
-# nirav-hairstorm
+---
+
+## 🚢 Production Deployment
+
+For full production deployment instructions with Docker Compose, Nginx SSL, Vercel, or cloud platforms, refer to the [Production Deployment Guide](documentation/DEPLOYMENT.md).
+
+Quick 1-command full-stack container launch:
+```bash
+docker compose up -d --build
+```

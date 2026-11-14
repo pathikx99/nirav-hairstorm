@@ -35,6 +35,9 @@ export interface ClientHistoryInput {
   previous_chemical_services: string[];
   has_metallic_salts_or_henna: boolean;
   has_sodium_hydroxide_relaxer: boolean;
+  hair_texture?: "FINE" | "MEDIUM" | "COARSE_RESISTANT";
+  has_hard_water?: boolean;
+  water_quality_notes?: string | null;
 }
 
 export interface HairAssessmentInput {

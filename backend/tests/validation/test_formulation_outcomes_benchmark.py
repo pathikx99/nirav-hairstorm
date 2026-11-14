@@ -77,3 +77,89 @@ def test_formulation_outcomes_service_chemical_validity():
     shade_codes = [s["shade_code"] for s in shades]
     assert "7/0" in shade_codes, "Grey coverage trial must incorporate Pure Natural root shade at target level"
     assert len(shades) == 2, "Fashion shade + Natural shade mix required for 50% grey"
+
+
+def test_repigmentation_filler_outcomes_chemical_validity():
+    """Verify that repigmentation and tint-back benchmark trials obey filler rules."""
+    with open(TRIALS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    trials_by_id = {t["trial_id"]: t for t in data["trials"]}
+
+    # 1. Delta = -2 (Trial 006): 25% Gold primer base addition
+    trial_6 = trials_by_id["TRIAL-REPIG-2L-006"]
+    shades_6 = trial_6["predicted_formulation"]["shades"]
+    roles_6 = {s["role"]: s for s in shades_6}
+    assert "WARM_GOLD_PRIMER" in roles_6
+    assert roles_6["WARM_GOLD_PRIMER"]["parts"] == 0.25
+    assert roles_6["TARGET_BASE"]["parts"] == 0.75
+
+    # 2. Delta = -3 (Trial 007): 33% Copper filler addition
+    trial_7 = trials_by_id["TRIAL-REPIG-3L-007"]
+    shades_7 = trial_7["predicted_formulation"]["shades"]
+    roles_7 = {s["role"]: s for s in shades_7}
+    assert "COPPER_FILLER" in roles_7
+    assert roles_7["COPPER_FILLER"]["parts"] == 0.33
+    assert roles_7["TARGET_BASE"]["parts"] == 0.67
+
+    # 3. Delta = -4 (Trial 008): Two-Step Pre-pigmentation mandatory
+    trial_8 = trials_by_id["TRIAL-REPIG-4L-TWO-STEP-008"]
+    assert trial_8["predicted_formulation"]["process_type"] == "MULTI_STAGE_PROCESS"
+    stages_8 = trial_8["predicted_formulation"]["stages"]
+    assert len(stages_8) == 2
+    assert stages_8[0]["stage_number"] == 1
+    assert stages_8[0]["service_type"] == "DEPOSIT"
+    assert "Filler" in stages_8[0]["product"]
+    assert stages_8[1]["stage_number"] == 2
+    assert stages_8[1]["service_type"] == "DARKENING"
+
+    # 4. Delta = -5 (Trial 009): Two-Step Red/Copper Pre-pigmentation
+    trial_9 = trials_by_id["TRIAL-REPIG-5L-TWO-STEP-009"]
+    assert trial_9["predicted_formulation"]["process_type"] == "MULTI_STAGE_PROCESS"
+    stages_9 = trial_9["predicted_formulation"]["stages"]
+    assert len(stages_9) == 2
+    assert stages_9[0]["stage_number"] == 1
+    assert "Filler" in stages_9[0]["product"]
+
+
+def test_porosity_and_indian_hair_trials_validity():
+    """Verify that porosity differential and Indian hair phenotype trials enforce chemical kinetics."""
+    with open(TRIALS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    trials_by_id = {t["trial_id"]: t for t in data["trials"]}
+
+    # 1. Porosity differential (Trial 010): Zonal developer compensation
+    trial_10 = trials_by_id["TRIAL-POROSITY-DIFFERENTIAL-010"]
+    dev_name_10 = trial_10["predicted_formulation"]["developer"]["name"]
+    assert "6% roots" in dev_name_10 and "1.9% ends" in dev_name_10
+
+    # 2. High porosity ends toning (Trial 011): 1.9% developer for porous hair
+    trial_11 = trials_by_id["TRIAL-HIGH-POROSITY-ENDS-TONING-011"]
+    assert trial_11["predicted_formulation"]["developer"]["percentage"] == 1.9
+
+    # 3. Coarse Indian hair lift (Trial 012): 45 min extended processing
+    trial_12 = trials_by_id["TRIAL-INDIAN-COARSE-LIFT-012"]
+    assert trial_12["predicted_formulation"]["development_time_minutes"] == 45
+    assert trial_12["starting_hair"]["hair_texture"] == "COARSE_RESISTANT"
+
+    # 4. Indian Level 3 lift with Special Mix ash neutralisation (Trial 013)
+    trial_13 = trials_by_id["TRIAL-INDIAN-RED-ORANGE-WALL-013"]
+    stages_13 = trial_13["predicted_formulation"]["stages"]
+    assert len(stages_13) == 2
+    assert "0/11" in stages_13[1]["product"], "Must include Special Mix cool neutraliser"
+
+
+def test_hard_water_chelation_pre_treatment_validity():
+    """Verify that hard water client trials prepend metal chelation pre-treatment stage."""
+    with open(TRIALS_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    trials_by_id = {t["trial_id"]: t for t in data["trials"]}
+    trial_14 = trials_by_id["TRIAL-HARD-WATER-CHELATION-014"]
+
+    assert trial_14["starting_hair"]["has_hard_water"] is True
+    stages_14 = trial_14["predicted_formulation"]["stages"]
+    assert len(stages_14) == 2
+    assert stages_14[0]["stage_number"] == 1
+    assert "Chelating Treatment" in stages_14[0]["product"]

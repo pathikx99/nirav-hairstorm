@@ -107,6 +107,8 @@ export interface RegionFormulationPlan {
   stages: FormulationStage[];
   grey_coverage_notes?: string | null;
   special_mix_notes?: string | null;
+  repigmentation_notes?: string | null;
+  porosity_compensation_notes?: string | null;
 }
 
 export interface PredictedResult {
