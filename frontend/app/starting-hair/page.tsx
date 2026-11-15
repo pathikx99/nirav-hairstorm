@@ -730,7 +730,7 @@ export default function StartingHairPage() {
         <StickyBottomBar
           summary={
             <>
-              <span className="text-[10px] font-mono text-neutral-400 uppercase font-bold mr-1">
+              <span className="text-[10px] font-mono text-neutral-400 uppercase font-bold mr-1 shrink-0">
                 Hair State:
               </span>
               <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-black text-amber-300 whitespace-nowrap">
@@ -739,7 +739,15 @@ export default function StartingHairPage() {
               <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-black text-neutral-200 whitespace-nowrap">
                 Lengths: L{midLengths.observed_level}
               </span>
-              {history.has_metallic_salts_or_henna ? (
+              {history.has_allergy_history ? (
+                <span className="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/50 text-xs font-black text-rose-300 whitespace-nowrap">
+                  🛑 Allergy Active
+                </span>
+              ) : history.has_sodium_hydroxide_relaxer ? (
+                <span className="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/50 text-xs font-black text-rose-300 whitespace-nowrap">
+                  🛑 Relaxer Flagged
+                </span>
+              ) : history.has_metallic_salts_or_henna ? (
                 <span className="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-500/50 text-xs font-black text-rose-300 whitespace-nowrap">
                   ⚠️ Henna Flagged
                 </span>
