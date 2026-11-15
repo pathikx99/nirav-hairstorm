@@ -35,15 +35,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "1b196ad1-d914-4646-b37e-22251f6a2010",
+      "formulation_id": "470eafd7-0db1-4151-b862-adb60302ecb6",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "28751d46-2ad7-4ed2-b2e2-dc0952617920",
-      "target_colour_id": "ea1c7258-ad22-4b44-b83d-cfc495d4a518",
+      "assessment_id": "9314ad19-4c00-492b-a0d4-dd9e5981c72c",
+      "target_colour_id": "b8fde8e2-d153-4b59-b260-6d1528de7e4e",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -491,11 +491,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
-        "Blondor Technical Folder Page 7, 10, 14"
+        "Blondor Technical Folder Page 7, 10, 14",
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.082041Z"
+      "evaluated_at": "2026-11-15T22:34:42.762688Z"
     }
   },
   {
@@ -525,15 +528,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "10683f85-cbfd-4b7a-addd-3fcd3416f349",
+      "formulation_id": "ed98b91a-9ce6-48f4-bf96-cb567ff8ad6d",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "6cf6d6db-8c52-44af-9f79-0d771aab8a47",
-      "target_colour_id": "c9615316-ecf8-42ce-bf4d-a499ca6e4140",
+      "assessment_id": "7a5f64e5-19a8-49ce-9302-1755ddfcc5de",
+      "target_colour_id": "a9360118-bd9f-4733-acce-ae8fb8066386",
       "service_classification": "LIFTING",
       "stages": [
         {
@@ -857,11 +860,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Koleston Perfect Usage Guidelines Page 2 - Coloring grey hair",
-        "Koleston Perfect Usage Guidelines Page 2"
+        "Koleston Perfect Usage Guidelines Page 2",
+        "Koleston Perfect Usage Guidelines Page 2 - Coloring grey hair"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.132218Z"
+      "evaluated_at": "2026-11-15T22:34:42.896082Z"
     }
   },
   {
@@ -901,15 +907,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "9d7d341e-5a70-40e9-867b-11b2d524b5f3",
+      "formulation_id": "edff20fd-416b-49fe-a44c-cef2fd1f60fb",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "4de6857d-3ea8-4766-bf2b-a8089b51e7cb",
-      "target_colour_id": "5c1d5c6f-d9c5-4ee6-9782-10c1bec43000",
+      "assessment_id": "015104ef-b7e9-4107-ab83-631148752365",
+      "target_colour_id": "6cdadaa2-6404-47f3-ab65-3c402f277b3f",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -1407,8 +1413,11 @@
       "source_references": [
         "Professional Colour Tint-Back & Filler Guidelines"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": null,
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.181874Z"
+      "evaluated_at": "2026-11-15T22:34:42.951015Z"
     }
   },
   {
@@ -1428,15 +1437,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "8d45cee0-3cb0-4a23-b764-f86bc267bb3c",
+      "formulation_id": "81319bf7-d50d-4594-b834-bf0ec0d86078",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "b9871ff3-1279-4288-9ae2-92daffc7236a",
-      "target_colour_id": "74e93675-afa1-46f7-a6a4-f2b3221c913a",
+      "assessment_id": "fd820241-05a9-4b98-b5fa-22885b373cab",
+      "target_colour_id": "5e81090b-a2da-428c-a353-08ed159d371f",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [],
       "regions": [],
@@ -1486,8 +1495,11 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": null,
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.231061Z"
+      "evaluated_at": "2026-11-15T22:34:43.002227Z"
     }
   },
   {
@@ -1507,15 +1519,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "3b14a0cf-8702-456c-ba1d-97a14793c172",
+      "formulation_id": "570410cf-90aa-496a-96b4-6f1810af7001",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "c830f0ff-7daa-455d-b5d7-82f23fe0c3b0",
-      "target_colour_id": "fc694726-54d9-4042-bac2-6c7ec7090a29",
+      "assessment_id": "086712d5-041b-4a28-939a-64437ca0ddb2",
+      "target_colour_id": "24f8580e-95f2-42ae-b093-944925ba1992",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [],
       "regions": [],
@@ -1565,8 +1577,11 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": null,
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.322138Z"
+      "evaluated_at": "2026-11-15T22:34:43.053846Z"
     }
   },
   {
@@ -1605,15 +1620,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "c96d3380-16a6-42b1-9d5f-1ec8e1c0edf4",
+      "formulation_id": "1eff7374-92db-4e9d-b698-9d23c6f138f0",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "6238c561-2aa7-4e97-97e4-7d7bc804d7df",
-      "target_colour_id": "c8e3d866-69fe-4434-ab1f-30c081ab64e8",
+      "assessment_id": "3bd450fb-f06f-4464-8823-1cdcd9718521",
+      "target_colour_id": "d8354792-8d0b-4409-aa20-d364e4d2f7a9",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -2041,7 +2056,9 @@
           "recommendation": null
         }
       ],
-      "warnings": [],
+      "warnings": [
+        "Exposed ORANGE natural undertone: add 3\u20135g Blue / Ash counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect."
+      ],
       "missing_information": [],
       "predicted_result": {
         "universal_colour": {
@@ -2061,11 +2078,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
-        "Blondor Technical Folder Page 7, 10, 14"
+        "Blondor Technical Folder Page 7, 10, 14",
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": "Level 6 ORANGE",
+      "counter_toner_recommendation": "Exposed ORANGE natural undertone: add 3\u20135g Blue / Ash counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect.",
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.369826Z"
+      "evaluated_at": "2026-11-15T22:34:43.109999Z"
     }
   },
   {
@@ -2087,15 +2107,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "6d1a4d9e-6015-4367-8018-0c272cf88d73",
+      "formulation_id": "94fc8419-6f08-4bde-a77c-f342c5023eb9",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "7680d6db-2a40-4c98-bfe7-c423313eac27",
-      "target_colour_id": "c475f002-e059-455c-9c95-1a5242fa10ca",
+      "assessment_id": "3f10a80c-5d4f-418c-bcc6-86c595d4f39c",
+      "target_colour_id": "6a942917-2f00-460d-8893-da87c2c8adeb",
       "service_classification": "LIFTING",
       "stages": [],
       "regions": [],
@@ -2137,8 +2157,11 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": null,
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.418280Z"
+      "evaluated_at": "2026-11-15T22:34:43.163951Z"
     }
   },
   {
@@ -2177,15 +2200,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "b2d0ff24-a038-440f-8b3b-47ace8e635a4",
+      "formulation_id": "3d555bc6-f816-48f7-92f6-f3c0907a55ef",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "72559b22-e0b9-4286-981c-1905b853efad",
-      "target_colour_id": "63d4e297-1ffe-4252-86ff-a3eb1d6c3a8c",
+      "assessment_id": "acddfce3-6878-4981-8a79-1283f09ebc7b",
+      "target_colour_id": "892f018f-f66e-4774-a741-bb1b72e9d436",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -2613,7 +2636,9 @@
           "recommendation": null
         }
       ],
-      "warnings": [],
+      "warnings": [
+        "Exposed YELLOW_GOLD natural undertone: add 2\u20133g Violet / Pearl counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect."
+      ],
       "missing_information": [],
       "predicted_result": {
         "universal_colour": {
@@ -2633,11 +2658,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
-        "Blondor Technical Folder Page 7, 10, 14"
+        "Blondor Technical Folder Page 7, 10, 14",
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": "Level 8 YELLOW_GOLD",
+      "counter_toner_recommendation": "Exposed YELLOW_GOLD natural undertone: add 2\u20133g Violet / Pearl counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect.",
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.465215Z"
+      "evaluated_at": "2026-11-15T22:34:43.213973Z"
     }
   },
   {
@@ -2688,15 +2716,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "396f2bb9-6f2e-4023-b042-183e88ad3047",
+      "formulation_id": "b2e583fc-dcc0-4f2c-a308-75a3f3135972",
       "status": "REQUIRES_PROFESSIONAL_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "6246db25-63d7-463d-9217-1d790f909100",
-      "target_colour_id": "ec69dfe5-8445-42e0-b8b9-ef26bb87b25c",
+      "assessment_id": "0da8c31a-d905-46b7-a436-ea22c389a307",
+      "target_colour_id": "75895996-1366-423d-bc3d-e1e309cee12f",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -3304,8 +3332,11 @@
         "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
         "Blondor Technical Folder Page 7, 10, 14"
       ],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": "Level 8 YELLOW_GOLD",
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.517950Z"
+      "evaluated_at": "2026-11-15T22:34:43.268352Z"
     }
   },
   {
@@ -3325,15 +3356,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "e01acba2-105a-4315-9ddd-608a7c03be3d",
+      "formulation_id": "5dec8609-0c48-429f-9f3a-2d2f7f6684e5",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "6799e9dd-271a-40d5-bee7-58b8854c56d3",
-      "target_colour_id": "30f2f143-348c-4e5f-b03b-b271311e2b48",
+      "assessment_id": "2f181c4b-fe35-4c88-9bf2-3809e269b410",
+      "target_colour_id": "0f6b6e38-9c15-4c4e-9f15-16f5ecfeb811",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [],
       "regions": [],
@@ -3383,8 +3414,11 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [],
+      "technique": "ALL_OVER",
+      "exposed_underlying_pigment": null,
+      "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T00:12:20.569946Z"
+      "evaluated_at": "2026-11-15T22:34:43.358198Z"
     }
   }
 ]
