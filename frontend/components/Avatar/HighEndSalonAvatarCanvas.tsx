@@ -200,20 +200,47 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
 
     const { width, height, basePixels, alphaPixels, zonePixels, skinPixels } = cache;
     const isFront = view === 'front';
-    const normSkin = (skinTone || 'olive').toLowerCase().replace(/_/g, '-');
-    const skinMultipliers: Record<string, [number, number, number]> = {
-      'very-fair': [1.05, 1.03, 1.05],
-      'fair': [1.04, 1.02, 1.04],
-      'light': [1.00, 1.00, 1.00],
-      'medium': [0.96, 0.94, 0.92],
-      'olive': [0.92, 0.92, 0.84],
-      'tan': [0.85, 0.80, 0.70],
-      'brown': [0.72, 0.65, 0.55],
-      'dark': [0.60, 0.52, 0.44],
-      'deep': [0.58, 0.50, 0.42],
+    const normSkin = (skinTone || 'medium').toLowerCase().replace(/_/g, '-');
+    
+    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles
+    const skinProfiles: Record<string, { mult: [number, number, number]; sss: [number, number, number] }> = {
+      'very-fair': { mult: [1.03, 0.98, 0.94], sss: [10, 4, -4] },
+      'fair':      { mult: [1.03, 0.97, 0.91], sss: [12, 5, -5] },
+      'light':     { mult: [1.02, 0.95, 0.86], sss: [14, 6, -6] },
+      'medium':    { mult: [1.00, 0.91, 0.79], sss: [16, 7, -8] },
+      'olive':     { mult: [0.97, 0.89, 0.75], sss: [14, 8, -10] },
+      'tan':       { mult: [0.91, 0.78, 0.63], sss: [18, 9, -12] },
+      'brown':     { mult: [0.78, 0.62, 0.47], sss: [16, 8, -10] },
+      'dark':      { mult: [0.63, 0.47, 0.35], sss: [12, 6, -8] },
+      'deep':      { mult: [0.50, 0.36, 0.26], sss: [10, 5, -6] },
     };
-    const [skinMultR, skinMultG, skinMultB] = skinMultipliers[normSkin] || [1.0, 1.0, 1.0];
-    const applySkinRecolor = isFront && skinPixels && normSkin !== 'light';
+    const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['medium'];
+
+    // Lighting Ambient Radiance Coupling on Skin
+    let skinAmbientR = 1.0;
+    let skinAmbientG = 1.0;
+    let skinAmbientB = 1.0;
+    if (lighting === "salon") {
+      skinAmbientR = 1.04;
+      skinAmbientG = 1.02;
+      skinAmbientB = 0.95;
+    } else if (lighting === "cool") {
+      skinAmbientR = 0.98;
+      skinAmbientG = 1.00;
+      skinAmbientB = 1.03;
+    } else {
+      skinAmbientR = 1.01;
+      skinAmbientG = 1.00;
+      skinAmbientB = 0.98;
+    }
+
+    const targetSkinMultR = activeSkinProfile.mult[0] * skinAmbientR;
+    const targetSkinMultG = activeSkinProfile.mult[1] * skinAmbientG;
+    const targetSkinMultB = activeSkinProfile.mult[2] * skinAmbientB;
+    const sssR = activeSkinProfile.sss[0];
+    const sssG = activeSkinProfile.sss[1];
+    const sssB = activeSkinProfile.sss[2];
+    const applySkinRecolor = isFront && !!skinPixels;
 
     const [rawRootsR, rawRootsG, rawRootsB] = hexToRgb(rootsColor);
     const [rawMidR, rawMidG, rawMidB] = separateZones ? hexToRgb(midColor) : [rawRootsR, rawRootsG, rawRootsB];
@@ -283,9 +310,17 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
         if (applySkinRecolor) {
           const sAlpha = skinPixels[p] / 255;
           if (sAlpha > 0.01) {
-            out[i] = Math.min(255, Math.round(basePixels[i] * (1 - sAlpha + sAlpha * skinMultR)));
-            out[i + 1] = Math.min(255, Math.round(basePixels[i + 1] * (1 - sAlpha + sAlpha * skinMultG)));
-            out[i + 2] = Math.min(255, Math.round(basePixels[i + 2] * (1 - sAlpha + sAlpha * skinMultB)));
+            const bR = basePixels[i];
+            const bG = basePixels[i + 1];
+            const bB = basePixels[i + 2];
+            const sLum = (0.299 * bR + 0.587 * bG + 0.114 * bB) / 255;
+            const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
+            const skR = Math.min(255, Math.max(0, Math.round(bR * targetSkinMultR + sssR * sssFactor)));
+            const skG = Math.min(255, Math.max(0, Math.round(bG * targetSkinMultG + sssG * sssFactor)));
+            const skB = Math.min(255, Math.max(0, Math.round(bB * targetSkinMultB + sssB * sssFactor)));
+            out[i] = Math.round(bR * (1 - sAlpha) + skR * sAlpha);
+            out[i + 1] = Math.round(bG * (1 - sAlpha) + skG * sAlpha);
+            out[i + 2] = Math.round(bB * (1 - sAlpha) + skB * sAlpha);
             out[i + 3] = 255;
             continue;
           }
@@ -389,9 +424,14 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       if (applySkinRecolor) {
         const sAlpha = skinPixels[p] / 255;
         if (sAlpha > 0.01) {
-          bgR = Math.min(255, Math.round(origR * (1 - sAlpha + sAlpha * skinMultR)));
-          bgG = Math.min(255, Math.round(origG * (1 - sAlpha + sAlpha * skinMultG)));
-          bgB = Math.min(255, Math.round(origB * (1 - sAlpha + sAlpha * skinMultB)));
+          const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
+          const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
+          const skR = Math.min(255, Math.max(0, Math.round(origR * targetSkinMultR + sssR * sssFactor)));
+          const skG = Math.min(255, Math.max(0, Math.round(origG * targetSkinMultG + sssG * sssFactor)));
+          const skB = Math.min(255, Math.max(0, Math.round(origB * targetSkinMultB + sssB * sssFactor)));
+          bgR = Math.round(origR * (1 - sAlpha) + skR * sAlpha);
+          bgG = Math.round(origG * (1 - sAlpha) + skG * sAlpha);
+          bgB = Math.round(origB * (1 - sAlpha) + skB * sAlpha);
         }
       }
 
