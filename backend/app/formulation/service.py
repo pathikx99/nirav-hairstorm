@@ -85,6 +85,7 @@ class FormulationService:
                 target=target,
                 manufacturer=mfg,
                 market=request.market,
+                technique=str(request.technique) if request.technique else None,
                 db=db,
             )
 
@@ -116,6 +117,7 @@ class FormulationService:
                     target=target,
                     manufacturer=m,
                     market=request.market,
+                    technique=str(request.technique) if request.technique else None,
                     db=db,
                 )
                 evaluated_results.append(res)
@@ -143,6 +145,7 @@ class FormulationService:
         manufacturer: Manufacturer,
         market: str,
         db: AsyncSession,
+        technique: str | None = None,
     ) -> FormulationResultResponse:
         """Loads manufacturer records from the database and runs FormulationEngine."""
         # 1. Fetch published catalogue version
@@ -245,4 +248,5 @@ class FormulationService:
             developers=developers,
             rules=rules,
             catalogue_version=catalogue_version,
+            technique=technique,
         )

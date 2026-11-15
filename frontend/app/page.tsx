@@ -89,27 +89,25 @@ export default function HomePage() {
 
   if (mode === "STYLIST") {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-10">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
         {/* Salon Stylist Hero */}
-        <section className="relative overflow-hidden rounded-3xl border border-amber-500/30 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-950 p-6 sm:p-10 shadow-2xl">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-            <div className="space-y-3 max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/15 px-3.5 py-1 text-xs font-black text-amber-300">
+        <section className="relative overflow-hidden rounded-3xl border border-amber-500/30 bg-gradient-to-b from-neutral-900 via-neutral-900 to-neutral-950 p-5 sm:p-8 shadow-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/15 px-3 py-1 text-xs font-black text-amber-300">
                 <span>✨</span> Salon Edition • Professional Hair Color Made Simple
               </div>
-              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+              <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
                 Welcome! Start a New Hair Color Formulation
               </h1>
-              <p className="text-sm sm:text-base text-neutral-300">
+              <p className="text-xs sm:text-sm text-neutral-300">
                 Assess client hair, select their target look, and get the exact scale formula and step-by-step instructions.
               </p>
             </div>
-
-            
           </div>
 
           {/* Giant Primary Action Cards */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
               href="/starting-hair"
               className="group flex flex-col justify-between rounded-3xl border-2 border-amber-500/50 bg-gradient-to-br from-amber-500/20 to-neutral-900/80 p-6 shadow-xl hover:border-amber-400 hover:scale-[1.02] transition-all"

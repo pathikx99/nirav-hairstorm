@@ -80,6 +80,9 @@ class ApplicationTechniqueEnum(str, Enum):
     BALAYAGE_FOIL = "BALAYAGE_FOIL"
     TONING_GLOSS = "TONING_GLOSS"
     DUAL_APPLICATION = "DUAL_APPLICATION"
+    SHADOW_ROOT = "SHADOW_ROOT"
+    COLOR_MELT = "COLOR_MELT"
+    ALL_OVER = "ALL_OVER"
 
 
 class HairConditionEnum(str, Enum):

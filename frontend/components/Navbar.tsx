@@ -6,7 +6,7 @@ import { useApp } from "../context/AppContext";
 
 export function Navbar() {
   const pathname = usePathname();
-  const { mode, setMode } = useApp();
+  const { mode, setMode, consultationMode, setConsultationMode } = useApp();
 
   const navLinks = [
     { href: "/", label: "Home", icon: "🏠" },
@@ -61,20 +61,36 @@ export function Navbar() {
           </nav>
         </div>
 
-        {/* Mode Switcher: Stylist (Easy) vs Chemist (Data) */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* Mode Switchers: Express vs Pro + Stylist vs Chemist */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          {/* Express vs Pro Toggle */}
+          <button
+            type="button"
+            onClick={() => setConsultationMode(consultationMode === "EXPRESS" ? "PRO" : "EXPRESS")}
+            className={`rounded-xl border px-2.5 py-1.5 text-xs font-black transition-all shadow-sm active:scale-95 flex items-center gap-1 ${
+              consultationMode === "EXPRESS"
+                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500"
+                : "border-purple-500 bg-purple-500/20 text-purple-300 ring-1 ring-purple-500"
+            }`}
+            title="Toggle Express Consultation (Fast) or Pro Lab Mode (Comprehensive)"
+          >
+            <span>{consultationMode === "EXPRESS" ? "⚡" : "🔬"}</span>
+            <span className="hidden xs:inline">{consultationMode === "EXPRESS" ? "Express" : "Pro Lab"}</span>
+          </button>
+
+          {/* Stylist vs Chemist Toggle */}
           <button
             type="button"
             onClick={handleToggleMode}
-            className={`rounded-xl border px-3 py-1.5 text-xs font-black transition-all shadow-sm active:scale-95 flex items-center gap-1.5 ${
+            className={`rounded-xl border px-2.5 py-1.5 text-xs font-black transition-all shadow-sm active:scale-95 flex items-center gap-1 ${
               mode === "STYLIST"
                 ? "border-amber-500 bg-amber-500/20 text-amber-300 ring-1 ring-amber-500"
                 : "border-indigo-500 bg-indigo-500/20 text-indigo-300 ring-1 ring-indigo-500"
             }`}
             title="Toggle between Stylist (Visual) and Chemist (Technical) view"
           >
-            <span>{mode === "STYLIST" ? "✂️" : "🔬"}</span>
-            <span>{mode === "STYLIST" ? "Stylist View" : "Chemist Data"}</span>
+            <span>{mode === "STYLIST" ? "✂️" : "🧪"}</span>
+            <span className="hidden xs:inline">{mode === "STYLIST" ? "Stylist" : "Chemist"}</span>
           </button>
         </div>
       </div>

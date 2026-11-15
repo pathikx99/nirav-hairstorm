@@ -1,0 +1,595 @@
+{
+  "profile": {
+    "manufacturer": {
+      "name": "Schwarzkopf Professional",
+      "slug": "schwarzkopf-india",
+      "country_of_origin": "Germany",
+      "supported_markets": {
+        "IN": true
+      },
+      "website": "https://www.schwarzkopf-professional.in",
+      "status": "ACTIVE"
+    },
+    "catalogue_version": {
+      "market": "IN",
+      "version": "1.0",
+      "status": "PUBLISHED"
+    },
+    "source_documents": [
+      {
+        "key": "igora_royal_technical_manual",
+        "title": "Schwarzkopf Professional Igora Royal Technical Manual & Shade Guide India",
+        "publisher": "Henkel Schwarzkopf Professional",
+        "document_type": "TECHNICAL_MANUAL",
+        "market": "IN",
+        "language": "en",
+        "document_version": "1.0",
+        "permission_status": "GRANTED",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "shades": [
+    {
+      "shade_code": "1-0",
+      "shade_name": "Igora Royal 1-0 Black",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "1",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 1-0 Black Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "3-0",
+      "shade_name": "Igora Royal 3-0 Dark Brown",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "3",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 3-0 Dark Brown Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4-0",
+      "shade_name": "Igora Royal 4-0 Medium Brown",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 4-0 Medium Brown Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5-0",
+      "shade_name": "Igora Royal 5-0 Light Brown",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 5-0 Light Brown Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6-0",
+      "shade_name": "Igora Royal 6-0 Dark Blonde",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 6-0 Dark Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7-0",
+      "shade_name": "Igora Royal 7-0 Medium Blonde",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 7-0 Medium Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8-0",
+      "shade_name": "Igora Royal 8-0 Light Blonde",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 8-0 Light Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9-0",
+      "shade_name": "Igora Royal 9-0 Extra Light Blonde",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 9-0 Extra Light Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10-0",
+      "shade_name": "Igora Royal 10-0 Ultra Light Blonde",
+      "manufacturer_family": "Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "0",
+      "original_description": "Schwarzkopf Professional Igora Royal 10-0 Ultra Light Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7-1",
+      "shade_name": "Igora Royal 7-1 Medium Blonde Cendr\u00e9",
+      "manufacturer_family": "Cendr\u00e9",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "1",
+      "original_description": "Schwarzkopf Professional Igora Royal 7-1 Medium Blonde Cendr\u00e9 (Ash)",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8-1",
+      "shade_name": "Igora Royal 8-1 Light Blonde Cendr\u00e9",
+      "manufacturer_family": "Cendr\u00e9",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "1",
+      "original_description": "Schwarzkopf Professional Igora Royal 8-1 Light Blonde Cendr\u00e9 (Ash)",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7-4",
+      "shade_name": "Igora Royal 7-4 Medium Blonde Beige",
+      "manufacturer_family": "Beige",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "4",
+      "original_description": "Schwarzkopf Professional Igora Royal 7-4 Medium Blonde Beige",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7-5",
+      "shade_name": "Igora Royal 7-5 Medium Blonde Gold",
+      "manufacturer_family": "Gold",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "5",
+      "original_description": "Schwarzkopf Professional Igora Royal 7-5 Medium Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7-77",
+      "shade_name": "Igora Royal 7-77 Medium Blonde Copper Extra",
+      "manufacturer_family": "Copper",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "77",
+      "original_description": "Schwarzkopf Professional Igora Royal 7-77 Medium Blonde Copper Extra",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "COPPER",
+        "secondary_tone": "COPPER",
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.99,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6-88",
+      "shade_name": "Igora Royal 6-88 Dark Blonde Red Extra",
+      "manufacturer_family": "Red",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "88",
+      "original_description": "Schwarzkopf Professional Igora Royal 6-88 Dark Blonde Red Extra",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": "RED",
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.99,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5-99",
+      "shade_name": "Igora Royal 5-99 Light Brown Violet Extra",
+      "manufacturer_family": "Violet",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "99",
+      "original_description": "Schwarzkopf Professional Igora Royal 5-99 Light Brown Violet Extra",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "VIOLET",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.99,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0-00",
+      "shade_name": "Igora Royal 0-00 Clear / Diluter",
+      "manufacturer_family": "Neutralisers & Pastels",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "00",
+      "original_description": "Schwarzkopf Professional Igora Royal 0-00 Clear Diluter",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "SOFT",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0-11",
+      "shade_name": "Igora Royal 0-11 Anti-Orange Concentrate",
+      "manufacturer_family": "Neutralisers & Pastels",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "11",
+      "original_description": "Schwarzkopf Professional Igora Royal 0-11 Anti-Orange Ash Concentrate",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "ASH",
+        "secondary_tone": "BLUE",
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 1.0,
+        "verification_status": "VERIFIED"
+      }
+    }
+  ],
+  "developers": [
+    {
+      "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 3% (10 Vol)",
+      "concentration_percent": 3.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "darkening",
+          "deposit_only",
+          "pastel_toning"
+        ],
+        "volume_equivalent": 10
+      },
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 6% (20 Vol)",
+      "concentration_percent": 6.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "1_to_2_levels_lift",
+          "grey_coverage",
+          "tone_on_tone"
+        ],
+        "volume_equivalent": 20
+      },
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 9% (30 Vol)",
+      "concentration_percent": 9.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "2_to_3_levels_lift",
+          "series_00_grey_coverage"
+        ],
+        "volume_equivalent": 30
+      },
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Schwarzkopf Professional Igora Royal Oil Developer 12% (40 Vol)",
+      "concentration_percent": 12.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "3_to_4_levels_lift",
+          "high_lift_series_10_12"
+        ],
+        "volume_equivalent": 40
+      },
+      "source_doc_key": "igora_royal_technical_manual",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "rules": [
+    {
+      "rule_code": "SCHWARZKOPF-IGORA-MIX-STANDARD",
+      "product_family": "Igora Royal",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "MIXING_RATIO",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_line": "Igora Royal",
+        "service_type": "PERMANENT_COLOUR"
+      },
+      "actions": {
+        "mixing_ratio": {
+          "colour_parts": 1.0,
+          "developer_parts": 1.0
+        },
+        "example": "60g Igora Royal colour + 60g Igora Royal Oil Developer"
+      },
+      "source_section": "Igora Royal Technical Manual - Mixing Guidelines",
+      "source_doc_key": "igora_royal_technical_manual",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "SCHWARZKOPF-IGORA-DEV-LIFT",
+      "product_family": "Igora Royal",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "DEVELOPER_COMPATIBILITY",
+      "market": "IN",
+      "priority": 2,
+      "conditions": {
+        "product_line": "Igora Royal"
+      },
+      "actions": {
+        "developer_choices": {
+          "3% (10 Vol)": {
+            "target_lift": 0,
+            "notes": "Darker or tone-on-tone"
+          },
+          "6% (20 Vol)": {
+            "target_lift": 2,
+            "notes": "Up to 2 levels of lift, 100% white hair coverage"
+          },
+          "9% (30 Vol)": {
+            "target_lift": 3,
+            "notes": "Up to 3 levels of lift"
+          },
+          "12% (40 Vol)": {
+            "target_lift": 4,
+            "notes": "Up to 4 levels of lift"
+          }
+        }
+      },
+      "source_section": "Igora Royal Technical Manual - Developer Selection",
+      "source_doc_key": "igora_royal_technical_manual",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "SCHWARZKOPF-IGORA-TIME",
+      "product_family": "Igora Royal",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "PROCESSING_TIME",
+      "market": "IN",
+      "priority": 3,
+      "conditions": {
+        "product_line": "Igora Royal"
+      },
+      "actions": {
+        "standard_time_minutes": 35,
+        "time_range": "30\u201345 min without heat",
+        "heat_permitted": false
+      },
+      "source_section": "Igora Royal Technical Manual - Development Times",
+      "source_doc_key": "igora_royal_technical_manual",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "SCHWARZKOPF-IGORA-GREY-COVERAGE",
+      "product_family": "Igora Royal",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "GREY_COVERAGE",
+      "market": "IN",
+      "priority": 4,
+      "conditions": {
+        "product_line": "Igora Royal",
+        "grey_percentage_min": 50
+      },
+      "actions": {
+        "grey_strategy": "ADD_NATURAL_BASE",
+        "ratio": "1:1 with -0 or -00 shade",
+        "recommended_developer": "6% (20 Vol) or 9% (30 Vol for resistant hair)"
+      },
+      "source_section": "Igora Royal Technical Manual - White Hair Coverage",
+      "source_doc_key": "igora_royal_technical_manual",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

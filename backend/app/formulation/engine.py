@@ -68,6 +68,7 @@ class FormulationEngine:
         developers: list[Developer],
         rules: list[ProductRule],
         catalogue_version: CatalogueVersion,
+        technique: str | None = None,
     ) -> FormulationResultResponse:
         """
         Executes the full formulation evaluation pipeline.
@@ -185,7 +186,43 @@ class FormulationEngine:
             )
 
         # -------------------------------------------------------------------
-        # Step 5: Generate Stages and Regional Plans
+        # Step 5: Natural Contributing Pigment (NRP) & Neutralization
+        # -------------------------------------------------------------------
+        exposed_nrp: str | None = None
+        counter_toner_rec: str | None = None
+        roots_delta = int(target.universal_level) - int(assessment.roots.observed_level)
+
+        if roots_delta > 0:
+            from backend.app.formulation.repigmentation import UNDERLYING_PIGMENT_MAP
+
+            target_lvl_int = int(target.universal_level)
+            nrp_entry = UNDERLYING_PIGMENT_MAP.get(target_lvl_int, {})
+            warmth = nrp_entry.get("warmth_name", "WARM")
+            exposed_nrp = f"Level {target_lvl_int} {warmth}"
+
+            if target.primary_tone in (
+                ToneFamilyEnum.ASH,
+                ToneFamilyEnum.BLUE,
+                ToneFamilyEnum.PEARL,
+                ToneFamilyEnum.VIOLET,
+            ):
+                if "YELLOW" in warmth:
+                    counter_tone = "Violet / Pearl"
+                    g_amt = "2–3g"
+                elif "ORANGE" in warmth:
+                    counter_tone = "Blue / Ash"
+                    g_amt = "3–5g"
+                else:
+                    counter_tone = "Green / Ash"
+                    g_amt = "2–4g"
+                counter_toner_rec = (
+                    f"Exposed {warmth} natural undertone: add {g_amt} {counter_tone} counter-neutralizer "
+                    f"per 60g formula to cancel brassiness and lock in target {target.primary_tone.value} reflect."
+                )
+                warnings.append(counter_toner_rec)
+
+        # -------------------------------------------------------------------
+        # Step 6: Generate Stages and Regional Plans
         # -------------------------------------------------------------------
         stages, region_plans, shared_reg = cls._generate_stages_and_plans(
             assessment=assessment,
@@ -204,6 +241,7 @@ class FormulationEngine:
             safety_checks=safety_checks,
             warnings=warnings,
             source_refs=source_refs,
+            technique=technique,
         )
 
         # Determine final status
@@ -249,6 +287,9 @@ class FormulationEngine:
             missing_information=[],
             predicted_result=predicted_result,
             source_references=list(set(source_refs)),
+            technique=technique or "ALL_OVER",
+            exposed_underlying_pigment=exposed_nrp,
+            counter_toner_recommendation=counter_toner_rec,
         )
 
     # -----------------------------------------------------------------------
@@ -420,6 +461,7 @@ class FormulationEngine:
         safety_checks: list[SafetyCheckResult],
         warnings: list[str],
         source_refs: list[str],
+        technique: str | None = None,
     ) -> tuple[list[FormulationStage], list[RegionFormulationPlan], bool]:
         """Builds ordered stages and per-region plans."""
         stages: list[FormulationStage] = []
@@ -1012,33 +1054,159 @@ class FormulationEngine:
                 "For high porosity ends, reduce dwell time or emulsify during final 10–15 minutes to avoid over-pigmentation."
             )
 
-        stage_single = FormulationStage(
-            stage_number=stage_counter,
-            service_type=overall_classification,
-            stage_description=f"Stage {stage_counter}: {overall_classification.value} application.",
-            target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
-            products=products,
-            developer=dev_formula,
-            mixing_ratio_text=mix_ratio,
-            development_time_minutes=dev_time,
-            development_time_range=dev_time_range,
-            heat_permitted=False,
-            application_instructions=(
-                "Apply mixture systematically to regrowth / roots first. "
-                "If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10–15 minutes."
-            ),
-            rules_applied=[
-                rule_code,
-                "WELLA-KP-MIX-STANDARD" if is_wella else "LOREAL-MAJIREL-MIX",
-            ],
-            source_document_references=[
-                "Koleston Perfect Usage Guidelines" if is_wella else "Majirel Technical Manual"
-            ],
-        )
-        stages.append(stage_single)
-        source_refs.append(
-            "Koleston Perfect Usage Guidelines Page 2" if is_wella else "Majirel Technical Dossier"
-        )
+        if technique in ("SHADOW_ROOT", "COLOR_MELT"):
+            # Dual-Bowl Master Color Melt
+            shadow_level = max(1, min(int(roots.observed_level), target_lvl - 1))
+            shadow_shade = pure_natural_shade or target_shade
+            shadow_code = (
+                f"{shadow_level}/0"
+                if is_wella
+                else (f"{shadow_level}.0" if is_loreal else f"{shadow_level}-0")
+            )
+
+            dev_shadow_formula = DeveloperComponentFormula(
+                developer_id=resolved_dev.id if resolved_dev else None,
+                developer_name="20 Vol (6%) Developer (Roots Anchor)",
+                concentration_percent=Decimal("6.0"),
+                volume_in_vol=20,
+                parts=Decimal("1.0"),
+                weight_grams=Decimal("30.0"),
+            )
+
+            stage_bowl_1 = FormulationStage(
+                stage_number=stage_counter,
+                service_type=ServiceClassificationEnum.DEPOSIT,
+                stage_description=f"Bowl 1 (Root Shadow / Depth Anchor): Depth anchor applied to regrowth zone.",
+                target_regions=[HairRegionEnum.ROOTS],
+                products=[
+                    ProductComponentFormula(
+                        product_type="SHADOW_BASE",
+                        product_id=shadow_shade.product_id if shadow_shade else None,
+                        product_name=f"Level {shadow_level} Base Shade",
+                        shade_id=shadow_shade.id if shadow_shade else None,
+                        shade_code=shadow_code,
+                        shade_name=f"Level {shadow_level} Shadow Foundation",
+                        parts=Decimal("1.0"),
+                        weight_grams=Decimal("30.0"),
+                        notes="Root shadow deposit to create dimension and blend regrowth line.",
+                    )
+                ],
+                developer=dev_shadow_formula,
+                mixing_ratio_text="1:1",
+                development_time_minutes=35,
+                development_time_range="35 min without heat",
+                heat_permitted=False,
+                application_instructions=(
+                    "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). "
+                    "Anchor base depth."
+                ),
+                rules_applied=[rule_code, "TECHNIQUE-SHADOW-ROOT-BOWL-1"],
+                source_document_references=["Salon Creative Color Melt & Shadow Root Guide"],
+            )
+            stage_counter += 1
+
+            # Bowl 2: Mid-Lengths & Ends Melt
+            melt_dev_vol = 10 if has_high_porosity else 20
+            melt_dev_pct = Decimal("3.0") if has_high_porosity else Decimal("6.0")
+            dev_melt_formula = DeveloperComponentFormula(
+                developer_id=resolved_dev.id if resolved_dev else None,
+                developer_name=f"{melt_dev_vol} Vol Developer (Melt Glaze)",
+                concentration_percent=melt_dev_pct,
+                volume_in_vol=melt_dev_vol,
+                parts=Decimal("1.0"),
+                weight_grams=Decimal("45.0"),
+            )
+
+            stage_bowl_2 = FormulationStage(
+                stage_number=stage_counter,
+                service_type=overall_classification,
+                stage_description=f"Bowl 2 (Luminous Color Melt): Vibrant fashion glaze feathered through lengths.",
+                target_regions=[HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
+                products=[
+                    ProductComponentFormula(
+                        product_type="MELT_GLAZE",
+                        product_id=target_shade.product_id if target_shade else None,
+                        product_name=target_shade.shade_name if target_shade else "Target Shade",
+                        shade_id=target_shade.id if target_shade else None,
+                        shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                        shade_name=target_shade.shade_name if target_shade else "Target Glaze",
+                        parts=Decimal("1.0"),
+                        weight_grams=Decimal("45.0"),
+                        notes="Target tonal reflect melt.",
+                    )
+                ],
+                developer=dev_melt_formula,
+                mixing_ratio_text="1:1",
+                development_time_minutes=30,
+                development_time_range="30 min concurrent with Bowl 1",
+                heat_permitted=False,
+                application_instructions=(
+                    "Immediately following Bowl 1, apply Bowl 2 through mid-lengths and ends. Use a wide-tooth comb "
+                    "or gloved fingers to smudge and blur the boundary line between Bowl 1 and Bowl 2 for an ultra-seamless melted gradient."
+                ),
+                rules_applied=[rule_code, "TECHNIQUE-COLOR-MELT-BOWL-2"],
+                source_document_references=["Salon Creative Color Melt & Shadow Root Guide"],
+            )
+            stages.extend([stage_bowl_1, stage_bowl_2])
+            source_refs.append("Salon Creative Color Melt & Shadow Root Guide")
+        elif technique == "GLOSS_TONING":
+            # Deposit-only toning gloss
+            dev_gloss = DeveloperComponentFormula(
+                developer_id=resolved_dev.id if resolved_dev else None,
+                developer_name="10 Vol (3%) Developer (Deposit-Only Gloss)",
+                concentration_percent=Decimal("3.0"),
+                volume_in_vol=10,
+                parts=Decimal("1.0"),
+                weight_grams=Decimal("60.0"),
+            )
+            stage_gloss = FormulationStage(
+                stage_number=stage_counter,
+                service_type=ServiceClassificationEnum.TONING,
+                stage_description=f"Stage {stage_counter}: Deposit-Only Toning Glaze (No Base Lift).",
+                target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
+                products=products,
+                developer=dev_gloss,
+                mixing_ratio_text="1:1",
+                development_time_minutes=20,
+                development_time_range="15–20 min visual timing",
+                heat_permitted=False,
+                application_instructions=(
+                    "Apply toning gloss to damp or dry hair at the shampoo basin or station. "
+                    "Massage thoroughly to saturate fibers. Dwell 15–20 min with visual inspection."
+                ),
+                rules_applied=[rule_code, "TECHNIQUE-GLOSS-TONING"],
+                source_document_references=["Salon Demi-Permanent Toning & Glossing Protocol"],
+            )
+            stages.append(stage_gloss)
+            source_refs.append("Salon Demi-Permanent Toning & Glossing Protocol")
+        else:
+            stage_single = FormulationStage(
+                stage_number=stage_counter,
+                service_type=overall_classification,
+                stage_description=f"Stage {stage_counter}: {overall_classification.value} application.",
+                target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
+                products=products,
+                developer=dev_formula,
+                mixing_ratio_text=mix_ratio,
+                development_time_minutes=dev_time,
+                development_time_range=dev_time_range,
+                heat_permitted=False,
+                application_instructions=(
+                    "Apply mixture systematically to regrowth / roots first. "
+                    "If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10–15 minutes."
+                ),
+                rules_applied=[
+                    rule_code,
+                    "WELLA-KP-MIX-STANDARD" if is_wella else "LOREAL-MAJIREL-MIX",
+                ],
+                source_document_references=[
+                    "Koleston Perfect Usage Guidelines" if is_wella else "Majirel Technical Manual"
+                ],
+            )
+            stages.append(stage_single)
+            source_refs.append(
+                "Koleston Perfect Usage Guidelines Page 2" if is_wella else "Majirel Technical Dossier"
+            )
 
         # Build region plans
         for reg in (roots, mid, ends):

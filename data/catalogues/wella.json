@@ -1,0 +1,4862 @@
+{
+  "profile": {
+    "manufacturer": {
+      "name": "Wella Professionals",
+      "slug": "wella-india",
+      "country_of_origin": "Germany",
+      "supported_markets": {
+        "IN": true
+      },
+      "website": "https://www.wella.com",
+      "status": "ACTIVE"
+    },
+    "catalogue_version": {
+      "market": "IN",
+      "version": "1.0",
+      "status": "PUBLISHED"
+    },
+    "source_documents": [
+      {
+        "key": "kp_usage_guidelines",
+        "title": "Koleston Perfect Usage Guidelines & Technical Folder",
+        "publisher": "Wella Professionals",
+        "document_type": "TECHNICAL_MANUAL",
+        "market": "IN",
+        "language": "en",
+        "document_version": "1.0",
+        "permission_status": "GRANTED",
+        "verification_status": "VERIFIED"
+      },
+      {
+        "key": "blondor_technical_folder",
+        "title": "Blondor Technical Folder & Services Guide",
+        "publisher": "Wella Professionals",
+        "document_type": "LIGHTENER_GUIDE",
+        "market": "IN",
+        "language": "en",
+        "document_version": "1.0",
+        "permission_status": "GRANTED",
+        "verification_status": "VERIFIED"
+      }
+    ]
+  },
+  "shades": [
+    {
+      "shade_code": "10/0",
+      "shade_name": "Lightest Blonde Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 10/0 Lightest Blonde Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/00",
+      "shade_name": "Lightest Blonde Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 10/00 Lightest Blonde Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/03",
+      "shade_name": "Lightest Blonde Natural Gold",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "03",
+      "original_description": "Koleston Perfect ME+ 10/03 Lightest Blonde Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/04",
+      "shade_name": "Lightest Blonde Natural Red",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "04",
+      "original_description": "Koleston Perfect ME+ 10/04 Lightest Blonde Natural Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "RED",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/0",
+      "shade_name": "Very Light Blonde Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 9/0 Very Light Blonde Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "99/0",
+      "shade_name": "Very Light Blonde Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "99",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 99/0 Very Light Blonde Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/00",
+      "shade_name": "Very Light Blonde Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 9/00 Very Light Blonde Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/01",
+      "shade_name": "Very Light Blonde Natural Ash",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "01",
+      "original_description": "Koleston Perfect ME+ 9/01 Very Light Blonde Natural Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/03",
+      "shade_name": "Very Light Blonde Natural Gold",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "03",
+      "original_description": "Koleston Perfect ME+ 9/03 Very Light Blonde Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/04",
+      "shade_name": "Very Light Blonde Natural Red",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "04",
+      "original_description": "Koleston Perfect ME+ 9/04 Very Light Blonde Natural Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "RED",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/0",
+      "shade_name": "Light Blonde Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 8/0 Light Blonde Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "88/0",
+      "shade_name": "Light Blonde Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "88",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 88/0 Light Blonde Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "88/02",
+      "shade_name": "Light Blonde Resistant Cool Cover",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "88",
+      "manufacturer_tone_code": "02",
+      "original_description": "Koleston Perfect ME+ 88/02 Light Blonde Resistant Cool Cover",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GREEN",
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/00",
+      "shade_name": "Light Blonde Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 8/00 Light Blonde Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/01",
+      "shade_name": "Light Blonde Natural Ash",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "01",
+      "original_description": "Koleston Perfect ME+ 8/01 Light Blonde Natural Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/03",
+      "shade_name": "Light Blonde Natural Gold",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "03",
+      "original_description": "Koleston Perfect ME+ 8/03 Light Blonde Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/04",
+      "shade_name": "Light Blonde Natural Red",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "04",
+      "original_description": "Koleston Perfect ME+ 8/04 Light Blonde Natural Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "RED",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/07",
+      "shade_name": "Light Blonde Natural Brown",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 8/07 Light Blonde Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/0",
+      "shade_name": "Medium Blonde Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 7/0 Medium Blonde Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "77/0",
+      "shade_name": "Medium Blonde Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "77",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 77/0 Medium Blonde Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "77/02",
+      "shade_name": "Medium Blonde Resistant Cool Cover",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "77",
+      "manufacturer_tone_code": "02",
+      "original_description": "Koleston Perfect ME+ 77/02 Medium Blonde Resistant Cool Cover",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GREEN",
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/00",
+      "shade_name": "Medium Blonde Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 7/00 Medium Blonde Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/01",
+      "shade_name": "Medium Blonde Natural Ash",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "01",
+      "original_description": "Koleston Perfect ME+ 7/01 Medium Blonde Natural Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/03",
+      "shade_name": "Medium Blonde Natural Gold",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "03",
+      "original_description": "Koleston Perfect ME+ 7/03 Medium Blonde Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/07",
+      "shade_name": "Medium Blonde Natural Brown",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 7/07 Medium Blonde Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/0",
+      "shade_name": "Dark Blonde Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 6/0 Dark Blonde Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/0",
+      "shade_name": "Dark Blonde Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 66/0 Dark Blonde Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/02",
+      "shade_name": "Dark Blonde Resistant Cool Cover",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "02",
+      "original_description": "Koleston Perfect ME+ 66/02 Dark Blonde Resistant Cool Cover",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GREEN",
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/00",
+      "shade_name": "Dark Blonde Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 6/00 Dark Blonde Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/07",
+      "shade_name": "Dark Blonde Natural Brown",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 6/07 Dark Blonde Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/0",
+      "shade_name": "Light Brown Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 5/0 Light Brown Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/0",
+      "shade_name": "Light Brown Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 55/0 Light Brown Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/02",
+      "shade_name": "Light Brown Resistant Cool Cover",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "02",
+      "original_description": "Koleston Perfect ME+ 55/02 Light Brown Resistant Cool Cover",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GREEN",
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/00",
+      "shade_name": "Light Brown Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 5/00 Light Brown Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/07",
+      "shade_name": "Light Brown Natural Brown",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 5/07 Light Brown Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/0",
+      "shade_name": "Medium Brown Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 4/0 Medium Brown Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "44/0",
+      "shade_name": "Medium Brown Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "44",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 44/0 Medium Brown Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/00",
+      "shade_name": "Medium Brown Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 4/00 Medium Brown Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/07",
+      "shade_name": "Medium Brown Natural Brown",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 4/07 Medium Brown Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "SOFT",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "3/0",
+      "shade_name": "Dark Brown Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "3",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 3/0 Dark Brown Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "33/0",
+      "shade_name": "Dark Brown Intense Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "33",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 33/0 Dark Brown Intense Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "3/00",
+      "shade_name": "Dark Brown Natural Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "3",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 3/00 Dark Brown Natural Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "2/0",
+      "shade_name": "Black Pure Natural",
+      "manufacturer_family": "Pure Naturals",
+      "manufacturer_depth": "2",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 2/0 Black Pure Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 2,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "NATURAL",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "11/1",
+      "shade_name": "Special Light Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "11",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 11/1 Special Light Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "11/3",
+      "shade_name": "Special Light Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "11",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 11/3 Special Light Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/1",
+      "shade_name": "Lightest Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 10/1 Lightest Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/16",
+      "shade_name": "Lightest Blonde Ash Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "16",
+      "original_description": "Koleston Perfect ME+ 10/16 Lightest Blonde Ash Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/3",
+      "shade_name": "Lightest Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 10/3 Lightest Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/31",
+      "shade_name": "Lightest Blonde Gold Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "31",
+      "original_description": "Koleston Perfect ME+ 10/31 Lightest Blonde Gold Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "GOLD",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/38",
+      "shade_name": "Lightest Blonde Gold Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "38",
+      "original_description": "Koleston Perfect ME+ 10/38 Lightest Blonde Gold Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "GOLD",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/8",
+      "shade_name": "Lightest Blonde Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "8",
+      "original_description": "Koleston Perfect ME+ 10/8 Lightest Blonde Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/86",
+      "shade_name": "Lightest Blonde Pearl Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "86",
+      "original_description": "Koleston Perfect ME+ 10/86 Lightest Blonde Pearl Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/95",
+      "shade_name": "Lightest Blonde Cendre Mahogany",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "95",
+      "original_description": "Koleston Perfect ME+ 10/95 Lightest Blonde Cendre Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/96",
+      "shade_name": "Lightest Blonde Cendre Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "96",
+      "original_description": "Koleston Perfect ME+ 10/96 Lightest Blonde Cendre Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "10/97",
+      "shade_name": "Lightest Blonde Cendre Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "10",
+      "manufacturer_tone_code": "97",
+      "original_description": "Koleston Perfect ME+ 10/97 Lightest Blonde Cendre Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/1",
+      "shade_name": "Very Light Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 9/1 Very Light Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/16",
+      "shade_name": "Very Light Blonde Ash Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "16",
+      "original_description": "Koleston Perfect ME+ 9/16 Very Light Blonde Ash Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "ASH",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/17",
+      "shade_name": "Very Light Blonde Ash Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "17",
+      "original_description": "Koleston Perfect ME+ 9/17 Very Light Blonde Ash Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "ASH",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/3",
+      "shade_name": "Very Light Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 9/3 Very Light Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/31",
+      "shade_name": "Very Light Blonde Gold Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "31",
+      "original_description": "Koleston Perfect ME+ 9/31 Very Light Blonde Gold Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "GOLD",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/38",
+      "shade_name": "Very Light Blonde Gold Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "38",
+      "original_description": "Koleston Perfect ME+ 9/38 Very Light Blonde Gold Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "GOLD",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/8",
+      "shade_name": "Very Light Blonde Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "8",
+      "original_description": "Koleston Perfect ME+ 9/8 Very Light Blonde Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "PEARL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/81",
+      "shade_name": "Very Light Blonde Pearl Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "81",
+      "original_description": "Koleston Perfect ME+ 9/81 Very Light Blonde Pearl Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "PEARL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/96",
+      "shade_name": "Very Light Blonde Cendre Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "96",
+      "original_description": "Koleston Perfect ME+ 9/96 Very Light Blonde Cendre Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/97",
+      "shade_name": "Very Light Blonde Cendre Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "97",
+      "original_description": "Koleston Perfect ME+ 9/97 Very Light Blonde Cendre Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "PEARL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/1",
+      "shade_name": "Light Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 8/1 Light Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/11",
+      "shade_name": "Light Blonde Intense Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "11",
+      "original_description": "Koleston Perfect ME+ 8/11 Light Blonde Intense Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/2",
+      "shade_name": "Light Blonde Matt",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "2",
+      "original_description": "Koleston Perfect ME+ 8/2 Light Blonde Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/3",
+      "shade_name": "Light Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 8/3 Light Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/38",
+      "shade_name": "Light Blonde Gold Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "38",
+      "original_description": "Koleston Perfect ME+ 8/38 Light Blonde Gold Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "GOLD",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/96",
+      "shade_name": "Light Blonde Cendre Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "96",
+      "original_description": "Koleston Perfect ME+ 8/96 Light Blonde Cendre Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/97",
+      "shade_name": "Light Blonde Cendre Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "97",
+      "original_description": "Koleston Perfect ME+ 8/97 Light Blonde Cendre Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "PEARL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/1",
+      "shade_name": "Medium Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 7/1 Medium Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/11",
+      "shade_name": "Medium Blonde Intense Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "11",
+      "original_description": "Koleston Perfect ME+ 7/11 Medium Blonde Intense Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/17",
+      "shade_name": "Medium Blonde Ash Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "17",
+      "original_description": "Koleston Perfect ME+ 7/17 Medium Blonde Ash Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/18",
+      "shade_name": "Medium Blonde Ash Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "18",
+      "original_description": "Koleston Perfect ME+ 7/18 Medium Blonde Ash Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "ASH",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/2",
+      "shade_name": "Medium Blonde Matt",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "2",
+      "original_description": "Koleston Perfect ME+ 7/2 Medium Blonde Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/3",
+      "shade_name": "Medium Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 7/3 Medium Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/31",
+      "shade_name": "Medium Blonde Gold Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "31",
+      "original_description": "Koleston Perfect ME+ 7/31 Medium Blonde Gold Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/36",
+      "shade_name": "Medium Blonde Gold Violet",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "36",
+      "original_description": "Koleston Perfect ME+ 7/36 Medium Blonde Gold Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/37",
+      "shade_name": "Medium Blonde Gold Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "37",
+      "original_description": "Koleston Perfect ME+ 7/37 Medium Blonde Gold Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/38",
+      "shade_name": "Medium Blonde Gold Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "38",
+      "original_description": "Koleston Perfect ME+ 7/38 Medium Blonde Gold Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/1",
+      "shade_name": "Dark Blonde Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 6/1 Dark Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/1",
+      "shade_name": "Dark Blonde Intense Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 66/1 Dark Blonde Intense Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/2",
+      "shade_name": "Dark Blonde Matt",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "2",
+      "original_description": "Koleston Perfect ME+ 6/2 Dark Blonde Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/3",
+      "shade_name": "Dark Blonde Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 6/3 Dark Blonde Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/91",
+      "shade_name": "Dark Blonde Cendre Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "91",
+      "original_description": "Koleston Perfect ME+ 6/91 Dark Blonde Cendre Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "PEARL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/97",
+      "shade_name": "Dark Blonde Cendre Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "97",
+      "original_description": "Koleston Perfect ME+ 6/97 Dark Blonde Cendre Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "PEARL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/1",
+      "shade_name": "Light Brown Ash",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 5/1 Light Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/18",
+      "shade_name": "Light Brown Ash Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "18",
+      "original_description": "Koleston Perfect ME+ 5/18 Light Brown Ash Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "ASH",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/2",
+      "shade_name": "Light Brown Matt",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "2",
+      "original_description": "Koleston Perfect ME+ 5/2 Light Brown Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/3",
+      "shade_name": "Light Brown Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 5/3 Light Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/37",
+      "shade_name": "Light Brown Gold Brown",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "37",
+      "original_description": "Koleston Perfect ME+ 5/37 Light Brown Gold Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "GOLD",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/3",
+      "shade_name": "Medium Brown Gold",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "3",
+      "original_description": "Koleston Perfect ME+ 4/3 Medium Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "2/8",
+      "shade_name": "Black Pearl",
+      "manufacturer_family": "Rich Naturals",
+      "manufacturer_depth": "2",
+      "manufacturer_tone_code": "8",
+      "original_description": "Koleston Perfect ME+ 2/8 Black Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 2,
+        "primary_tone": "PEARL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "99/44",
+      "shade_name": "Very Light Blonde Intense Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "99",
+      "manufacturer_tone_code": "44",
+      "original_description": "Koleston Perfect ME+ 99/44 Very Light Blonde Intense Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/34",
+      "shade_name": "Light Blonde Gold Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "34",
+      "original_description": "Koleston Perfect ME+ 8/34 Light Blonde Gold Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "GOLD",
+        "secondary_tone": "RED",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/41",
+      "shade_name": "Light Blonde Red Ash",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "41",
+      "original_description": "Koleston Perfect ME+ 8/41 Light Blonde Red Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "RED",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/43",
+      "shade_name": "Light Blonde Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 8/43 Light Blonde Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "88/43",
+      "shade_name": "Light Blonde Intense Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "88",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 88/43 Light Blonde Intense Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/45",
+      "shade_name": "Light Blonde Red Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "45",
+      "original_description": "Koleston Perfect ME+ 8/45 Light Blonde Red Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "RED",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/46",
+      "shade_name": "Light Blonde Red Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "46",
+      "original_description": "Koleston Perfect ME+ 8/46 Light Blonde Red Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "RED",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/34",
+      "shade_name": "Medium Blonde Gold Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "34",
+      "original_description": "Koleston Perfect ME+ 7/34 Medium Blonde Gold Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "GOLD",
+        "secondary_tone": "RED",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/41",
+      "shade_name": "Medium Blonde Red Ash",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "41",
+      "original_description": "Koleston Perfect ME+ 7/41 Medium Blonde Red Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/43",
+      "shade_name": "Medium Blonde Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 7/43 Medium Blonde Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "77/43",
+      "shade_name": "Medium Blonde Intense Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "77",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 77/43 Medium Blonde Intense Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "77/44",
+      "shade_name": "Medium Blonde Intense Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "77",
+      "manufacturer_tone_code": "44",
+      "original_description": "Koleston Perfect ME+ 77/44 Medium Blonde Intense Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "77/46",
+      "shade_name": "Medium Blonde Intense Red Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "77",
+      "manufacturer_tone_code": "46",
+      "original_description": "Koleston Perfect ME+ 77/46 Medium Blonde Intense Red Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/47",
+      "shade_name": "Medium Blonde Red Brown",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "47",
+      "original_description": "Koleston Perfect ME+ 7/47 Medium Blonde Red Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "RED",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/34",
+      "shade_name": "Dark Blonde Gold Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "34",
+      "original_description": "Koleston Perfect ME+ 6/34 Dark Blonde Gold Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "GOLD",
+        "secondary_tone": "RED",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/41",
+      "shade_name": "Dark Blonde Red Ash",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "41",
+      "original_description": "Koleston Perfect ME+ 6/41 Dark Blonde Red Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/43",
+      "shade_name": "Dark Blonde Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 6/43 Dark Blonde Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/44",
+      "shade_name": "Dark Blonde Intense Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "44",
+      "original_description": "Koleston Perfect ME+ 66/44 Dark Blonde Intense Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/45",
+      "shade_name": "Dark Blonde Red Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "45",
+      "original_description": "Koleston Perfect ME+ 6/45 Dark Blonde Red Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/46",
+      "shade_name": "Dark Blonde Intense Red Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "46",
+      "original_description": "Koleston Perfect ME+ 66/46 Dark Blonde Intense Red Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "RED",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/5",
+      "shade_name": "Dark Blonde Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "5",
+      "original_description": "Koleston Perfect ME+ 6/5 Dark Blonde Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/55",
+      "shade_name": "Dark Blonde Intense Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "55",
+      "original_description": "Koleston Perfect ME+ 66/55 Dark Blonde Intense Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/56",
+      "shade_name": "Dark Blonde Intense Mahogany Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "56",
+      "original_description": "Koleston Perfect ME+ 66/56 Dark Blonde Intense Mahogany Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/41",
+      "shade_name": "Light Brown Red Ash",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "41",
+      "original_description": "Koleston Perfect ME+ 5/41 Light Brown Red Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "RED",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/43",
+      "shade_name": "Light Brown Red Gold",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 5/43 Light Brown Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/46",
+      "shade_name": "Light Brown Intense Red Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "46",
+      "original_description": "Koleston Perfect ME+ 55/46 Light Brown Intense Red Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "RED",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/5",
+      "shade_name": "Light Brown Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "5",
+      "original_description": "Koleston Perfect ME+ 5/5 Light Brown Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/55",
+      "shade_name": "Light Brown Intense Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "55",
+      "original_description": "Koleston Perfect ME+ 55/55 Light Brown Intense Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/65",
+      "shade_name": "Light Brown Intense Violet Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "65",
+      "original_description": "Koleston Perfect ME+ 55/65 Light Brown Intense Violet Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "VIOLET",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "55/66",
+      "shade_name": "Light Brown Intense Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "55",
+      "manufacturer_tone_code": "66",
+      "original_description": "Koleston Perfect ME+ 55/66 Light Brown Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "44/44",
+      "shade_name": "Medium Brown Intense Red",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "44",
+      "manufacturer_tone_code": "44",
+      "original_description": "Koleston Perfect ME+ 44/44 Medium Brown Intense Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/6",
+      "shade_name": "Medium Brown Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "6",
+      "original_description": "Koleston Perfect ME+ 4/6 Medium Brown Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "44/6",
+      "shade_name": "Medium Brown Intense Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "44",
+      "manufacturer_tone_code": "6",
+      "original_description": "Koleston Perfect ME+ 44/6 Medium Brown Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/66",
+      "shade_name": "Medium Brown Intense Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "66",
+      "original_description": "Koleston Perfect ME+ 4/66 Medium Brown Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "44/65",
+      "shade_name": "Medium Brown Intense Violet Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "44",
+      "manufacturer_tone_code": "65",
+      "original_description": "Koleston Perfect ME+ 44/65 Medium Brown Intense Violet Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "VIOLET",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "44/66",
+      "shade_name": "Medium Brown Extra Intense Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "44",
+      "manufacturer_tone_code": "66",
+      "original_description": "Koleston Perfect ME+ 44/66 Medium Brown Extra Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "33/55",
+      "shade_name": "Dark Brown Intense Mahogany",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "33",
+      "manufacturer_tone_code": "55",
+      "original_description": "Koleston Perfect ME+ 33/55 Dark Brown Intense Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "MAHOGANY",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "33/66",
+      "shade_name": "Dark Brown Intense Violet",
+      "manufacturer_family": "Vibrant Reds",
+      "manufacturer_depth": "33",
+      "manufacturer_tone_code": "66",
+      "original_description": "Koleston Perfect ME+ 33/66 Dark Brown Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 3,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/7",
+      "shade_name": "Very Light Blonde Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 9/7 Very Light Blonde Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "9/73",
+      "shade_name": "Very Light Blonde Brown Gold",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "9",
+      "manufacturer_tone_code": "73",
+      "original_description": "Koleston Perfect ME+ 9/73 Very Light Blonde Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 9,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/7",
+      "shade_name": "Light Blonde Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 8/7 Light Blonde Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/71",
+      "shade_name": "Light Blonde Brown Ash",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "71",
+      "original_description": "Koleston Perfect ME+ 8/71 Light Blonde Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/73",
+      "shade_name": "Light Blonde Brown Gold",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "73",
+      "original_description": "Koleston Perfect ME+ 8/73 Light Blonde Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "8/74",
+      "shade_name": "Light Blonde Brown Red",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "8",
+      "manufacturer_tone_code": "74",
+      "original_description": "Koleston Perfect ME+ 8/74 Light Blonde Brown Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 8,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "RED",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/7",
+      "shade_name": "Medium Blonde Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 7/7 Medium Blonde Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/71",
+      "shade_name": "Medium Blonde Brown Ash",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "71",
+      "original_description": "Koleston Perfect ME+ 7/71 Medium Blonde Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/73",
+      "shade_name": "Medium Blonde Brown Gold",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "73",
+      "original_description": "Koleston Perfect ME+ 7/73 Medium Blonde Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/75",
+      "shade_name": "Medium Blonde Brown Mahogany",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "75",
+      "original_description": "Koleston Perfect ME+ 7/75 Medium Blonde Brown Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "7/77",
+      "shade_name": "Medium Blonde Intense Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "7",
+      "manufacturer_tone_code": "77",
+      "original_description": "Koleston Perfect ME+ 7/77 Medium Blonde Intense Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 7,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/7",
+      "shade_name": "Dark Blonde Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 6/7 Dark Blonde Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "66/7",
+      "shade_name": "Dark Blonde Intense Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "66",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 66/7 Dark Blonde Intense Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/71",
+      "shade_name": "Dark Blonde Brown Ash",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "71",
+      "original_description": "Koleston Perfect ME+ 6/71 Dark Blonde Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/73",
+      "shade_name": "Dark Blonde Brown Gold",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "73",
+      "original_description": "Koleston Perfect ME+ 6/73 Dark Blonde Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/74",
+      "shade_name": "Dark Blonde Brown Red",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "74",
+      "original_description": "Koleston Perfect ME+ 6/74 Dark Blonde Brown Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "RED",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/75",
+      "shade_name": "Dark Blonde Brown Mahogany",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "75",
+      "original_description": "Koleston Perfect ME+ 6/75 Dark Blonde Brown Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "6/77",
+      "shade_name": "Dark Blonde Intense Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "6",
+      "manufacturer_tone_code": "77",
+      "original_description": "Koleston Perfect ME+ 6/77 Dark Blonde Intense Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 6,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/7",
+      "shade_name": "Light Brown Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "7",
+      "original_description": "Koleston Perfect ME+ 5/7 Light Brown Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/71",
+      "shade_name": "Light Brown Brown Ash",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "71",
+      "original_description": "Koleston Perfect ME+ 5/71 Light Brown Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/73",
+      "shade_name": "Light Brown Brown Gold",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "73",
+      "original_description": "Koleston Perfect ME+ 5/73 Light Brown Brown Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/75",
+      "shade_name": "Light Brown Brown Mahogany",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "75",
+      "original_description": "Koleston Perfect ME+ 5/75 Light Brown Brown Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "5/77",
+      "shade_name": "Light Brown Intense Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "5",
+      "manufacturer_tone_code": "77",
+      "original_description": "Koleston Perfect ME+ 5/77 Light Brown Intense Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 5,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/71",
+      "shade_name": "Medium Brown Brown Ash",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "71",
+      "original_description": "Koleston Perfect ME+ 4/71 Medium Brown Brown Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/75",
+      "shade_name": "Medium Brown Brown Mahogany",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "75",
+      "original_description": "Koleston Perfect ME+ 4/75 Medium Brown Brown Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "BEIGE",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "STANDARD",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "4/77",
+      "shade_name": "Medium Brown Intense Brown",
+      "manufacturer_family": "Deep Browns",
+      "manufacturer_depth": "4",
+      "manufacturer_tone_code": "77",
+      "original_description": "Koleston Perfect ME+ 4/77 Medium Brown Intense Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 4,
+        "primary_tone": "BEIGE",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "FASHION",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/0",
+      "shade_name": "Special Blonde Natural",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "0",
+      "original_description": "Koleston Perfect ME+ 12/0 Special Blonde Natural",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/03",
+      "shade_name": "Special Blonde Natural Gold",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "03",
+      "original_description": "Koleston Perfect ME+ 12/03 Special Blonde Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/07",
+      "shade_name": "Special Blonde Natural Brown",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "07",
+      "original_description": "Koleston Perfect ME+ 12/07 Special Blonde Natural Brown",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": "BEIGE",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/1",
+      "shade_name": "Special Blonde Ash",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "1",
+      "original_description": "Koleston Perfect ME+ 12/1 Special Blonde Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/11",
+      "shade_name": "Special Blonde Intense Ash",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "11",
+      "original_description": "Koleston Perfect ME+ 12/11 Special Blonde Intense Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/16",
+      "shade_name": "Special Blonde Ash Violet",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "16",
+      "original_description": "Koleston Perfect ME+ 12/16 Special Blonde Ash Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "ASH",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/22",
+      "shade_name": "Special Blonde Intense Matt",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "22",
+      "original_description": "Koleston Perfect ME+ 12/22 Special Blonde Intense Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/61",
+      "shade_name": "Special Blonde Violet Ash",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "61",
+      "original_description": "Koleston Perfect ME+ 12/61 Special Blonde Violet Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "VIOLET",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/81",
+      "shade_name": "Special Blonde Pearl Ash",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "81",
+      "original_description": "Koleston Perfect ME+ 12/81 Special Blonde Pearl Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/89",
+      "shade_name": "Special Blonde Pearl Cendre",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "89",
+      "original_description": "Koleston Perfect ME+ 12/89 Special Blonde Pearl Cendre",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "12/96",
+      "shade_name": "Special Blonde Cendre Violet",
+      "manufacturer_family": "Special Blonde",
+      "manufacturer_depth": "12",
+      "manufacturer_tone_code": "96",
+      "original_description": "Koleston Perfect ME+ 12/96 Special Blonde Cendre Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "PEARL",
+        "secondary_tone": "VIOLET",
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_BLONDE",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/00",
+      "shade_name": "Clear Tone",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "00",
+      "original_description": "Koleston Perfect ME+ 0/00 Clear Tone",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 10,
+        "primary_tone": "NATURAL",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/11",
+      "shade_name": "Intense Ash",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "11",
+      "original_description": "Koleston Perfect ME+ 0/11 Intense Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "ASH",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/22",
+      "shade_name": "Intense Matt",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "22",
+      "original_description": "Koleston Perfect ME+ 0/22 Intense Matt",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "GREEN",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/28",
+      "shade_name": "Matt Pearl",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "28",
+      "original_description": "Koleston Perfect ME+ 0/28 Matt Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "GREEN",
+        "secondary_tone": "PEARL",
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/30",
+      "shade_name": "Natural Gold",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "30",
+      "original_description": "Koleston Perfect ME+ 0/30 Natural Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "STANDARD",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/33",
+      "shade_name": "Intense Gold",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "33",
+      "original_description": "Koleston Perfect ME+ 0/33 Intense Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "GOLD",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/43",
+      "shade_name": "Red Gold",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "43",
+      "original_description": "Koleston Perfect ME+ 0/43 Red Gold",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "RED",
+        "secondary_tone": "GOLD",
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/44",
+      "shade_name": "Intense Red",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "44",
+      "original_description": "Koleston Perfect ME+ 0/44 Intense Red",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "RED",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/65",
+      "shade_name": "Violet Mahogany",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "65",
+      "original_description": "Koleston Perfect ME+ 0/65 Violet Mahogany",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "VIOLET",
+        "secondary_tone": "MAHOGANY",
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/66",
+      "shade_name": "Intense Violet",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "66",
+      "original_description": "Koleston Perfect ME+ 0/66 Intense Violet",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "VIOLET",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/81",
+      "shade_name": "Pearl Ash",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "81",
+      "original_description": "Koleston Perfect ME+ 0/81 Pearl Ash",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "PEARL",
+        "secondary_tone": "ASH",
+        "tone_intensity": "INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    },
+    {
+      "shade_code": "0/88",
+      "shade_name": "Intense Pearl",
+      "manufacturer_family": "Special Mix",
+      "manufacturer_depth": "0",
+      "manufacturer_tone_code": "88",
+      "original_description": "Koleston Perfect ME+ 0/88 Intense Pearl",
+      "market": "IN",
+      "active_status": true,
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED",
+      "uhcr_mapping": {
+        "uhcr_level": 1,
+        "primary_tone": "PEARL",
+        "secondary_tone": null,
+        "tone_intensity": "EXTRA_INTENSE",
+        "colour_family": "SPECIAL_MIX",
+        "mapping_method": "MANUFACTURER_DOCUMENT",
+        "mapping_confidence": 0.98,
+        "verification_status": "VERIFIED"
+      }
+    }
+  ],
+  "developers": [
+    {
+      "product_name": "Welloxon Perfect 1.9% (Pastel)",
+      "concentration_percent": 1.9,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "color_balancing",
+          "blonde_toning",
+          "glossing"
+        ],
+        "volume_equivalent": 6,
+        "lift_levels": 0
+      },
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Welloxon Perfect 4% (13 Vol)",
+      "concentration_percent": 4.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "same_depth",
+          "darker",
+          "deeper_results_on_natural_hair_no_grey"
+        ],
+        "volume_equivalent": 13,
+        "lift_levels": 0
+      },
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Welloxon Perfect 6% (20 Vol)",
+      "concentration_percent": 6.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "1_level_lift",
+          "grey_coverage",
+          "same_depth_or_darker"
+        ],
+        "volume_equivalent": 20,
+        "lift_levels": 1
+      },
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Welloxon Perfect 9% (30 Vol)",
+      "concentration_percent": 9.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "2_levels_lift",
+          "3_levels_lift_special_blonde"
+        ],
+        "volume_equivalent": 30,
+        "lift_levels": 2,
+        "special_blonde_lift_levels": 3
+      },
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Welloxon Perfect 12% (40 Vol)",
+      "concentration_percent": 12.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "3_levels_lift",
+          "4_to_5_levels_lift_special_blonde"
+        ],
+        "volume_equivalent": 40,
+        "lift_levels": 3,
+        "special_blonde_lift_levels": 5
+      },
+      "source_doc_key": "kp_usage_guidelines",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Freelights Developer 6% (20 Vol)",
+      "concentration_percent": 6.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "freelights_freehand_lightening"
+        ],
+        "closed_system": true,
+        "compatible_with": [
+          "Blondor Freelights White Lightening Powder"
+        ]
+      },
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Freelights Developer 9% (30 Vol)",
+      "concentration_percent": 9.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "freelights_freehand_lightening"
+        ],
+        "closed_system": true,
+        "compatible_with": [
+          "Blondor Freelights White Lightening Powder"
+        ]
+      },
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Freelights Developer 12% (40 Vol)",
+      "concentration_percent": 12.0,
+      "concentration_type": "PERCENTAGE",
+      "market": "IN",
+      "intended_use": {
+        "services": [
+          "freelights_freehand_lightening"
+        ],
+        "closed_system": true,
+        "compatible_with": [
+          "Blondor Freelights White Lightening Powder"
+        ]
+      },
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "rules": [
+    {
+      "rule_code": "WELLA-KP-MIX-STANDARD",
+      "product_family": "Koleston Perfect ME+",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "MIXING_RATIO",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_family_in": [
+          "Pure Naturals",
+          "Rich Naturals",
+          "Vibrant Reds",
+          "Deep Browns"
+        ],
+        "service_type": "PERMANENT_COLOUR"
+      },
+      "actions": {
+        "mixing_ratio": {
+          "colour_parts": 1.0,
+          "developer_parts": 1.0
+        },
+        "example": "60ml Koleston Perfect + 60ml Welloxon Perfect"
+      },
+      "source_section": "Usage Guidelines Page 2 - Full-head / Regrowth 1:1",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-MIX-SPECIAL-BLONDE",
+      "product_family": "Koleston Perfect Special Blonde",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "MIXING_RATIO",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_family": "Special Blonde",
+        "shade_series": "12/"
+      },
+      "actions": {
+        "mixing_ratio": {
+          "colour_parts": 1.0,
+          "developer_parts": 2.0
+        },
+        "example": "60ml Koleston Perfect Special Blonde + 120ml Welloxon Perfect"
+      },
+      "source_section": "Usage Guidelines Page 2 - Lightening with Special Blonde 1:2",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-DEV-LIFT-STANDARD",
+      "product_family": "Koleston Perfect ME+",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "DEVELOPER_COMPATIBILITY",
+      "market": "IN",
+      "priority": 2,
+      "conditions": {
+        "product_family_in": [
+          "Pure Naturals",
+          "Rich Naturals",
+          "Vibrant Reds",
+          "Deep Browns"
+        ]
+      },
+      "actions": {
+        "developer_choices": {
+          "1.9%": {
+            "target_lift": 0,
+            "notes": "Colour balancing, blonde toning, glossing"
+          },
+          "4%": {
+            "target_lift": 0,
+            "notes": "Same depth or darker; deeper results on natural hair with no grey coverage"
+          },
+          "6%": {
+            "target_lift": 1,
+            "grey_coverage": true,
+            "notes": "1 level of lift, grey coverage, same depth/darker"
+          },
+          "9%": {
+            "target_lift": 2,
+            "notes": "2 levels of lift"
+          },
+          "12%": {
+            "target_lift": 3,
+            "notes": "3 levels of lift"
+          }
+        }
+      },
+      "source_section": "Usage Guidelines Page 2 - Welloxon Perfect Lift Guidelines",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-DEV-LIFT-SPECIAL-BLONDE",
+      "product_family": "Koleston Perfect Special Blonde",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "DEVELOPER_COMPATIBILITY",
+      "market": "IN",
+      "priority": 2,
+      "conditions": {
+        "product_family": "Special Blonde",
+        "shade_series": "12/"
+      },
+      "actions": {
+        "developer_choices": {
+          "9%": {
+            "target_lift": 3,
+            "notes": "3 levels of lift with Special Blonde"
+          },
+          "12%": {
+            "target_lift": 5,
+            "notes": "4-5 levels of lift with Special Blonde"
+          }
+        }
+      },
+      "source_section": "Usage Guidelines Page 2 - Welloxon Perfect for Special Blonde",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-GREY-COVERAGE",
+      "product_family": "Koleston Perfect ME+",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "GREY_COVERAGE",
+      "market": "IN",
+      "priority": 3,
+      "conditions": {
+        "has_grey_hair": true
+      },
+      "actions": {
+        "rules": [
+          {
+            "min_grey_percent": 30,
+            "max_grey_percent": 50,
+            "instruction": "Add 1/3 of a Pure Naturals shade",
+            "ratio": "15g 7/0 + 45g fashion shade + 60g 6% Welloxon Perfect"
+          },
+          {
+            "min_grey_percent": 50,
+            "max_grey_percent": 100,
+            "instruction": "Add 1/2 of a Pure Naturals shade",
+            "ratio": "30g 7/0 + 30g fashion shade + 60g 6% Welloxon Perfect"
+          },
+          {
+            "tone_family": "Vibrant Reds",
+            "min_grey_percent": 50,
+            "instruction": "Mix 2 parts red shade to 1 part Pure Natural shade",
+            "example": "1/2 tube red + 1/4 tube natural"
+          }
+        ]
+      },
+      "source_section": "Usage Guidelines Page 2 - Coloring grey hair",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-TIME-STANDARD",
+      "product_family": "Koleston Perfect ME+",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "PROCESSING_TIME",
+      "market": "IN",
+      "priority": 4,
+      "conditions": {
+        "product_family_in": [
+          "Pure Naturals",
+          "Rich Naturals",
+          "Vibrant Reds",
+          "Deep Browns"
+        ]
+      },
+      "actions": {
+        "without_heat_minutes": [
+          30,
+          40
+        ],
+        "with_climazon_minutes": [
+          15,
+          25
+        ]
+      },
+      "source_section": "Usage Guidelines Page 2 - Full-head / Regrowth application",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-TIME-SPECIAL-BLONDE",
+      "product_family": "Koleston Perfect Special Blonde",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "PROCESSING_TIME",
+      "market": "IN",
+      "priority": 4,
+      "conditions": {
+        "product_family": "Special Blonde"
+      },
+      "actions": {
+        "without_heat_minutes": [
+          50,
+          60
+        ],
+        "with_climazon_minutes": [
+          25,
+          35
+        ]
+      },
+      "source_section": "Usage Guidelines Page 2 - Lightening with Special Blonde",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-SPECIAL-MIX-CALCULATION",
+      "product_family": "Koleston Perfect Special Mix",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "SPECIAL_MIX",
+      "market": "IN",
+      "priority": 5,
+      "conditions": {
+        "includes_additive": true
+      },
+      "actions": {
+        "calculation_basis": "Grams of Special Mix per 30g of Koleston Perfect cream",
+        "cm_to_grams_table": {
+          "12": {
+            "cm": 3.0,
+            "grams": 1.5
+          },
+          "11": {
+            "cm": 2.0,
+            "grams": 1.0
+          },
+          "10": {
+            "cm": 1.0,
+            "grams": 0.5
+          },
+          "9": {
+            "cm": 2.0,
+            "grams": 1.0
+          },
+          "8": {
+            "cm": 3.0,
+            "grams": 1.5
+          },
+          "7": {
+            "cm": 4.0,
+            "grams": 2.0
+          },
+          "6": {
+            "cm": 5.0,
+            "grams": 2.5
+          },
+          "5": {
+            "cm": 6.0,
+            "grams": 3.0
+          },
+          "4": {
+            "cm": 7.0,
+            "grams": 3.5
+          },
+          "3": {
+            "cm": 8.0,
+            "grams": 4.0
+          },
+          "2": {
+            "cm": 9.0,
+            "grams": 4.5
+          }
+        },
+        "developer_ratio": "1 part Color Cream (Koleston + Special Mix) : 1 part Welloxon Perfect (except 0/43 which is 1:2)"
+      },
+      "source_section": "Usage Guidelines Page 3 - Special Mix calculation table",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-KP-PASTEL-TONING",
+      "product_family": "Koleston Perfect ME+",
+      "service_type": "TONER",
+      "rule_type": "APPLICATION_METHOD",
+      "market": "IN",
+      "priority": 5,
+      "conditions": {
+        "service_type": "TONER",
+        "target_shades_in": [
+          "10/1",
+          "10/03",
+          "10/16",
+          "10/3",
+          "10/38",
+          "10/8",
+          "9/03",
+          "9/16",
+          "9/17",
+          "9/38",
+          "9/7"
+        ]
+      },
+      "actions": {
+        "prerequisite": "Evenly pre-lightened hair (1/2 level lighter than target) or natural hair 9/0+",
+        "mixing_ratio": {
+          "colour_parts": 1.0,
+          "developer_parts": 2.0
+        },
+        "developer": "Welloxon Perfect Pastel 1.9% or Color Touch Emulsion 1.9%",
+        "development_time_max_minutes": 15,
+        "comb_interval_minutes": 5,
+        "heat_allowed": false
+      },
+      "source_section": "Usage Guidelines Page 3 - Pastel Toning",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-BLONDOR-POWDER-MIX",
+      "product_family": "Blondor",
+      "service_type": "LIGHTENER",
+      "rule_type": "MIXING_RATIO",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_code_in": [
+          "BLONDOR-MBP",
+          "BLONDOR-PLEX",
+          "BLONDOR-SBC"
+        ]
+      },
+      "actions": {
+        "mixing_ratio_range": {
+          "powder_parts": 1.0,
+          "developer_parts_min": 1.5,
+          "developer_parts_max": 2.0
+        },
+        "compatible_developer": "Welloxon Perfect (1.9%, 4%, 6%, 9%, 12%)"
+      },
+      "source_section": "Blondor Technical Folder - User Guide (1:1.5 up to 2)",
+      "source_doc_key": "blondor_technical_folder",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-BLONDOR-SCALP-SAFETY",
+      "product_family": "Blondor",
+      "service_type": "LIGHTENER",
+      "rule_type": "PROCESSING_CONDITIONS",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "application_area": "ON_SCALP",
+        "service_type": "LIGHTENER"
+      },
+      "actions": {
+        "max_developer_strength_percent": 6.0,
+        "heat_allowed": false,
+        "development_time_max_minutes": 50,
+        "warning": "When applying lightener on scalp, maximum developer strength is 6% (20 Vol). Never use heat."
+      },
+      "source_section": "Blondor Technical Folder Page 7, 10, 14",
+      "source_doc_key": "blondor_technical_folder",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-BLONDOR-BB-CONTRAINDICATION",
+      "product_family": "Blondor Base Breakers",
+      "service_type": "LIGHTENER",
+      "rule_type": "CONTRAINDICATION",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_code": "BLONDOR-BB",
+        "additive": "WellaPlex"
+      },
+      "actions": {
+        "is_blocked": true,
+        "reason": "WellaPlex is NOT recommended to be mixed with Blondor Base Breakers due to specific formulation and shading."
+      },
+      "source_section": "Blondor Technical Folder Page 17 Note",
+      "source_doc_key": "blondor_technical_folder",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-BLONDOR-MAGMA-CONTRAINDICATION",
+      "product_family": "Magma by Blondor",
+      "service_type": "LIGHTENER",
+      "rule_type": "CONTRAINDICATION",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_code": "BLONDOR-MAGMA",
+        "application_area": "ON_SCALP"
+      },
+      "actions": {
+        "is_blocked": true,
+        "reason": "Magma by Blondor must NEVER be applied directly to the scalp. Use in foil or freehand techniques only."
+      },
+      "source_section": "Blondor Technical Folder Page 21 Services Table",
+      "source_doc_key": "blondor_technical_folder",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-BLONDOR-FREELIGHTS-CLOSED-SYSTEM",
+      "product_family": "Blondor Freelights",
+      "service_type": "LIGHTENER",
+      "rule_type": "DEVELOPER_COMPATIBILITY",
+      "market": "IN",
+      "priority": 1,
+      "conditions": {
+        "product_code": "BLONDOR-FL-POWDER"
+      },
+      "actions": {
+        "mandatory_developer": "Blondor Freelights Developer",
+        "disallowed_developers": [
+          "Welloxon Perfect"
+        ],
+        "application_technique": "FREEHAND_ONLY",
+        "foil_allowed": false,
+        "on_scalp_allowed": false,
+        "reason": "Freelights is a closed system: ACTIFUSE network requires Freelights Powder + Freelights Developer."
+      },
+      "source_section": "Blondor Technical Folder Page 18-19",
+      "source_doc_key": "blondor_technical_folder",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "rule_code": "WELLA-SAFETY-ALLERGY-ALERT-TEST",
+      "product_family": "All Wella Products",
+      "service_type": "PERMANENT_COLOUR",
+      "rule_type": "CONTRAINDICATION",
+      "market": "IN",
+      "priority": 0,
+      "conditions": {
+        "prior_allergy_history": true
+      },
+      "actions": {
+        "is_blocked": true,
+        "protocol": "Skin Allergy Test 48 hours prior to service: 5g color + 5g developer on 1cm2 below crook of elbow for 45 min.",
+        "warning": "If client shows any signs of redness, burning, itching, or has ever experienced an allergic reaction to hair colorants, do not color."
+      },
+      "source_section": "Koleston Perfect Usage Booklet Page 4 / Leaflet Page 25",
+      "source_doc_key": "kp_usage_guidelines",
+      "rule_version": "1.0",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "lighteners": [
+    {
+      "product_name": "Blondor Multi-Blonde Powder",
+      "product_code": "BLONDOR-MBP",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "Anti-Yellow Molecules, Dual Persulfate System",
+      "dust_free": true,
+      "on_scalp_suitable": true,
+      "in_foil_suitable": true,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1:1.5 to 1:2",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "on_scalp_max_developer_percent": 6.0,
+      "development_time_max_minutes": 50,
+      "heat_allowed": false,
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "BlondorPlex",
+      "product_code": "BLONDOR-PLEX",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "Bond Builder Technology included, up to 97% less breakage",
+      "dust_free": true,
+      "on_scalp_suitable": true,
+      "in_foil_suitable": true,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1:1.5 to 1:2",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "on_scalp_max_developer_percent": 6.0,
+      "development_time_max_minutes": 50,
+      "heat_allowed": false,
+      "post_treatment_requirement": "Always complete BlondorPlex service with WellaPlex No. 2 for 10 minutes",
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Multi-Blonde Granules",
+      "product_code": "BLONDOR-MBG",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "White granules for true underlying pigment visibility, coconut fragrance",
+      "dust_free": true,
+      "on_scalp_suitable": true,
+      "in_foil_suitable": true,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1:1.5",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "on_scalp_max_developer_percent": 6.0,
+      "development_time_max_minutes": 50,
+      "heat_allowed": false,
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Soft Blonde Cream",
+      "product_code": "BLONDOR-SBC",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "Rich creamy texture, high lipid concentration, chamomile for soothing",
+      "on_scalp_suitable": true,
+      "in_foil_suitable": true,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1:1.5 to 1:2",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "on_scalp_max_developer_percent": 6.0,
+      "development_time_max_minutes": 50,
+      "heat_allowed": false,
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Freelights White Lightening Powder",
+      "product_code": "BLONDOR-FL-POWDER",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "ACTIFUSE network: flexible and adhesive clay network with reduced swelling",
+      "on_scalp_suitable": false,
+      "in_foil_suitable": false,
+      "free_hand_suitable": true,
+      "closed_system": true,
+      "default_mixing_ratio": "1:1.5 to 1:3",
+      "compatible_developers": [
+        "Blondor Freelights Developer 6%",
+        "Blondor Freelights Developer 9%",
+        "Blondor Freelights Developer 12%"
+      ],
+      "development_time_max_minutes": 50,
+      "heat_allowed": false,
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Meches",
+      "product_code": "BLONDOR-MECHES",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 5,
+      "technology": "Auto-Control System (slows lightening after 15 min with heat, 45 min without), ammonia-free cream",
+      "on_scalp_suitable": false,
+      "in_foil_suitable": true,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1 sachet powder (30g) + 1 tube cream (30g) + 30-60g Welloxon Perfect (1:1:1 to 1:1:2)",
+      "compatible_developers": [
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "development_time_max_minutes": 45,
+      "heat_development_time_minutes": 15,
+      "heat_allowed": true,
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Extra Cool Blonde",
+      "product_code": "BLONDOR-ECB",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 7,
+      "technology": "Dual lightening and matte toning in one step",
+      "on_scalp_suitable": true,
+      "in_foil_suitable": true,
+      "free_hand_suitable": true,
+      "default_mixing_ratio": "1:1.5 to 1:2",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%"
+      ],
+      "development_time_max_minutes": 50,
+      "intermixable_ratio": "1:2 with other Blondor lighteners (not with Magma)",
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Blondor Base Breakers",
+      "product_code": "BLONDOR-BB",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 1,
+      "technology": "Silk Blend consistency, express 10-minute base breaking and gentle toning",
+      "on_scalp_suitable": true,
+      "in_foil_suitable": false,
+      "free_hand_suitable": false,
+      "default_mixing_ratio": "1:1 with 1.9% (soft) or 3% (intense)",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 4%"
+      ],
+      "development_time_max_minutes": 10,
+      "heat_allowed": false,
+      "contraindication": "Do not mix with WellaPlex",
+      "shades": [
+        {
+          "shade_code": "/19",
+          "shade_name": "Cool",
+          "description": "Soft ash cendre tone ideal for natural hair 6/0 to 8/0 and neutralizing yellow"
+        },
+        {
+          "shade_code": "/86",
+          "shade_name": "Extra Cool",
+          "description": "Intense pearl violet tone ideal for natural hair 6/0 to 8/0 and neutralizing yellow orange"
+        }
+      ],
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "product_name": "Magma by Blondor",
+      "product_code": "BLONDOR-MAGMA",
+      "product_type": "LIGHTENER",
+      "max_lift_levels": 6,
+      "technology": "SpectraLift Technology: internal lift with external direct-dye deposit in 1 step",
+      "on_scalp_suitable": false,
+      "in_foil_suitable": true,
+      "free_hand_suitable": true,
+      "default_mixing_ratio": "1:1.5 (foil) or 1:1.5 to 1:2 (freehand)",
+      "compatible_developers": [
+        "Welloxon Perfect 1.9%",
+        "Welloxon Perfect 6%",
+        "Welloxon Perfect 9%",
+        "Welloxon Perfect 12%",
+        "Blondor Freelights Developer 6%",
+        "Blondor Freelights Developer 9%",
+        "Blondor Freelights Developer 12%"
+      ],
+      "development_time_max_minutes": 60,
+      "heat_allowed": true,
+      "contraindication": "Never apply on scalp. Never intermix with Blondor Extra Cool Blonde.",
+      "source_doc_key": "blondor_technical_folder",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

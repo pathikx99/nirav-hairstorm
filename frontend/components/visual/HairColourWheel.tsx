@@ -509,6 +509,8 @@ export function HairColourWheel({
     );
   };
 
+  const round2 = (n: number) => Math.round(n * 100) / 100;
+
   // Helper to generate SVG pie slice path
   const describeArc = (
     cx: number,
@@ -520,14 +522,14 @@ export function HairColourWheel({
   ) => {
     // 0° is 12 o'clock (deg - 90 converts math standard to clock face)
     const toRad = (deg: number) => ((deg - 90) * Math.PI) / 180;
-    const x1 = cx + rOut * Math.cos(toRad(startAngle));
-    const y1 = cy + rOut * Math.sin(toRad(startAngle));
-    const x2 = cx + rOut * Math.cos(toRad(endAngle));
-    const y2 = cy + rOut * Math.sin(toRad(endAngle));
-    const x3 = cx + rIn * Math.cos(toRad(endAngle));
-    const y3 = cy + rIn * Math.sin(toRad(endAngle));
-    const x4 = cx + rIn * Math.cos(toRad(startAngle));
-    const y4 = cy + rIn * Math.sin(toRad(startAngle));
+    const x1 = round2(cx + rOut * Math.cos(toRad(startAngle)));
+    const y1 = round2(cy + rOut * Math.sin(toRad(startAngle)));
+    const x2 = round2(cx + rOut * Math.cos(toRad(endAngle)));
+    const y2 = round2(cy + rOut * Math.sin(toRad(endAngle)));
+    const x3 = round2(cx + rIn * Math.cos(toRad(endAngle)));
+    const y3 = round2(cy + rIn * Math.sin(toRad(endAngle)));
+    const x4 = round2(cx + rIn * Math.cos(toRad(startAngle)));
+    const y4 = round2(cy + rIn * Math.sin(toRad(startAngle)));
 
     const largeArc = endAngle - startAngle > 180 ? 1 : 0;
 
@@ -540,10 +542,10 @@ export function HairColourWheel({
   const oppositeAngle = (activeAngle + 180) % 360;
 
   // Active and opposite positions sit exactly at radial center of their respective slices
-  const actX = center + (radius - 12) * Math.cos(toRad(activeAngle));
-  const actY = center + (radius - 12) * Math.sin(toRad(activeAngle));
-  const oppX = center + (radius - 12) * Math.cos(toRad(oppositeAngle));
-  const oppY = center + (radius - 12) * Math.sin(toRad(oppositeAngle));
+  const actX = round2(center + (radius - 12) * Math.cos(toRad(activeAngle)));
+  const actY = round2(center + (radius - 12) * Math.sin(toRad(activeAngle)));
+  const oppX = round2(center + (radius - 12) * Math.cos(toRad(oppositeAngle)));
+  const oppY = round2(center + (radius - 12) * Math.sin(toRad(oppositeAngle)));
 
   // Current level details
   const levelMetric = LEVEL_METRICS[level] || LEVEL_METRICS[7];
@@ -560,9 +562,10 @@ export function HairColourWheel({
 
   return (
     <div
-      className={`rounded-3xl border border-neutral-800 bg-neutral-900/90 p-5 sm:p-7 shadow-2xl space-y-6 ${className}`}
+      className={`rounded-3xl border border-neutral-800 bg-neutral-900/90 p-5 sm:p-7 shadow-2xl space-y-5 ${className}`}
+      suppressHydrationWarning
     >
-      {/* Header with Scientific Law Banner */}
+      {/* 1. Header with Scientific Law Banner */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-800 pb-4">
         <div>
           <div className="flex items-center gap-2">
@@ -596,14 +599,63 @@ export function HairColourWheel({
         </div>
       </div>
 
-      {/* Main Wheel + Multi-Brand Number Analysis Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        {/* Left: The Interactive SVG Colour Wheel */}
-        <div className="lg:col-span-6 xl:col-span-7 flex flex-col items-center">
-          <div className="relative w-[320px] h-[320px] sm:w-[360px] sm:h-[360px] select-none">
+      {/* 2. Depth Level (1 to 10) Master Control Bar */}
+      <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-3.5 sm:p-4 space-y-2.5 shadow-inner">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <label className="text-xs font-bold text-neutral-300 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🎚️</span> Depth Level (1 to 10):
+          </label>
+          <span className="text-xs font-mono font-black text-amber-400">
+            Level {level} ({levelMetric.name}) • Lightness L* {levelMetric.lStar}
+          </span>
+        </div>
+
+        {/* Continuous Range Slider */}
+        <input
+          type="range"
+          min="1"
+          max="10"
+          step="1"
+          value={level}
+          onChange={(e) => handleLevelChange(Number(e.target.value) as UniversalLevel)}
+          className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
+        />
+
+        {/* 10 Discrete Level Pills with L* lightness */}
+        <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5">
+          {([1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as UniversalLevel[]).map((lvl) => {
+            const metric = LEVEL_METRICS[lvl];
+            const isLvlSelected = level === lvl;
+            return (
+              <button
+                key={lvl}
+                type="button"
+                onClick={() => handleLevelChange(lvl)}
+                className={`py-1 px-1 text-center rounded-xl transition-all flex flex-col items-center justify-center cursor-pointer ${
+                  isLvlSelected
+                    ? "bg-amber-500 text-neutral-950 shadow-md ring-2 ring-amber-400 scale-[1.03]"
+                    : "bg-neutral-800/80 text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                }`}
+                title={`Level ${lvl} ${metric.name} (L* ${metric.lStar})`}
+              >
+                <span className="text-xs font-black leading-tight">{lvl}</span>
+                <span className={`text-[8px] font-mono leading-none mt-0.5 ${isLvlSelected ? "text-neutral-900 font-bold" : "text-neutral-400"}`}>
+                  L*{metric.lStar}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 3. Main Wheel & Salon Formulation Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+        {/* Left Column: Interactive Wheel + Legend + Chips */}
+        <div className="flex flex-col items-center space-y-3">
+          <div className="relative w-[300px] h-[300px] sm:w-[320px] sm:h-[320px] select-none">
             <svg
               viewBox="0 0 320 320"
-              className="w-full h-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.85)]"
+              className="w-full h-full drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
             >
               <defs>
                 {/* Glow Filter */}
@@ -647,13 +699,13 @@ export function HairColourWheel({
 
                 // Sector label coordinates
                 const rad = toRad(sector.angleDeg);
-                const lx = center + labelRadius * Math.cos(rad);
-                const ly = center + labelRadius * Math.sin(rad);
+                const lx = round2(center + labelRadius * Math.cos(rad));
+                const ly = round2(center + labelRadius * Math.sin(rad));
 
                 // Outer degree label coordinates
                 const degRadius = radius - 8;
-                const dx = center + degRadius * Math.cos(rad);
-                const dy = center + degRadius * Math.sin(rad);
+                const dx = round2(center + degRadius * Math.cos(rad));
+                const dy = round2(center + degRadius * Math.sin(rad));
 
                 return (
                   <g
@@ -809,39 +861,39 @@ export function HairColourWheel({
           </div>
 
           {/* Wheel Quick Legend */}
-          <div className="mt-3 flex items-center justify-center gap-3 text-[11px] text-neutral-400">
+          <div className="flex items-center justify-center gap-3 text-[10px] text-neutral-400 font-medium">
             <span className="flex items-center gap-1">
-              <span className="h-2 w-2 rounded-full bg-white inline-block" /> Selected Tone ({activeAngle}°)
+              <span className="h-2 w-2 rounded-full bg-white inline-block shadow-xs" /> Selected ({activeAngle}°)
             </span>
             <span className="flex items-center gap-1">
-              <span className="h-2 w-2 rounded-full border border-amber-400 inline-block" /> Opposite Neutralizer ({oppositeAngle}°)
+              <span className="h-2 w-2 rounded-full border-2 border-amber-400 inline-block" /> Neutralizer ({oppositeAngle}°)
             </span>
             <span className="flex items-center gap-1">
-              <span className="h-2 w-2 rounded-full bg-neutral-600 inline-block" /> Center = .0 Base
+              <span className="h-2 w-2 rounded-full bg-neutral-600 inline-block" /> Center (.0 Base)
             </span>
           </div>
 
           {/* Quick Tone Selector Chips with Numbers */}
-          <div className="mt-4 w-full">
-            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block mb-2 text-center">
+          <div className="w-full space-y-1.5 pt-1">
+            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block text-center">
               Tap Reflect Code (.X / /X)
             </span>
             <div className="flex flex-wrap justify-center gap-1.5">
               <button
                 type="button"
                 onClick={handleSelectNatural}
-                className={`px-2.5 py-1.5 rounded-xl text-[11px] font-bold flex items-center gap-1.5 transition-all ${
+                className={`px-2 py-1 rounded-xl text-[10px] font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                   isNaturalBase
                     ? "bg-amber-500 text-neutral-950 font-black shadow-md ring-1 ring-amber-400 scale-105"
                     : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
                 }`}
               >
                 <span
-                  className="h-2.5 w-2.5 rounded-full ring-1 ring-white/30"
+                  className="h-2 w-2 rounded-full ring-1 ring-white/30"
                   style={{ backgroundColor: naturalCenterColorimetry.baseHex }}
                 />
                 <span>Natural</span>
-                <span className="font-mono text-[10px] opacity-80">.0 (/0)</span>
+                <span className="font-mono text-[9px] opacity-80">.0</span>
               </button>
 
               {WHEEL_SECTORS.map((s) => {
@@ -852,18 +904,18 @@ export function HairColourWheel({
                     key={s.id}
                     type="button"
                     onClick={() => handleSelectSector(s)}
-                    className={`px-2.5 py-1.5 rounded-xl text-[11px] font-bold flex items-center gap-1.5 transition-all ${
+                    className={`px-2 py-1 rounded-xl text-[10px] font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                       isSelected
                         ? "bg-amber-500 text-neutral-950 font-black shadow-md ring-1 ring-amber-400 scale-105"
                         : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
                     }`}
                   >
                     <span
-                      className="h-2.5 w-2.5 rounded-full shadow-xs ring-1 ring-white/30"
+                      className="h-2 w-2 rounded-full shadow-xs ring-1 ring-white/30"
                       style={{ backgroundColor: chipColor }}
                     />
                     <span>{s.nameEn.split(" / ")[0]}</span>
-                    <span className="font-mono text-[10px] opacity-80">.{s.iccCode}</span>
+                    <span className="font-mono text-[9px] opacity-80">.{s.iccCode}</span>
                   </button>
                 );
               })}
@@ -871,87 +923,93 @@ export function HairColourWheel({
           </div>
         </div>
 
-        {/* Right: Exact Formulation Numbers & Colorimetric Matrix */}
-        <div className="lg:col-span-6 xl:col-span-5 space-y-4">
-          {/* Active Shade Number Grid across Major Brands */}
-          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-4 space-y-3 shadow-inner">
-            <div className="flex items-center justify-between border-b border-neutral-800 pb-2">
-              <span className="text-xs font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-1.5">
-                <span>🔢</span> Cross-Brand Formulation Numbers
-              </span>
-              <span className="text-xs font-mono font-black text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
-                Level {level} • {activeSector.nameEn.split(" / ")[0]}
-              </span>
-            </div>
-
-            {/* 4 Brand Number Chips */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
-              <div className="rounded-xl border border-neutral-800 bg-neutral-900/90 p-2">
-                <span className="text-[10px] text-neutral-400 font-bold block uppercase">Universal ICC</span>
-                <span className="text-base font-black font-mono text-white block mt-0.5">{iccNumber}</span>
-              </div>
-              <div className="rounded-xl border border-neutral-800 bg-neutral-900/90 p-2">
-                <span className="text-[10px] text-amber-400 font-bold block uppercase">Wella Professionals</span>
-                <span className="text-base font-black font-mono text-amber-300 block mt-0.5">{wellaNumber}</span>
-              </div>
-              <div className="rounded-xl border border-neutral-800 bg-neutral-900/90 p-2">
-                <span className="text-[10px] text-blue-400 font-bold block uppercase">L&apos;Oréal Majirel</span>
-                <span className="text-base font-black font-mono text-blue-300 block mt-0.5">{lorealNumber}</span>
-              </div>
-              <div className="rounded-xl border border-neutral-800 bg-neutral-900/90 p-2">
-                <span className="text-[10px] text-red-400 font-bold block uppercase">Schwarzkopf Igora</span>
-                <span className="text-base font-black font-mono text-red-300 block mt-0.5">{schwarzkopfNumber}</span>
-              </div>
-            </div>
-
-            {/* Matrix / Alternative Notation */}
-            <div className="flex items-center justify-between text-[11px] text-neutral-400 px-1 pt-1">
-              <span>Matrix SoColor: <strong className="font-mono text-neutral-200">{matrixNumber}</strong></span>
-              <span>Reflect Family: <strong className="text-neutral-200">{activeSector.tone}</strong></span>
-            </div>
-          </div>
-
-          {/* Calibrated Hair Fiber Swatch Preview */}
+        {/* Right Column: Formulation Console & Scientific Breakdown */}
+        <div className="space-y-3.5">
+          {/* Card 1: Calibrated Swatch & Tone Identity */}
           <div
-            className="relative w-full h-24 rounded-2xl overflow-hidden shadow-inner border border-neutral-700/60 p-3 flex flex-col justify-between transition-all duration-500"
+            className="relative w-full h-20 rounded-2xl overflow-hidden shadow-md border border-neutral-700/60 p-3 flex flex-col justify-between transition-all duration-500"
             style={{ background: currentColorimetry.gradient }}
           >
             <div className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/50 via-transparent to-black/50 pointer-events-none" />
             <div className="absolute inset-0 opacity-20 bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(255,255,255,0.25)_3px,transparent_4px)] pointer-events-none" />
 
             <div className="relative z-10 flex items-center justify-between">
-              <span className="inline-flex items-center justify-center px-3 py-0.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white font-black text-xs font-mono">
+              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white font-black text-[11px] font-mono">
                 Depth {level} (L* {levelMetric.lStar})
               </span>
-              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-amber-400 text-neutral-950 font-black text-[10px] font-mono">
+              <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-amber-400 text-neutral-950 font-black text-[10px] font-mono shadow-xs">
                 {isNaturalBase ? ".0 NATURAL BASE" : `.${activeSector.iccCode} (${activeSector.reflectCode})`}
               </span>
             </div>
 
-            <div className="relative z-10">
-              <h4 className="text-sm font-black text-white drop-shadow-md">
-                {isNaturalBase ? "Pure Natural Base (.0 / /0)" : activeSector.nameEn}
-              </h4>
-              <p className="text-[10px] font-bold text-amber-200 drop-shadow-md">
-                {isNaturalBase ? "100% Resistant White / Grey Coverage" : activeSector.nameHi}
-              </p>
+            <div className="relative z-10 flex items-end justify-between">
+              <div>
+                <h4 className="text-sm font-black text-white drop-shadow-md leading-tight">
+                  {isNaturalBase ? "Pure Natural Base (.0 / /0)" : activeSector.nameEn}
+                </h4>
+                <p className="text-[10px] font-bold text-amber-200 drop-shadow-md">
+                  {isNaturalBase ? "100% Resistant White / Grey Coverage" : activeSector.nameHi}
+                </p>
+              </div>
+              <span className="text-[10px] font-bold text-neutral-200/90 font-mono bg-black/60 px-2 py-0.5 rounded-md backdrop-blur-xs">
+                Reflect: {activeSector.tone}
+              </span>
             </div>
           </div>
 
-          {/* Colour Wheel Law: Exact 180° Neutralization Equation Card */}
-          <div className="rounded-2xl border border-amber-500/30 bg-amber-500/10 p-3.5 space-y-2">
+          {/* Card 2: Cross-Brand Formulation Numbers */}
+          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-3.5 space-y-2.5 shadow-inner">
+            <div className="flex items-center justify-between border-b border-neutral-800/80 pb-2">
+              <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-1.5">
+                <span>🔢</span> Cross-Brand Formulation Matrix
+              </span>
+              <span className="text-[11px] font-mono font-black text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                Level {level} • {isNaturalBase ? "Natural" : activeSector.nameEn.split(" / ")[0]}
+              </span>
+            </div>
+
+            {/* 4 Brand Number Chips */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+              <div className="rounded-xl border border-neutral-800/80 bg-neutral-900/90 p-2">
+                <span className="text-[9px] text-neutral-400 font-bold block uppercase tracking-wider">Universal ICC</span>
+                <span className="text-sm font-black font-mono text-white block mt-0.5">{iccNumber}</span>
+              </div>
+              <div className="rounded-xl border border-neutral-800/80 bg-neutral-900/90 p-2">
+                <span className="text-[9px] text-amber-400 font-bold block uppercase tracking-wider">Wella</span>
+                <span className="text-sm font-black font-mono text-amber-300 block mt-0.5">{wellaNumber}</span>
+              </div>
+              <div className="rounded-xl border border-neutral-800/80 bg-neutral-900/90 p-2">
+                <span className="text-[9px] text-blue-400 font-bold block uppercase tracking-wider">L&apos;Oréal</span>
+                <span className="text-sm font-black font-mono text-blue-300 block mt-0.5">{lorealNumber}</span>
+              </div>
+              <div className="rounded-xl border border-neutral-800/80 bg-neutral-900/90 p-2">
+                <span className="text-[9px] text-red-400 font-bold block uppercase tracking-wider">Schwarzkopf</span>
+                <span className="text-sm font-black font-mono text-red-300 block mt-0.5">{schwarzkopfNumber}</span>
+              </div>
+            </div>
+
+            {/* Matrix / Alternative Notation */}
+            <div className="flex items-center justify-between text-[10px] text-neutral-400 px-1 pt-0.5">
+              <span>Matrix SoColor: <strong className="font-mono text-neutral-200">{matrixNumber}</strong></span>
+              <span>Reflect Tone: <strong className="text-neutral-200">{activeSector.tone}</strong></span>
+            </div>
+          </div>
+
+          {/* Card 3: Neutralization Law & Underlying Pigment Science (Unified) */}
+          <div className="rounded-2xl border border-amber-500/25 bg-amber-500/5 p-3.5 space-y-2.5">
+            {/* Header */}
             <div className="flex items-center justify-between text-xs font-bold text-amber-300">
               <span className="flex items-center gap-1.5">
                 <span>⚖️</span>
-                <span>Neutralization Law (180° Counteraction):</span>
+                <span>180° Neutralization Law:</span>
               </span>
-              <span className="font-mono text-xs text-white bg-neutral-900 px-2 py-0.5 rounded border border-neutral-700">
+              <span className="font-mono text-[10px] text-white bg-neutral-900 px-2 py-0.5 rounded border border-neutral-700">
                 Δθ = 180.0° Exact
               </span>
             </div>
 
-            {/* Arithmetic Chemical Neutralization Formula */}
-            <div className="rounded-xl border border-neutral-800 bg-neutral-950/90 p-2.5 text-center font-mono text-xs flex items-center justify-center gap-2 flex-wrap">
+            {/* Chemical Equation Box */}
+            <div className="rounded-xl border border-neutral-800 bg-neutral-950/90 p-2 text-center font-mono text-xs flex items-center justify-center gap-1.5 flex-wrap">
               <span className="text-amber-400 font-bold">
                 {iccNumber} ({activeSector.nameEn.split(" / ")[0]} {activeAngle}°)
               </span>
@@ -971,86 +1029,27 @@ export function HairColourWheel({
                 : activeSector.neutralizesWhatEn}
             </p>
 
+            {/* Cross-Brand Neutralizers */}
             <div className="flex items-center justify-between text-[10px] font-mono text-neutral-400 pt-1 border-t border-amber-500/20">
-              <span>Counteracting Wella: <strong className="text-white">{oppWellaNumber}</strong></span>
-              <span>Counteracting L&apos;Oréal: <strong className="text-white">{oppIccNumber}</strong></span>
-            </div>
-          </div>
-
-          {/* Underlying Exposed Pigment (EUP) & Melanin Science at Current Level */}
-          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-3.5 space-y-2">
-            <div className="flex items-center justify-between text-xs font-bold text-neutral-300">
-              <span className="flex items-center gap-1.5">
-                <span>🧬</span>
-                <span>Exposed Underlying Pigment at Level {level}:</span>
-              </span>
-              <span className="font-mono text-[11px] text-amber-400">
-                L* = {levelMetric.lStar}
-              </span>
+              <span>Counter Wella: <strong className="text-white">{oppWellaNumber}</strong></span>
+              <span>Counter L&apos;Oréal: <strong className="text-white">{oppIccNumber}</strong></span>
             </div>
 
-            <div className="flex items-center gap-2 text-xs">
-              <span className="px-2 py-1 rounded-md bg-neutral-900 border border-neutral-700 text-white font-bold">
-                {levelMetric.eupName}
-              </span>
-              <span className="text-[11px] text-neutral-400">
-                ({levelMetric.eupMelaninDistribution})
-              </span>
-            </div>
-
-            <div className="text-[11px] text-neutral-300 flex items-center justify-between pt-1">
-              <span>Required Anti-Warmth Tone:</span>
-              <span className="font-mono font-bold text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
-                {levelMetric.eupCancelReflect} ({levelMetric.eupCancelToneName})
-              </span>
-            </div>
-          </div>
-
-          {/* Depth Level Selection (Levels 1 to 10) with Accurate Lightness L* Numbers */}
-          <div className="rounded-2xl border border-neutral-800 bg-neutral-950/80 p-4 space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold text-neutral-300 uppercase tracking-wider flex items-center gap-1.5">
-                <span>🎚️</span> Depth Level (1 to 10) with Lightness (L*):
-              </label>
-              <span className="text-xs font-mono font-black text-amber-400">
-                Level {level} ({levelMetric.name}) • L* {levelMetric.lStar}
-              </span>
-            </div>
-
-            {/* Slider */}
-            <input
-              type="range"
-              min="1"
-              max="10"
-              step="1"
-              value={level}
-              onChange={(e) => handleLevelChange(Number(e.target.value) as UniversalLevel)}
-              className="w-full h-2.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
-            />
-
-            {/* Quick Level Tap Pills with Exact Level & Lightness L* Numbers */}
-            <div className="grid grid-cols-5 sm:grid-cols-10 gap-1.5 pt-1">
-              {([1, 2, 3, 4, 5, 6, 7, 8, 9, 10] as UniversalLevel[]).map((lvl) => {
-                const metric = LEVEL_METRICS[lvl];
-                const isLvlSelected = level === lvl;
-                return (
-                  <button
-                    key={lvl}
-                    type="button"
-                    onClick={() => handleLevelChange(lvl)}
-                    className={`py-1 px-0.5 text-center rounded-lg transition-all flex flex-col items-center justify-center ${
-                      isLvlSelected
-                        ? "bg-amber-500 text-neutral-950 shadow-md ring-2 ring-amber-400 scale-105"
-                        : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
-                    }`}
-                  >
-                    <span className="text-xs font-black leading-none">{lvl}</span>
-                    <span className={`text-[8px] font-mono leading-none mt-0.5 ${isLvlSelected ? "text-neutral-900 font-bold" : "text-neutral-400"}`}>
-                      {metric.lStar}
-                    </span>
-                  </button>
-                );
-              })}
+            {/* Exposed Underlying Pigment Row */}
+            <div className="pt-2 border-t border-neutral-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-[11px]">
+              <div className="flex items-center gap-1.5 text-neutral-300">
+                <span>🧬 NRP:</span>
+                <span className="font-bold text-white px-1.5 py-0.5 rounded bg-neutral-900 border border-neutral-700 text-[10px]">
+                  {levelMetric.eupName}
+                </span>
+                <span className="text-[10px] text-neutral-400">({levelMetric.eupMelaninDistribution})</span>
+              </div>
+              <div className="flex items-center gap-1 text-[10px]">
+                <span className="text-neutral-400">Anti-Warmth:</span>
+                <span className="font-mono font-bold text-cyan-400 bg-cyan-950/60 px-1.5 py-0.5 rounded border border-cyan-800/40">
+                  {levelMetric.eupCancelReflect} ({levelMetric.eupCancelToneName})
+                </span>
+              </div>
             </div>
           </div>
         </div>

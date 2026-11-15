@@ -31,6 +31,12 @@ export type FormulationResultStatus =
 
 export type ProcessMode = "PREFERRED_MANUFACTURER" | "CROSS_BRAND_COMPARISON";
 
+export type ApplicationTechnique =
+  | "ALL_OVER"
+  | "SHADOW_ROOT"
+  | "COLOR_MELT"
+  | "GLOSS_TONING";
+
 export interface TargetColourInput {
   target_colour_id?: string;
   universal_level: UniversalLevel;
@@ -48,6 +54,7 @@ export interface FormulationEvaluateRequest {
   manufacturer_id?: string | null;
   manufacturer_ids?: string[];
   market: string;
+  technique?: ApplicationTechnique | string;
 }
 
 export interface SafetyCheckResult {
@@ -143,4 +150,7 @@ export interface FormulationResultResponse {
   source_references: string[];
   chemical_equivalence: "NOT_ESTABLISHED";
   evaluated_at: string;
+  technique?: string;
+  exposed_underlying_pigment?: string | null;
+  counter_toner_recommendation?: string | null;
 }

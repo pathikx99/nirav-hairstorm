@@ -18,12 +18,38 @@ from backend.app.database.session import engine
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     """Manage application startup and shutdown.
 
-    On startup:  verify the database connection is reachable.
-    On shutdown: dispose of the connection pool gracefully.
+    On startup:
+      - Ensures database schema is created.
+      - Auto-seeds catalogues from local data if unpopulated.
+    On shutdown:
+      - Disposes of connection engine gracefully.
     """
-    # Startup — verify connectivity
-    async with engine.connect() as conn:
-        await conn.execute(__import__("sqlalchemy").text("SELECT 1"))
+    from pathlib import Path
+    from sqlalchemy import select
+    from backend.app.database.base import Base
+    from backend.app.database.session import async_session_factory, engine
+    from backend.app.manufacturers.importer import CatalogueImporter
+    from backend.app.manufacturers.loreal_seeder import seed_loreal_india
+    from backend.app.manufacturers.wella_seeder import seed_wella_india
+    from backend.app.models.manufacturers import Manufacturer
+
+    # Startup — ensure tables exist
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+    # Auto-seed if empty
+    async with async_session_factory() as session:
+        res = await session.execute(select(Manufacturer).limit(1))
+        if res.scalars().first() is None:
+            await seed_wella_india(session)
+            await seed_loreal_india(session)
+            sk_dir = Path("data/manufacturers/schwarzkopf")
+            if sk_dir.exists():
+                await CatalogueImporter.import_from_directory(
+                    session=session,
+                    directory=sk_dir,
+                    market="IN",
+                )
 
     yield
 

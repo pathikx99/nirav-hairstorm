@@ -16,6 +16,7 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from backend.app.formulation.enums import (
+    ApplicationTechniqueEnum,
     FormulationResultStatusEnum,
     HairConditionEnum,
     PorosityEnum,
@@ -242,6 +243,10 @@ class FormulationEvaluateRequest(BaseModel):
     market: str = Field(
         default="IN",
         description="Target market code (default: 'IN').",
+    )
+    technique: ApplicationTechniqueEnum | str | None = Field(
+        default=None,
+        description="Application technique: 'ALL_OVER', 'SHADOW_ROOT', 'COLOR_MELT', 'GLOSS_TONING'.",
     )
 
     @model_validator(mode="after")
@@ -554,6 +559,18 @@ class FormulationResultResponse(BaseModel):
     source_references: list[str] = Field(
         default_factory=list,
         description="Citations to verified manufacturer technical documentation.",
+    )
+    technique: str | None = Field(
+        default="ALL_OVER",
+        description="Application technique applied (e.g. ALL_OVER, SHADOW_ROOT, COLOR_MELT).",
+    )
+    exposed_underlying_pigment: str | None = Field(
+        default=None,
+        description="Natural contributing pigment (NRP) exposed during lift.",
+    )
+    counter_toner_recommendation: str | None = Field(
+        default=None,
+        description="Color wheel counter-toner neutralization recommendation.",
     )
     chemical_equivalence: Literal["NOT_ESTABLISHED"] = Field(
         default="NOT_ESTABLISHED",

@@ -14,12 +14,22 @@ from backend.app.config import get_settings
 
 settings = get_settings()
 
+is_sqlite = settings.async_database_url.startswith("sqlite")
+
+engine_kwargs: dict = {
+    "echo": settings.DEBUG,
+}
+
+if is_sqlite:
+    engine_kwargs["connect_args"] = {"check_same_thread": False}
+else:
+    engine_kwargs["pool_size"] = 5
+    engine_kwargs["max_overflow"] = 10
+    engine_kwargs["pool_pre_ping"] = True
+
 engine = create_async_engine(
     settings.async_database_url,
-    echo=settings.DEBUG,
-    pool_size=5,
-    max_overflow=10,
-    pool_pre_ping=True,
+    **engine_kwargs,
 )
 
 async_session_factory = async_sessionmaker(

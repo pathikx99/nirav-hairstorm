@@ -351,6 +351,80 @@ export function computeHairColorimetry(
 // Helpers
 // ---------------------------------------------------------------------------
 
+/**
+ * Applies physical lighting metamerism color shift based on correlated color temperature (CCT)
+ * and Planckian spectral distribution:
+ * - DAYLIGHT (6500K / CIE D65): Neutral baseline, 100 CRI reflection.
+ * - WARM (3000K Halogen/Incandescent): Dominant long-wavelength red/amber shift (+16% R, +6% G, -24% B).
+ * - COOL (4000K Cool White Fluorescent/Commercial LED): Blue/cyan peak shift (-12% R, +2% G, +18% B).
+ */
+export function applyMetamerism(hex: string, mode: "DAYLIGHT" | "WARM" | "COOL"): string {
+  const [r, g, b] = hexToRgb(hex);
+  if (mode === "DAYLIGHT") {
+    return hex;
+  } else if (mode === "WARM") {
+    const wr = Math.min(255, Math.round(r * 1.16));
+    const wg = Math.min(255, Math.round(g * 1.06));
+    const wb = Math.max(0, Math.round(b * 0.76));
+    return rgbToHex(wr, wg, wb);
+  } else if (mode === "COOL") {
+    const cr = Math.max(0, Math.round(r * 0.88));
+    const cg = Math.min(255, Math.round(g * 1.02));
+    const cb = Math.min(255, Math.round(b * 1.18));
+    return rgbToHex(cr, cg, cb);
+  }
+  return hex;
+}
+
+const TONE_DIGIT_MAP: Record<ToneFamily, string> = {
+  NATURAL: "0",
+  ASH: "1",
+  PEARL: "2",
+  GOLD: "3",
+  COPPER: "4",
+  MAHOGANY: "5",
+  VIOLET: "6",
+  RED: "6",
+  GREEN: "7",
+  BEIGE: "8",
+  BLUE: "1",
+  YELLOW: "3",
+  ORANGE: "4",
+  PINK: "5",
+  MIXED: "9",
+  UNKNOWN: "0",
+};
+
+export function getSalonShadeCode(
+  level: UniversalLevel,
+  primary: ToneFamily,
+  secondary?: ToneFamily | null
+): { code: string; name: string } {
+  const pDigit = TONE_DIGIT_MAP[primary] || "0";
+  const sDigit = secondary ? (TONE_DIGIT_MAP[secondary] || "") : "";
+  const code = sDigit && sDigit !== pDigit ? `${level}/${pDigit}${sDigit}` : `${level}/${pDigit}`;
+
+  let name = `Level ${level} ${primary}`;
+  if (secondary && secondary !== primary) {
+    name = `Level ${level} ${primary}/${secondary}`;
+  }
+
+  if (primary === "COPPER" && secondary === "GOLD") name = `Fiery Amber Copper`;
+  else if (primary === "GOLD" && level >= 8) name = `Honey Blonde`;
+  else if (primary === "GOLD") name = `Golden Warmth`;
+  else if (primary === "COPPER") name = `Fiery Copper`;
+  else if (primary === "ASH") name = `Smoky Ash`;
+  else if (primary === "PEARL") name = `Cool Pearl`;
+  else if (primary === "RED" && secondary === "VIOLET") name = `Deep Burgundy Plum`;
+  else if (primary === "RED") name = `Crimson Red`;
+  else if (primary === "NATURAL" && level === 1) name = `Jet Black`;
+  else if (primary === "NATURAL" && level <= 3) name = `Deep Espresso Brunette`;
+  else if (primary === "NATURAL" && level <= 5) name = `Rich Chocolate Brown`;
+  else if (primary === "NATURAL" && level >= 9) name = `Pure Platinum Blonde`;
+
+  return { code, name };
+}
+
 function hexToRgb(hex: string): [number, number, number] {
   const sanitized = hex.replace("#", "");
   const num = parseInt(sanitized, 16);

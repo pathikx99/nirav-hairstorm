@@ -1,26 +1,34 @@
 #!/bin/bash
 set -e
 
-echo "Waiting for PostgreSQL database to be reachable..."
-until python -c "
+echo "Starting Nirav Hairstorm entrypoint..."
+
+# If using PostgreSQL, wait until reachable
+python -c "
 import asyncio
+from backend.app.config import get_settings
 from backend.app.database.session import async_session_factory
 from sqlalchemy import text
 
-async def check():
-    async with async_session_factory() as s:
-        await s.execute(text('SELECT 1'))
+async def wait_db():
+    settings = get_settings()
+    if 'sqlite' in settings.async_database_url:
+        print('Using local SQLite - no external database wait needed.')
+        return
+    print('Waiting for database to be reachable...')
+    for i in range(30):
+        try:
+            async with async_session_factory() as s:
+                await s.execute(text('SELECT 1'))
+            print('✅ Database reachable!')
+            return
+        except Exception as e:
+            print(f'Waiting... ({e})')
+            await asyncio.sleep(1)
+    raise RuntimeError('Database unreachable after 30 attempts')
 
-asyncio.run(check())
-" 2>/dev/null; do
-    echo "PostgreSQL is unavailable - sleeping 1s..."
-    sleep 1
-done
-
-echo "✅ PostgreSQL is reachable!"
-
-echo "Running database migrations (alembic upgrade head)..."
-alembic upgrade head
+asyncio.run(wait_db())
+"
 
 echo "Checking catalogue seed status..."
 python -c "
