@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ProcessMode, TargetColourInput } from "../../types/formulation";
+import { ApplicationTechnique, ProcessMode, TargetColourInput } from "../../types/formulation";
 import { Manufacturer } from "../../types/manufacturer";
 import { ToneFamily, ToneIntensity, UniversalLevel } from "../../types/uhcr";
 import { HairAssessmentInput } from "../../types/assessment";
-import { useApp } from "../../context/AppContext";
+import { useApp, LightingMode } from "../../context/AppContext";
 import { LevelSelector } from "../../features/colour-selection/LevelSelector";
 import { ToneSelector } from "../../features/colour-selection/ToneSelector";
 import { ModeSelector } from "../../features/colour-selection/ModeSelector";
@@ -463,7 +463,7 @@ export default function TargetColourPage() {
                 <button
                   key={l.id}
                   type="button"
-                  onClick={() => setLightingMode(l.id as any)}
+                  onClick={() => setLightingMode(l.id as LightingMode)}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer ${
                     lightingMode === l.id
                       ? "bg-amber-500 text-neutral-950 shadow-xs font-black"
@@ -488,7 +488,7 @@ export default function TargetColourPage() {
                 <button
                   key={t.id}
                   type="button"
-                  onClick={() => setActiveTechnique(t.id as any)}
+                  onClick={() => setActiveTechnique(t.id as ApplicationTechnique)}
                   className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                     activeTechnique === t.id
                       ? "bg-rose-500 text-white shadow-xs font-black"
@@ -511,7 +511,7 @@ export default function TargetColourPage() {
                 <button
                   key={z.id}
                   type="button"
-                  onClick={() => setColourTargetZone(z.id as any)}
+                  onClick={() => setColourTargetZone(z.id as ColourApplicationTarget)}
                   className={`px-2 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
                     colourTargetZone === z.id
                       ? "bg-indigo-500 text-white font-black"

@@ -4,6 +4,7 @@ Benchmarking Nirav Hairstorm Platform against Professional Colorist Standards
 """
 
 import json
+
 import requests
 
 API_URL = "http://localhost:8000/api/v1/formulations/evaluate"

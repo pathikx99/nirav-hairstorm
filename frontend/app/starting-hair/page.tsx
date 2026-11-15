@@ -7,7 +7,7 @@ import {
   HairAssessmentInput,
   HairRegionInput,
 } from "../../types/assessment";
-import { UniversalLevel } from "../../types/uhcr";
+import { ToneFamily, UniversalLevel } from "../../types/uhcr";
 import { useApp } from "../../context/AppContext";
 import { RegionAssessmentCard } from "../../features/assessment/RegionAssessmentCard";
 import { HistoryChecklist } from "../../features/assessment/HistoryChecklist";
@@ -519,7 +519,7 @@ export default function StartingHairPage() {
             ) : (
               <HairStrandMacroStudio
                 level={currentRegion.observed_level || 5}
-                primaryTone={(currentRegion.observed_undertone as any) || "NATURAL"}
+                primaryTone={(currentRegion.observed_undertone as ToneFamily) || "NATURAL"}
                 greyPercentage={currentRegion.grey_percentage || 0}
                 lightingMode={lightingMode}
                 onLightingModeChange={setLightingMode}

@@ -11,7 +11,7 @@
  */
 
 import { ToneFamily, UniversalLevel } from "../types/uhcr";
-import { computeHairColorimetry, applyMetamerism } from "./hairColorimetryService";
+import { applyMetamerism } from "./hairColorimetryService";
 import { ApplicationTechnique } from "../types/formulation";
 import { LightingMode } from "../context/AppContext";
 
@@ -249,7 +249,7 @@ export function analyzeHairFromImageData(
   hairMask: Uint8ClampedArray,
   hairBounds: { minX: number; maxX: number; minY: number; maxY: number }
 ): ClientHairPhotoAnalysis {
-  const { width, height, data } = imgData;
+  const { width, data } = imgData;
   const hairHeight = Math.max(1, hairBounds.maxY - hairBounds.minY);
 
   // Divide hair vertically into 3 physiological zones:
@@ -482,7 +482,7 @@ export function renderRecoloredHairToCanvas(
 
     const totalW = wRoots + wMid + wEnds || 1;
     const targetR = (wRoots * tRootsR + wMid * tMidR + wEnds * tEndsR) / totalW;
-    const targetG = (wRoots * tRootsG + wMid * tMidG + wEnds * tEndsB) / totalW;
+    const targetG = (wRoots * tRootsG + wMid * tMidG + wEnds * tEndsG) / totalW;
     const targetB = (wRoots * tRootsB + wMid * tMidB + wEnds * tEndsB) / totalW;
 
     for (let x = startX; x <= maxX; x++) {

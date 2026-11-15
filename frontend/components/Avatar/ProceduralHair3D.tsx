@@ -9,7 +9,7 @@
  * Powered by HairShaderMaterial.
  */
 
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import * as THREE from "three";
 import { RenderedHairPalette, HairZoneId, LightingPreset } from "./AvatarTypes";
 import { createHairShaderMaterial } from "./HairShaderMaterial";
@@ -88,7 +88,7 @@ export const ProceduralHair3D: React.FC<ProceduralHair3DProps> = ({
   }, []);
 
   // Update uniforms when palette or state changes
-  useMemo(() => {
+  useEffect(() => {
     hairMaterial.uniforms.uRootsColor.value.set(roots.base);
     hairMaterial.uniforms.uRootsShadow.value.set(roots.shadow);
     hairMaterial.uniforms.uRootsHighlight.value.set(roots.highlight);

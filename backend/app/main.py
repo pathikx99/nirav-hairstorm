@@ -25,9 +25,11 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
       - Disposes of connection engine gracefully.
     """
     from pathlib import Path
+
     from sqlalchemy import select
+
     from backend.app.database.base import Base
-    from backend.app.database.session import async_session_factory, engine
+    from backend.app.database.session import async_session_factory
     from backend.app.manufacturers.importer import CatalogueImporter
     from backend.app.manufacturers.loreal_seeder import seed_loreal_india
     from backend.app.manufacturers.wella_seeder import seed_wella_india

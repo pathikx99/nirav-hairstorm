@@ -7,6 +7,8 @@ Comprehensive End-to-End Verification of 5 Real-World Salon Formulation Cases:
 5. Cross-brand shade resolution (e.g., Universal Level 7 Ash across Wella, L'Oréal, Schwarzkopf)
 """
 
+from pathlib import Path
+
 import pytest
 from httpx import AsyncClient
 from sqlalchemy import select
@@ -16,7 +18,6 @@ from backend.app.manufacturers.importer import CatalogueImporter
 from backend.app.manufacturers.loreal_seeder import seed_loreal_india
 from backend.app.manufacturers.wella_seeder import seed_wella_india
 from backend.app.models.manufacturers import Manufacturer
-from pathlib import Path
 
 
 @pytest.mark.asyncio

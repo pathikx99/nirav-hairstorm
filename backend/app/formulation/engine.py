@@ -1076,7 +1076,7 @@ class FormulationEngine:
             stage_bowl_1 = FormulationStage(
                 stage_number=stage_counter,
                 service_type=ServiceClassificationEnum.DEPOSIT,
-                stage_description=f"Bowl 1 (Root Shadow / Depth Anchor): Depth anchor applied to regrowth zone.",
+                stage_description="Bowl 1 (Root Shadow / Depth Anchor): Depth anchor applied to regrowth zone.",
                 target_regions=[HairRegionEnum.ROOTS],
                 products=[
                     ProductComponentFormula(
@@ -1120,7 +1120,7 @@ class FormulationEngine:
             stage_bowl_2 = FormulationStage(
                 stage_number=stage_counter,
                 service_type=overall_classification,
-                stage_description=f"Bowl 2 (Luminous Color Melt): Vibrant fashion glaze feathered through lengths.",
+                stage_description="Bowl 2 (Luminous Color Melt): Vibrant fashion glaze feathered through lengths.",
                 target_regions=[HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
                 products=[
                     ProductComponentFormula(

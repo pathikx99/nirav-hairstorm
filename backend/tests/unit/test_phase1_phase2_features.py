@@ -1,7 +1,5 @@
 """Test suite validating Phase 1 & Phase 2 Creative & Colorimetric Engine Extensions."""
 
-import pytest
-from decimal import Decimal
 
 from backend.app.formulation.engine import FormulationEngine
 from backend.app.formulation.enums import (
