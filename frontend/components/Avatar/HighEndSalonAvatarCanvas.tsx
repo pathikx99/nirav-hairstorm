@@ -229,26 +229,26 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
     let lusterBoost = 0.22;
 
     if (lighting === "salon") {
-      metaR = 1.10;
-      metaG = 1.03;
-      metaB = 0.85;
+      metaR = 1.12;
+      metaG = 1.04;
+      metaB = 0.84;
       lusterR = 255;
       lusterG = 242;
       lusterB = 210;
       lusterBoost = 0.28;
     } else if (lighting === "cool") {
-      metaR = 0.92;
-      metaG = 1.01;
-      metaB = 1.12;
+      metaR = 0.93;
+      metaG = 1.015;
+      metaB = 1.11;
       lusterR = 220;
       lusterG = 235;
       lusterB = 255;
       lusterBoost = 0.18;
     } else {
-      // Direct sunlight
-      metaR = 1.03;
-      metaG = 1.01;
-      metaB = 0.98;
+      // Direct daylight
+      metaR = 1.00;
+      metaG = 1.00;
+      metaB = 1.00;
       lusterR = 255;
       lusterG = 252;
       lusterB = 240;

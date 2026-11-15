@@ -363,14 +363,14 @@ export function applyMetamerism(hex: string, mode: "DAYLIGHT" | "WARM" | "COOL")
   if (mode === "DAYLIGHT") {
     return hex;
   } else if (mode === "WARM") {
-    const wr = Math.min(255, Math.round(r * 1.16));
-    const wg = Math.min(255, Math.round(g * 1.06));
-    const wb = Math.max(0, Math.round(b * 0.76));
+    const wr = Math.min(255, Math.round(r * 1.12));
+    const wg = Math.min(255, Math.round(g * 1.04));
+    const wb = Math.max(0, Math.round(b * 0.84));
     return rgbToHex(wr, wg, wb);
   } else if (mode === "COOL") {
-    const cr = Math.max(0, Math.round(r * 0.88));
-    const cg = Math.min(255, Math.round(g * 1.02));
-    const cb = Math.min(255, Math.round(b * 1.18));
+    const cr = Math.max(0, Math.round(r * 0.93));
+    const cg = Math.min(255, Math.round(g * 1.015));
+    const cb = Math.min(255, Math.round(b * 1.11));
     return rgbToHex(cr, cg, cb);
   }
   return hex;

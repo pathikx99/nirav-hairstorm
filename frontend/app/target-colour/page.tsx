@@ -661,9 +661,10 @@ export default function TargetColourPage() {
               onSkinToneChange={setSkinTone}
               viewAngle={viewAngle}
               onViewAngleChange={setViewAngle}
-              rootsInput={assessmentData?.roots}
-              midLengthsInput={assessmentData?.mid_lengths}
-              endsInput={assessmentData?.ends}
+              rootsGrey={0}
+              midGrey={0}
+              endsGrey={0}
+              greyPercentage={0}
               activeRegion={colourTargetZone === "ALL" ? undefined : (colourTargetZone as AvatarZone)}
               onSelectRegion={(region) => setColourTargetZone(region)}
               customRootsLevel={customRootsLevel}

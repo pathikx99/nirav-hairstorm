@@ -201,18 +201,25 @@ class SafetyValidationService:
         # 4. Fiber Integrity / Severe Damage
         # -------------------------------------------------------------------
         severely_damaged_regions = [
-            r.region.value
+            r
             for r in (assessment.roots, assessment.mid_lengths, assessment.ends)
             if r.condition == HairConditionEnum.SEVERELY_DAMAGED
         ]
         if severely_damaged_regions:
-            if overall_classification in (
-                ServiceClassificationEnum.LIGHTENING,
-                ServiceClassificationEnum.LIFTING,
-                ServiceClassificationEnum.MULTI_STAGE_PROCESS,
-            ):
+            target_lvl = int(target.universal_level)
+            # A region requires lift if target level > observed level, or if overall is full-head LIGHTENING
+            damaged_regions_requiring_lift = [
+                r.region.value
+                for r in severely_damaged_regions
+                if (
+                    target_lvl - int(r.observed_level) > 0
+                    or overall_classification == ServiceClassificationEnum.LIGHTENING
+                )
+            ]
+
+            if damaged_regions_requiring_lift:
                 msg = (
-                    f"Hair fiber in regions {severely_damaged_regions} is classified as SEVERELY_DAMAGED. "
+                    f"Hair fiber in regions {damaged_regions_requiring_lift} is classified as SEVERELY_DAMAGED and requires chemical lift. "
                     "Aggressive oxidative lifting or bleaching poses extreme risk of hair breakage and loss of structural elasticity."
                 )
                 checks.append(
@@ -227,13 +234,17 @@ class SafetyValidationService:
                 )
                 blocking_reasons.append(msg)
             else:
+                damaged_deposit_names = [r.region.value for r in severely_damaged_regions]
                 checks.append(
                     SafetyCheckResult(
                         check_code="SAFETY_SEVERELY_DAMAGED_FIBER",
                         status=SafetyStatusEnum.WARNING,
-                        title="Severely Damaged Hair Fiber",
-                        detail=f"Hair is severely damaged in {severely_damaged_regions}. Use gentle deposit or acidic gloss only.",
-                        recommendation="Use lowest developer concentration (1.9% / 6 Vol) with maximum conditioning agents.",
+                        title="Severely Damaged Hair Fiber (Deposit / Acidic Gloss Only)",
+                        detail=(
+                            f"Hair fiber in regions {damaged_deposit_names} is SEVERELY_DAMAGED. "
+                            "Alkaline lift or bleaching is prohibited, but gentle deposit or acidic gloss using lowest developer (1.9% / 6 Vol) is permitted."
+                        ),
+                        recommendation="Use lowest developer concentration (1.9% / 6 Vol) with non-ammonia acidic demi-permanent gloss and bond builder.",
                     )
                 )
 

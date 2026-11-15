@@ -31,19 +31,19 @@
         "products": [
           "7/3 (30.0g)"
         ],
-        "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
       }
     ],
     "raw": {
-      "formulation_id": "470eafd7-0db1-4151-b862-adb60302ecb6",
+      "formulation_id": "317c25b7-21d5-4283-9dfd-d90a7152ab6e",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "9314ad19-4c00-492b-a0d4-dd9e5981c72c",
-      "target_colour_id": "b8fde8e2-d153-4b59-b260-6d1528de7e4e",
+      "assessment_id": "a0dc0359-2d9b-4ad4-be85-a5cde98f1962",
+      "target_colour_id": "a211eff1-574c-447b-a3e9-837f2a95bc1e",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -127,7 +127,7 @@
           "development_time_minutes": 20,
           "development_time_range": "15\u201320 min without heat",
           "heat_permitted": false,
-          "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+          "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
           "rules_applied": [
             "WELLA-KP-PASTEL-TONING"
           ],
@@ -225,7 +225,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -327,7 +327,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -429,7 +429,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -491,14 +491,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Blondor Technical Folder Page 7, 10, 14",
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
+        "Blondor Technical Folder Page 7, 10, 14"
       ],
       "technique": "ALL_OVER",
       "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:42.762688Z"
+      "evaluated_at": "2026-11-15T22:50:14.129550Z"
     }
   },
   {
@@ -517,8 +517,8 @@
     "stages": [
       {
         "stage_type": null,
-        "developer_vol": 40,
-        "developer_pct": "12.0",
+        "developer_vol": 20,
+        "developer_pct": "6.0",
         "time_mins": 35,
         "products": [
           "7/0 (30.0g)",
@@ -528,15 +528,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "ed98b91a-9ce6-48f4-bf96-cb567ff8ad6d",
+      "formulation_id": "0cc0a13e-a94a-4f4e-8b7a-c1e134ce0070",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "7a5f64e5-19a8-49ce-9302-1755ddfcc5de",
-      "target_colour_id": "a9360118-bd9f-4733-acce-ae8fb8066386",
+      "assessment_id": "38aa768b-e3c5-420e-98fe-83c2d5b7a23c",
+      "target_colour_id": "2610590f-263a-49c6-b070-549425b56e16",
       "service_classification": "LIFTING",
       "stages": [
         {
@@ -577,10 +577,10 @@
             }
           ],
           "developer": {
-            "developer_id": "41a81e30-5041-4ddc-a466-511cacc649a2",
-            "developer_name": "Welloxon Perfect 12% (40 Vol)",
-            "concentration_percent": "12.0",
-            "volume_in_vol": 40,
+            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_name": "Welloxon Perfect 6% (20 Vol)",
+            "concentration_percent": "6.0",
+            "volume_in_vol": 20,
             "parts": "1.0",
             "weight_grams": "60.00"
           },
@@ -590,7 +590,7 @@
           "heat_permitted": false,
           "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
           "rules_applied": [
-            "WELLA-KP-DEV-LIFT-STANDARD",
+            "GREY-COVERAGE-20V-STANDARD",
             "WELLA-KP-MIX-STANDARD"
           ],
           "source_document_references": [
@@ -644,10 +644,10 @@
                 }
               ],
               "developer": {
-                "developer_id": "41a81e30-5041-4ddc-a466-511cacc649a2",
-                "developer_name": "Welloxon Perfect 12% (40 Vol)",
-                "concentration_percent": "12.0",
-                "volume_in_vol": 40,
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
                 "parts": "1.0",
                 "weight_grams": "60.00"
               },
@@ -657,7 +657,7 @@
               "heat_permitted": false,
               "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
               "rules_applied": [
-                "WELLA-KP-DEV-LIFT-STANDARD",
+                "GREY-COVERAGE-20V-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
               ],
               "source_document_references": [
@@ -715,10 +715,10 @@
                 }
               ],
               "developer": {
-                "developer_id": "41a81e30-5041-4ddc-a466-511cacc649a2",
-                "developer_name": "Welloxon Perfect 12% (40 Vol)",
-                "concentration_percent": "12.0",
-                "volume_in_vol": 40,
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
                 "parts": "1.0",
                 "weight_grams": "60.00"
               },
@@ -728,7 +728,7 @@
               "heat_permitted": false,
               "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
               "rules_applied": [
-                "WELLA-KP-DEV-LIFT-STANDARD",
+                "GREY-COVERAGE-20V-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
               ],
               "source_document_references": [
@@ -786,10 +786,10 @@
                 }
               ],
               "developer": {
-                "developer_id": "41a81e30-5041-4ddc-a466-511cacc649a2",
-                "developer_name": "Welloxon Perfect 12% (40 Vol)",
-                "concentration_percent": "12.0",
-                "volume_in_vol": 40,
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
                 "parts": "1.0",
                 "weight_grams": "60.00"
               },
@@ -799,7 +799,7 @@
               "heat_permitted": false,
               "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
               "rules_applied": [
-                "WELLA-KP-DEV-LIFT-STANDARD",
+                "GREY-COVERAGE-20V-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
               ],
               "source_document_references": [
@@ -867,7 +867,7 @@
       "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:42.896082Z"
+      "evaluated_at": "2026-11-15T22:50:14.188223Z"
     }
   },
   {
@@ -907,15 +907,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "edff20fd-416b-49fe-a44c-cef2fd1f60fb",
+      "formulation_id": "e7c4386b-024b-4586-b1ed-a8e2917c81ad",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "015104ef-b7e9-4107-ab83-631148752365",
-      "target_colour_id": "6cdadaa2-6404-47f3-ab65-3c402f277b3f",
+      "assessment_id": "b35455a5-8f64-4ecd-b9a8-46d72c6b961b",
+      "target_colour_id": "5c91aee2-1888-4361-b761-d4fef43a34bb",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -1417,7 +1417,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:42.951015Z"
+      "evaluated_at": "2026-11-15T22:50:14.310752Z"
     }
   },
   {
@@ -1437,15 +1437,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "81319bf7-d50d-4594-b834-bf0ec0d86078",
+      "formulation_id": "3228b03b-9d1a-4b11-801b-6f9d0a7eaa86",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "fd820241-05a9-4b98-b5fa-22885b373cab",
-      "target_colour_id": "5e81090b-a2da-428c-a353-08ed159d371f",
+      "assessment_id": "7a61433e-be15-431a-9b4a-19cebc37f0a1",
+      "target_colour_id": "34a80e03-c2e8-49ff-814d-c8fa8a956aaa",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [],
       "regions": [],
@@ -1499,7 +1499,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.002227Z"
+      "evaluated_at": "2026-11-15T22:50:14.359347Z"
     }
   },
   {
@@ -1519,15 +1519,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "570410cf-90aa-496a-96b4-6f1810af7001",
+      "formulation_id": "ad94b23c-ff4e-46c9-b55b-5d4120ba3877",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "086712d5-041b-4a28-939a-64437ca0ddb2",
-      "target_colour_id": "24f8580e-95f2-42ae-b093-944925ba1992",
+      "assessment_id": "3259a21c-6060-447f-8a37-321d083f49a7",
+      "target_colour_id": "cdc17b1d-ac40-4659-8a29-115866035f66",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [],
       "regions": [],
@@ -1581,7 +1581,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.053846Z"
+      "evaluated_at": "2026-11-15T22:50:14.423095Z"
     }
   },
   {
@@ -1614,21 +1614,22 @@
         "developer_pct": "1.900",
         "time_mins": 20,
         "products": [
-          "6/1 (30.0g)"
+          "6/1 (30.0g)",
+          "0/11 (3.0g)"
         ],
         "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
       }
     ],
     "raw": {
-      "formulation_id": "1eff7374-92db-4e9d-b698-9d23c6f138f0",
+      "formulation_id": "37a3d3ee-e122-401e-8678-03684ac74be8",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "3bd450fb-f06f-4464-8823-1cdcd9718521",
-      "target_colour_id": "d8354792-8d0b-4409-aa20-d364e4d2f7a9",
+      "assessment_id": "81f923f2-6a67-4bcf-87f0-e66fb6dd77e6",
+      "target_colour_id": "d2fe6c25-9551-48c3-8f3f-2f74469c4108",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -1698,6 +1699,19 @@
               "length_cm": null,
               "is_pure_natural": false,
               "notes": null
+            },
+            {
+              "product_type": "SPECIAL_MIX",
+              "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+              "product_name": "Intense Ash",
+              "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+              "shade_code": "0/11",
+              "shade_name": "Intense Ash",
+              "parts": "0.05",
+              "weight_grams": "3.0",
+              "length_cm": "6",
+              "is_pure_natural": false,
+              "notes": "Rule of 12 counter-neutralizing booster: 6 cm."
             }
           ],
           "developer": {
@@ -1796,6 +1810,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "3.0",
+                  "length_cm": "6",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 6 cm."
                 }
               ],
               "developer": {
@@ -1898,6 +1925,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "3.0",
+                  "length_cm": "6",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 6 cm."
                 }
               ],
               "developer": {
@@ -2000,6 +2040,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "3.0",
+                  "length_cm": "6",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 6 cm."
                 }
               ],
               "developer": {
@@ -2078,14 +2131,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Blondor Technical Folder Page 7, 10, 14",
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
+        "Blondor Technical Folder Page 7, 10, 14"
       ],
       "technique": "ALL_OVER",
       "exposed_underlying_pigment": "Level 6 ORANGE",
       "counter_toner_recommendation": "Exposed ORANGE natural undertone: add 3\u20135g Blue / Ash counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect.",
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.109999Z"
+      "evaluated_at": "2026-11-15T22:50:14.495231Z"
     }
   },
   {
@@ -2107,15 +2160,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "94fc8419-6f08-4bde-a77c-f342c5023eb9",
+      "formulation_id": "82b110cd-fae3-45b2-a65d-63c684b21b0b",
       "status": "BLOCKED",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "3f10a80c-5d4f-418c-bcc6-86c595d4f39c",
-      "target_colour_id": "6a942917-2f00-460d-8893-da87c2c8adeb",
+      "assessment_id": "efd4d89f-f825-46f6-a715-43c162b63d7c",
+      "target_colour_id": "f5d961b8-fc1c-429f-956d-b754357fdab4",
       "service_classification": "LIFTING",
       "stages": [],
       "regions": [],
@@ -2161,7 +2214,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.163951Z"
+      "evaluated_at": "2026-11-15T22:50:14.567834Z"
     }
   },
   {
@@ -2194,21 +2247,22 @@
         "developer_pct": "1.900",
         "time_mins": 20,
         "products": [
-          "8/1 (30.0g)"
+          "8/1 (30.0g)",
+          "0/11 (2.0g)"
         ],
         "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
       }
     ],
     "raw": {
-      "formulation_id": "3d555bc6-f816-48f7-92f6-f3c0907a55ef",
+      "formulation_id": "918b21aa-4fe5-4167-ba2e-9166ed6e103b",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "acddfce3-6878-4981-8a79-1283f09ebc7b",
-      "target_colour_id": "892f018f-f66e-4774-a741-bb1b72e9d436",
+      "assessment_id": "e62ef7af-64c0-40d5-8a8d-3302128b0ca8",
+      "target_colour_id": "7a47b5f1-5cb3-4082-b532-2c22eeb12980",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -2278,6 +2332,19 @@
               "length_cm": null,
               "is_pure_natural": false,
               "notes": null
+            },
+            {
+              "product_type": "SPECIAL_MIX",
+              "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+              "product_name": "Intense Ash",
+              "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+              "shade_code": "0/11",
+              "shade_name": "Intense Ash",
+              "parts": "0.05",
+              "weight_grams": "2.0",
+              "length_cm": "4",
+              "is_pure_natural": false,
+              "notes": "Rule of 12 counter-neutralizing booster: 4 cm."
             }
           ],
           "developer": {
@@ -2376,6 +2443,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "2.0",
+                  "length_cm": "4",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 4 cm."
                 }
               ],
               "developer": {
@@ -2478,6 +2558,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "2.0",
+                  "length_cm": "4",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 4 cm."
                 }
               ],
               "developer": {
@@ -2580,6 +2673,19 @@
                   "length_cm": null,
                   "is_pure_natural": false,
                   "notes": null
+                },
+                {
+                  "product_type": "SPECIAL_MIX",
+                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_name": "Intense Ash",
+                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_code": "0/11",
+                  "shade_name": "Intense Ash",
+                  "parts": "0.05",
+                  "weight_grams": "2.0",
+                  "length_cm": "4",
+                  "is_pure_natural": false,
+                  "notes": "Rule of 12 counter-neutralizing booster: 4 cm."
                 }
               ],
               "developer": {
@@ -2658,14 +2764,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Blondor Technical Folder Page 7, 10, 14",
-        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning"
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
+        "Blondor Technical Folder Page 7, 10, 14"
       ],
       "technique": "ALL_OVER",
       "exposed_underlying_pigment": "Level 8 YELLOW_GOLD",
       "counter_toner_recommendation": "Exposed YELLOW_GOLD natural undertone: add 2\u20133g Violet / Pearl counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect.",
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.213973Z"
+      "evaluated_at": "2026-11-15T22:50:14.633738Z"
     }
   },
   {
@@ -2690,7 +2796,7 @@
         "developer_pct": null,
         "time_mins": 10,
         "products": [
-          "None (20.0g)"
+          "CHELATING-PREP (20.0g)"
         ],
         "instructions": "Spray evenly from roots to ends on dry hair prior to service. Comb through for uniform saturation. Air-dry or towel-blot excess. Do not rinse."
       },
@@ -2712,19 +2818,19 @@
         "products": [
           "8/3 (30.0g)"
         ],
-        "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
       }
     ],
     "raw": {
-      "formulation_id": "b2e583fc-dcc0-4f2c-a308-75a3f3135972",
+      "formulation_id": "e46b43ea-7744-487a-b836-051af885797f",
       "status": "REQUIRES_PROFESSIONAL_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "0da8c31a-d905-46b7-a436-ea22c389a307",
-      "target_colour_id": "75895996-1366-423d-bc3d-e1e309cee12f",
+      "assessment_id": "3bd77548-a9ed-4326-9736-9488621e970d",
+      "target_colour_id": "e318249b-2e4b-4cc6-8024-fd32dd37fc6d",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -2742,8 +2848,8 @@
               "product_id": null,
               "product_name": "Wella Invigo Aqua Pure Chelating Treatment",
               "shade_id": null,
-              "shade_code": null,
-              "shade_name": null,
+              "shade_code": "CHELATING-PREP",
+              "shade_name": "Wella Invigo Aqua Pure Chelating Treatment",
               "parts": "1.0",
               "weight_grams": "20.0",
               "length_cm": null,
@@ -2845,7 +2951,7 @@
           "development_time_minutes": 20,
           "development_time_range": "15\u201320 min without heat",
           "heat_permitted": false,
-          "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+          "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
           "rules_applied": [
             "WELLA-KP-PASTEL-TONING"
           ],
@@ -2877,8 +2983,8 @@
                   "product_id": null,
                   "product_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "shade_id": null,
-                  "shade_code": null,
-                  "shade_name": null,
+                  "shade_code": "CHELATING-PREP",
+                  "shade_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "parts": "1.0",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -2980,7 +3086,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -3016,8 +3122,8 @@
                   "product_id": null,
                   "product_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "shade_id": null,
-                  "shade_code": null,
-                  "shade_name": null,
+                  "shade_code": "CHELATING-PREP",
+                  "shade_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "parts": "1.0",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -3119,7 +3225,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -3155,8 +3261,8 @@
                   "product_id": null,
                   "product_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "shade_id": null,
-                  "shade_code": null,
-                  "shade_name": null,
+                  "shade_code": "CHELATING-PREP",
+                  "shade_name": "Wella Invigo Aqua Pure Chelating Treatment",
                   "parts": "1.0",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -3258,7 +3364,7 @@
               "development_time_minutes": 20,
               "development_time_range": "15\u201320 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse.",
               "rules_applied": [
                 "WELLA-KP-PASTEL-TONING"
               ],
@@ -3328,15 +3434,15 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Salon Hard Water & Heavy Metal Safety Guidelines",
         "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
+        "Salon Hard Water & Heavy Metal Safety Guidelines",
         "Blondor Technical Folder Page 7, 10, 14"
       ],
       "technique": "ALL_OVER",
       "exposed_underlying_pigment": "Level 8 YELLOW_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.268352Z"
+      "evaluated_at": "2026-11-15T22:50:14.695147Z"
     }
   },
   {
@@ -3345,29 +3451,447 @@
     "source": "Hairbrained & BehindTheChair 'Dealing with Compromised Porous Hair'",
     "problem": "Client with healthy Level 6 roots, but bleached Level 8 ends that are severely compromised (snapping when wet, high porosity, cuticle degradation). Desires Level 7 Natural Warm Blonde.",
     "hair_science_rule": "High-volume alkaline tint on severely compromised ends will cause irreversible fiber breakage (chemical haircut). Professional protocol requires low-volume deposit (1.9% / 6 Vol or 4% / 13 Vol) with acidic or demi-permanent conditioning technology.",
-    "formulation_status": "BLOCKED",
+    "formulation_status": "REQUIRES_PROFESSIONAL_REVIEW",
     "service_classification": "MULTI_STAGE_PROCESS",
-    "safety_blocked_count": 1,
-    "safety_blocked_details": [
-      "Hair fiber in regions ['ENDS'] is classified as SEVERELY_DAMAGED. Aggressive oxidative lifting or bleaching poses extreme risk of hair breakage and loss of structural elasticity."
+    "safety_blocked_count": 0,
+    "safety_blocked_details": [],
+    "safety_warnings_count": 1,
+    "safety_warnings_titles": [
+      "Severely Damaged Hair Fiber (Deposit / Acidic Gloss Only)"
     ],
-    "safety_warnings_count": 0,
-    "safety_warnings_titles": [],
-    "stages_count": 0,
-    "stages": [],
+    "stages_count": 2,
+    "stages": [
+      {
+        "stage_type": null,
+        "developer_vol": 20,
+        "developer_pct": "6.0",
+        "time_mins": 40,
+        "products": [
+          "BLONDOR-MBP (30.0g)"
+        ],
+        "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+      },
+      {
+        "stage_type": null,
+        "developer_vol": 6,
+        "developer_pct": "1.900",
+        "time_mins": 20,
+        "products": [
+          "7/03 (30.0g)"
+        ],
+        "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+      }
+    ],
     "raw": {
-      "formulation_id": "5dec8609-0c48-429f-9f3a-2d2f7f6684e5",
-      "status": "BLOCKED",
+      "formulation_id": "9af71342-e31b-492c-92ba-e7f40a6ac004",
+      "status": "REQUIRES_PROFESSIONAL_REVIEW",
       "market": "IN",
       "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
       "manufacturer_name": "Wella Professionals",
       "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
       "engine_version": "1.0",
-      "assessment_id": "2f181c4b-fe35-4c88-9bf2-3809e269b410",
-      "target_colour_id": "0f6b6e38-9c15-4c4e-9f15-16f5ecfeb811",
+      "assessment_id": "4976e570-36a0-4eef-ab79-3e5614d2e7aa",
+      "target_colour_id": "19e419f2-2a61-403e-b25e-8847822598f4",
       "service_classification": "MULTI_STAGE_PROCESS",
-      "stages": [],
-      "regions": [],
+      "stages": [
+        {
+          "stage_number": 1,
+          "service_type": "LIGHTENING",
+          "stage_description": "Stage 1: Pre-lightening / Cleansing to expose target depth level.",
+          "target_regions": [
+            "ROOTS",
+            "MID_LENGTHS",
+            "ENDS"
+          ],
+          "products": [
+            {
+              "product_type": "LIGHTENER",
+              "product_id": null,
+              "product_name": "Blondor Multi-Blonde Powder",
+              "shade_id": null,
+              "shade_code": "BLONDOR-MBP",
+              "shade_name": "Multi-Blonde Powder",
+              "parts": "1.0",
+              "weight_grams": "30.0",
+              "length_cm": null,
+              "is_pure_natural": false,
+              "notes": null
+            }
+          ],
+          "developer": {
+            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_name": "Welloxon Perfect 6% (20 Vol)",
+            "concentration_percent": "6.0",
+            "volume_in_vol": 20,
+            "parts": "1.5",
+            "weight_grams": "45.0"
+          },
+          "mixing_ratio_text": "1:1.5",
+          "development_time_minutes": 40,
+          "development_time_range": "Up to 50 min (visual control)",
+          "heat_permitted": false,
+          "application_instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively.",
+          "rules_applied": [
+            "WELLA-BLONDOR-POWDER-MIX",
+            "WELLA-BLONDOR-SCALP-SAFETY"
+          ],
+          "source_document_references": [
+            "Blondor Technical Folder"
+          ]
+        },
+        {
+          "stage_number": 2,
+          "service_type": "TONING",
+          "stage_description": "Stage 2: Tonal Glazing & Neutralisation on pre-lightened hair.",
+          "target_regions": [
+            "ROOTS",
+            "MID_LENGTHS",
+            "ENDS"
+          ],
+          "products": [
+            {
+              "product_type": "SHADE",
+              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+              "product_name": "Medium Blonde Natural Gold",
+              "shade_id": "fc8a9582-6f5c-4723-925d-3eac8974612d",
+              "shade_code": "7/03",
+              "shade_name": "Medium Blonde Natural Gold",
+              "parts": "1.0",
+              "weight_grams": "30.0",
+              "length_cm": null,
+              "is_pure_natural": false,
+              "notes": null
+            }
+          ],
+          "developer": {
+            "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+            "developer_name": "Welloxon Perfect 1.9% (Pastel)",
+            "concentration_percent": "1.900",
+            "volume_in_vol": 6,
+            "parts": "2.0",
+            "weight_grams": "60.0"
+          },
+          "mixing_ratio_text": "1:2",
+          "development_time_minutes": 20,
+          "development_time_range": "15\u201320 min without heat",
+          "heat_permitted": false,
+          "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+          "rules_applied": [
+            "WELLA-KP-PASTEL-TONING"
+          ],
+          "source_document_references": [
+            "Koleston Perfect Usage Guidelines Page 3"
+          ]
+        }
+      ],
+      "regions": [
+        {
+          "region": "ROOTS",
+          "initial_level": 6,
+          "target_level": 7,
+          "level_delta": 1,
+          "service_classification": "LIFTING",
+          "stages": [
+            {
+              "stage_number": 1,
+              "service_type": "LIGHTENING",
+              "stage_description": "Stage 1: Pre-lightening / Cleansing to expose target depth level.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "LIGHTENER",
+                  "product_id": null,
+                  "product_name": "Blondor Multi-Blonde Powder",
+                  "shade_id": null,
+                  "shade_code": "BLONDOR-MBP",
+                  "shade_name": "Multi-Blonde Powder",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
+                "parts": "1.5",
+                "weight_grams": "45.0"
+              },
+              "mixing_ratio_text": "1:1.5",
+              "development_time_minutes": 40,
+              "development_time_range": "Up to 50 min (visual control)",
+              "heat_permitted": false,
+              "application_instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively.",
+              "rules_applied": [
+                "WELLA-BLONDOR-POWDER-MIX",
+                "WELLA-BLONDOR-SCALP-SAFETY"
+              ],
+              "source_document_references": [
+                "Blondor Technical Folder"
+              ]
+            },
+            {
+              "stage_number": 2,
+              "service_type": "TONING",
+              "stage_description": "Stage 2: Tonal Glazing & Neutralisation on pre-lightened hair.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "SHADE",
+                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_name": "Medium Blonde Natural Gold",
+                  "shade_id": "fc8a9582-6f5c-4723-925d-3eac8974612d",
+                  "shade_code": "7/03",
+                  "shade_name": "Medium Blonde Natural Gold",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_name": "Welloxon Perfect 1.9% (Pastel)",
+                "concentration_percent": "1.900",
+                "volume_in_vol": 6,
+                "parts": "2.0",
+                "weight_grams": "60.0"
+              },
+              "mixing_ratio_text": "1:2",
+              "development_time_minutes": 20,
+              "development_time_range": "15\u201320 min without heat",
+              "heat_permitted": false,
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "rules_applied": [
+                "WELLA-KP-PASTEL-TONING"
+              ],
+              "source_document_references": [
+                "Koleston Perfect Usage Guidelines Page 3"
+              ]
+            }
+          ],
+          "grey_coverage_notes": null,
+          "special_mix_notes": "Glaze tone applied across pre-lightened base.",
+          "repigmentation_notes": null,
+          "porosity_compensation_notes": null
+        },
+        {
+          "region": "MID_LENGTHS",
+          "initial_level": 7,
+          "target_level": 7,
+          "level_delta": 0,
+          "service_classification": "TONING",
+          "stages": [
+            {
+              "stage_number": 1,
+              "service_type": "LIGHTENING",
+              "stage_description": "Stage 1: Pre-lightening / Cleansing to expose target depth level.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "LIGHTENER",
+                  "product_id": null,
+                  "product_name": "Blondor Multi-Blonde Powder",
+                  "shade_id": null,
+                  "shade_code": "BLONDOR-MBP",
+                  "shade_name": "Multi-Blonde Powder",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
+                "parts": "1.5",
+                "weight_grams": "45.0"
+              },
+              "mixing_ratio_text": "1:1.5",
+              "development_time_minutes": 40,
+              "development_time_range": "Up to 50 min (visual control)",
+              "heat_permitted": false,
+              "application_instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively.",
+              "rules_applied": [
+                "WELLA-BLONDOR-POWDER-MIX",
+                "WELLA-BLONDOR-SCALP-SAFETY"
+              ],
+              "source_document_references": [
+                "Blondor Technical Folder"
+              ]
+            },
+            {
+              "stage_number": 2,
+              "service_type": "TONING",
+              "stage_description": "Stage 2: Tonal Glazing & Neutralisation on pre-lightened hair.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "SHADE",
+                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_name": "Medium Blonde Natural Gold",
+                  "shade_id": "fc8a9582-6f5c-4723-925d-3eac8974612d",
+                  "shade_code": "7/03",
+                  "shade_name": "Medium Blonde Natural Gold",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_name": "Welloxon Perfect 1.9% (Pastel)",
+                "concentration_percent": "1.900",
+                "volume_in_vol": 6,
+                "parts": "2.0",
+                "weight_grams": "60.0"
+              },
+              "mixing_ratio_text": "1:2",
+              "development_time_minutes": 20,
+              "development_time_range": "15\u201320 min without heat",
+              "heat_permitted": false,
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "rules_applied": [
+                "WELLA-KP-PASTEL-TONING"
+              ],
+              "source_document_references": [
+                "Koleston Perfect Usage Guidelines Page 3"
+              ]
+            }
+          ],
+          "grey_coverage_notes": null,
+          "special_mix_notes": "Glaze tone applied across pre-lightened base.",
+          "repigmentation_notes": null,
+          "porosity_compensation_notes": null
+        },
+        {
+          "region": "ENDS",
+          "initial_level": 8,
+          "target_level": 7,
+          "level_delta": -1,
+          "service_classification": "DARKENING",
+          "stages": [
+            {
+              "stage_number": 1,
+              "service_type": "LIGHTENING",
+              "stage_description": "Stage 1: Pre-lightening / Cleansing to expose target depth level.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "LIGHTENER",
+                  "product_id": null,
+                  "product_name": "Blondor Multi-Blonde Powder",
+                  "shade_id": null,
+                  "shade_code": "BLONDOR-MBP",
+                  "shade_name": "Multi-Blonde Powder",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_name": "Welloxon Perfect 6% (20 Vol)",
+                "concentration_percent": "6.0",
+                "volume_in_vol": 20,
+                "parts": "1.5",
+                "weight_grams": "45.0"
+              },
+              "mixing_ratio_text": "1:1.5",
+              "development_time_minutes": 40,
+              "development_time_range": "Up to 50 min (visual control)",
+              "heat_permitted": false,
+              "application_instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively.",
+              "rules_applied": [
+                "WELLA-BLONDOR-POWDER-MIX",
+                "WELLA-BLONDOR-SCALP-SAFETY"
+              ],
+              "source_document_references": [
+                "Blondor Technical Folder"
+              ]
+            },
+            {
+              "stage_number": 2,
+              "service_type": "TONING",
+              "stage_description": "Stage 2: Tonal Glazing & Neutralisation on pre-lightened hair.",
+              "target_regions": [
+                "ROOTS",
+                "MID_LENGTHS",
+                "ENDS"
+              ],
+              "products": [
+                {
+                  "product_type": "SHADE",
+                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_name": "Medium Blonde Natural Gold",
+                  "shade_id": "fc8a9582-6f5c-4723-925d-3eac8974612d",
+                  "shade_code": "7/03",
+                  "shade_name": "Medium Blonde Natural Gold",
+                  "parts": "1.0",
+                  "weight_grams": "30.0",
+                  "length_cm": null,
+                  "is_pure_natural": false,
+                  "notes": null
+                }
+              ],
+              "developer": {
+                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_name": "Welloxon Perfect 1.9% (Pastel)",
+                "concentration_percent": "1.900",
+                "volume_in_vol": 6,
+                "parts": "2.0",
+                "weight_grams": "60.0"
+              },
+              "mixing_ratio_text": "1:2",
+              "development_time_minutes": 20,
+              "development_time_range": "15\u201320 min without heat",
+              "heat_permitted": false,
+              "application_instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse.",
+              "rules_applied": [
+                "WELLA-KP-PASTEL-TONING"
+              ],
+              "source_document_references": [
+                "Koleston Perfect Usage Guidelines Page 3"
+              ]
+            }
+          ],
+          "grey_coverage_notes": null,
+          "special_mix_notes": "Glaze tone applied across pre-lightened base.",
+          "repigmentation_notes": null,
+          "porosity_compensation_notes": null
+        }
+      ],
       "shared_regional_formulation": false,
       "safety_checks": [
         {
@@ -3396,29 +3920,41 @@
         },
         {
           "check_code": "SAFETY_SEVERELY_DAMAGED_FIBER",
-          "status": "BLOCKED",
-          "title": "Severe Hair Damage Contraindication",
-          "detail": "Hair fiber in regions ['ENDS'] is classified as SEVERELY_DAMAGED. Aggressive oxidative lifting or bleaching poses extreme risk of hair breakage and loss of structural elasticity.",
-          "blocked_reason": "Hair fiber in regions ['ENDS'] is classified as SEVERELY_DAMAGED. Aggressive oxidative lifting or bleaching poses extreme risk of hair breakage and loss of structural elasticity.",
-          "recommendation": "Prescribe bond-rebuilding and protein treatments. Oxidative lift contraindicated without strand test."
+          "status": "WARNING",
+          "title": "Severely Damaged Hair Fiber (Deposit / Acidic Gloss Only)",
+          "detail": "Hair fiber in regions ['ENDS'] is SEVERELY_DAMAGED. Alkaline lift or bleaching is prohibited, but gentle deposit or acidic gloss using lowest developer (1.9% / 6 Vol) is permitted.",
+          "blocked_reason": null,
+          "recommendation": "Use lowest developer concentration (1.9% / 6 Vol) with non-ammonia acidic demi-permanent gloss and bond builder."
         }
       ],
-      "warnings": [
-        "Hair fiber in regions ['ENDS'] is classified as SEVERELY_DAMAGED. Aggressive oxidative lifting or bleaching poses extreme risk of hair breakage and loss of structural elasticity."
-      ],
+      "warnings": [],
       "missing_information": [],
       "predicted_result": {
-        "universal_colour": null,
+        "universal_colour": {
+          "schema_version": "1.0",
+          "level": 7,
+          "primary_tone": "NATURAL",
+          "secondary_tone": "GOLD",
+          "tone_intensity": "STANDARD",
+          "colour_family": "NATURAL",
+          "measurement": null,
+          "classification_status": "PREDICTED",
+          "mapping_confidence": "0.90",
+          "evidence_reference": null
+        },
         "lab_measurement": null,
-        "confidence": "INSUFFICIENT",
+        "confidence": "HIGH",
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
-      "source_references": [],
+      "source_references": [
+        "Koleston Perfect Usage Guidelines Page 3 - Pastel Toning",
+        "Blondor Technical Folder Page 7, 10, 14"
+      ],
       "technique": "ALL_OVER",
-      "exposed_underlying_pigment": null,
+      "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T22:34:43.358198Z"
+      "evaluated_at": "2026-11-15T22:50:14.762347Z"
     }
   }
 ]

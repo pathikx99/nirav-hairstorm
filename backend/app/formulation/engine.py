@@ -13,6 +13,7 @@ from decimal import Decimal
 from backend.app.formulation.classifier import FeasibilityClassifier
 from backend.app.formulation.enums import (
     FormulationResultStatusEnum,
+    HairConditionEnum,
     PorosityEnum,
     SafetyStatusEnum,
     ServiceClassificationEnum,
@@ -512,6 +513,10 @@ class FormulationEngine:
                         product_name="Metal Detox Pre-Treatment Spray"
                         if is_loreal
                         else "Wella Invigo Aqua Pure Chelating Treatment",
+                        shade_code="CHELATING-PREP",
+                        shade_name="Metal Detox Pre-Treatment Spray"
+                        if is_loreal
+                        else "Wella Invigo Aqua Pure Chelating Treatment",
                         parts=Decimal("1.0"),
                         weight_grams=Decimal("20.0"),
                         notes="Chelating pre-treatment to neutralize copper and mineral deposits prior to chemical oxidation.",
@@ -535,8 +540,12 @@ class FormulationEngine:
 
         # -------------------------------------------------------------------
         # Multi-Stage: Pre-lightening required
-        # (e.g. artificial color lift, or delta > 3 on virgin hair)
+        # (e.g. artificial color lift where target > observed, or virgin lift delta > 3)
         # -------------------------------------------------------------------
+        artificial_needs_lift = any(
+            r.existing_artificial_colour and (target_lvl > int(r.observed_level))
+            for r in (roots, mid, ends)
+        )
         if (
             overall_classification
             in (
@@ -544,8 +553,8 @@ class FormulationEngine:
                 ServiceClassificationEnum.LIGHTENING,
                 ServiceClassificationEnum.COLOUR_REMOVAL,
             )
-            and (any(r.existing_artificial_colour for r in (roots, mid, ends)) or roots_delta > 3)
-            and roots_delta > 0
+            and (artificial_needs_lift or roots_delta > 3)
+            and (roots_delta > 0 or artificial_needs_lift)
         ):
             # Stage 1 (or 2 if hard water): Lightening / Cleansing
             dev_6 = cls._resolve_developer(developers, Decimal("6.0"))
@@ -626,6 +635,49 @@ class FormulationEngine:
                 weight_grams=Decimal("30.0"),
             )
 
+            stage_2_products = [shade_comp_2]
+            stage_2_special_mix_notes = None
+            if (
+                is_wella
+                and special_mix_shade is not None
+                and target.primary_tone in (ToneFamilyEnum.ASH, ToneFamilyEnum.VIOLET, ToneFamilyEnum.PEARL)
+            ):
+                ribbon_cm = Decimal(12 - target_lvl)
+                if ribbon_cm > 0:
+                    weight_g = ribbon_cm * Decimal("0.5")
+                    stage_2_special_mix_notes = (
+                        f"Wella Rule of 12 Post-Bleach Neutralization: Add {ribbon_cm} cm ({weight_g}g) of Special Mix {special_mix_shade.shade_code} "
+                        "to counteract raw underlying yellow/orange exposed during Stage 1 pre-lightening."
+                    )
+                    stage_2_products.append(
+                        ProductComponentFormula(
+                            product_type="SPECIAL_MIX",
+                            product_id=special_mix_shade.product_id,
+                            product_name=special_mix_shade.shade_name,
+                            shade_id=special_mix_shade.id,
+                            shade_code=special_mix_shade.shade_code,
+                            shade_name=special_mix_shade.shade_name,
+                            parts=Decimal("0.05"),
+                            weight_grams=weight_g,
+                            length_cm=ribbon_cm,
+                            notes=f"Rule of 12 counter-neutralizing booster: {ribbon_cm} cm.",
+                        )
+                    )
+
+            toning_instructions = (
+                "Apply evenly from roots to ends on towel-dried, pre-lightened hair. "
+                "Process for 15–20 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+            )
+            if target.primary_tone in (ToneFamilyEnum.GOLD, ToneFamilyEnum.COPPER) and any(
+                r.existing_artificial_colour for r in (roots, mid, ends)
+            ):
+                toning_instructions = (
+                    "Apply evenly from roots to ends on towel-dried, pre-lightened hair. "
+                    "Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds "
+                    f"Level {target_lvl}, blend with 10–15% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. "
+                    "Process for 15–20 minutes without heat under visual control. Emulsify and rinse."
+                )
+
             stage_2 = FormulationStage(
                 stage_number=stage_counter,
                 service_type=ServiceClassificationEnum.TONING,
@@ -635,16 +687,13 @@ class FormulationEngine:
                     HairRegionEnum.MID_LENGTHS,
                     HairRegionEnum.ENDS,
                 ],
-                products=[shade_comp_2],
+                products=stage_2_products,
                 developer=dev_comp_2,
                 mixing_ratio_text="1:2",
                 development_time_minutes=20,
                 development_time_range="15–20 min without heat",
                 heat_permitted=False,
-                application_instructions=(
-                    "Apply evenly from roots to ends on towel-dried, pre-lightened hair. "
-                    "Process for 15–20 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
-                ),
+                application_instructions=toning_instructions,
                 rules_applied=["WELLA-KP-PASTEL-TONING"],
                 source_document_references=["Koleston Perfect Usage Guidelines Page 3"],
             )
@@ -766,6 +815,24 @@ class FormulationEngine:
             req_dev_pct = Decimal("12.0")
             dev_vol = 40
             rule_code = "WELLA-KP-DEV-LIFT-SPECIAL-BLONDE"
+
+        # Grey hair & on-scalp developer safety capping
+        grey_pct = float(roots.grey_percentage)
+        if grey_pct >= 50.0:
+            # Unpigmented grey hair has no melanin to lift; 20V (6%) is standard to ensure proper dye oxidation & prevent hot roots / scalp burns
+            req_dev_pct = Decimal("6.0")
+            dev_vol = 20
+            rule_code = "GREY-COVERAGE-20V-STANDARD"
+        elif grey_pct >= 30.0 and dev_vol > 30:
+            # 30-50% grey: cap at 30 Vol to prevent hot roots on unpigmented hair
+            req_dev_pct = Decimal("9.0")
+            dev_vol = 30
+            rule_code = "GREY-COVERAGE-30V-CAP"
+        elif roots.is_on_scalp and dev_vol > 30 and "SPECIAL_BLONDE" not in rule_code:
+            # Standard on-scalp tint should never exceed 30V to prevent chemical scalp irritation
+            req_dev_pct = Decimal("9.0")
+            dev_vol = 30
+            rule_code = "ON-SCALP-30V-CAP"
 
         resolved_dev = cls._resolve_developer(developers, req_dev_pct)
         ratio_parts = Decimal("1.0") if is_wella else Decimal("1.5")
@@ -1180,6 +1247,17 @@ class FormulationEngine:
             stages.append(stage_gloss)
             source_refs.append("Salon Demi-Permanent Toning & Glossing Protocol")
         else:
+            standard_app_instructions = (
+                "Apply mixture systematically to regrowth / roots first. "
+                "If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10–15 minutes."
+            )
+            if any(r.condition == HairConditionEnum.SEVERELY_DAMAGED for r in (mid, ends)):
+                standard_app_instructions = (
+                    "Zonal Protection Technique: Apply formula to roots first. "
+                    "CAUTION: Compromised/damaged lengths and ends must NOT be exposed to full-strength alkaline developer. "
+                    "For mid-lengths and ends, dilute remaining mixture 1:1 with clear post-treatment or apply an acidic demi-permanent gloss (6 Vol / 1.9%) during the final 5–10 minutes only."
+                )
+
             stage_single = FormulationStage(
                 stage_number=stage_counter,
                 service_type=overall_classification,
@@ -1191,10 +1269,7 @@ class FormulationEngine:
                 development_time_minutes=dev_time,
                 development_time_range=dev_time_range,
                 heat_permitted=False,
-                application_instructions=(
-                    "Apply mixture systematically to regrowth / roots first. "
-                    "If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10–15 minutes."
-                ),
+                application_instructions=standard_app_instructions,
                 rules_applied=[
                     rule_code,
                     "WELLA-KP-MIX-STANDARD" if is_wella else "LOREAL-MAJIREL-MIX",
