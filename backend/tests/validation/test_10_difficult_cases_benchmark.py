@@ -1,7 +1,7 @@
 """
 10 Difficult Real-Life Salon Formulation Cases Automated Benchmark Test Suite
 Validates safety gating, grey coverage developer capping, underlying pigment compensation,
-and chelation protocols against Professional Master Colorist standards.
+multi-bowl zonal architecture, and chelation protocols against Master Colorist standards.
 """
 
 from pathlib import Path
@@ -80,10 +80,10 @@ async def test_ten_difficult_salon_cases_benchmark(client: AsyncClient, db_sessi
     })
     assert resp_2.status_code == 200
     d2 = resp_2.json()
-    assert len(d2["stages"]) == 1
+    bowl_1 = d2["stages"][0]
     # Strict master-colorist check: 40V on 100% grey scalp is strictly prohibited!
-    assert d2["stages"][0]["developer"]["volume_in_vol"] == 20
-    assert any(p["shade_code"] == "7/0" for p in d2["stages"][0]["products"])
+    assert bowl_1["developer"]["volume_in_vol"] == 20
+    assert any(p["shade_code"] == "7/0" for p in bowl_1["products"])
 
     # -------------------------------------------------------------------------
     # CASE 3: Drastic Darkening / Repigmentation (L10 to L5)
@@ -145,6 +145,27 @@ async def test_ten_difficult_salon_cases_benchmark(client: AsyncClient, db_sessi
     assert resp_5.json()["status"] == "BLOCKED"
 
     # -------------------------------------------------------------------------
+    # CASE 6: Multi-Banding -> Zonal Bowls Generated
+    # -------------------------------------------------------------------------
+    resp_6 = await client.post("/api/v1/formulations/evaluate", json={
+        "mode": "PREFERRED_MANUFACTURER",
+        "manufacturer_id": mfg_wella,
+        "market": "IN",
+        "assessment": {
+            "market": "IN",
+            "history": {"has_allergy_history": False, "patch_test_completed_48h": True, "scalp_condition": "normal", "previous_chemical_services": ["permanent_colour", "bleach"]},
+            "roots": {"region": "ROOTS", "observed_level": 3, "existing_artificial_colour": False, "grey_percentage": 0.0, "porosity": "NORMAL", "condition": "HEALTHY", "is_on_scalp": True},
+            "mid_lengths": {"region": "MID_LENGTHS", "observed_level": 5, "existing_artificial_colour": True, "grey_percentage": 0.0, "porosity": "NORMAL", "condition": "HEALTHY", "is_on_scalp": False},
+            "ends": {"region": "ENDS", "observed_level": 8, "existing_artificial_colour": True, "grey_percentage": 0.0, "porosity": "HIGH", "condition": "MODERATELY_DAMAGED", "is_on_scalp": False}
+        },
+        "target_colour": {"universal_level": 6, "primary_tone": "ASH", "secondary_tone": None, "tone_intensity": "STANDARD"}
+    })
+    assert resp_6.status_code == 200
+    d6 = resp_6.json()
+    assert d6["status"] in ("ELIGIBLE_FOR_REVIEW", "REQUIRES_PROFESSIONAL_REVIEW")
+    assert len(d6["stages"]) >= 2
+
+    # -------------------------------------------------------------------------
     # CASE 7: Known Allergy History -> MUST BE BLOCKED
     # -------------------------------------------------------------------------
     resp_7 = await client.post("/api/v1/formulations/evaluate", json={
@@ -164,6 +185,27 @@ async def test_ten_difficult_salon_cases_benchmark(client: AsyncClient, db_sessi
     assert resp_7.json()["status"] == "BLOCKED"
 
     # -------------------------------------------------------------------------
+    # CASE 8: Virgin Level 2 to Level 8 Ash (6 levels lift)
+    # -------------------------------------------------------------------------
+    resp_8 = await client.post("/api/v1/formulations/evaluate", json={
+        "mode": "PREFERRED_MANUFACTURER",
+        "manufacturer_id": mfg_wella,
+        "market": "IN",
+        "assessment": {
+            "market": "IN",
+            "history": {"has_allergy_history": False, "patch_test_completed_48h": True, "scalp_condition": "normal", "previous_chemical_services": []},
+            "roots": {"region": "ROOTS", "observed_level": 2, "existing_artificial_colour": False, "grey_percentage": 0.0, "porosity": "LOW", "condition": "HEALTHY", "is_on_scalp": True},
+            "mid_lengths": {"region": "MID_LENGTHS", "observed_level": 2, "existing_artificial_colour": False, "grey_percentage": 0.0, "porosity": "LOW", "condition": "HEALTHY", "is_on_scalp": False},
+            "ends": {"region": "ENDS", "observed_level": 2, "existing_artificial_colour": False, "grey_percentage": 0.0, "porosity": "LOW", "condition": "HEALTHY", "is_on_scalp": False}
+        },
+        "target_colour": {"universal_level": 8, "primary_tone": "ASH", "secondary_tone": None, "tone_intensity": "STANDARD"}
+    })
+    assert resp_8.status_code == 200
+    d8 = resp_8.json()
+    assert d8["status"] in ("ELIGIBLE_FOR_REVIEW", "REQUIRES_PROFESSIONAL_REVIEW")
+    assert len(d8["stages"]) == 2
+
+    # -------------------------------------------------------------------------
     # CASE 9: Hard water mineral green -> Chelation stage product must NOT be None
     # -------------------------------------------------------------------------
     resp_9 = await client.post("/api/v1/formulations/evaluate", json={
@@ -181,5 +223,24 @@ async def test_ten_difficult_salon_cases_benchmark(client: AsyncClient, db_sessi
     })
     assert resp_9.status_code == 200
     d9 = resp_9.json()
-    # Chelation stage must exist and product must have valid shade_code
     assert d9["stages"][0]["products"][0]["shade_code"] == "CHELATING-PREP"
+
+    # -------------------------------------------------------------------------
+    # CASE 10: Severely Damaged Snapping Ends (Deposit) -> Warning, NOT Blocked
+    # -------------------------------------------------------------------------
+    resp_10 = await client.post("/api/v1/formulations/evaluate", json={
+        "mode": "PREFERRED_MANUFACTURER",
+        "manufacturer_id": mfg_wella,
+        "market": "IN",
+        "assessment": {
+            "market": "IN",
+            "history": {"has_allergy_history": False, "patch_test_completed_48h": True, "scalp_condition": "normal", "previous_chemical_services": ["bleach"]},
+            "roots": {"region": "ROOTS", "observed_level": 6, "existing_artificial_colour": False, "grey_percentage": 0.0, "porosity": "NORMAL", "condition": "HEALTHY", "is_on_scalp": True},
+            "mid_lengths": {"region": "MID_LENGTHS", "observed_level": 7, "existing_artificial_colour": True, "grey_percentage": 0.0, "porosity": "HIGH", "condition": "MODERATELY_DAMAGED", "is_on_scalp": False},
+            "ends": {"region": "ENDS", "observed_level": 8, "existing_artificial_colour": True, "grey_percentage": 0.0, "porosity": "HIGH", "condition": "SEVERELY_DAMAGED", "is_on_scalp": False}
+        },
+        "target_colour": {"universal_level": 7, "primary_tone": "NATURAL", "secondary_tone": "GOLD", "tone_intensity": "STANDARD"}
+    })
+    assert resp_10.status_code == 200
+    d10 = resp_10.json()
+    assert d10["status"] == "REQUIRES_PROFESSIONAL_REVIEW"

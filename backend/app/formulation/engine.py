@@ -1246,6 +1246,255 @@ class FormulationEngine:
             )
             stages.append(stage_gloss)
             source_refs.append("Salon Demi-Permanent Toning & Glossing Protocol")
+        elif not conditions_uniform:
+            # Multi-Bowl Zonal Formulation (Anatomical Tri-Bowl Architecture)
+            # Differentiates formulation across non-uniform regrowth, mid-lengths, and porous ends
+            is_roots_mid_same = (
+                roots.observed_level == mid.observed_level
+                and roots.existing_artificial_colour == mid.existing_artificial_colour
+                and roots.grey_percentage == mid.grey_percentage
+                and roots.condition == mid.condition
+                and roots.porosity == mid.porosity
+            )
+            is_mid_ends_same = (
+                mid.observed_level == ends.observed_level
+                and mid.existing_artificial_colour == ends.existing_artificial_colour
+                and mid.grey_percentage == ends.grey_percentage
+                and mid.condition == ends.condition
+                and mid.porosity == ends.porosity
+            )
+
+            if not is_roots_mid_same and not is_mid_ends_same:
+                # 3 Independent Bowls: Roots, Mid-Lengths, Ends
+                stage_bowl_1 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=region_classes[HairRegionEnum.ROOTS],
+                    stage_description=f"Stage {stage_counter} — Bowl 1 (Roots / Regrowth): Depth & Grey Coverage.",
+                    target_regions=[HairRegionEnum.ROOTS],
+                    products=products,
+                    developer=dev_formula,
+                    mixing_ratio_text=mix_ratio,
+                    development_time_minutes=dev_time,
+                    development_time_range=dev_time_range,
+                    heat_permitted=False,
+                    application_instructions=(
+                        "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). "
+                        "Process for 20 minutes before applying mid-lengths and ends bowls."
+                    ),
+                    rules_applied=[rule_code, "ZONAL-MULTI-BOWL-ROOTS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stage_counter += 1
+
+                mid_delta = target_lvl - int(mid.observed_level)
+                mid_dev_vol = 10 if (mid_delta <= 0 or mid.porosity in (PorosityEnum.HIGH, PorosityEnum.EXTREME)) else 20
+                mid_dev_pct = Decimal("3.0") if mid_dev_vol == 10 else Decimal("6.0")
+                dev_mid = cls._resolve_developer(developers, mid_dev_pct)
+                dev_mid_formula = DeveloperComponentFormula(
+                    developer_id=dev_mid.id if dev_mid else None,
+                    developer_name=dev_mid.product_name if dev_mid else f"{mid_dev_pct}% ({mid_dev_vol} Vol) Developer",
+                    concentration_percent=mid_dev_pct,
+                    volume_in_vol=mid_dev_vol,
+                    parts=Decimal("1.0"),
+                    weight_grams=Decimal("45.0"),
+                )
+                stage_bowl_2 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=region_classes[HairRegionEnum.MID_LENGTHS],
+                    stage_description=f"Stage {stage_counter} — Bowl 2 (Mid-Lengths Balancing): Mid-strand tone alignment.",
+                    target_regions=[HairRegionEnum.MID_LENGTHS],
+                    products=[
+                        ProductComponentFormula(
+                            product_type="SHADE",
+                            product_id=target_shade.product_id if target_shade else None,
+                            product_name=target_shade.shade_name if target_shade else "Target Shade",
+                            shade_id=target_shade.id if target_shade else None,
+                            shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                            shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                            parts=Decimal("1.0"),
+                            weight_grams=Decimal("45.0"),
+                            notes="Mid-lengths tonal balancing formula.",
+                        )
+                    ],
+                    developer=dev_mid_formula,
+                    mixing_ratio_text="1:1",
+                    development_time_minutes=25,
+                    development_time_range="25 min concurrent with Bowl 1",
+                    heat_permitted=False,
+                    application_instructions=(
+                        "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. "
+                        "Process for 15 minutes concurrent with roots."
+                    ),
+                    rules_applied=[rule_code, "ZONAL-MULTI-BOWL-MIDS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stage_counter += 1
+
+                dev_ends = cls._resolve_developer(developers, Decimal("1.9")) or cls._resolve_developer(developers, Decimal("3.0"))
+                ends_dev_pct = dev_ends.concentration_percent if dev_ends else Decimal("1.9")
+                ends_dev_vol = 6 if ends_dev_pct < Decimal("3.0") else 10
+                dev_ends_formula = DeveloperComponentFormula(
+                    developer_id=dev_ends.id if dev_ends else None,
+                    developer_name=dev_ends.product_name if dev_ends else f"{ends_dev_pct}% ({ends_dev_vol} Vol) Developer (Restorative Glaze)",
+                    concentration_percent=ends_dev_pct,
+                    volume_in_vol=ends_dev_vol,
+                    parts=Decimal("1.5"),
+                    weight_grams=Decimal("45.0"),
+                )
+                stage_bowl_3 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=ServiceClassificationEnum.TONING if ends.condition == HairConditionEnum.SEVERELY_DAMAGED else region_classes[HairRegionEnum.ENDS],
+                    stage_description=f"Stage {stage_counter} — Bowl 3 (Ends Restorative Glaze): Low-volume conditioning deposit.",
+                    target_regions=[HairRegionEnum.ENDS],
+                    products=[
+                        ProductComponentFormula(
+                            product_type="SHADE",
+                            product_id=target_shade.product_id if target_shade else None,
+                            product_name=target_shade.shade_name if target_shade else "Target Shade",
+                            shade_id=target_shade.id if target_shade else None,
+                            shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                            shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                            parts=Decimal("1.0"),
+                            weight_grams=Decimal("30.0"),
+                            notes="Restorative deposit for porous/compromised ends.",
+                        )
+                    ],
+                    developer=dev_ends_formula,
+                    mixing_ratio_text="1:1.5",
+                    development_time_minutes=15,
+                    development_time_range="10–15 min visual timing",
+                    heat_permitted=False,
+                    application_instructions=(
+                        "Apply Bowl 3 through ends during the final 10–15 minutes of service. "
+                        "Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+                    ),
+                    rules_applied=[rule_code, "ZONAL-MULTI-BOWL-ENDS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stages.extend([stage_bowl_1, stage_bowl_2, stage_bowl_3])
+                source_refs.append("Salon Zonal Color Formulation Manual — Tri-Bowl Technique")
+            elif is_mid_ends_same:
+                # 2 Bowls: Roots vs Lengths/Ends
+                stage_bowl_1 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=region_classes[HairRegionEnum.ROOTS],
+                    stage_description=f"Stage {stage_counter} — Bowl 1 (Roots / Regrowth): Regrowth formula.",
+                    target_regions=[HairRegionEnum.ROOTS],
+                    products=products,
+                    developer=dev_formula,
+                    mixing_ratio_text=mix_ratio,
+                    development_time_minutes=dev_time,
+                    development_time_range=dev_time_range,
+                    heat_permitted=False,
+                    application_instructions="Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
+                    rules_applied=[rule_code, "ZONAL-TWO-BOWL-ROOTS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stage_counter += 1
+
+                dev_lengths = cls._resolve_developer(developers, Decimal("6.0"))
+                lengths_dev_pct = dev_lengths.concentration_percent if dev_lengths else Decimal("6.0")
+                lengths_dev_vol = (
+                    int(round(float(lengths_dev_pct) * 3.333))
+                    if lengths_dev_pct
+                    else (dev_formula.volume_in_vol if dev_formula else 20)
+                )
+                dev_lengths_formula = DeveloperComponentFormula(
+                    developer_id=dev_lengths.id if dev_lengths else (dev_formula.developer_id if dev_formula else None),
+                    developer_name=dev_lengths.product_name if dev_lengths else (dev_formula.developer_name if dev_formula else f"{lengths_dev_pct}% ({lengths_dev_vol} Vol) Developer"),
+                    concentration_percent=lengths_dev_pct,
+                    volume_in_vol=lengths_dev_vol,
+                    parts=Decimal("1.0"),
+                    weight_grams=Decimal("60.0"),
+                )
+                stage_bowl_2 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=region_classes[HairRegionEnum.MID_LENGTHS],
+                    stage_description=f"Stage {stage_counter} — Bowl 2 (Mid-Lengths & Ends): Color refresh glaze.",
+                    target_regions=[HairRegionEnum.MID_LENGTHS, HairRegionEnum.ENDS],
+                    products=[
+                        ProductComponentFormula(
+                            product_type="SHADE",
+                            product_id=target_shade.product_id if target_shade else None,
+                            product_name=target_shade.shade_name if target_shade else "Target Shade",
+                            shade_id=target_shade.id if target_shade else None,
+                            shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                            shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                            parts=Decimal("1.0"),
+                            weight_grams=Decimal("60.0"),
+                            notes="Mid-lengths & ends refresh formula.",
+                        )
+                    ],
+                    developer=dev_lengths_formula,
+                    mixing_ratio_text="1:1",
+                    development_time_minutes=20,
+                    development_time_range="15–20 min concurrent with Bowl 1",
+                    heat_permitted=False,
+                    application_instructions="Apply Bowl 2 through lengths and ends during the final 15–20 minutes.",
+                    rules_applied=[rule_code, "ZONAL-TWO-BOWL-LENGTHS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stages.extend([stage_bowl_1, stage_bowl_2])
+                source_refs.append("Salon Zonal Color Formulation Manual — Dual-Bowl Technique")
+            else:
+                # 2 Bowls: Roots/Mids vs Ends
+                stage_bowl_1 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=region_classes[HairRegionEnum.ROOTS],
+                    stage_description=f"Stage {stage_counter} — Bowl 1 (Roots & Mid-Lengths): Foundation lift and deposit.",
+                    target_regions=[HairRegionEnum.ROOTS, HairRegionEnum.MID_LENGTHS],
+                    products=products,
+                    developer=dev_formula,
+                    mixing_ratio_text=mix_ratio,
+                    development_time_minutes=dev_time,
+                    development_time_range=dev_time_range,
+                    heat_permitted=False,
+                    application_instructions="Apply Bowl 1 to roots and mid-lengths. Dwell 20 minutes before applying Bowl 2 to ends.",
+                    rules_applied=[rule_code, "ZONAL-TWO-BOWL-ROOTS-MIDS"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stage_counter += 1
+
+                dev_ends = cls._resolve_developer(developers, Decimal("1.9")) or cls._resolve_developer(developers, Decimal("3.0"))
+                ends_dev_pct = dev_ends.concentration_percent if dev_ends else Decimal("1.9")
+                ends_dev_vol = 6 if ends_dev_pct < Decimal("3.0") else 10
+                dev_ends_formula = DeveloperComponentFormula(
+                    developer_id=dev_ends.id if dev_ends else None,
+                    developer_name=dev_ends.product_name if dev_ends else f"{ends_dev_pct}% ({ends_dev_vol} Vol) Developer",
+                    concentration_percent=ends_dev_pct,
+                    volume_in_vol=ends_dev_vol,
+                    parts=Decimal("1.5"),
+                    weight_grams=Decimal("45.0"),
+                )
+                stage_bowl_2 = FormulationStage(
+                    stage_number=stage_counter,
+                    service_type=ServiceClassificationEnum.TONING if ends.condition == HairConditionEnum.SEVERELY_DAMAGED else region_classes[HairRegionEnum.ENDS],
+                    stage_description=f"Stage {stage_counter} — Bowl 2 (Porous Ends Restorative Glaze): Gentle deposit.",
+                    target_regions=[HairRegionEnum.ENDS],
+                    products=[
+                        ProductComponentFormula(
+                            product_type="SHADE",
+                            product_id=target_shade.product_id if target_shade else None,
+                            product_name=target_shade.shade_name if target_shade else "Target Shade",
+                            shade_id=target_shade.id if target_shade else None,
+                            shade_code=target_shade.shade_code if target_shade else f"{target_lvl}/xx",
+                            shade_name=target_shade.shade_name if target_shade else "Target Shade",
+                            parts=Decimal("1.0"),
+                            weight_grams=Decimal("30.0"),
+                            notes="Porous ends restorative formula.",
+                        )
+                    ],
+                    developer=dev_ends_formula,
+                    mixing_ratio_text="1:1.5",
+                    development_time_minutes=15,
+                    development_time_range="10–15 min visual timing",
+                    heat_permitted=False,
+                    application_instructions="Apply Bowl 2 to porous ends during the final 10–15 minutes. Emulsify gently.",
+                    rules_applied=[rule_code, "ZONAL-TWO-BOWL-ENDS-GLAZE"],
+                    source_document_references=["Salon Zonal Color Formulation Manual"],
+                )
+                stages.extend([stage_bowl_1, stage_bowl_2])
+                source_refs.append("Salon Zonal Color Formulation Manual — Dual-Bowl Porous Ends Technique")
         else:
             standard_app_instructions = (
                 "Apply mixture systematically to regrowth / roots first. "
