@@ -834,6 +834,16 @@ class FormulationEngine:
             dev_vol = 30
             rule_code = "ON-SCALP-30V-CAP"
 
+        # Fine hair texture / high porosity safety calibration: cap on-scalp developer to 20V
+        is_fine_or_fragile = (
+            getattr(assessment.history, "hair_texture", "MEDIUM").upper() in ("FINE", "THIN")
+            or roots.porosity in (PorosityEnum.HIGH, PorosityEnum.EXTREME)
+        )
+        if is_fine_or_fragile and dev_vol > 20 and roots.is_on_scalp and "SPECIAL_BLONDE" not in rule_code:
+            req_dev_pct = Decimal("6.0")
+            dev_vol = 20
+            rule_code = "FINE-FRAGILE-20V-CAP"
+
         resolved_dev = cls._resolve_developer(developers, req_dev_pct)
         ratio_parts = Decimal("1.0") if is_wella else Decimal("1.5")
         if "SPECIAL_BLONDE" in rule_code:

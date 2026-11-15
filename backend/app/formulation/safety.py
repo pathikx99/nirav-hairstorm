@@ -107,7 +107,17 @@ class SafetyValidationService:
         # 2. Scalp Condition
         # -------------------------------------------------------------------
         scalp = (history.scalp_condition or "normal").lower().strip()
-        if scalp in ("irritated", "broken_skin", "abrasions", "lesions", "dermatitis"):
+        if scalp in (
+            "irritated",
+            "broken_skin",
+            "abrasions",
+            "lesions",
+            "dermatitis",
+            "abraded",
+            "inflamed",
+            "open_sores",
+            "psoriasis",
+        ):
             msg = (
                 f"Scalp examination reveals compromised tissue ({scalp}). "
                 "Direct contact with oxidative colour or lightener can cause chemical burns or systemic sensitization."
@@ -174,7 +184,7 @@ class SafetyValidationService:
 
         # Sodium Hydroxide (Lye) Relaxer + Bleaching
         has_lye = history.has_sodium_hydroxide_relaxer or any(
-            "sodium hydroxide" in s.lower() or "lye" in s.lower()
+            "sodium hydroxide" in s.lower() or "lye" in s.lower() or "relaxer" in s.lower()
             for s in history.previous_chemical_services
         )
         if has_lye and overall_classification in (
@@ -193,6 +203,32 @@ class SafetyValidationService:
                     detail=msg,
                     blocked_reason=msg,
                     recommendation="Lightening is strictly contraindicated on lye-relaxed hair.",
+                )
+            )
+            blocking_reasons.append(msg)
+
+        # Ammonium Thioglycolate Perm + High-Lift Bleaching
+        has_perm = any(
+            ("perm" in s.lower() and "permanent" not in s.lower())
+            or "thioglycolate" in s.lower()
+            or "chemical_wave" in s.lower()
+            for s in history.previous_chemical_services
+        )
+        target_lvl_int = int(target.universal_level)
+        requires_high_lift = any(target_lvl_int - int(r.observed_level) >= 3 for r in (assessment.roots, assessment.mid_lengths, assessment.ends))
+        if has_perm and (requires_high_lift or overall_classification == ServiceClassificationEnum.LIGHTENING):
+            msg = (
+                "Chemically permed hair (ammonium thioglycolate) cannot withstand aggressive persulfate bleaching or high lift (3+ levels). "
+                "Disulfide bond cleavage combined with alkaline persulfate creates severe fiber dissolution and chemical breakage."
+            )
+            checks.append(
+                SafetyCheckResult(
+                    check_code="SAFETY_PERM_BLEACH_CONTRAINDICATION",
+                    status=SafetyStatusEnum.BLOCKED,
+                    title="Permed Hair Bleach Incompatibility",
+                    detail=msg,
+                    blocked_reason=msg,
+                    recommendation="Do not apply persulfate bleach to permed hair. Limit to gentle semi/demi-permanent deposit only.",
                 )
             )
             blocking_reasons.append(msg)

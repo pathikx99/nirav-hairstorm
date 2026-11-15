@@ -29,11 +29,11 @@ export function StickyBottomBar({
   return (
     <aside
       aria-label="Action Dock"
-      className={`fixed bottom-0 inset-x-0 z-40 border-t border-neutral-800 bg-neutral-950/95 backdrop-blur-md px-4 py-3 shadow-[0_-10px_25px_-5px_rgba(0,0,0,0.5)] ${className}`}
+      className={`fixed bottom-0 inset-x-0 z-40 border-t border-neutral-800 bg-neutral-950/95 backdrop-blur-md px-4 sm:px-6 py-3 shadow-[0_-10px_25px_-5px_rgba(0,0,0,0.5)] ${className}`}
     >
       <div className="mx-auto flex max-w-7xl flex-col sm:flex-row items-center justify-between gap-3">
-        {/* Left: Live Summary Chips */}
-        <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto scrollbar-none py-0.5">
+        {/* Left: Live Summary Chips with safe insets */}
+        <div className="flex items-center gap-2.5 overflow-x-auto w-full sm:w-auto scrollbar-none py-0.5 pl-2 sm:pl-3">
           {summary}
         </div>
 

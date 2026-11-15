@@ -90,8 +90,16 @@ export default function StartingHairPage() {
     }
   }, []);
 
-  const handleSaveAndProceed = () => {
-            const assessment: HairAssessmentInput = {
+  const [contraindicationWarningOpen, setContraindicationWarningOpen] = useState(false);
+
+  const hasHardContraindication =
+    history.has_allergy_history ||
+    history.has_sodium_hydroxide_relaxer ||
+    history.scalp_condition === "abraded" ||
+    history.scalp_condition === "inflamed";
+
+  const executeProceed = () => {
+    const assessment: HairAssessmentInput = {
       market: "IN",
       roots,
       mid_lengths: midLengths,
@@ -105,6 +113,14 @@ export default function StartingHairPage() {
       // ignore
     }
     router.push("/target-colour");
+  };
+
+  const handleSaveAndProceed = () => {
+    if (hasHardContraindication) {
+      setContraindicationWarningOpen(true);
+      return;
+    }
+    executeProceed();
   };
 
   const handleApplyPhotoPredictions = (
@@ -771,6 +787,62 @@ export default function StartingHairPage() {
           onClose={() => setPhotoModalOpen(false)}
           onApply={handleApplyPhotoPredictions}
         />
+
+        {/* Hard Contraindication Pre-Flight Warning Modal */}
+        {contraindicationWarningOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200">
+            <div className="max-w-lg w-full rounded-3xl border border-rose-500/50 bg-neutral-950 p-6 sm:p-8 shadow-2xl space-y-5 text-left">
+              <div className="flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-400 text-2xl border border-rose-500/40">
+                  🛑
+                </span>
+                <div>
+                  <h3 className="text-base sm:text-lg font-black text-white">
+                    Safety Warning: Hard Contraindication
+                  </h3>
+                  <p className="text-xs text-rose-300 font-medium">
+                    Critical chemical contraindication detected in client history
+                  </p>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-xs text-rose-200 space-y-2">
+                {history.has_allergy_history && (
+                  <p>• <strong>Documented Allergy History:</strong> Oxidative hair dyes (PPD/PTD) carry severe risk of contact dermatitis or anaphylaxis without verified 48h patch testing.</p>
+                )}
+                {history.has_sodium_hydroxide_relaxer && (
+                  <p>• <strong>Sodium Hydroxide / Lye Relaxer:</strong> Bleaching or oxidative high-lift over lye relaxers can cause severe structural dissolution and chemical breakage.</p>
+                )}
+                {(history.scalp_condition === "abraded" || history.scalp_condition === "inflamed") && (
+                  <p>• <strong>Compromised Scalp Barrier:</strong> Chemical application directly onto abraded or inflamed scalp is strictly prohibited.</p>
+                )}
+                <p className="text-neutral-400 text-[11px] pt-1">
+                  You may proceed to preview colors and non-oxidative alternatives, but chemical mixing will remain strictly blocked.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setContraindicationWarningOpen(false)}
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-neutral-700 bg-neutral-900 text-xs font-bold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all cursor-pointer"
+                >
+                  Return to Assessment
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setContraindicationWarningOpen(false);
+                    executeProceed();
+                  }}
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-xs font-black text-white shadow-lg shadow-rose-600/30 transition-all cursor-pointer"
+                >
+                  Proceed with Safety Notice ➔
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -882,6 +954,62 @@ export default function StartingHairPage() {
         onClose={() => setPhotoModalOpen(false)}
         onApplyPredictions={handleApplyPhotoPredictions}
       />
+
+      {/* Hard Contraindication Pre-Flight Warning Modal */}
+      {contraindicationWarningOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200">
+          <div className="max-w-lg w-full rounded-3xl border border-rose-500/50 bg-neutral-950 p-6 sm:p-8 shadow-2xl space-y-5 text-left">
+            <div className="flex items-center gap-3">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-400 text-2xl border border-rose-500/40">
+                🛑
+              </span>
+              <div>
+                <h3 className="text-base sm:text-lg font-black text-white">
+                  Safety Warning: Hard Contraindication
+                </h3>
+                <p className="text-xs text-rose-300 font-medium">
+                  Critical chemical contraindication detected in client history
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-xs text-rose-200 space-y-2">
+              {history.has_allergy_history && (
+                <p>• <strong>Documented Allergy History:</strong> Oxidative hair dyes (PPD/PTD) carry severe risk of contact dermatitis or anaphylaxis without verified 48h patch testing.</p>
+              )}
+              {history.has_sodium_hydroxide_relaxer && (
+                <p>• <strong>Sodium Hydroxide / Lye Relaxer:</strong> Bleaching or oxidative high-lift over lye relaxers can cause severe structural dissolution and chemical breakage.</p>
+              )}
+              {(history.scalp_condition === "abraded" || history.scalp_condition === "inflamed") && (
+                <p>• <strong>Compromised Scalp Barrier:</strong> Chemical application directly onto abraded or inflamed scalp is strictly prohibited.</p>
+              )}
+              <p className="text-neutral-400 text-[11px] pt-1">
+                You may proceed to preview colors and non-oxidative alternatives, but chemical mixing will remain strictly blocked.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setContraindicationWarningOpen(false)}
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-neutral-700 bg-neutral-900 text-xs font-bold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all cursor-pointer"
+              >
+                Return to Assessment
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setContraindicationWarningOpen(false);
+                  executeProceed();
+                }}
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-xs font-black text-white shadow-lg shadow-rose-600/30 transition-all cursor-pointer"
+              >
+                Proceed with Safety Notice ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
