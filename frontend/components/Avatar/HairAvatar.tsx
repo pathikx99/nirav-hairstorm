@@ -77,16 +77,20 @@ function mapLegacySkinTone(input?: string): SkinTonePreset {
   if (!input) return "fair";
   const lower = input.toLowerCase().replace(/_/g, "-");
   if (lower === "porcelain") return "porcelain";
+  if (lower === "alabaster") return "alabaster";
   if (lower === "very-fair" || lower === "veryfair") return "very-fair";
   if (lower === "fair") return "fair";
+  if (lower === "peach") return "peach";
   if (lower === "light") return "light";
   if (lower === "warm-beige" || lower === "warmbeige") return "warm-beige";
+  if (lower === "honey") return "honey";
   if (lower === "medium") return "medium";
   if (lower === "olive") return "olive";
   if (lower === "tan") return "tan";
   if (lower === "caramel" || lower === "almond") return "caramel";
   if (lower === "brown" || lower === "chestnut") return "brown";
-  if (lower === "espresso" || lower === "dark") return "espresso";
+  if (lower === "dark") return "dark";
+  if (lower === "espresso") return "espresso";
   if (lower === "deep" || lower === "ebony") return "deep";
   return "fair";
 }

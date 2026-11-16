@@ -13,15 +13,19 @@ export type LightingPreset = "sunlight" | "salon" | "cool";
 
 export type SkinTonePreset =
   | "porcelain"
+  | "alabaster"
   | "very-fair"
   | "fair"
+  | "peach"
   | "light"
   | "warm-beige"
+  | "honey"
   | "medium"
   | "olive"
   | "tan"
   | "caramel"
   | "brown"
+  | "dark"
   | "espresso"
   | "deep";
 
@@ -168,6 +172,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#dfb094",
     preview: "#fff1e8",
   },
+  "alabaster": {
+    id: "alabaster",
+    label: "Alabaster",
+    baseHex: "#fef0e7",
+    shadowHex: "#e8cfc2",
+    highlightHex: "#ffffff",
+    blushHex: "#ffc2ce",
+    featureStroke: "#d4a48e",
+    collarboneStroke: "#d8a892",
+    preview: "#fef0e7",
+  },
   "very-fair": {
     id: "very-fair",
     label: "Very Fair",
@@ -190,6 +205,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#d4a07a",
     preview: "#fde8d0",
   },
+  "peach": {
+    id: "peach",
+    label: "Peach",
+    baseHex: "#f7d7be",
+    shadowHex: "#ddb79a",
+    highlightHex: "#fae7d4",
+    blushHex: "#fa8e7a",
+    featureStroke: "#c4906e",
+    collarboneStroke: "#c4906e",
+    preview: "#f7d7be",
+  },
   "light": {
     id: "light",
     label: "Light",
@@ -211,6 +237,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#b58252",
     collarboneStroke: "#b58252",
     preview: "#e8be92",
+  },
+  "honey": {
+    id: "honey",
+    label: "Honey",
+    baseHex: "#dfb07e",
+    shadowHex: "#be905d",
+    highlightHex: "#fad2a5",
+    blushHex: "#e86e5c",
+    featureStroke: "#a67442",
+    collarboneStroke: "#a67442",
+    preview: "#dfb07e",
   },
   "medium": {
     id: "medium",
@@ -266,6 +303,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#4d2912",
     collarboneStroke: "#5c3720",
     preview: "#8b5e3c",
+  },
+  "dark": {
+    id: "dark",
+    label: "Dark",
+    baseHex: "#6b4226",
+    shadowHex: "#4d2e16",
+    highlightHex: "#8a5833",
+    blushHex: "#8a3030",
+    featureStroke: "#3d2410",
+    collarboneStroke: "#3d2410",
+    preview: "#6b4226",
   },
   "espresso": {
     id: "espresso",
