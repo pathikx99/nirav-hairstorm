@@ -56,9 +56,9 @@ export interface HighLevelRealisticAvatarProps {
 }
 
 export function HighLevelRealisticAvatar({
-  level = 7,
-  primaryTone = "COPPER",
-  secondaryTone = "GOLD",
+  level = 1,
+  primaryTone = "NATURAL",
+  secondaryTone = null,
   intensity = "STANDARD",
   technique,
   zoneMode = false,
@@ -118,10 +118,14 @@ export function HighLevelRealisticAvatar({
       ? "warm-beige"
       : activeSkinTone === "HONEY"
       ? "honey"
+      : activeSkinTone === "GOLDEN"
+      ? "golden"
       : activeSkinTone === "MEDIUM"
       ? "medium"
       : activeSkinTone === "OLIVE"
       ? "olive"
+      : activeSkinTone === "BRONZE"
+      ? "bronze"
       : activeSkinTone === "TAN"
       ? "tan"
       : activeSkinTone === "CARAMEL"
@@ -134,6 +138,8 @@ export function HighLevelRealisticAvatar({
       ? "espresso"
       : activeSkinTone === "DEEP"
       ? "deep"
+      : activeSkinTone === "EBONY"
+      ? "ebony"
       : "fair";
 
   // Map lighting to LightingPreset
@@ -170,11 +176,11 @@ export function HighLevelRealisticAvatar({
 
   if (zoneMode && rootsInput && midLengthsInput && endsInput) {
     separate = true;
-    rootsLvl = (rootsInput.observed_level || 4) as UniversalLevel;
+    rootsLvl = (rootsInput.observed_level || 1) as UniversalLevel;
     rootsTn = (rootsInput.observed_undertone as ToneFamily) || "NATURAL";
-    midLvl = (midLengthsInput.observed_level || 5) as UniversalLevel;
+    midLvl = (midLengthsInput.observed_level || 1) as UniversalLevel;
     midTn = (midLengthsInput.observed_undertone as ToneFamily) || "NATURAL";
-    endsLvl = (endsInput.observed_level || 6) as UniversalLevel;
+    endsLvl = (endsInput.observed_level || 1) as UniversalLevel;
     endsTn = (endsInput.observed_undertone as ToneFamily) || "NATURAL";
   } else if (activeTech === "SHADOW_ROOT") {
     separate = true;

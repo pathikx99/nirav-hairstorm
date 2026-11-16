@@ -10,6 +10,21 @@ export default function HomePage() {
   const router = useRouter();
   const { mode } = useApp();
 
+  const handleStartNewHairCheck = () => {
+    try {
+      const initialAssessment: HairAssessmentInput = {
+        market: "IN",
+        roots: { region: "ROOTS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true },
+        mid_lengths: { region: "MID_LENGTHS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true },
+        ends: { region: "ENDS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true },
+        history: { has_allergy_history: false, patch_test_completed_48h: true, scalp_condition: "normal", previous_chemical_services: [], has_metallic_salts_or_henna: false, has_sodium_hydroxide_relaxer: false },
+      };
+      localStorage.setItem("nh_hair_assessment", JSON.stringify(initialAssessment));
+    } catch {
+      // ignore
+    }
+  };
+
   const handleLaunchPreset = (type: "CARAMEL" | "GREY" | "COPPER" | "BURGUNDY") => {
         let startingAssessment: HairAssessmentInput;
     let targetColour: TargetColourInput;
@@ -110,6 +125,7 @@ export default function HomePage() {
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
               href="/starting-hair"
+              onClick={handleStartNewHairCheck}
               className="group flex flex-col justify-between rounded-3xl border-2 border-amber-500/50 bg-gradient-to-br from-amber-500/20 to-neutral-900/80 p-6 shadow-xl hover:border-amber-400 hover:scale-[1.02] transition-all"
             >
               <div className="flex items-center gap-4">

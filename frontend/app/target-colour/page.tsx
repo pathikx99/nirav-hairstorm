@@ -109,7 +109,7 @@ export default function TargetColourPage() {
     }
   }, []);
 
-  const startingLevel = (assessmentData?.roots?.observed_level || 4) as UniversalLevel;
+  const startingLevel = (assessmentData?.roots?.observed_level || 1) as UniversalLevel;
 
   useEffect(() => {
     async function loadMfgs() {

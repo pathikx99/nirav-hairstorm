@@ -24,9 +24,9 @@ interface HairStrandMacroStudioProps {
 }
 
 export function HairStrandMacroStudio({
-  level = 7,
-  primaryTone = "COPPER",
-  secondaryTone = "GOLD",
+  level = 1,
+  primaryTone = "NATURAL",
+  secondaryTone = null,
   intensity = "STANDARD",
   technique = "ALL_OVER",
   lightingMode: propLightingMode,

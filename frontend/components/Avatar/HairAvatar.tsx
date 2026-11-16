@@ -84,14 +84,17 @@ function mapLegacySkinTone(input?: string): SkinTonePreset {
   if (lower === "light") return "light";
   if (lower === "warm-beige" || lower === "warmbeige") return "warm-beige";
   if (lower === "honey") return "honey";
+  if (lower === "golden") return "golden";
   if (lower === "medium") return "medium";
   if (lower === "olive") return "olive";
+  if (lower === "bronze") return "bronze";
   if (lower === "tan") return "tan";
   if (lower === "caramel" || lower === "almond") return "caramel";
   if (lower === "brown" || lower === "chestnut") return "brown";
   if (lower === "dark") return "dark";
   if (lower === "espresso") return "espresso";
-  if (lower === "deep" || lower === "ebony") return "deep";
+  if (lower === "deep") return "deep";
+  if (lower === "ebony") return "ebony";
   return "fair";
 }
 
@@ -167,28 +170,28 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
       undertone: skinUndertone ?? "neutral",
     },
     hair: {
-      naturalBaseLevel: naturalBaseLevel,
+      naturalBaseLevel: naturalBaseLevel ?? 1,
       roots: {
-        level: rootsLevel ?? (level ?? 3),
+        level: rootsLevel ?? (level ?? 1),
         tone: rootsTone ?? (primaryTone ?? "NATURAL"),
         color: rootsColor,
-        greyPercentage: rootsGrey ?? greyPercentage,
+        greyPercentage: rootsGrey ?? (greyPercentage ?? 0),
       },
       midLengths: {
-        level: midLevel ?? 6,
-        tone: midTone ?? "ASH",
+        level: midLevel ?? (level ?? 1),
+        tone: midTone ?? (secondaryTone || primaryTone || "NATURAL"),
         color: midColor,
-        greyPercentage: midGrey ?? greyPercentage,
+        greyPercentage: midGrey ?? (greyPercentage ?? 0),
       },
       ends: {
-        level: endsLevel ?? 9,
-        tone: endsTone ?? "BEIGE",
+        level: endsLevel ?? (level ?? 1),
+        tone: endsTone ?? (secondaryTone || primaryTone || "NATURAL"),
         color: endsColor,
-        greyPercentage: endsGrey ?? greyPercentage,
+        greyPercentage: endsGrey ?? (greyPercentage ?? 0),
       },
-      separateZones: separateZones !== undefined ? separateZones : true,
+      separateZones: separateZones !== undefined ? separateZones : false,
       blendIntensity: blendIntensity,
-      greyPercentage: greyPercentage,
+      greyPercentage: greyPercentage ?? 0,
     },
     activeZone: mapLegacyZone(activeRegion),
   }));
@@ -208,28 +211,28 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
           undertone: skinUndertone ?? prev.skin.undertone,
         },
         hair: {
-          naturalBaseLevel: naturalBaseLevel,
+          naturalBaseLevel: naturalBaseLevel ?? 1,
           roots: {
-            level: rootsLevel ?? (level ?? prev.hair.roots.level),
-            tone: rootsTone ?? (primaryTone ?? prev.hair.roots.tone),
+            level: rootsLevel ?? (level ?? prev.hair.roots.level ?? 1),
+            tone: rootsTone ?? (primaryTone ?? prev.hair.roots.tone ?? "NATURAL"),
             color: rootsColor,
-            greyPercentage: rootsGrey ?? (prev.hair.roots.greyPercentage ?? greyPercentage),
+            greyPercentage: rootsGrey ?? (prev.hair.roots.greyPercentage ?? greyPercentage ?? 0),
           },
           midLengths: {
-            level: midLevel ?? (level ?? prev.hair.midLengths.level),
-            tone: midTone ?? (secondaryTone || primaryTone || prev.hair.midLengths.tone),
+            level: midLevel ?? (level ?? prev.hair.midLengths.level ?? 1),
+            tone: midTone ?? (secondaryTone || primaryTone || (prev.hair.midLengths.tone ?? "NATURAL")),
             color: midColor,
-            greyPercentage: midGrey ?? (prev.hair.midLengths.greyPercentage ?? greyPercentage),
+            greyPercentage: midGrey ?? (prev.hair.midLengths.greyPercentage ?? (greyPercentage ?? 0)),
           },
           ends: {
-            level: endsLevel ?? (level ?? prev.hair.ends.level),
-            tone: endsTone ?? (secondaryTone || primaryTone || prev.hair.ends.tone),
+            level: endsLevel ?? (level ?? (prev.hair.ends.level ?? 1)),
+            tone: endsTone ?? (secondaryTone || primaryTone || (prev.hair.ends.tone ?? "NATURAL")),
             color: endsColor,
-            greyPercentage: endsGrey ?? (prev.hair.ends.greyPercentage ?? greyPercentage),
+            greyPercentage: endsGrey ?? (prev.hair.ends.greyPercentage ?? greyPercentage ?? 0),
           },
           separateZones: separateZones !== undefined ? separateZones : prev.hair.separateZones,
           blendIntensity: blendIntensity,
-          greyPercentage: greyPercentage,
+          greyPercentage: greyPercentage ?? 0,
         },
         activeZone: activeRegion ? mapLegacyZone(activeRegion) : prev.activeZone,
       }));
@@ -396,32 +399,44 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
               {activeSkin}
             </span>
           </div>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-1.5">
+          <div className="flex items-center gap-1.5 overflow-x-auto py-1 px-0.5 no-scrollbar scroll-smooth">
             {[
+              { id: "porcelain", label: "Porcelain", color: "#fff1e8" },
+              { id: "alabaster", label: "Alabaster", color: "#fef0e7" },
+              { id: "very-fair", label: "Very Fair", color: "#fff1e5" },
               { id: "fair", label: "Fair", color: "#fde8d0" },
+              { id: "peach", label: "Peach", color: "#f7d7be" },
               { id: "light", label: "Light", color: "#f5d0a9" },
+              { id: "warm-beige", label: "Warm Beige", color: "#e8be92" },
+              { id: "honey", label: "Honey", color: "#dfb07e" },
+              { id: "golden", label: "Golden", color: "#cc9c72" },
               { id: "medium", label: "Medium", color: "#d4a373" },
               { id: "olive", label: "Olive", color: "#c49a6c" },
+              { id: "bronze", label: "Bronze", color: "#a87652" },
               { id: "tan", label: "Tan", color: "#a67c52" },
+              { id: "caramel", label: "Caramel", color: "#9b693e" },
               { id: "brown", label: "Brown", color: "#8b5e3c" },
               { id: "dark", label: "Dark", color: "#6b4226" },
+              { id: "espresso", label: "Espresso", color: "#52321b" },
               { id: "deep", label: "Deep", color: "#3d2515" },
+              { id: "ebony", label: "Ebony", color: "#34221a" },
             ].map((t) => (
               <button
                 key={t.id}
                 type="button"
                 onClick={() => handleSetSkinTone(t.id as SkinTonePreset)}
-                className={`flex items-center gap-1 py-1 px-1.5 rounded-lg border text-[10px] font-bold transition-all ${
+                className={`flex-shrink-0 flex items-center gap-1.5 py-1 px-2 rounded-lg border text-[10px] font-bold transition-all ${
                   activeSkin === t.id
-                    ? "bg-amber-500/20 border-amber-400 text-amber-300 ring-1 ring-amber-400/50 scale-[1.02]"
+                    ? "bg-amber-500/20 border-amber-400 text-amber-300 ring-1 ring-amber-400/50 scale-[1.03]"
                     : "bg-neutral-900/80 border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700"
                 }`}
+                title={`${t.label} Skin Tone`}
               >
                 <span
-                  className="h-2.5 w-2.5 rounded-full shrink-0 ring-1 ring-white/30"
+                  className="h-3 w-3 rounded-full shrink-0 ring-1 ring-white/40 shadow-sm"
                   style={{ backgroundColor: t.color }}
                 />
-                <span className="truncate">{t.label}</span>
+                <span className="whitespace-nowrap">{t.label}</span>
               </button>
             ))}
           </div>

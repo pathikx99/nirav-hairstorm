@@ -214,14 +214,17 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       'light':      { targetRgb: [222, 182, 158], sss: [11, 4, -2],  spec: 0.10, gamma: 0.91 },
       'warm-beige': { targetRgb: [215, 172, 142], sss: [13, 6, -4],  spec: 0.11, gamma: 0.90 },
       'honey':      { targetRgb: [208, 162, 128], sss: [14, 7, -6],  spec: 0.12, gamma: 0.89 },
+      'golden':     { targetRgb: [204, 156, 114], sss: [15, 8, -5],  spec: 0.13, gamma: 0.88 },
       'medium':     { targetRgb: [198, 152, 120], sss: [15, 7, -7],  spec: 0.13, gamma: 0.88 },
       'olive':      { targetRgb: [190, 150, 114], sss: [13, 8, -8],  spec: 0.13, gamma: 0.88 },
+      'bronze':     { targetRgb: [168, 118,  82], sss: [17, 9, -9],   spec: 0.16, gamma: 0.85 },
       'tan':        { targetRgb: [174, 128,  92], sss: [16, 8, -10], spec: 0.15, gamma: 0.86 },
       'caramel':    { targetRgb: [150, 104,  70], sss: [18, 9, -12], spec: 0.17, gamma: 0.85 },
       'brown':      { targetRgb: [126,  82,  52], sss: [18, 8, -10], spec: 0.18, gamma: 0.84 },
       'dark':       { targetRgb: [112,  72,  46], sss: [17, 7,  -9], spec: 0.19, gamma: 0.83 },
       'espresso':   { targetRgb: [ 98,  62,  40], sss: [16, 7,  -8], spec: 0.20, gamma: 0.82 },
-      'deep':       { targetRgb: [ 72,  44,  32], sss: [14, 6,  -6], spec: 0.24, gamma: 0.80 },
+      'deep':       { targetRgb: [ 76,  46,  34], sss: [15, 6,  -6], spec: 0.23, gamma: 0.80 },
+      'ebony':      { targetRgb: [ 52,  34,  26], sss: [12, 5,  -5], spec: 0.26, gamma: 0.78 },
     };
     const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['fair'];
 
@@ -462,6 +465,17 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
           bgR = Math.round(origR * (1 - sAlpha) + clR * sAlpha);
           bgG = Math.round(origG * (1 - sAlpha) + clG * sAlpha);
           bgB = Math.round(origB * (1 - sAlpha) + clB * sAlpha);
+        } else if (p < width * 620) {
+          // Harmonize underlying skin tone under semi-transparent hair wisps along hairline/face/neck
+          if (origR > 85 && origG > 55 && origB > 40 && origR >= origG && (origR - origB > 12)) {
+            const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
+            const normLum = sLum / baseLum;
+            const dMod = Math.pow(Math.min(2.0, Math.max(0.15, normLum)), skinGamma);
+            const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
+            bgR = Math.min(255, Math.max(0, Math.round(targetSkinR * dMod + sssR * sssFactor)));
+            bgG = Math.min(255, Math.max(0, Math.round(targetSkinG * dMod + sssG * sssFactor)));
+            bgB = Math.min(255, Math.max(0, Math.round(targetSkinB * dMod + sssB * sssFactor)));
+          }
         }
       }
 

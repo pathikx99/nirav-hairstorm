@@ -20,14 +20,17 @@ export type SkinTonePreset =
   | "light"
   | "warm-beige"
   | "honey"
+  | "golden"
   | "medium"
   | "olive"
+  | "bronze"
   | "tan"
   | "caramel"
   | "brown"
   | "dark"
   | "espresso"
-  | "deep";
+  | "deep"
+  | "ebony";
 
 export type SkinUndertone = "cool" | "neutral" | "warm" | "olive";
 
@@ -249,6 +252,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#a67442",
     preview: "#dfb07e",
   },
+  "golden": {
+    id: "golden",
+    label: "Golden",
+    baseHex: "#cc9c72",
+    shadowHex: "#ab7a50",
+    highlightHex: "#e2b58c",
+    blushHex: "#e07060",
+    featureStroke: "#8c5c32",
+    collarboneStroke: "#9c6a3e",
+    preview: "#cc9c72",
+  },
   "medium": {
     id: "medium",
     label: "Medium",
@@ -270,6 +284,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#7c552b",
     collarboneStroke: "#8b6238",
     preview: "#c49a6c",
+  },
+  "bronze": {
+    id: "bronze",
+    label: "Bronze",
+    baseHex: "#a87652",
+    shadowHex: "#895836",
+    highlightHex: "#bf8c66",
+    blushHex: "#b84848",
+    featureStroke: "#633c1d",
+    collarboneStroke: "#724828",
+    preview: "#a87652",
   },
   "tan": {
     id: "tan",
@@ -336,6 +361,17 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#180a04",
     collarboneStroke: "#1f0e06",
     preview: "#3d2515",
+  },
+  "ebony": {
+    id: "ebony",
+    label: "Ebony",
+    baseHex: "#34221a",
+    shadowHex: "#20120b",
+    highlightHex: "#483226",
+    blushHex: "#551818",
+    featureStroke: "#120803",
+    collarboneStroke: "#180a05",
+    preview: "#34221a",
   },
 };
 

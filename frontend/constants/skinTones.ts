@@ -7,14 +7,17 @@ export type SkinTone =
   | "LIGHT"
   | "WARM_BEIGE"
   | "HONEY"
+  | "GOLDEN"
   | "MEDIUM"
   | "OLIVE"
+  | "BRONZE"
   | "TAN"
   | "CARAMEL"
   | "BROWN"
   | "DARK"
   | "ESPRESSO"
-  | "DEEP";
+  | "DEEP"
+  | "EBONY";
 
 export interface SkinToneConfig {
   id: SkinTone;
@@ -109,6 +112,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#dfb07e",
   },
   {
+    id: "GOLDEN",
+    label: "Golden",
+    faceHex: "#cc9c72",
+    shadowHex: "#ab7a50",
+    blushHex: "#e07060",
+    noseStroke: "#8c5c32",
+    collarboneStroke: "#9c6a3e",
+    preview: "#cc9c72",
+  },
+  {
     id: "MEDIUM",
     label: "Medium",
     faceHex: "#d4a373",
@@ -127,6 +140,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     noseStroke: "#8b6238",
     collarboneStroke: "#8b6238",
     preview: "#c49a6c",
+  },
+  {
+    id: "BRONZE",
+    label: "Bronze",
+    faceHex: "#a87652",
+    shadowHex: "#895836",
+    blushHex: "#b84848",
+    noseStroke: "#633c1d",
+    collarboneStroke: "#724828",
+    preview: "#a87652",
   },
   {
     id: "TAN",
@@ -187,6 +210,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     noseStroke: "#1f0e06",
     collarboneStroke: "#1f0e06",
     preview: "#3d2515",
+  },
+  {
+    id: "EBONY",
+    label: "Ebony",
+    faceHex: "#34221a",
+    shadowHex: "#20120b",
+    blushHex: "#551818",
+    noseStroke: "#120803",
+    collarboneStroke: "#180a05",
+    preview: "#34221a",
   },
 ];
 

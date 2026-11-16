@@ -30,7 +30,7 @@ export default function StartingHairPage() {
 
   const [roots, setRoots] = useState<HairRegionInput>({
     region: "ROOTS",
-    observed_level: 5,
+    observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
     grey_percentage: 0,
@@ -42,7 +42,7 @@ export default function StartingHairPage() {
 
   const [midLengths, setMidLengths] = useState<HairRegionInput>({
     region: "MID_LENGTHS",
-    observed_level: 5,
+    observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
     grey_percentage: 0,
@@ -54,7 +54,7 @@ export default function StartingHairPage() {
 
   const [ends, setEnds] = useState<HairRegionInput>({
     region: "ENDS",
-    observed_level: 5,
+    observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
     grey_percentage: 0,
@@ -184,7 +184,7 @@ export default function StartingHairPage() {
 
   const handleQuickPreset = (preset: "VIRGIN_BLACK" | "VIRGIN_BROWN" | "GREY_ROOTS" | "COLOURED_ENDS" | "HENNA") => {
         if (preset === "VIRGIN_BLACK") {
-            const r: HairRegionInput = { region: "ROOTS", observed_level: 3, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
+            const r: HairRegionInput = { region: "ROOTS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
       setRoots(r);
       setMidLengths({ ...r, region: "MID_LENGTHS", is_on_scalp: false });
       setEnds({ ...r, region: "ENDS", is_on_scalp: false });
@@ -452,7 +452,7 @@ export default function StartingHairPage() {
               className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 transition-all hover:scale-[1.02]"
             >
               <span>🖤</span>
-              <span>Virgin Indian Black (L3)</span>
+              <span>Virgin Jet Black (L1)</span>
             </button>
             <button
               type="button"
@@ -485,6 +485,33 @@ export default function StartingHairPage() {
             >
               <span>🌿</span>
               <span>Henna / Mehendi Alert</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                const fresh: HairRegionInput = { region: "ROOTS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
+                setRoots(fresh);
+                setMidLengths({ ...fresh, region: "MID_LENGTHS", is_on_scalp: false });
+                setEnds({ ...fresh, region: "ENDS", is_on_scalp: false });
+                setSyncAllZones(false);
+                try {
+                  const assessment: HairAssessmentInput = {
+                    market: "IN",
+                    roots: fresh,
+                    mid_lengths: { ...fresh, region: "MID_LENGTHS", is_on_scalp: false },
+                    ends: { ...fresh, region: "ENDS", is_on_scalp: false },
+                    history,
+                  };
+                  localStorage.setItem("nh_hair_assessment", JSON.stringify(assessment));
+                } catch {
+                  // ignore
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition-all hover:scale-[1.02]"
+              title="Reset all zones to Level 1 Jet Black with 0% grey"
+            >
+              <span>🔄</span>
+              <span>Reset L1 All Over (0% White)</span>
             </button>
           </div>
         </div>
