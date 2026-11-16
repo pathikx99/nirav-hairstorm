@@ -525,12 +525,12 @@ export const AvatarControls: React.FC<AvatarControlsProps> = ({
               <span>🧑</span> Skin Complexion:
             </span>
             <span className="text-[10px] font-mono text-amber-400 capitalize">
-              {SKIN_TONE_PRESETS[state.skin.tone].label} ({state.skin.undertone})
+              {(SKIN_TONE_PRESETS[state.skin.tone] || SKIN_TONE_PRESETS["fair"]).label} ({state.skin.undertone})
             </span>
           </div>
 
-          {/* 8 Skin Tone Presets */}
-          <div className="flex items-center justify-between gap-1">
+          {/* 12 Comprehensive Skin Tone Presets (Fitzpatrick Types I - VI) */}
+          <div className="flex items-center gap-2 overflow-x-auto py-1 px-0.5 no-scrollbar scroll-smooth">
             {(Object.keys(SKIN_TONE_PRESETS) as SkinTonePreset[]).map((presetKey) => {
               const preset = SKIN_TONE_PRESETS[presetKey];
               const isSelected = state.skin.tone === presetKey;
@@ -539,7 +539,7 @@ export const AvatarControls: React.FC<AvatarControlsProps> = ({
                   key={presetKey}
                   type="button"
                   onClick={() => handleSkinToneChange(presetKey)}
-                  className={`relative flex flex-col items-center transition-all ${
+                  className={`flex-shrink-0 relative flex flex-col items-center transition-all ${
                     isSelected ? "scale-110 z-10" : "opacity-75 hover:opacity-100 hover:scale-105"
                   }`}
                   title={`${preset.label} Complexion`}
@@ -553,11 +553,11 @@ export const AvatarControls: React.FC<AvatarControlsProps> = ({
                     style={{ backgroundColor: preset.preview }}
                   />
                   <span
-                    className={`text-[8px] mt-0.5 truncate max-w-[32px] ${
+                    className={`text-[8px] mt-0.5 truncate max-w-[36px] ${
                       isSelected ? "text-amber-400 font-bold" : "text-neutral-500"
                     }`}
                   >
-                    {preset.label.slice(0, 3)}
+                    {preset.label.slice(0, 4)}
                   </span>
                 </button>
               );

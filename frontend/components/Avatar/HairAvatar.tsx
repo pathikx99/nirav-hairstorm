@@ -74,17 +74,21 @@ export interface HairAvatarProps {
 }
 
 function mapLegacySkinTone(input?: string): SkinTonePreset {
-  if (!input) return "olive";
+  if (!input) return "fair";
   const lower = input.toLowerCase().replace(/_/g, "-");
-  if (lower === "very-fair") return "very-fair";
+  if (lower === "porcelain") return "porcelain";
+  if (lower === "very-fair" || lower === "veryfair") return "very-fair";
   if (lower === "fair") return "fair";
   if (lower === "light") return "light";
+  if (lower === "warm-beige" || lower === "warmbeige") return "warm-beige";
   if (lower === "medium") return "medium";
   if (lower === "olive") return "olive";
   if (lower === "tan") return "tan";
-  if (lower === "brown") return "brown";
-  if (lower === "dark" || lower === "deep") return "deep";
-  return "olive";
+  if (lower === "caramel" || lower === "almond") return "caramel";
+  if (lower === "brown" || lower === "chestnut") return "brown";
+  if (lower === "espresso" || lower === "dark") return "espresso";
+  if (lower === "deep" || lower === "ebony") return "deep";
+  return "fair";
 }
 
 function mapLegacyLighting(input?: string): LightingPreset {
@@ -155,8 +159,8 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
     view: mapLegacyView(viewAngle),
     lighting: lightingMode ? mapLegacyLighting(lightingMode) : "salon",
     skin: {
-      tone: skinTone ? mapLegacySkinTone(skinTone) : "olive",
-      undertone: skinUndertone ?? "warm",
+      tone: skinTone ? mapLegacySkinTone(skinTone) : "fair",
+      undertone: skinUndertone ?? "neutral",
     },
     hair: {
       naturalBaseLevel: naturalBaseLevel,
@@ -358,6 +362,7 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
           separateZones={activeState.hair.separateZones}
           blendIntensity={activeState.hair.blendIntensity}
           skinTone={activeSkin}
+          skinUndertone={activeState.skin.undertone}
           lighting={activeLight}
           view={activeView}
           activeZone={activeState.activeZone}

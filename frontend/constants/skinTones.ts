@@ -1,11 +1,16 @@
 export type SkinTone =
+  | "PORCELAIN"
+  | "VERY_FAIR"
   | "FAIR"
   | "LIGHT"
+  | "WARM_BEIGE"
   | "MEDIUM"
   | "OLIVE"
   | "TAN"
+  | "CARAMEL"
   | "BROWN"
   | "DARK"
+  | "ESPRESSO"
   | "DEEP";
 
 export interface SkinToneConfig {
@@ -21,14 +26,34 @@ export interface SkinToneConfig {
 
 export const SKIN_TONES: SkinToneConfig[] = [
   {
-    id: "FAIR",
-    label: "Fair",
+    id: "PORCELAIN",
+    label: "Porcelain",
+    faceHex: "#fff1e8",
+    shadowHex: "#ecd4c4",
+    blushHex: "#ffccd5",
+    noseStroke: "#d9a88c",
+    collarboneStroke: "#dfb094",
+    preview: "#fff1e8",
+  },
+  {
+    id: "VERY_FAIR",
+    label: "Very Fair",
     faceHex: "#fde8d0",
     shadowHex: "#e8c9aa",
     blushHex: "#fca5a5",
     noseStroke: "#d4a07a",
     collarboneStroke: "#d4a07a",
     preview: "#fde8d0",
+  },
+  {
+    id: "FAIR",
+    label: "Fair",
+    faceHex: "#f8e2cf",
+    shadowHex: "#e0c2ab",
+    blushHex: "#f89b9b",
+    noseStroke: "#cda080",
+    collarboneStroke: "#cda080",
+    preview: "#f8e2cf",
   },
   {
     id: "LIGHT",
@@ -39,6 +64,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     noseStroke: "#c49670",
     collarboneStroke: "#c49670",
     preview: "#f5d0a9",
+  },
+  {
+    id: "WARM_BEIGE",
+    label: "Warm Beige",
+    faceHex: "#e8be92",
+    shadowHex: "#cca072",
+    blushHex: "#f07865",
+    noseStroke: "#b58252",
+    collarboneStroke: "#b58252",
+    preview: "#e8be92",
   },
   {
     id: "MEDIUM",
@@ -71,6 +106,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#a67c52",
   },
   {
+    id: "CARAMEL",
+    label: "Caramel",
+    faceHex: "#9b693e",
+    shadowHex: "#7f4e27",
+    blushHex: "#b34237",
+    noseStroke: "#653a19",
+    collarboneStroke: "#653a19",
+    preview: "#9b693e",
+  },
+  {
     id: "BROWN",
     label: "Brown",
     faceHex: "#8b5e3c",
@@ -91,6 +136,16 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#6b4226",
   },
   {
+    id: "ESPRESSO",
+    label: "Espresso",
+    faceHex: "#52321b",
+    shadowHex: "#391f0e",
+    blushHex: "#752222",
+    noseStroke: "#2b1407",
+    collarboneStroke: "#2b1407",
+    preview: "#52321b",
+  },
+  {
     id: "DEEP",
     label: "Deep",
     faceHex: "#3d2515",
@@ -104,5 +159,5 @@ export const SKIN_TONES: SkinToneConfig[] = [
 
 export function getSkinToneConfig(id: SkinTone): SkinToneConfig {
   const found = SKIN_TONES.find((s) => s.id === id);
-  return found || SKIN_TONES[2]; // Default Medium
+  return found || SKIN_TONES[2]; // Default Fair
 }

@@ -14,7 +14,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import { AvatarView, HairZoneId, LightingPreset } from "./AvatarTypes";
+import { AvatarView, HairZoneId, LightingPreset, SkinUndertone } from "./AvatarTypes";
 
 interface HighEndSalonAvatarCanvasProps {
   rootsColor: string;
@@ -26,6 +26,7 @@ interface HighEndSalonAvatarCanvasProps {
   separateZones?: boolean;
   blendIntensity?: number;
   skinTone?: string;
+  skinUndertone?: SkinUndertone;
   lighting?: LightingPreset;
   view?: AvatarView;
   activeZone?: HairZoneId;
@@ -62,7 +63,8 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
   endsGrey = 0,
   separateZones = true,
   blendIntensity = 0.5,
-  skinTone = "olive",
+  skinTone = "fair",
+  skinUndertone = "neutral",
   lighting = "salon",
   view = "front",
   activeZone = "roots",
@@ -200,30 +202,41 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
 
     const { width, height, basePixels, alphaPixels, zonePixels, skinPixels } = cache;
     const isFront = view === 'front';
-    const normSkin = (skinTone || 'medium').toLowerCase().replace(/_/g, '-');
+    const normSkin = (skinTone || 'fair').toLowerCase().replace(/_/g, '-');
     
-    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles
-    const skinProfiles: Record<string, { mult: [number, number, number]; sss: [number, number, number] }> = {
-      'very-fair': { mult: [1.03, 0.98, 0.94], sss: [10, 4, -4] },
-      'fair':      { mult: [1.03, 0.97, 0.91], sss: [12, 5, -5] },
-      'light':     { mult: [1.02, 0.95, 0.86], sss: [14, 6, -6] },
-      'medium':    { mult: [1.00, 0.91, 0.79], sss: [16, 7, -8] },
-      'olive':     { mult: [0.97, 0.89, 0.75], sss: [14, 8, -10] },
-      'tan':       { mult: [0.91, 0.78, 0.63], sss: [18, 9, -12] },
-      'brown':     { mult: [0.78, 0.62, 0.47], sss: [16, 8, -10] },
-      'dark':      { mult: [0.63, 0.47, 0.35], sss: [12, 6, -8] },
-      'deep':      { mult: [0.50, 0.36, 0.26], sss: [10, 5, -6] },
+    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles across Fitzpatrick Types I - VI
+    const skinProfiles: Record<string, { targetRgb: [number, number, number]; sss: [number, number, number]; spec: number }> = {
+      'porcelain':  { targetRgb: [248, 222, 212], sss: [6, 2, 2],     spec: 0.12 },
+      'very-fair':  { targetRgb: [240, 208, 194], sss: [8, 3, 0],     spec: 0.10 },
+      'fair':       { targetRgb: [229, 192, 177], sss: [0, 0, 0],     spec: 0.00 }, // Photographic studio baseline
+      'light':      { targetRgb: [222, 182, 158], sss: [10, 4, -2],   spec: 0.08 },
+      'warm-beige': { targetRgb: [215, 172, 142], sss: [12, 5, -4],   spec: 0.09 },
+      'medium':     { targetRgb: [200, 154, 122], sss: [14, 6, -6],   spec: 0.10 },
+      'olive':      { targetRgb: [192, 152, 116], sss: [12, 8, -8],   spec: 0.10 },
+      'tan':        { targetRgb: [175, 130,  94], sss: [16, 7, -10],  spec: 0.12 },
+      'caramel':    { targetRgb: [152, 106,  72], sss: [18, 8, -12],  spec: 0.14 },
+      'brown':      { targetRgb: [128,  84,  54], sss: [18, 7, -10],  spec: 0.15 },
+      'espresso':   { targetRgb: [102,  64,  42], sss: [16, 6, -8],   spec: 0.16 },
+      'deep':       { targetRgb: [ 74,  46,  34], sss: [14, 5, -6],   spec: 0.18 },
     };
-    const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['medium'];
+    const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['fair'];
+
+    const undertoneMults: Record<SkinUndertone, [number, number, number]> = {
+      'warm':    [1.03, 1.01, 0.95],
+      'neutral': [1.00, 1.00, 1.00],
+      'cool':    [1.01, 0.98, 1.04],
+      'olive':   [0.98, 1.02, 0.94],
+    };
+    const activeUtMult = undertoneMults[skinUndertone || 'neutral'] || [1.0, 1.0, 1.0];
 
     // Lighting Ambient Radiance Coupling on Skin
     let skinAmbientR = 1.0;
     let skinAmbientG = 1.0;
     let skinAmbientB = 1.0;
     if (lighting === "salon") {
-      skinAmbientR = 1.04;
-      skinAmbientG = 1.02;
-      skinAmbientB = 0.95;
+      skinAmbientR = 1.03;
+      skinAmbientG = 1.01;
+      skinAmbientB = 0.96;
     } else if (lighting === "cool") {
       skinAmbientR = 0.98;
       skinAmbientG = 1.00;
@@ -234,20 +247,27 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       skinAmbientB = 0.98;
     }
 
-    const targetSkinMultR = activeSkinProfile.mult[0] * skinAmbientR;
-    const targetSkinMultG = activeSkinProfile.mult[1] * skinAmbientG;
-    const targetSkinMultB = activeSkinProfile.mult[2] * skinAmbientB;
+    // Baseline reference: model photo cheek [229, 192, 177]
+    const baseRefR = 229.0;
+    const baseRefG = 192.0;
+    const baseRefB = 177.0;
+
+    const targetSkinMultR = (activeSkinProfile.targetRgb[0] / baseRefR) * activeUtMult[0] * skinAmbientR;
+    const targetSkinMultG = (activeSkinProfile.targetRgb[1] / baseRefG) * activeUtMult[1] * skinAmbientG;
+    const targetSkinMultB = (activeSkinProfile.targetRgb[2] / baseRefB) * activeUtMult[2] * skinAmbientB;
     const sssR = activeSkinProfile.sss[0];
     const sssG = activeSkinProfile.sss[1];
     const sssB = activeSkinProfile.sss[2];
-    const applySkinRecolor = isFront && !!skinPixels;
+    const specLuster = activeSkinProfile.spec;
+
+    const isBaselineFair = normSkin === 'fair' && (skinUndertone === 'neutral' || !skinUndertone) && lighting === 'salon';
+    const applySkinRecolor = isFront && !!skinPixels && !isBaselineFair;
 
     const [rawRootsR, rawRootsG, rawRootsB] = hexToRgb(rootsColor);
     const [rawMidR, rawMidG, rawMidB] = separateZones ? hexToRgb(midColor) : [rawRootsR, rawRootsG, rawRootsB];
     const [rawEndsR, rawEndsG, rawEndsB] = separateZones ? hexToRgb(endsColor) : [rawRootsR, rawRootsG, rawRootsB];
 
     // Specular anisotropic highlights & lighting environment luster
-    // Note: rootsColor, midColor, and endsColor are already chromaticity-adapted via AvatarColorEngine
     let lusterR = 255;
     let lusterG = 255;
     let lusterB = 255;
@@ -257,7 +277,7 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       lusterR = 255;
       lusterG = 242;
       lusterB = 210;
-      lusterBoost = 0.28;
+      lusterBoost = 0.26;
     } else if (lighting === "cool") {
       lusterR = 220;
       lusterG = 235;
@@ -268,7 +288,7 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       lusterR = 255;
       lusterG = 252;
       lusterB = 240;
-      lusterBoost = 0.25;
+      lusterBoost = 0.24;
     }
 
     const rRoots = rawRootsR;
@@ -304,12 +324,25 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
             const bB = basePixels[i + 2];
             const sLum = (0.299 * bR + 0.587 * bG + 0.114 * bB) / 255;
             const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
-            const skR = Math.min(255, Math.max(0, Math.round(bR * targetSkinMultR + sssR * sssFactor)));
-            const skG = Math.min(255, Math.max(0, Math.round(bG * targetSkinMultG + sssG * sssFactor)));
-            const skB = Math.min(255, Math.max(0, Math.round(bB * targetSkinMultB + sssB * sssFactor)));
-            out[i] = Math.round(bR * (1 - sAlpha) + skR * sAlpha);
-            out[i + 1] = Math.round(bG * (1 - sAlpha) + skG * sAlpha);
-            out[i + 2] = Math.round(bB * (1 - sAlpha) + skB * sAlpha);
+            let skR = bR * targetSkinMultR + sssR * sssFactor;
+            let skG = bG * targetSkinMultG + sssG * sssFactor;
+            let skB = bB * targetSkinMultB + sssB * sssFactor;
+
+            // Preserve natural epidermal specular highlights (bridge of nose, forehead, cheeks)
+            if (sLum > 0.70 && specLuster > 0) {
+              const specFactor = ((sLum - 0.70) / 0.30) * specLuster;
+              skR = skR * (1 - specFactor) + 252 * specFactor;
+              skG = skG * (1 - specFactor) + 246 * specFactor;
+              skB = skB * (1 - specFactor) + 238 * specFactor;
+            }
+
+            const clR = Math.min(255, Math.max(0, Math.round(skR)));
+            const clG = Math.min(255, Math.max(0, Math.round(skG)));
+            const clB = Math.min(255, Math.max(0, Math.round(skB)));
+
+            out[i] = Math.round(bR * (1 - sAlpha) + clR * sAlpha);
+            out[i + 1] = Math.round(bG * (1 - sAlpha) + clG * sAlpha);
+            out[i + 2] = Math.round(bB * (1 - sAlpha) + clB * sAlpha);
             out[i + 3] = 255;
             continue;
           }
@@ -353,29 +386,26 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       // Effective white/grey hair percentage at current pixel (0.0 to 1.0)
       const effGrey = Math.min(1.0, Math.max(0.0, wR * (rootsGrey / 100) + wG * (midGrey / 100) + wB * (endsGrey / 100)));
 
-      // Original hair fiber luminance (0.0 to 1.0) representing microscopic strands, depth, and specular sheen
+      // Original hair fiber luminance (0.0 to 1.0)
       const origLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
-      const normLum = Math.min(2.5, origLum / 0.435);
+      const normLum = origLum / 0.435;
 
-      // Pigmented strand depth modulation:
-      // Preserves deep natural hair shadow crevices (0.36 ambient floor) and wave crest highlights (1.25)
-      const fiberMod = 0.36 + 0.64 * Math.pow(normLum, 0.82);
+      // Physically-based strand depth modulation:
+      // Preserves deep natural hair shadow crevices (0.36 ambient floor) and wave crest highlights (capped to 1.15)
+      const fiberMod = 0.36 + 0.64 * Math.pow(Math.min(2.0, normLum), 0.78);
+      const capMod = Math.min(1.15, fiberMod);
 
-      const pR = Math.min(255, Math.round(tr * fiberMod));
-      const pG = Math.min(255, Math.round(tg * fiberMod));
-      const pB = Math.min(255, Math.round(tb * fiberMod));
-
-      let newR = pR;
-      let newG = pG;
-      let newB = pB;
+      let newR = Math.min(255, Math.round(tr * capMod));
+      let newG = Math.min(255, Math.round(tg * capMod));
+      let newB = Math.min(255, Math.round(tb * capMod));
 
       // Photorealistic unpigmented canities / white hair simulation
       if (effGrey > 0) {
-        // High internal light scattering in unpigmented canities fibers lifts crevice shadow floor to 0.50
-        const whiteFiberMod = 0.50 + 0.50 * Math.pow(normLum, 0.78);
-        const whiteR = Math.min(255, Math.round(238 * whiteFiberMod));
-        const whiteG = Math.min(255, Math.round(234 * whiteFiberMod));
-        const whiteB = Math.min(255, Math.round(226 * whiteFiberMod));
+        const whiteFiberMod = 0.32 + 0.68 * Math.pow(Math.min(1.8, normLum), 0.75);
+        const capWhite = Math.min(1.08, whiteFiberMod);
+        const whiteR = Math.min(255, Math.round(228 * capWhite));
+        const whiteG = Math.min(255, Math.round(225 * capWhite));
+        const whiteB = Math.min(255, Math.round(220 * capWhite));
 
         // Strand-level salt-and-pepper: micro-variations from original photo fiber texture
         const strandTex = Math.min(1.0, Math.max(0.0, (origLum - 0.435) * 2.2 + 0.5));
@@ -384,24 +414,14 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
           ? 1.0
           : Math.min(1.0, Math.max(0.0, ((strandTex - strandThresh + 0.15) / 0.30) * Math.min(1.0, effGrey * 1.5) + effGrey * 0.45));
 
-        newR = Math.round(pR * (1 - whiteWeight) + whiteR * whiteWeight);
-        newG = Math.round(pG * (1 - whiteWeight) + whiteG * whiteWeight);
-        newB = Math.round(pB * (1 - whiteWeight) + whiteB * whiteWeight);
-      } else {
-        // High-lift blondes (Level 9-10): lift shadow floor to prevent darkening into level 6 mud
-        const tgtLum = (0.299 * tr + 0.587 * tg + 0.114 * tb) / 255;
-        if (tgtLum > 0.70) {
-          const lift = (tgtLum - 0.70) / 0.30;
-          const highLiftMod = (0.36 + 0.14 * lift) + (0.64 - 0.14 * lift) * Math.pow(normLum, 0.82);
-          newR = Math.min(255, Math.round(tr * highLiftMod));
-          newG = Math.min(255, Math.round(tg * highLiftMod));
-          newB = Math.min(255, Math.round(tb * highLiftMod));
-        }
+        newR = Math.round(newR * (1 - whiteWeight) + whiteR * whiteWeight);
+        newG = Math.round(newG * (1 - whiteWeight) + whiteG * whiteWeight);
+        newB = Math.round(newB * (1 - whiteWeight) + whiteB * whiteWeight);
       }
 
-      // Specular cuticle sheen
-      if (origLum > 0.60) {
-        const shineIntensity = ((origLum - 0.60) / 0.40) * (0.28 * effGrey + lusterBoost * (1 - effGrey));
+      // Specular cuticle sheen (only genuine specular wave reflections)
+      if (origLum > 0.68) {
+        const shineIntensity = ((origLum - 0.68) / 0.32) * (0.16 * effGrey + lusterBoost * 0.65 * (1 - effGrey));
         newR = Math.min(255, Math.round(newR * (1 - shineIntensity) + lusterR * shineIntensity));
         newG = Math.min(255, Math.round(newG * (1 - shineIntensity) + lusterG * shineIntensity));
         newB = Math.min(255, Math.round(newB * (1 - shineIntensity) + lusterB * shineIntensity));
@@ -415,12 +435,24 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
         if (sAlpha > 0.01) {
           const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
           const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
-          const skR = Math.min(255, Math.max(0, Math.round(origR * targetSkinMultR + sssR * sssFactor)));
-          const skG = Math.min(255, Math.max(0, Math.round(origG * targetSkinMultG + sssG * sssFactor)));
-          const skB = Math.min(255, Math.max(0, Math.round(origB * targetSkinMultB + sssB * sssFactor)));
-          bgR = Math.round(origR * (1 - sAlpha) + skR * sAlpha);
-          bgG = Math.round(origG * (1 - sAlpha) + skG * sAlpha);
-          bgB = Math.round(origB * (1 - sAlpha) + skB * sAlpha);
+          let skR = origR * targetSkinMultR + sssR * sssFactor;
+          let skG = origG * targetSkinMultG + sssG * sssFactor;
+          let skB = origB * targetSkinMultB + sssB * sssFactor;
+
+          if (sLum > 0.70 && specLuster > 0) {
+            const specFactor = ((sLum - 0.70) / 0.30) * specLuster;
+            skR = skR * (1 - specFactor) + 252 * specFactor;
+            skG = skG * (1 - specFactor) + 246 * specFactor;
+            skB = skB * (1 - specFactor) + 238 * specFactor;
+          }
+
+          const clR = Math.min(255, Math.max(0, Math.round(skR)));
+          const clG = Math.min(255, Math.max(0, Math.round(skG)));
+          const clB = Math.min(255, Math.max(0, Math.round(skB)));
+
+          bgR = Math.round(origR * (1 - sAlpha) + clR * sAlpha);
+          bgG = Math.round(origG * (1 - sAlpha) + clG * sAlpha);
+          bgB = Math.round(origB * (1 - sAlpha) + clB * sAlpha);
         }
       }
 
@@ -433,7 +465,7 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
     }
 
     ctx.putImageData(outputImgData, 0, 0);
-  }, [rootsColor, midColor, endsColor, rootsGrey, midGrey, endsGrey, separateZones, blendIntensity, skinTone, lighting, view]);
+  }, [rootsColor, midColor, endsColor, rootsGrey, midGrey, endsGrey, separateZones, blendIntensity, skinTone, skinUndertone, lighting, view]);
 
   useEffect(() => {
     if (loadedView === view) {

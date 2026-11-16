@@ -102,21 +102,31 @@ export function HighLevelRealisticAvatar({
 
   // Map active skin tone to SkinTonePreset
   const mappedSkinTone: SkinTonePreset =
-    activeSkinTone === "FAIR"
+    activeSkinTone === "PORCELAIN"
+      ? "porcelain"
+      : activeSkinTone === "VERY_FAIR"
+      ? "very-fair"
+      : activeSkinTone === "FAIR"
       ? "fair"
       : activeSkinTone === "LIGHT"
       ? "light"
+      : activeSkinTone === "WARM_BEIGE"
+      ? "warm-beige"
       : activeSkinTone === "MEDIUM"
       ? "medium"
       : activeSkinTone === "OLIVE"
       ? "olive"
       : activeSkinTone === "TAN"
       ? "tan"
+      : activeSkinTone === "CARAMEL"
+      ? "caramel"
       : activeSkinTone === "BROWN"
       ? "brown"
-      : activeSkinTone === "DARK" || activeSkinTone === "DEEP"
+      : activeSkinTone === "DARK" || activeSkinTone === "ESPRESSO"
+      ? "espresso"
+      : activeSkinTone === "DEEP"
       ? "deep"
-      : "medium";
+      : "fair";
 
   // Map lighting to LightingPreset
   const mappedLighting: LightingPreset =
@@ -203,19 +213,29 @@ export function HighLevelRealisticAvatar({
   // Handle skin tone change callback
   const handleSkinChange = (s: SkinTonePreset) => {
     const legacySkin: SkinTone = (
-      s === "very-fair" || s === "fair"
+      s === "porcelain"
+        ? "PORCELAIN"
+        : s === "very-fair"
+        ? "VERY_FAIR"
+        : s === "fair"
         ? "FAIR"
         : s === "light"
         ? "LIGHT"
+        : s === "warm-beige"
+        ? "WARM_BEIGE"
         : s === "medium"
         ? "MEDIUM"
         : s === "olive"
         ? "OLIVE"
         : s === "tan"
         ? "TAN"
+        : s === "caramel"
+        ? "CARAMEL"
         : s === "brown"
         ? "BROWN"
-        : "DARK"
+        : s === "espresso"
+        ? "ESPRESSO"
+        : "DEEP"
     ) as SkinTone;
     context.setSkinTone(legacySkin);
     onSkinToneChange?.(legacySkin);
