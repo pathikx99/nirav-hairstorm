@@ -91,10 +91,11 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
 
       setIsLoading(true);
       const isFront = angle === "front";
-      const modelSrc = isFront ? "/avatar/avatar_front_model.jpg" : "/avatar/avatar_back_model.jpg";
-      const alphaSrc = isFront ? "/avatar/hair_front_alpha.png" : "/avatar/hair_back_alpha.png";
-      const zonesSrc = isFront ? "/avatar/hair_front_zones.png" : "/avatar/hair_back_zones.png";
-      const skinSrc = isFront ? "/avatar/hair_front_skin.png" : null;
+      const AVATAR_ASSET_VERSION = "20261116-v4";
+      const modelSrc = (isFront ? "/avatar/avatar_front_model.jpg" : "/avatar/avatar_back_model.jpg") + `?v=${AVATAR_ASSET_VERSION}`;
+      const alphaSrc = (isFront ? "/avatar/hair_front_alpha.png" : "/avatar/hair_back_alpha.png") + `?v=${AVATAR_ASSET_VERSION}`;
+      const zonesSrc = (isFront ? "/avatar/hair_front_zones.png" : "/avatar/hair_back_zones.png") + `?v=${AVATAR_ASSET_VERSION}`;
+      const skinSrc = isFront ? `/avatar/hair_front_skin.png?v=${AVATAR_ASSET_VERSION}` : null;
 
       const loadImg = (src: string): Promise<HTMLImageElement> => {
         return new Promise((resolve, reject) => {
