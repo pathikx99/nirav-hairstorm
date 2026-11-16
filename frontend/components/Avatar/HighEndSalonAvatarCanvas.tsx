@@ -472,16 +472,6 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
           bgR = Math.round(origR * (1 - sAlpha) + clR * sAlpha);
           bgG = Math.round(origG * (1 - sAlpha) + clG * sAlpha);
           bgB = Math.round(origB * (1 - sAlpha) + clB * sAlpha);
-        } else if (p < width * 620) {
-          // Harmonize underlying skin tone under semi-transparent hair wisps along hairline/face/neck
-          if (origR > 85 && origG > 55 && origB > 40 && origR >= origG && (origR - origB > 12)) {
-            const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
-            const normLum = Math.min(2.0, Math.max(0.15, sLum / baseLum));
-            const expMod = Math.pow(normLum, skinGamma - 1.0);
-            bgR = Math.min(255, Math.max(0, Math.round(origR * ratioR * expMod)));
-            bgG = Math.min(255, Math.max(0, Math.round(origG * ratioG * expMod)));
-            bgB = Math.min(255, Math.max(0, Math.round(origB * ratioB * expMod)));
-          }
         }
       }
 
