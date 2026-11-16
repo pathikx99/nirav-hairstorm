@@ -204,7 +204,7 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
     const isFront = view === 'front';
     const normSkin = (skinTone || 'fair').toLowerCase().replace(/_/g, '-');
     
-    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles across 15 Fitzpatrick Types I - VI
+    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles across 19 Fitzpatrick Types I - VI
     const skinProfiles: Record<string, { targetRgb: [number, number, number]; sss: [number, number, number]; spec: number; gamma: number }> = {
       'porcelain':  { targetRgb: [248, 222, 212], sss: [8, 3, 2],    spec: 0.14, gamma: 0.95 },
       'alabaster':  { targetRgb: [244, 216, 204], sss: [9, 3, 1],    spec: 0.13, gamma: 0.94 },
@@ -214,17 +214,17 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       'light':      { targetRgb: [222, 182, 158], sss: [11, 4, -2],  spec: 0.10, gamma: 0.91 },
       'warm-beige': { targetRgb: [215, 172, 142], sss: [13, 6, -4],  spec: 0.11, gamma: 0.90 },
       'honey':      { targetRgb: [208, 162, 128], sss: [14, 7, -6],  spec: 0.12, gamma: 0.89 },
-      'golden':     { targetRgb: [204, 156, 114], sss: [15, 8, -5],  spec: 0.13, gamma: 0.88 },
+      'golden':     { targetRgb: [214, 166, 122], sss: [16, 8, -5],  spec: 0.14, gamma: 0.88 },
       'medium':     { targetRgb: [198, 152, 120], sss: [15, 7, -7],  spec: 0.13, gamma: 0.88 },
       'olive':      { targetRgb: [190, 150, 114], sss: [13, 8, -8],  spec: 0.13, gamma: 0.88 },
-      'bronze':     { targetRgb: [168, 118,  82], sss: [17, 9, -9],   spec: 0.16, gamma: 0.85 },
-      'tan':        { targetRgb: [174, 128,  92], sss: [16, 8, -10], spec: 0.15, gamma: 0.86 },
-      'caramel':    { targetRgb: [150, 104,  70], sss: [18, 9, -12], spec: 0.17, gamma: 0.85 },
-      'brown':      { targetRgb: [126,  82,  52], sss: [18, 8, -10], spec: 0.18, gamma: 0.84 },
-      'dark':       { targetRgb: [112,  72,  46], sss: [17, 7,  -9], spec: 0.19, gamma: 0.83 },
-      'espresso':   { targetRgb: [ 98,  62,  40], sss: [16, 7,  -8], spec: 0.20, gamma: 0.82 },
-      'deep':       { targetRgb: [ 76,  46,  34], sss: [15, 6,  -6], spec: 0.23, gamma: 0.80 },
-      'ebony':      { targetRgb: [ 52,  34,  26], sss: [12, 5,  -5], spec: 0.26, gamma: 0.78 },
+      'bronze':     { targetRgb: [178, 126,  86], sss: [18, 9, -9],   spec: 0.16, gamma: 0.86 },
+      'tan':        { targetRgb: [182, 134,  96], sss: [17, 8, -10], spec: 0.15, gamma: 0.86 },
+      'caramel':    { targetRgb: [162, 114,  76], sss: [19, 9, -11], spec: 0.17, gamma: 0.85 },
+      'brown':      { targetRgb: [142,  98,  66], sss: [19, 8, -10], spec: 0.18, gamma: 0.84 },
+      'dark':       { targetRgb: [128,  86,  58], sss: [19, 7,  -8], spec: 0.20, gamma: 0.83 },
+      'espresso':   { targetRgb: [112,  74,  50], sss: [18, 7,  -8], spec: 0.22, gamma: 0.82 },
+      'deep':       { targetRgb: [ 96,  62,  42], sss: [20, 8,  -6], spec: 0.25, gamma: 0.82 },
+      'ebony':      { targetRgb: [ 76,  48,  34], sss: [16, 6,  -5], spec: 0.27, gamma: 0.80 },
     };
     const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['fair'];
 
@@ -335,11 +335,21 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
             let skB = targetSkinB * dMod + sssB * sssFactor;
 
             // Preserve natural epidermal specular highlights (bridge of nose, forehead, cheeks)
-            if (sLum > 0.70 && specLuster > 0) {
-              const specFactor = ((sLum - 0.70) / 0.30) * specLuster;
+            if (sLum > 0.66 && specLuster > 0) {
+              const specFactor = ((sLum - 0.66) / 0.34) * specLuster;
               skR = skR * (1 - specFactor) + 252 * specFactor;
               skG = skG * (1 - specFactor) + 246 * specFactor;
               skB = skB * (1 - specFactor) + 238 * specFactor;
+            }
+
+            // Natural lip vascularity enhancement (plum/berry vitality across deep/rich tones)
+            if (p >= width * 435 && p <= width * 485) {
+              const px = p % width;
+              if (px >= 410 && px <= 490 && bR > bG + 25 && bR > bB + 15) {
+                skR = skR * 1.18 + 15;
+                skG = skG * 0.88;
+                skB = skB * 0.95 + 10;
+              }
             }
 
             const clR = Math.min(255, Math.max(0, Math.round(skR)));
@@ -557,7 +567,7 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
                 <button
                   type="button"
                   onClick={() => onSelectZone("roots")}
-                  className={`pointer-events-auto absolute left-[50%] top-[16%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-7 h-7 rounded-full font-black text-xs shadow-xl transition-all duration-300 ${
+                  className={`pointer-events-auto absolute left-[50%] top-[12%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-7 h-7 rounded-full font-black text-xs shadow-xl transition-all duration-300 ${
                     activeZone === "roots"
                       ? "bg-amber-400 text-neutral-950 scale-125 ring-4 ring-amber-400/50 shadow-amber-500/50 animate-pulse"
                       : "bg-neutral-900/90 text-white border border-white/60 hover:scale-110 hover:border-amber-400"
