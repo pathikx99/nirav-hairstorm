@@ -13,22 +13,13 @@ export type LightingPreset = "sunlight" | "salon" | "cool";
 
 export type SkinTonePreset =
   | "porcelain"
-  | "alabaster"
-  | "very-fair"
   | "fair"
-  | "peach"
   | "light"
   | "warm-beige"
-  | "honey"
-  | "golden"
   | "medium"
   | "olive"
-  | "bronze"
   | "tan"
   | "caramel"
-  | "brown"
-  | "dark"
-  | "espresso"
   | "deep"
   | "ebony";
 
@@ -175,28 +166,6 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#dfb094",
     preview: "#fff1e8",
   },
-  "alabaster": {
-    id: "alabaster",
-    label: "Alabaster",
-    baseHex: "#fef0e7",
-    shadowHex: "#e8cfc2",
-    highlightHex: "#ffffff",
-    blushHex: "#ffc2ce",
-    featureStroke: "#d4a48e",
-    collarboneStroke: "#d8a892",
-    preview: "#fef0e7",
-  },
-  "very-fair": {
-    id: "very-fair",
-    label: "Very Fair",
-    baseHex: "#fff1e5",
-    shadowHex: "#ecd0bc",
-    highlightHex: "#ffffff",
-    blushHex: "#ffccd5",
-    featureStroke: "#d9a88c",
-    collarboneStroke: "#dfb094",
-    preview: "#fff1e5",
-  },
   "fair": {
     id: "fair",
     label: "Fair",
@@ -207,17 +176,6 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#c99772",
     collarboneStroke: "#d4a07a",
     preview: "#fde8d0",
-  },
-  "peach": {
-    id: "peach",
-    label: "Peach",
-    baseHex: "#f7d7be",
-    shadowHex: "#ddb79a",
-    highlightHex: "#fae7d4",
-    blushHex: "#fa8e7a",
-    featureStroke: "#c4906e",
-    collarboneStroke: "#c4906e",
-    preview: "#f7d7be",
   },
   "light": {
     id: "light",
@@ -241,28 +199,6 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#b58252",
     preview: "#e8be92",
   },
-  "honey": {
-    id: "honey",
-    label: "Honey",
-    baseHex: "#dfb07e",
-    shadowHex: "#be905d",
-    highlightHex: "#fad2a5",
-    blushHex: "#e86e5c",
-    featureStroke: "#a67442",
-    collarboneStroke: "#a67442",
-    preview: "#dfb07e",
-  },
-  "golden": {
-    id: "golden",
-    label: "Golden",
-    baseHex: "#cc9c72",
-    shadowHex: "#ab7a50",
-    highlightHex: "#e2b58c",
-    blushHex: "#e07060",
-    featureStroke: "#8c5c32",
-    collarboneStroke: "#9c6a3e",
-    preview: "#cc9c72",
-  },
   "medium": {
     id: "medium",
     label: "Medium",
@@ -284,17 +220,6 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#7c552b",
     collarboneStroke: "#8b6238",
     preview: "#c49a6c",
-  },
-  "bronze": {
-    id: "bronze",
-    label: "Bronze",
-    baseHex: "#a87652",
-    shadowHex: "#895836",
-    highlightHex: "#bf8c66",
-    blushHex: "#b84848",
-    featureStroke: "#633c1d",
-    collarboneStroke: "#724828",
-    preview: "#a87652",
   },
   "tan": {
     id: "tan",
@@ -318,20 +243,9 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#653a19",
     preview: "#9b693e",
   },
-  "brown": {
-    id: "brown",
-    label: "Brown",
-    baseHex: "#8b5e3c",
-    shadowHex: "#704828",
-    highlightHex: "#a67753",
-    blushHex: "#a84040",
-    featureStroke: "#4d2912",
-    collarboneStroke: "#5c3720",
-    preview: "#8b5e3c",
-  },
-  "dark": {
-    id: "dark",
-    label: "Dark",
+  "deep": {
+    id: "deep",
+    label: "Deep",
     baseHex: "#6b4226",
     shadowHex: "#4d2e16",
     highlightHex: "#8a5833",
@@ -340,20 +254,9 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     collarboneStroke: "#3d2410",
     preview: "#6b4226",
   },
-  "espresso": {
-    id: "espresso",
-    label: "Espresso",
-    baseHex: "#52321b",
-    shadowHex: "#391f0e",
-    highlightHex: "#6e4528",
-    blushHex: "#752222",
-    featureStroke: "#2b1407",
-    collarboneStroke: "#2b1407",
-    preview: "#52321b",
-  },
-  "deep": {
-    id: "deep",
-    label: "Deep",
+  "ebony": {
+    id: "ebony",
+    label: "Ebony",
     baseHex: "#3d2515",
     shadowHex: "#281608",
     highlightHex: "#573721",
@@ -361,17 +264,6 @@ export const SKIN_TONE_PRESETS: Record<SkinTonePreset, AvatarSkinConfig> = {
     featureStroke: "#180a04",
     collarboneStroke: "#1f0e06",
     preview: "#3d2515",
-  },
-  "ebony": {
-    id: "ebony",
-    label: "Ebony",
-    baseHex: "#34221a",
-    shadowHex: "#20120b",
-    highlightHex: "#483226",
-    blushHex: "#551818",
-    featureStroke: "#120803",
-    collarboneStroke: "#180a05",
-    preview: "#34221a",
   },
 };
 

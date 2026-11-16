@@ -204,27 +204,28 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
     const isFront = view === 'front';
     const normSkin = (skinTone || 'fair').toLowerCase().replace(/_/g, '-');
     
-    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles across 19 Fitzpatrick Types I - VI
+    // Photorealistic Dermal Melanin & Subsurface Scattering (SSS) Profiles across 10 Calibrated Presets
     const skinProfiles: Record<string, { targetRgb: [number, number, number]; sss: [number, number, number]; spec: number; gamma: number }> = {
-      'porcelain':  { targetRgb: [248, 222, 212], sss: [8, 3, 2],    spec: 0.14, gamma: 0.95 },
-      'alabaster':  { targetRgb: [244, 216, 204], sss: [9, 3, 1],    spec: 0.13, gamma: 0.94 },
-      'very-fair':  { targetRgb: [238, 206, 192], sss: [10, 4, 0],   spec: 0.12, gamma: 0.93 },
+      'porcelain':  { targetRgb: [246, 222, 214], sss: [6, 2, 0],    spec: 0.12, gamma: 1.00 },
       'fair':       { targetRgb: [229, 192, 177], sss: [0, 0, 0],    spec: 0.00, gamma: 1.00 }, // Photographic studio baseline
-      'peach':      { targetRgb: [226, 185, 165], sss: [12, 5, 0],   spec: 0.10, gamma: 0.92 },
-      'light':      { targetRgb: [222, 182, 158], sss: [11, 4, -2],  spec: 0.10, gamma: 0.91 },
-      'warm-beige': { targetRgb: [215, 172, 142], sss: [13, 6, -4],  spec: 0.11, gamma: 0.90 },
-      'honey':      { targetRgb: [208, 162, 128], sss: [14, 7, -6],  spec: 0.12, gamma: 0.89 },
-      'golden':     { targetRgb: [214, 166, 122], sss: [16, 8, -5],  spec: 0.14, gamma: 0.88 },
-      'medium':     { targetRgb: [198, 152, 120], sss: [15, 7, -7],  spec: 0.13, gamma: 0.88 },
-      'olive':      { targetRgb: [190, 150, 114], sss: [13, 8, -8],  spec: 0.13, gamma: 0.88 },
-      'bronze':     { targetRgb: [178, 126,  86], sss: [18, 9, -9],   spec: 0.16, gamma: 0.86 },
-      'tan':        { targetRgb: [182, 134,  96], sss: [17, 8, -10], spec: 0.15, gamma: 0.86 },
-      'caramel':    { targetRgb: [162, 114,  76], sss: [19, 9, -11], spec: 0.17, gamma: 0.85 },
-      'brown':      { targetRgb: [142,  98,  66], sss: [19, 8, -10], spec: 0.18, gamma: 0.84 },
-      'dark':       { targetRgb: [128,  86,  58], sss: [19, 7,  -8], spec: 0.20, gamma: 0.83 },
-      'espresso':   { targetRgb: [112,  74,  50], sss: [18, 7,  -8], spec: 0.22, gamma: 0.82 },
-      'deep':       { targetRgb: [ 96,  62,  42], sss: [20, 8,  -6], spec: 0.25, gamma: 0.82 },
-      'ebony':      { targetRgb: [ 76,  48,  34], sss: [16, 6,  -5], spec: 0.27, gamma: 0.80 },
+      'light':      { targetRgb: [224, 184, 160], sss: [10, 4, -2],  spec: 0.10, gamma: 0.98 },
+      'warm-beige': { targetRgb: [214, 172, 142], sss: [12, 6, -3],  spec: 0.11, gamma: 0.96 },
+      'medium':     { targetRgb: [200, 154, 122], sss: [14, 7, -5],  spec: 0.13, gamma: 0.94 },
+      'olive':      { targetRgb: [192, 150, 114], sss: [12, 8, -6],  spec: 0.12, gamma: 0.94 },
+      'tan':        { targetRgb: [176, 130, 94],  sss: [15, 8, -8],  spec: 0.14, gamma: 0.92 },
+      'caramel':    { targetRgb: [156, 108, 72],  sss: [18, 9, -10], spec: 0.16, gamma: 0.90 },
+      'deep':       { targetRgb: [122, 78, 52],   sss: [20, 8, -6],  spec: 0.18, gamma: 0.88 },
+      'ebony':      { targetRgb: [88, 54, 38],    sss: [16, 6, -4],  spec: 0.20, gamma: 0.86 },
+      // Aliases
+      'alabaster':  { targetRgb: [246, 222, 214], sss: [6, 2, 0],    spec: 0.12, gamma: 1.00 },
+      'very-fair':  { targetRgb: [229, 192, 177], sss: [0, 0, 0],    spec: 0.00, gamma: 1.00 },
+      'peach':      { targetRgb: [224, 184, 160], sss: [10, 4, -2],  spec: 0.10, gamma: 0.98 },
+      'honey':      { targetRgb: [214, 172, 142], sss: [12, 6, -3],  spec: 0.11, gamma: 0.96 },
+      'golden':     { targetRgb: [214, 172, 142], sss: [12, 6, -3],  spec: 0.11, gamma: 0.96 },
+      'bronze':     { targetRgb: [176, 130, 94],  sss: [15, 8, -8],  spec: 0.14, gamma: 0.92 },
+      'brown':      { targetRgb: [156, 108, 72],  sss: [18, 9, -10], spec: 0.16, gamma: 0.90 },
+      'dark':       { targetRgb: [122, 78, 52],   sss: [20, 8, -6],  spec: 0.18, gamma: 0.88 },
+      'espresso':   { targetRgb: [88, 54, 38],    sss: [16, 6, -4],  spec: 0.20, gamma: 0.86 },
     };
     const activeSkinProfile = skinProfiles[normSkin] || skinProfiles['fair'];
 
@@ -254,10 +255,16 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
       skinAmbientB = 0.98;
     }
 
-    const baseLum = (0.299 * 229 + 0.587 * 192 + 0.114 * 177) / 255;
+    const baseModelR = 229;
+    const baseModelG = 192;
+    const baseModelB = 177;
+    const baseLum = (0.299 * baseModelR + 0.587 * baseModelG + 0.114 * baseModelB) / 255;
     const targetSkinR = activeSkinProfile.targetRgb[0] * activeUtMult[0] * skinAmbientR;
     const targetSkinG = activeSkinProfile.targetRgb[1] * activeUtMult[1] * skinAmbientG;
     const targetSkinB = activeSkinProfile.targetRgb[2] * activeUtMult[2] * skinAmbientB;
+    const ratioR = targetSkinR / baseModelR;
+    const ratioG = targetSkinG / baseModelG;
+    const ratioB = targetSkinB / baseModelB;
     const sssR = activeSkinProfile.sss[0];
     const sssG = activeSkinProfile.sss[1];
     const sssB = activeSkinProfile.sss[2];
@@ -327,29 +334,19 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
             const bG = basePixels[i + 1];
             const bB = basePixels[i + 2];
             const sLum = (0.299 * bR + 0.587 * bG + 0.114 * bB) / 255;
-            const normLum = sLum / baseLum;
-            const dMod = Math.pow(Math.min(2.0, Math.max(0.15, normLum)), skinGamma);
+            const normLum = Math.min(2.0, Math.max(0.15, sLum / baseLum));
+            const expMod = Math.pow(normLum, skinGamma - 1.0);
             const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
-            let skR = targetSkinR * dMod + sssR * sssFactor;
-            let skG = targetSkinG * dMod + sssG * sssFactor;
-            let skB = targetSkinB * dMod + sssB * sssFactor;
+            let skR = bR * ratioR * expMod + sssR * sssFactor;
+            let skG = bG * ratioG * expMod + sssG * sssFactor;
+            let skB = bB * ratioB * expMod + sssB * sssFactor;
 
             // Preserve natural epidermal specular highlights (bridge of nose, forehead, cheeks)
-            if (sLum > 0.66 && specLuster > 0) {
-              const specFactor = ((sLum - 0.66) / 0.34) * specLuster;
-              skR = skR * (1 - specFactor) + 252 * specFactor;
-              skG = skG * (1 - specFactor) + 246 * specFactor;
-              skB = skB * (1 - specFactor) + 238 * specFactor;
-            }
-
-            // Natural lip vascularity enhancement (plum/berry vitality across deep/rich tones)
-            if (p >= width * 435 && p <= width * 485) {
-              const px = p % width;
-              if (px >= 410 && px <= 490 && bR > bG + 25 && bR > bB + 15) {
-                skR = skR * 1.18 + 15;
-                skG = skG * 0.88;
-                skB = skB * 0.95 + 10;
-              }
+            if (sLum > 0.72 && specLuster > 0) {
+              const specFactor = ((sLum - 0.72) / 0.28) * specLuster;
+              skR = skR * (1 - specFactor) + bR * specFactor;
+              skG = skG * (1 - specFactor) + bG * specFactor;
+              skB = skB * (1 - specFactor) + bB * specFactor;
             }
 
             const clR = Math.min(255, Math.max(0, Math.round(skR)));
@@ -454,18 +451,18 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
         const sAlpha = skinPixels[p] / 255;
         if (sAlpha > 0.01) {
           const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
-          const normLum = sLum / baseLum;
-          const dMod = Math.pow(Math.min(2.0, Math.max(0.15, normLum)), skinGamma);
+          const normLum = Math.min(2.0, Math.max(0.15, sLum / baseLum));
+          const expMod = Math.pow(normLum, skinGamma - 1.0);
           const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
-          let skR = targetSkinR * dMod + sssR * sssFactor;
-          let skG = targetSkinG * dMod + sssG * sssFactor;
-          let skB = targetSkinB * dMod + sssB * sssFactor;
+          let skR = origR * ratioR * expMod + sssR * sssFactor;
+          let skG = origG * ratioG * expMod + sssG * sssFactor;
+          let skB = origB * ratioB * expMod + sssB * sssFactor;
 
-          if (sLum > 0.70 && specLuster > 0) {
-            const specFactor = ((sLum - 0.70) / 0.30) * specLuster;
-            skR = skR * (1 - specFactor) + 252 * specFactor;
-            skG = skG * (1 - specFactor) + 246 * specFactor;
-            skB = skB * (1 - specFactor) + 238 * specFactor;
+          if (sLum > 0.72 && specLuster > 0) {
+            const specFactor = ((sLum - 0.72) / 0.28) * specLuster;
+            skR = skR * (1 - specFactor) + origR * specFactor;
+            skG = skG * (1 - specFactor) + origG * specFactor;
+            skB = skB * (1 - specFactor) + origB * specFactor;
           }
 
           const clR = Math.min(255, Math.max(0, Math.round(skR)));
@@ -479,12 +476,11 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
           // Harmonize underlying skin tone under semi-transparent hair wisps along hairline/face/neck
           if (origR > 85 && origG > 55 && origB > 40 && origR >= origG && (origR - origB > 12)) {
             const sLum = (0.299 * origR + 0.587 * origG + 0.114 * origB) / 255;
-            const normLum = sLum / baseLum;
-            const dMod = Math.pow(Math.min(2.0, Math.max(0.15, normLum)), skinGamma);
-            const sssFactor = Math.sin(Math.PI * Math.min(1.0, Math.max(0.0, sLum)));
-            bgR = Math.min(255, Math.max(0, Math.round(targetSkinR * dMod + sssR * sssFactor)));
-            bgG = Math.min(255, Math.max(0, Math.round(targetSkinG * dMod + sssG * sssFactor)));
-            bgB = Math.min(255, Math.max(0, Math.round(targetSkinB * dMod + sssB * sssFactor)));
+            const normLum = Math.min(2.0, Math.max(0.15, sLum / baseLum));
+            const expMod = Math.pow(normLum, skinGamma - 1.0);
+            bgR = Math.min(255, Math.max(0, Math.round(origR * ratioR * expMod)));
+            bgG = Math.min(255, Math.max(0, Math.round(origG * ratioG * expMod)));
+            bgB = Math.min(255, Math.max(0, Math.round(origB * ratioB * expMod)));
           }
         }
       }

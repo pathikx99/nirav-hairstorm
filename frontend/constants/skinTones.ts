@@ -1,21 +1,12 @@
 export type SkinTone =
   | "PORCELAIN"
-  | "ALABASTER"
-  | "VERY_FAIR"
   | "FAIR"
-  | "PEACH"
   | "LIGHT"
   | "WARM_BEIGE"
-  | "HONEY"
-  | "GOLDEN"
   | "MEDIUM"
   | "OLIVE"
-  | "BRONZE"
   | "TAN"
   | "CARAMEL"
-  | "BROWN"
-  | "DARK"
-  | "ESPRESSO"
   | "DEEP"
   | "EBONY";
 
@@ -42,44 +33,14 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#fff1e8",
   },
   {
-    id: "ALABASTER",
-    label: "Alabaster",
-    faceHex: "#fef0e7",
-    shadowHex: "#e8cfc2",
-    blushHex: "#ffc2ce",
-    noseStroke: "#d4a48e",
-    collarboneStroke: "#d8a892",
-    preview: "#fef0e7",
-  },
-  {
-    id: "VERY_FAIR",
-    label: "Very Fair",
+    id: "FAIR",
+    label: "Fair",
     faceHex: "#fde8d0",
     shadowHex: "#e8c9aa",
     blushHex: "#fca5a5",
     noseStroke: "#d4a07a",
     collarboneStroke: "#d4a07a",
     preview: "#fde8d0",
-  },
-  {
-    id: "FAIR",
-    label: "Fair",
-    faceHex: "#f8e2cf",
-    shadowHex: "#e0c2ab",
-    blushHex: "#f89b9b",
-    noseStroke: "#cda080",
-    collarboneStroke: "#cda080",
-    preview: "#f8e2cf",
-  },
-  {
-    id: "PEACH",
-    label: "Peach",
-    faceHex: "#f7d7be",
-    shadowHex: "#ddb79a",
-    blushHex: "#fa8e7a",
-    noseStroke: "#c4906e",
-    collarboneStroke: "#c4906e",
-    preview: "#f7d7be",
   },
   {
     id: "LIGHT",
@@ -102,26 +63,6 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#e8be92",
   },
   {
-    id: "HONEY",
-    label: "Honey",
-    faceHex: "#dfb07e",
-    shadowHex: "#be905d",
-    blushHex: "#e86e5c",
-    noseStroke: "#a67442",
-    collarboneStroke: "#a67442",
-    preview: "#dfb07e",
-  },
-  {
-    id: "GOLDEN",
-    label: "Golden",
-    faceHex: "#cc9c72",
-    shadowHex: "#ab7a50",
-    blushHex: "#e07060",
-    noseStroke: "#8c5c32",
-    collarboneStroke: "#9c6a3e",
-    preview: "#cc9c72",
-  },
-  {
     id: "MEDIUM",
     label: "Medium",
     faceHex: "#d4a373",
@@ -140,16 +81,6 @@ export const SKIN_TONES: SkinToneConfig[] = [
     noseStroke: "#8b6238",
     collarboneStroke: "#8b6238",
     preview: "#c49a6c",
-  },
-  {
-    id: "BRONZE",
-    label: "Bronze",
-    faceHex: "#a87652",
-    shadowHex: "#895836",
-    blushHex: "#b84848",
-    noseStroke: "#633c1d",
-    collarboneStroke: "#724828",
-    preview: "#a87652",
   },
   {
     id: "TAN",
@@ -172,18 +103,8 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#9b693e",
   },
   {
-    id: "BROWN",
-    label: "Brown",
-    faceHex: "#8b5e3c",
-    shadowHex: "#704828",
-    blushHex: "#a84040",
-    noseStroke: "#5c3720",
-    collarboneStroke: "#5c3720",
-    preview: "#8b5e3c",
-  },
-  {
-    id: "DARK",
-    label: "Dark",
+    id: "DEEP",
+    label: "Deep",
     faceHex: "#6b4226",
     shadowHex: "#4d2e16",
     blushHex: "#8a3030",
@@ -192,18 +113,8 @@ export const SKIN_TONES: SkinToneConfig[] = [
     preview: "#6b4226",
   },
   {
-    id: "ESPRESSO",
-    label: "Espresso",
-    faceHex: "#52321b",
-    shadowHex: "#391f0e",
-    blushHex: "#752222",
-    noseStroke: "#2b1407",
-    collarboneStroke: "#2b1407",
-    preview: "#52321b",
-  },
-  {
-    id: "DEEP",
-    label: "Deep",
+    id: "EBONY",
+    label: "Ebony",
     faceHex: "#3d2515",
     shadowHex: "#281608",
     blushHex: "#6b2020",
@@ -211,19 +122,9 @@ export const SKIN_TONES: SkinToneConfig[] = [
     collarboneStroke: "#1f0e06",
     preview: "#3d2515",
   },
-  {
-    id: "EBONY",
-    label: "Ebony",
-    faceHex: "#34221a",
-    shadowHex: "#20120b",
-    blushHex: "#551818",
-    noseStroke: "#120803",
-    collarboneStroke: "#180a05",
-    preview: "#34221a",
-  },
 ];
 
 export function getSkinToneConfig(id: SkinTone): SkinToneConfig {
   const found = SKIN_TONES.find((s) => s.id === id);
-  return found || SKIN_TONES[3]; // Default Fair
+  return found || SKIN_TONES[1]; // Default Fair
 }

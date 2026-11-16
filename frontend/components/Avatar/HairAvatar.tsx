@@ -76,25 +76,16 @@ export interface HairAvatarProps {
 function mapLegacySkinTone(input?: string): SkinTonePreset {
   if (!input) return "fair";
   const lower = input.toLowerCase().replace(/_/g, "-");
-  if (lower === "porcelain") return "porcelain";
-  if (lower === "alabaster") return "alabaster";
-  if (lower === "very-fair" || lower === "veryfair") return "very-fair";
-  if (lower === "fair") return "fair";
-  if (lower === "peach") return "peach";
-  if (lower === "light") return "light";
-  if (lower === "warm-beige" || lower === "warmbeige") return "warm-beige";
-  if (lower === "honey") return "honey";
-  if (lower === "golden") return "golden";
+  if (lower === "porcelain" || lower === "alabaster") return "porcelain";
+  if (lower === "fair" || lower === "very-fair" || lower === "veryfair") return "fair";
+  if (lower === "light" || lower === "peach") return "light";
+  if (lower === "warm-beige" || lower === "warmbeige" || lower === "honey" || lower === "golden") return "warm-beige";
   if (lower === "medium") return "medium";
   if (lower === "olive") return "olive";
-  if (lower === "bronze") return "bronze";
-  if (lower === "tan") return "tan";
-  if (lower === "caramel" || lower === "almond") return "caramel";
-  if (lower === "brown" || lower === "chestnut") return "brown";
-  if (lower === "dark") return "dark";
-  if (lower === "espresso") return "espresso";
-  if (lower === "deep") return "deep";
-  if (lower === "ebony") return "ebony";
+  if (lower === "tan" || lower === "bronze") return "tan";
+  if (lower === "caramel" || lower === "brown" || lower === "chestnut" || lower === "almond") return "caramel";
+  if (lower === "deep" || lower === "dark") return "deep";
+  if (lower === "ebony" || lower === "espresso") return "ebony";
   return "fair";
 }
 
@@ -402,24 +393,15 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
           <div className="flex items-center gap-1.5 overflow-x-auto py-1 px-0.5 no-scrollbar scroll-smooth">
             {[
               { id: "porcelain", label: "Porcelain", color: "#fff1e8" },
-              { id: "alabaster", label: "Alabaster", color: "#fef0e7" },
-              { id: "very-fair", label: "Very Fair", color: "#fff1e5" },
               { id: "fair", label: "Fair", color: "#fde8d0" },
-              { id: "peach", label: "Peach", color: "#f7d7be" },
               { id: "light", label: "Light", color: "#f5d0a9" },
               { id: "warm-beige", label: "Warm Beige", color: "#e8be92" },
-              { id: "honey", label: "Honey", color: "#dfb07e" },
-              { id: "golden", label: "Golden", color: "#cc9c72" },
               { id: "medium", label: "Medium", color: "#d4a373" },
               { id: "olive", label: "Olive", color: "#c49a6c" },
-              { id: "bronze", label: "Bronze", color: "#a87652" },
               { id: "tan", label: "Tan", color: "#a67c52" },
               { id: "caramel", label: "Caramel", color: "#9b693e" },
-              { id: "brown", label: "Brown", color: "#8b5e3c" },
-              { id: "dark", label: "Dark", color: "#6b4226" },
-              { id: "espresso", label: "Espresso", color: "#52321b" },
-              { id: "deep", label: "Deep", color: "#3d2515" },
-              { id: "ebony", label: "Ebony", color: "#34221a" },
+              { id: "deep", label: "Deep", color: "#6b4226" },
+              { id: "ebony", label: "Ebony", color: "#3d2515" },
             ].map((t) => (
               <button
                 key={t.id}
