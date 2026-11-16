@@ -246,53 +246,42 @@ export const HighEndSalonAvatarCanvas: React.FC<HighEndSalonAvatarCanvasProps> =
     const [rawMidR, rawMidG, rawMidB] = separateZones ? hexToRgb(midColor) : [rawRootsR, rawRootsG, rawRootsB];
     const [rawEndsR, rawEndsG, rawEndsB] = separateZones ? hexToRgb(endsColor) : [rawRootsR, rawRootsG, rawRootsB];
 
-    // Planckian CCT Metamerism Spectral Shift Multipliers
-    let metaR = 1.0;
-    let metaG = 1.0;
-    let metaB = 1.0;
+    // Specular anisotropic highlights & lighting environment luster
+    // Note: rootsColor, midColor, and endsColor are already chromaticity-adapted via AvatarColorEngine
     let lusterR = 255;
     let lusterG = 255;
     let lusterB = 255;
     let lusterBoost = 0.22;
 
     if (lighting === "salon") {
-      metaR = 1.12;
-      metaG = 1.04;
-      metaB = 0.84;
       lusterR = 255;
       lusterG = 242;
       lusterB = 210;
       lusterBoost = 0.28;
     } else if (lighting === "cool") {
-      metaR = 0.93;
-      metaG = 1.015;
-      metaB = 1.11;
       lusterR = 220;
       lusterG = 235;
       lusterB = 255;
       lusterBoost = 0.18;
     } else {
       // Direct daylight
-      metaR = 1.00;
-      metaG = 1.00;
-      metaB = 1.00;
       lusterR = 255;
       lusterG = 252;
       lusterB = 240;
       lusterBoost = 0.25;
     }
 
-    const rRoots = Math.min(255, Math.round(rawRootsR * metaR));
-    const gRoots = Math.min(255, Math.round(rawRootsG * metaG));
-    const bRoots = Math.max(0, Math.round(rawRootsB * metaB));
+    const rRoots = rawRootsR;
+    const gRoots = rawRootsG;
+    const bRoots = rawRootsB;
 
-    const rMid = Math.min(255, Math.round(rawMidR * metaR));
-    const gMid = Math.min(255, Math.round(rawMidG * metaG));
-    const bMid = Math.max(0, Math.round(rawMidB * metaB));
+    const rMid = rawMidR;
+    const gMid = rawMidG;
+    const bMid = rawMidB;
 
-    const rEnds = Math.min(255, Math.round(rawEndsR * metaR));
-    const gEnds = Math.min(255, Math.round(rawEndsG * metaG));
-    const bEnds = Math.max(0, Math.round(rawEndsB * metaB));
+    const rEnds = rawEndsR;
+    const gEnds = rawEndsG;
+    const bEnds = rawEndsB;
 
     // Blend curve: 0.0=sharpen boundaries, 1.0=diffuse melt
     const blendPower = blendIntensity < 0.35 ? 1.7 : blendIntensity > 0.7 ? 0.7 : 1.0;

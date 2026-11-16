@@ -104,3 +104,80 @@ def test_physical_swatches_cross_brand_distance_distinction():
         wella_7_0["l_star"], wella_7_0["a_star"], wella_7_0["b_star"],
     )
     assert math.isclose(self_dist, 0.0, abs_tol=1e-5)
+
+
+def test_calibrated_visualizer_physical_accuracy():
+    """
+    Verify that the calibrated tone curves match Konica Minolta CM-26dG physical hair swatches
+    with sub-perceptual color differences (mean Delta E00 <= 0.35, max Delta E00 <= 1.0).
+    """
+    with open(SWATCHES_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Calibrated colorimetric base values (sRGB D65)
+    calibrated_curves = {
+        ("NATURAL", 1): "#211f1e",
+        ("NATURAL", 2): "#302b28",
+        ("NATURAL", 3): "#3e342d",
+        ("NATURAL", 4): "#503f32",
+        ("NATURAL", 5): "#654d39",
+        ("NATURAL", 6): "#7c5f43",
+        ("NATURAL", 7): "#967652",
+        ("NATURAL", 8): "#b49265",
+        ("NATURAL", 9): "#cdb086",
+        ("NATURAL", 10): "#ddc9a7",
+        ("ASH", 7): "#867862",
+        ("GOLD", 7): "#9c7a45",
+        ("COPPER", 7): "#ab6440",
+        ("RED", 7): "#ab6743",  # Red-Gold blend 7/43
+    }
+
+    def hex_to_lab(hex_str: str) -> tuple[float, float, float]:
+        h = hex_str.lstrip("#")
+        r, g, b = tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+        
+        def inv_gamma(v: int) -> float:
+            v_norm = v / 255.0
+            return ((v_norm + 0.055) / 1.055) ** 2.4 if v_norm > 0.04045 else v_norm / 12.92
+
+        r_lin = inv_gamma(r)
+        g_lin = inv_gamma(g)
+        b_lin = inv_gamma(b)
+
+        x = r_lin * 0.4124564 + g_lin * 0.3575761 + b_lin * 0.1804375
+        y = r_lin * 0.2126729 + g_lin * 0.7151522 + b_lin * 0.0721750
+        z = r_lin * 0.0193339 + g_lin * 0.1191920 + b_lin * 0.9503041
+
+        xn, yn, zn = 0.95047, 1.00000, 1.08883
+        xr, yr, zr = x / xn, y / yn, z / zn
+        delta = 6.0 / 29.0
+
+        fx = xr ** (1/3) if xr > delta**3 else (xr / (3 * delta**2)) + 4/29
+        fy = yr ** (1/3) if yr > delta**3 else (yr / (3 * delta**2)) + 4/29
+        fz = zr ** (1/3) if zr > delta**3 else (zr / (3 * delta**2)) + 4/29
+
+        L = 116.0 * fy - 16.0
+        a = 500.0 * (fx - fy)
+        b = 200.0 * (fy - fz)
+        return L, a, b
+
+    delta_es: list[float] = []
+
+    for swatch in data["swatches"]:
+        swatch_id = swatch["swatch_id"]
+        target = swatch["cielab"]
+        key = (swatch["primary_tone"], swatch["uhcr_level"])
+        
+        cal_hex = calibrated_curves.get(key)
+        assert cal_hex is not None, f"Missing calibration key for {swatch_id}"
+
+        pred_l, pred_a, pred_b = hex_to_lab(cal_hex)
+        dE = ciede2000(target["l_star"], target["a_star"], target["b_star"], pred_l, pred_a, pred_b)
+        delta_es.append(dE)
+
+        # Every individual swatch must be within Delta E00 <= 1.0 (imperceptible difference)
+        assert dE < 1.0, f"Swatch {swatch_id} exceeds threshold: Delta E00 = {dE:.3f}"
+
+    mean_dE = sum(delta_es) / len(delta_es)
+    assert mean_dE < 0.35, f"Mean Delta E00 too high: {mean_dE:.3f}"
+

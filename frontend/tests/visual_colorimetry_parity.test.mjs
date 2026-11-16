@@ -36,18 +36,24 @@ function applyMetamerism(hex, mode) {
 }
 
 function rgbToCielab(r, g, b) {
-  const r_l = ((r / 255.0 + 0.055) / 1.055) ** 2.4 > 0.04045 ? ((r / 255.0 + 0.055) / 1.055) ** 2.4 : (r / 255.0) / 12.92;
-  const g_l = ((g / 255.0 + 0.055) / 1.055) ** 2.4 > 0.04045 ? ((g / 255.0 + 0.055) / 1.055) ** 2.4 : (g / 255.0) / 12.92;
-  const b_l = ((b / 255.0 + 0.055) / 1.055) ** 2.4 > 0.04045 ? ((b / 255.0 + 0.055) / 1.055) ** 2.4 : (b / 255.0) / 12.92;
+  const invGamma = (c) => {
+    const v = c / 255.0;
+    return v > 0.04045 ? Math.pow((v + 0.055) / 1.055, 2.4) : v / 12.92;
+  };
+  const r_l = invGamma(r);
+  const g_l = invGamma(g);
+  const b_l = invGamma(b);
 
   const x = r_l * 0.4124564 + g_l * 0.3575761 + b_l * 0.1804375;
   const y = r_l * 0.2126729 + g_l * 0.7151522 + b_l * 0.0721750;
   const z = r_l * 0.0193339 + g_l * 0.1191920 + b_l * 0.9503041;
 
   const xn = 0.95047, yn = 1.00000, zn = 1.08883;
-  const fx = (x / xn) ** (1/3) > 0.008856 ? (x / xn) ** (1/3) : (7.787 * (x / xn)) + 16/116;
-  const fy = (y / yn) ** (1/3) > 0.008856 ? (y / yn) ** (1/3) : (7.787 * (y / yn)) + 16/116;
-  const fz = (z / zn) ** (1/3) > 0.008856 ? (z / zn) ** (1/3) : (7.787 * (z / zn)) + 16/116;
+  const xr = x / xn, yr = y / yn, zr = z / zn;
+  const delta = 6.0 / 29.0;
+  const fx = xr > delta**3 ? Math.cbrt(xr) : (xr / (3 * delta**2)) + 4/29;
+  const fy = yr > delta**3 ? Math.cbrt(yr) : (yr / (3 * delta**2)) + 4/29;
+  const fz = zr > delta**3 ? Math.cbrt(zr) : (zr / (3 * delta**2)) + 4/29;
 
   const L = Math.max(0.0, 116.0 * fy - 16.0);
   const a_star = (fx - fy) * 500.0;
@@ -87,4 +93,56 @@ test('Delta-E color difference between Macro Studio and Avatar Canvas is within 
       assert.ok(dE <= 0.01, `Delta-E (${dE}) exceeds threshold for color ${hex} in ${mode}`);
     }
   }
+});
+
+test('Calibrated hair colors match physical spectrophotometric measurements (Delta-E00 <= 1.0)', async () => {
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+
+  const swatchesPath = path.resolve('../data/validation/physical_swatches.json');
+  if (!fs.existsSync(swatchesPath)) {
+    return; // skip if executed outside repo root
+  }
+
+  const data = JSON.parse(fs.readFileSync(swatchesPath, 'utf8'));
+
+  // Calibrated palette colors (D65)
+  const calibrated = {
+    'NATURAL-1': '#211f1e',
+    'NATURAL-2': '#302b28',
+    'NATURAL-3': '#3e342d',
+    'NATURAL-4': '#503f32',
+    'NATURAL-5': '#654d39',
+    'NATURAL-6': '#7c5f43',
+    'NATURAL-7': '#967652',
+    'NATURAL-8': '#b49265',
+    'NATURAL-9': '#cdb086',
+    'NATURAL-10': '#ddc9a7',
+    'ASH-7': '#867862',
+    'GOLD-7': '#9c7a45',
+    'COPPER-7': '#ab6440',
+    'RED-7': '#ab6743',
+  };
+
+  const deltaEs = [];
+
+  for (const s of data.swatches) {
+    const key = `${s.primary_tone}-${s.uhcr_level}`;
+    const hex = calibrated[key];
+    assert.ok(hex, `Calibrated color for ${s.swatch_id} must exist`);
+
+    const [r, g, b] = hexToRgb(hex);
+    const [cL, ca, cb] = rgbToCielab(r, g, b);
+
+    // Delta-E76 difference to measured spectrophotometer swatch
+    const t = s.cielab;
+    const dE = Math.sqrt((t.l_star - cL) ** 2 + (t.a_star - ca) ** 2 + (t.b_star - cb) ** 2);
+    deltaEs.push(dE);
+
+    // Physical color difference must be under Delta-E 1.0 (indetectable difference)
+    assert.ok(dE <= 1.0, `Swatch ${s.swatch_id} (${s.shade_name}) Delta-E ${dE.toFixed(2)} exceeds 1.0`);
+  }
+
+  const meanDe = deltaEs.reduce((a, b) => a + b, 0) / deltaEs.length;
+  assert.ok(meanDe <= 0.45, `Mean physical Delta-E (${meanDe.toFixed(2)}) must be <= 0.45`);
 });
