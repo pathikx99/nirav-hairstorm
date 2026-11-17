@@ -27,7 +27,7 @@ import {
 } from "./AvatarTypes";
 import { calculateRenderedHairPalette } from "./AvatarColorEngine";
 import { AvatarControls } from "./AvatarControls";
-import { HighEndSalonAvatarCanvas } from "./HighEndSalonAvatarCanvas";
+import { UniversalSalonAvatarRenderer, RendererSelection } from "./UniversalSalonAvatarRenderer";
 
 export interface HairAvatarProps {
   value?: AvatarState;
@@ -70,6 +70,8 @@ export interface HairAvatarProps {
   showZoneCards?: boolean;
   showLevelSlider?: boolean;
   showToneSelector?: boolean;
+  engineVersion?: "v1-legacy" | "v2-optical" | "v3-photorealistic";
+  rendererPreference?: RendererSelection;
   className?: string;
 }
 
@@ -147,10 +149,12 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
   showControls = false,
   showSkinToneBar = true,
   showViewToggle = true,
-  showLightingBar = false,
+  showLightingBar = true,
   showZoneCards = true,
   showLevelSlider = false,
   showToneSelector = false,
+  engineVersion = "v3-photorealistic",
+  rendererPreference = "auto",
   className = "",
 }) => {
   const [internalState, setInternalState] = useState<AvatarState>(() => ({
@@ -288,6 +292,16 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
     }));
   };
 
+  const handleSetLighting = (newLight: LightingPreset) => {
+    if (onLightingModeChange) {
+      onLightingModeChange(newLight);
+    }
+    handleStateChange((prev) => ({
+      ...prev,
+      lighting: newLight,
+    }));
+  };
+
   const handleSelectZone = (zone: HairZoneId) => {
     handleStateChange((prev) => ({ ...prev, activeZone: zone }));
     if (onSelectRegion) {
@@ -350,21 +364,23 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
 
       {/* 2. Responsive Salon Digital Human Canvas Viewport */}
       <div className="relative w-full h-[380px] sm:h-[440px] md:h-[490px] select-none my-1 flex items-center justify-center rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-950">
-        <HighEndSalonAvatarCanvas
+        <UniversalSalonAvatarRenderer
           rootsColor={hairPalette.roots.base}
           midColor={hairPalette.midLengths.base}
           endsColor={hairPalette.ends.base}
+          rootsLevel={hairPalette.roots.level}
+          midLevel={hairPalette.midLengths.level}
+          endsLevel={hairPalette.ends.level}
           rootsGrey={activeState.hair.roots.greyPercentage ?? rootsGrey ?? activeState.hair.greyPercentage ?? greyPercentage}
           midGrey={activeState.hair.midLengths.greyPercentage ?? midGrey ?? activeState.hair.greyPercentage ?? greyPercentage}
           endsGrey={activeState.hair.ends.greyPercentage ?? endsGrey ?? activeState.hair.greyPercentage ?? greyPercentage}
           separateZones={activeState.hair.separateZones}
           blendIntensity={activeState.hair.blendIntensity}
           skinTone={activeSkin}
-          skinUndertone={activeState.skin.undertone}
           lighting={activeLight}
           view={activeView}
-          activeZone={activeState.activeZone}
-          onSelectZone={handleSelectZone}
+          engineVersion={engineVersion}
+          rendererPreference={rendererPreference}
         />
 
         {/* Floating Top-Right Active Zone Badge */}
@@ -425,7 +441,50 @@ export const HairAvatar: React.FC<HairAvatarProps> = ({
         </div>
       )}
 
-      {/* 4. Quick Hair Zone Status Badges (Synchronized with 1-Tap Pins) */}
+      {/* 4. Lighting Environment Selector Bar (Salon 3000K, Sunlight 6500K, Cool Office 4000K) */}
+      {showLightingBar && (
+        <div className="w-full mt-2 pt-2 border-t border-neutral-800/80 flex flex-col gap-1.5 z-10">
+          <div className="flex items-center justify-between px-1">
+            <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider flex items-center gap-1">
+              <span>💡</span> Environment Lighting:
+            </span>
+            <span className="text-[10px] font-mono text-amber-400 font-bold capitalize">
+              {activeLight === "salon"
+                ? "Inside Salon (3000K Warm)"
+                : activeLight === "sunlight"
+                ? "Direct Sunlight (6500K D65)"
+                : "Cool Office (4000K Clean)"}
+            </span>
+          </div>
+          <div className="grid grid-cols-3 gap-1.5 py-0.5">
+            {[
+              { id: "salon", label: "Inside Salon", icon: "💡", sub: "3000K Warm" },
+              { id: "sunlight", label: "Daylight", icon: "☀️", sub: "6500K D65" },
+              { id: "cool", label: "Cool Office", icon: "🏢", sub: "4000K Clean" },
+            ].map((l) => (
+              <button
+                key={l.id}
+                type="button"
+                onClick={() => handleSetLighting(l.id as LightingPreset)}
+                className={`flex flex-col items-center justify-center py-1.5 px-2 rounded-xl border text-center transition-all ${
+                  activeLight === l.id
+                    ? "bg-amber-500/20 border-amber-400 text-amber-300 ring-1 ring-amber-400/50 scale-[1.02]"
+                    : "bg-neutral-900/80 border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700"
+                }`}
+                title={`Switch to ${l.label} (${l.sub})`}
+              >
+                <div className="flex items-center gap-1">
+                  <span className="text-xs">{l.icon}</span>
+                  <span className="text-[10px] font-bold">{l.label}</span>
+                </div>
+                <span className="text-[9px] font-mono text-neutral-400">{l.sub}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 5. Quick Hair Zone Status Badges (Synchronized with 1-Tap Pins) */}
       {showZoneCards && (
         <div className="w-full mt-2 pt-2 border-t border-neutral-800/80 grid grid-cols-3 gap-1.5 z-10">
           <button

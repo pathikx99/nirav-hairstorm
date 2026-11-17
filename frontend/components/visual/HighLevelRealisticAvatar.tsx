@@ -50,6 +50,7 @@ export interface HighLevelRealisticAvatarProps {
   onLevelChange?: (newLevel: UniversalLevel) => void;
   showControls?: boolean;
   showSkinToneBar?: boolean;
+  showLightingBar?: boolean;
   showViewToggle?: boolean;
   showLevelSlider?: boolean;
   className?: string;
@@ -89,6 +90,7 @@ export function HighLevelRealisticAvatar({
   onLevelChange,
   showControls = false,
   showSkinToneBar = true,
+  showLightingBar = true,
   showViewToggle = true,
   showLevelSlider = true,
   className = "",
@@ -269,6 +271,7 @@ export function HighLevelRealisticAvatar({
       onSelectRegion={handleSelectRegion}
       showControls={showControls}
       showSkinToneBar={showSkinToneBar}
+      showLightingBar={showLightingBar}
       showViewToggle={showViewToggle}
       showLevelSlider={showLevelSlider}
       className={className}

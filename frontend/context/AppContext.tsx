@@ -47,7 +47,7 @@ const AppContext = createContext<AppContextValue | undefined>(undefined);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [mode, setModeState] = useState<AppMode>("STYLIST");
-  const [consultationMode, setConsultationModeState] = useState<ConsultationMode>("EXPRESS");
+  const [consultationMode, setConsultationModeState] = useState<ConsultationMode>("PRO");
   const [activeTechnique, setActiveTechniqueState] = useState<ApplicationTechnique>("ALL_OVER");
   const [lightingMode, setLightingModeState] = useState<LightingMode>("WARM");
   const [skinTone, setSkinToneState] = useState<SkinTone>("MEDIUM");

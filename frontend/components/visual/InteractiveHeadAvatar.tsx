@@ -10,6 +10,7 @@ interface InteractiveHeadAvatarProps {
   roots: HairRegionInput;
   midLengths: HairRegionInput;
   ends: HairRegionInput;
+  showLightingBar?: boolean;
   className?: string;
 }
 
@@ -19,6 +20,7 @@ export function InteractiveHeadAvatar({
   roots,
   midLengths,
   ends,
+  showLightingBar = true,
   className = "",
 }: InteractiveHeadAvatarProps) {
   return (
@@ -30,6 +32,7 @@ export function InteractiveHeadAvatar({
       midLengthsInput={midLengths}
       endsInput={ends}
       showSkinToneBar={true}
+      showLightingBar={showLightingBar}
       showViewToggle={true}
       showLevelSlider={false}
       className={className}
