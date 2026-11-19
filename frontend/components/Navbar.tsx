@@ -13,6 +13,7 @@ export function Navbar() {
     { href: "/starting-hair", label: "1. Hair Check", icon: "📸" },
     { href: "/target-colour", label: "2. Choose Look", icon: "🎨" },
     { href: "/formulation", label: "3. Mix & Apply", icon: "🥣" },
+    { href: "/avatar-studio", label: "Avatar Studio", icon: "👤" },
   ];
 
   const handleToggleMode = () => {

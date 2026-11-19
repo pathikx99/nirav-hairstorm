@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const PUBLIC_AVATAR_DIR = path.resolve('public', 'avatar');
+const PUBLIC_AVATAR_DIR = fs.existsSync(path.resolve('frontend', 'public', 'avatar'))
+  ? path.resolve('frontend', 'public', 'avatar')
+  : path.resolve('public', 'avatar');
 
 // Trichological Formulas
 function getEyebrowMelaninOklab(level, greyPercentage, hairL, hairA, hairB) {

@@ -69,7 +69,9 @@ test('Phase 1 - 360° Virtual Ring Light Gizmo: Cardinal & Ordinal Half-Vector M
 
 test('Phase 4 - Universal Hair Texture Archetypes: Calibrated Asset Integrity', (t) => {
   const archetypes = ['straight', 'wavy', 'curly', 'coily'];
-  const publicDir = path.resolve('public/avatar/archetypes');
+  const publicDir = fs.existsSync(path.resolve('frontend/public/avatar/archetypes'))
+    ? path.resolve('frontend/public/avatar/archetypes')
+    : path.resolve('public/avatar/archetypes');
 
   if (!fs.existsSync(publicDir)) {
     t.skip('Awaiting new model image ingestion — skipping archetype asset check');

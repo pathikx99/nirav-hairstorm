@@ -37,14 +37,14 @@ def process_and_save_model(src_path, dst_path, target_w=896, target_h=1200):
     im_resized.save(dst_path, quality=98)
     return np.array(im_resized)
 
-front_src = "/home/lord-kratos/.gemini/antigravity/brain/37676d02-e6f7-4cac-801a-b8cfd83fd6aa/.user_uploaded/media_1794972994120_4a0ab06e.jpg"
-back_src = "/home/lord-kratos/.gemini/antigravity/brain/37676d02-e6f7-4cac-801a-b8cfd83fd6aa/.user_uploaded/media_1794972999650_61e2bdbf.jpg"
-
 front_model_path = os.path.join(BASE_DIR, "avatar_front_model.jpg")
 back_model_path = os.path.join(BASE_DIR, "avatar_back_model.jpg")
 
-front_rgb = process_and_save_model(front_src, front_model_path)
-back_rgb = process_and_save_model(back_src, back_model_path)
+if not os.path.exists(front_model_path) or not os.path.exists(back_model_path):
+    raise FileNotFoundError(f"Missing master photographs at {front_model_path} or {back_model_path}")
+
+front_rgb = np.array(Image.open(front_model_path).convert("RGB"))
+back_rgb = np.array(Image.open(back_model_path).convert("RGB"))
 
 h, w, _ = front_rgb.shape
 y_coords, x_coords = np.mgrid[:h, :w].astype(np.float32)
