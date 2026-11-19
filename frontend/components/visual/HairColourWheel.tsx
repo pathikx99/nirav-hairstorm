@@ -39,7 +39,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 0, // 12 o'clock
     nameEn: "Warm Gold / Yellow",
-    nameHi: "सुनहरा पीला (गोल्ड)",
+    nameHi: "Gold / Warm Yellow",
     reflectCode: ".3 (/3)",
     iccCode: "3",
     wellaCode: "3",
@@ -65,7 +65,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "COPPER",
     angleDeg: 30, // 1 o'clock
     nameEn: "Amber / Gold-Copper",
-    nameHi: "अंबर / सुनहरा तांबा",
+    nameHi: "Amber / Gold-Copper",
     reflectCode: ".34 (/34)",
     iccCode: "34",
     wellaCode: "34",
@@ -91,7 +91,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 60, // 2 o'clock
     nameEn: "Vibrant Copper / Orange",
-    nameHi: "चमकदार तांबा (कॉपर)",
+    nameHi: "Vibrant Copper / Orange",
     reflectCode: ".4 (/4)",
     iccCode: "4",
     wellaCode: "4",
@@ -117,7 +117,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "RED",
     angleDeg: 90, // 3 o'clock
     nameEn: "Red-Copper / Auburn",
-    nameHi: "लाल-तांबा (ऑबर्न)",
+    nameHi: "Red-Copper / Auburn",
     reflectCode: ".46 (/43)",
     iccCode: "46",
     wellaCode: "43",
@@ -143,7 +143,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 120, // 4 o'clock
     nameEn: "Ruby Red / Crimson",
-    nameHi: "माणिक लाल (रेड)",
+    nameHi: "Ruby Red / Crimson",
     reflectCode: ".6 (/4)",
     iccCode: "6",
     wellaCode: "4",
@@ -169,7 +169,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "VIOLET",
     angleDeg: 150, // 5 o'clock
     nameEn: "Mahogany / Red-Violet",
-    nameHi: "महोगनी / लाल-बैंगनी",
+    nameHi: "Mahogany / Red-Violet",
     reflectCode: ".5 (/65)",
     iccCode: "5",
     wellaCode: "65",
@@ -195,7 +195,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 180, // 6 o'clock
     nameEn: "Plum Violet / Purple",
-    nameHi: "बैंगनी (वायलेट)",
+    nameHi: "Plum Violet / Purple",
     reflectCode: ".2 (/6)",
     iccCode: "2",
     wellaCode: "6",
@@ -221,7 +221,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "ASH",
     angleDeg: 210, // 7 o'clock
     nameEn: "Pearl Cendré / Blue-Violet",
-    nameHi: "मोती (पर्ल सेंद्रे)",
+    nameHi: "Pearl Cendré / Blue-Violet",
     reflectCode: ".21 (/86)",
     iccCode: "21",
     wellaCode: "8",
@@ -247,7 +247,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 240, // 8 o'clock
     nameEn: "Cool Blue / Ash",
-    nameHi: "ठंडा नीला / राख (ऐश)",
+    nameHi: "Cool Blue / Ash",
     reflectCode: ".1 (/1)",
     iccCode: "1",
     wellaCode: "1",
@@ -273,7 +273,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "GREEN",
     angleDeg: 270, // 9 o'clock
     nameEn: "Matte Ash / Blue-Green",
-    nameHi: "मैट ऐश / नीला-हरा",
+    nameHi: "Matte Ash / Blue-Green",
     reflectCode: ".17 (/19)",
     iccCode: "17",
     wellaCode: "19",
@@ -299,7 +299,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: null,
     angleDeg: 300, // 10 o'clock
     nameEn: "Matte Green / Olive",
-    nameHi: "मैट हरा / जैतून (ऑलिव)",
+    nameHi: "Matte Green / Olive",
     reflectCode: ".7 (/2)",
     iccCode: "7",
     wellaCode: "2",
@@ -325,7 +325,7 @@ export const WHEEL_SECTORS: ColourWheelSector[] = [
     secondaryTone: "GOLD",
     angleDeg: 330, // 11 o'clock
     nameEn: "Natural Sand / Beige",
-    nameHi: "रेतीला बेज (सैंड)",
+    nameHi: "Natural Sand / Beige",
     reflectCode: ".13 (/38)",
     iccCode: "13",
     wellaCode: "38",
@@ -948,7 +948,7 @@ export function HairColourWheel({
                   {isNaturalBase ? "Pure Natural Base (.0 / /0)" : activeSector.nameEn}
                 </h4>
                 <p className="text-[10px] font-bold text-amber-200 drop-shadow-md">
-                  {isNaturalBase ? "100% Resistant White / Grey Coverage" : activeSector.nameHi}
+                  {isNaturalBase ? "100% Resistant White / Grey Coverage" : activeSector.neutralizesWhatEn}
                 </p>
               </div>
               <span className="text-[10px] font-bold text-neutral-200/90 font-mono bg-black/60 px-2 py-0.5 rounded-md backdrop-blur-xs">

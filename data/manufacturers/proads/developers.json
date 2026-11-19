@@ -1,0 +1,64 @@
+[
+  {
+    "product_name": "PROADS Absolute Premium Developer 3% 10 VOL",
+    "concentration_percent": 3.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "tone_to_tone_deposition",
+        "bleached_hair_toning",
+        "refresh"
+      ],
+      "volume_equivalent": 10
+    },
+    "source_doc_key": "proads_color_chart_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "PROADS Developer Absolute Premium 6% 20VOL",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "100_percent_grey_coverage",
+        "1_to_2_levels_lift",
+        "same_depth_color"
+      ],
+      "volume_equivalent": 20
+    },
+    "source_doc_key": "proads_color_chart_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "PROADS Developer Absolute Premium 9% 30VOL",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "2_to_3_levels_lift",
+        "vibrant_fashion_coloring"
+      ],
+      "volume_equivalent": 30
+    },
+    "source_doc_key": "proads_color_chart_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "PROADS Developer Absolute Premium 12% 40VOL",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "3_to_4_levels_lift",
+        "superlift_series_lightening"
+      ],
+      "volume_equivalent": 40
+    },
+    "source_doc_key": "proads_color_chart_manual",
+    "verification_status": "VERIFIED"
+  }
+]

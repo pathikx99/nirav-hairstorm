@@ -180,12 +180,18 @@ class CatalogueImporter:
                 elif isinstance(content, dict) and "shades" in content:
                     all_shades_data.extend(content["shades"])
 
-        # Infer Product Line from first shade or profile
-        first_family = all_shades_data[0].get("manufacturer_family", "Permanent Colour") if all_shades_data else "Standard Line"
-        line_name = first_family if first_family not in ("Naturals", "Pure Naturals", "Fashion") else f"{m.name} Colour"
+        # Infer Product Line from profile or first shade
+        pline_cfg = profile_data.get("product_line", {})
+        line_name = pline_cfg.get("name")
+        if not line_name:
+            first_family = all_shades_data[0].get("manufacturer_family", "Permanent Colour") if all_shades_data else "Standard Line"
+            line_name = first_family if first_family not in ("Naturals", "Pure Naturals", "Fashion") else f"{m.name} Colour"
+
+        service_type_val = ServiceTypeEnum(pline_cfg.get("service_type", "PERMANENT_COLOUR"))
 
         stmt = select(ProductLine).where(
             ProductLine.manufacturer_id == m.id,
+            ProductLine.name == line_name,
             ProductLine.market == market,
             ProductLine.catalogue_version_id == cat_ver.id,
         )
@@ -197,7 +203,7 @@ class CatalogueImporter:
                 id=uuid.uuid4(),
                 manufacturer_id=m.id,
                 name=line_name,
-                service_type=ServiceTypeEnum.PERMANENT_COLOUR,
+                service_type=service_type_val,
                 market=market,
                 status=ManufacturerStatusEnum.ACTIVE,
                 catalogue_version_id=cat_ver.id,
@@ -207,8 +213,13 @@ class CatalogueImporter:
             counts["product_lines"] += 1
 
         # Product
+        prod_cfg = profile_data.get("product", {})
+        default_prod_name = prod_cfg.get("name", f"{line_name} Crème")
+        default_prod_code = prod_cfg.get("code", f"{m.slug.upper()}-{line_name.upper().replace(' ', '-')}")
+
         stmt = select(ManufacturerProduct).where(
             ManufacturerProduct.product_line_id == pline.id,
+            ManufacturerProduct.product_code == default_prod_code,
             ManufacturerProduct.market == market,
         )
         res = await session.execute(stmt)
@@ -218,8 +229,8 @@ class CatalogueImporter:
             prod = ManufacturerProduct(
                 id=uuid.uuid4(),
                 product_line_id=pline.id,
-                product_name=f"{line_name} Crème",
-                product_code=f"{m.slug.upper()}-{line_name.upper().replace(' ', '-')}",
+                product_name=default_prod_name,
+                product_code=default_prod_code,
                 product_type=ProductTypeEnum.COLOUR,
                 market=market,
                 active_status=True,
@@ -335,6 +346,10 @@ class CatalogueImporter:
                     ProductRule.rule_type == r_item["rule_type"],
                     ProductRule.market == market,
                 )
+                if r_item.get("source_section"):
+                    stmt = stmt.where(ProductRule.source_section == r_item["source_section"])
+                elif "priority" in r_item:
+                    stmt = stmt.where(ProductRule.priority == r_item["priority"])
                 res = await session.execute(stmt)
                 rule = res.scalar_one_or_none()
 

@@ -42,7 +42,18 @@ class FeasibilityClassifier:
         target_level = int(target.universal_level)
         delta_l = target_level - start_level
 
-        # Case 1: Region contains existing artificial pigment
+        # Case 1: Region is bleached / pre-lightened (exposed raw undertone)
+        if getattr(region, "is_bleached", False):
+            if delta_l > 0:
+                return ServiceClassificationEnum.LIGHTENING
+            if delta_l == 0:
+                if region.observed_undertone and region.observed_undertone != target.primary_tone:
+                    return ServiceClassificationEnum.NEUTRALISATION
+                return ServiceClassificationEnum.TONING
+            # delta_l < 0: darkening bleached hair requires filling / re-pigmentation
+            return ServiceClassificationEnum.DARKENING
+
+        # Case 2: Region contains existing artificial pigment
         if region.existing_artificial_colour:
             if delta_l > 0:
                 # Tint cannot lift tint. Lightening or colour removal is mandatory.

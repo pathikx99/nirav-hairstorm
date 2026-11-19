@@ -398,6 +398,10 @@ class HairRegionAssessment(BaseModel):
         default=None,
         description="Whether artificial (previously applied) colour is present.",
     )
+    is_bleached: bool | None = Field(
+        default=None,
+        description="Whether this region has been bleached or pre-lightened.",
+    )
     porosity_assessment: str | None = Field(
         default=None,
         description="Porosity level, e.g. 'low', 'medium', 'high'.",

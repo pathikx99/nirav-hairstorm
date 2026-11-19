@@ -14,7 +14,11 @@ export interface Manufacturer {
 
 export interface CandidateShadeMatch {
   manufacturer: string;
+  manufacturer_id?: string;
   product_line: string;
+  product_name?: string;
+  product_id?: string;
+  shade_id?: string;
   shade_code: string;
   shade_name: string;
   match_classification: string;
@@ -22,6 +26,11 @@ export interface CandidateShadeMatch {
   composite_distance: number;
   level_distance: number;
   tone_distance: number;
+  accuracy_percentage?: number;
+  substitution_recipe?: string;
+  recommended_developer?: string;
+  mixing_ratio?: string;
+  processing_time_minutes?: number;
   universal_mapping: {
     level: UniversalLevel;
     primary_tone: ToneFamily;

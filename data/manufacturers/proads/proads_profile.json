@@ -1,0 +1,38 @@
+{
+  "manufacturer": {
+    "name": "Proads Professional",
+    "slug": "proads-professional-india",
+    "country_of_origin": "England",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://proadsindia.com",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "product_line": {
+    "name": "Absolute Premium",
+    "service_type": "PERMANENT_COLOUR"
+  },
+  "product": {
+    "name": "Absolute Premium Biotin Permanent Hair Color",
+    "code": "PROADS-ABSOLUTE-PREMIUM"
+  },
+  "source_documents": [
+    {
+      "key": "proads_color_chart_manual",
+      "title": "PROADS Professional Permanent Hair Color Chart & Technical Guide",
+      "publisher": "Freecia Professional India Pvt. Ltd. / PROADS Professional",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

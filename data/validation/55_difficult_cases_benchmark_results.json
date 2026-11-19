@@ -1,0 +1,1903 @@
+{
+  "summary": {
+    "total_cases": 55,
+    "total_passed": 55,
+    "pass_rate_pct": 100.0,
+    "mean_accuracy_pct": 99.35,
+    "mean_delta_e00": 0.387,
+    "category_breakdown": {
+      "EXTREME_LIFT": {
+        "total": 8,
+        "passed": 8
+      },
+      "RESISTANT_GREY_CANITIES": {
+        "total": 8,
+        "passed": 8
+      },
+      "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE": {
+        "total": 8,
+        "passed": 8
+      },
+      "MULTI_BANDED_CORRECTIVE": {
+        "total": 8,
+        "passed": 8
+      },
+      "TINT_BACK_REPIGMENTATION": {
+        "total": 8,
+        "passed": 8
+      },
+      "TONE_NEUTRALIZATION_COLORIMETRY": {
+        "total": 7,
+        "passed": 7
+      },
+      "SAFETY_CONTRAINDICATIONS_GATING": {
+        "total": 8,
+        "passed": 8
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "DIFF-01",
+      "category": "EXTREME_LIFT",
+      "title": "Virgin Raven Black (Level 1) to Platinum Pearl Blonde (Level 10)",
+      "clinical_challenge": "Maximum 9-level lift through dense eumelanin. On-scalp bleach limited to 20V.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Special Blonde Pearl Ash (30.0g)",
+            "Pearl Ash (1.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 1.201,
+      "accuracy_score_pct": 98.0,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-02",
+      "category": "EXTREME_LIFT",
+      "title": "Indian Level 2 Coarse Virgin Hair to Cool Silver Ice Blonde (Level 9)",
+      "clinical_challenge": "7-level lift through coarse Asian/Indian hair with stubborn red-orange eumelanin.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Majirel 9.1 Very Light Ash Blonde (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.232,
+      "accuracy_score_pct": 99.54,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-03",
+      "category": "EXTREME_LIFT",
+      "title": "Asian Level 3 Virgin Hair to Clean Level 8 Ash Blonde",
+      "clinical_challenge": "5-level lift through dense dark core. Requires powerful lift + cool anti-brass toner.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 45,
+          "products": [
+            "Igora Royal 8-1 Light Blonde Cendr\u00e9 (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 8-1 and 60.0g of Schwarzkopf Professional Igora Royal Oil Developer 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 45 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.35,
+      "accuracy_score_pct": 99.3,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-04",
+      "category": "EXTREME_LIFT",
+      "title": "Level 4 Natural Base to Level 7 Fiery Copper",
+      "clinical_challenge": "Harmonizing 3 levels of lift with natural orange NRP without hot roots.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 7/40 Medium Blonde Intense Copper (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 7/40 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.341,
+      "accuracy_score_pct": 99.32,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-05",
+      "category": "EXTREME_LIFT",
+      "title": "Fine Level 6 Virgin Hair Lifted 4 Levels to Level 10 Platinum with High Lift Series",
+      "clinical_challenge": "4-level lift using permanent high-lift dye (12/xx series) without bleach powder.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 50,
+          "products": [
+            "Special Blonde Pearl Ash (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 12/81 and 120.0g of Welloxon Perfect 9% (30 Vol) (1:2 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 50 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.503,
+      "accuracy_score_pct": 98.99,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-06",
+      "category": "EXTREME_LIFT",
+      "title": "Virgin Level 5 to Level 9 Vanilla Blonde (4 Levels Lift)",
+      "clinical_challenge": "Clean 4-level lift avoiding yellow-orange brassiness. Wella vs L'Or\u00e9al cross-brand parity.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Majirel 9.3 Very Light Golden Blonde (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9.3 and 90.00g of L'Or\u00e9al Professionnel Oxydant Cr\u00e8me 30 Vol (9%) (1:1.5 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.252,
+      "accuracy_score_pct": 99.5,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-07",
+      "category": "EXTREME_LIFT",
+      "title": "Thick Resistant Level 2 Base to Level 6 Warm Caramel",
+      "clinical_challenge": "4 levels of lift from dark natural base with heavy pheomelanin generation.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 45,
+          "products": [
+            "Dark Blonde Pure Natural (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 6/0 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 45 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.365,
+      "accuracy_score_pct": 99.27,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-08",
+      "category": "EXTREME_LIFT",
+      "title": "Virgin Level 4 to Level 8 Beige Blonde (On-Scalp Developer Constraint)",
+      "clinical_challenge": "4 levels lift with strict 20V scalp developer safety enforcement.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Igora Royal 8-46 Light Blonde Beige Chocolate (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 8-46 and 60.0g of Schwarzkopf Professional Igora Royal Oil Developer 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.324,
+      "accuracy_score_pct": 99.35,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-09",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "100% Resistant Glassy Canities at Crown to Rich Level 5 Warm Chocolate",
+      "clinical_challenge": "Complete absence of natural melanin + glassy cuticle. Requires 1:1 Natural base intermixing.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 5/0 Light Brown (30.0g)",
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Light Brown Pure Natural (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.484,
+      "accuracy_score_pct": 99.03,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-10",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "100% Coarse Vitiligo-White Patch on Dark Level 3 Base to Seamless Level 5 Chestnut",
+      "clinical_challenge": "Localized patch of 100% depigmented white hair on dark brunette base.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Majirel 5 Light Brown (30.0g)",
+            "Majirel 5 Light Brown (30.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Majirel 5 Light Brown (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.328,
+      "accuracy_score_pct": 99.34,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-11",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "80% Coarse Grey with Level 7 Fashion Tone (Golden Blonde)",
+      "clinical_challenge": "High grey percentage demanding opaque coverage while achieving vibrant blonde tone.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 7/0 Medium Blonde (30.0g)",
+            "Medium Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 25,
+          "products": [
+            "Medium Blonde Gold (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Medium Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.307,
+      "accuracy_score_pct": 99.39,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-12",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "60% Salt-and-Pepper Regrowth (L4 Base) to Level 8 Honey Blonde + Shadow Root",
+      "clinical_challenge": "Simultaneous 4-level lift on dark hair + 100% white coverage at roots.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Light Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 8, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.297,
+      "accuracy_score_pct": 99.41,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-13",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "50% Resistant White Hair with Level 6 Vibrant Copper Red",
+      "clinical_challenge": "Vibrant fashion tone without pinkish or translucent hot roots on white hairs.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Igora Royal 6-0 Dark Blonde (30.0g)",
+            "Target Shade (30.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Schwarzkopf Professional Igora Royal Oil Developer 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.309,
+      "accuracy_score_pct": 99.38,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-14",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "70% Diffuse White Hair on Fragile Fine Hair",
+      "clinical_challenge": "Fine caliber fiber requiring complete grey coverage without over-sensitizing fragile cuticle.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "SAME_LEVEL_COLOURING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Majirel 5 Light Brown (30.0g)",
+            "Majirel 5 Light Brown (30.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 5 and 90.00g of L'Or\u00e9al Professionnel Oxydant Cr\u00e8me 20 Vol (6%) (1:1.5 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.342,
+      "accuracy_score_pct": 99.32,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-15",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "40% Peppered Grey with Level 7 Cool Ash",
+      "clinical_challenge": "Deposit cool ash on white strands without creating muddy or drab olive reflections.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 7/0 Medium Blonde (20.0g)",
+            "Medium Blonde Ash (40.0g)",
+            "Intense Ash (2.5g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 7/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.395,
+      "accuracy_score_pct": 99.21,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-16",
+      "category": "RESISTANT_GREY_CANITIES",
+      "title": "90% Frontal Canities / 10% Occipital Natural Level 4",
+      "clinical_challenge": "Extreme regional canities variance across temples vs back of head.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 5/0 Light Brown (30.0g)",
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 25,
+          "products": [
+            "Light Brown Pure Natural (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.339,
+      "accuracy_score_pct": 99.32,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-17",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Dark Box Dye Black (Level 2) Lifted to Warm Honey Caramel (Level 7)",
+      "clinical_challenge": "Tint cannot lift tint. Artificial dark dye molecules must be stripped/cleansed first.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Medium Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.362,
+      "accuracy_score_pct": 99.28,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-18",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Previously Box-Dyed Dark Level 3 Tint to Level 6 Warm Amber",
+      "clinical_challenge": "Artificial pigment cleansing without burning out virgin Level 4 regrowth.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Dark Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 6, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.484,
+      "accuracy_score_pct": 99.03,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-19",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "3 Years of Black Box Dye Accumulation Seeking Level 5 Auburn Brown",
+      "clinical_challenge": "Dense stubborn polymeric dye saturation on mid-lengths and ends.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Majirel 5.6 Light Red Brown (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.315,
+      "accuracy_score_pct": 99.37,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-20",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Banded Artificial Dark Tint (Level 4 Mid, Level 5 Ends, Level 2 Regrowth) to Uniform Level 6",
+      "clinical_challenge": "Irregular banded artificial color removal with multi-level delta.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Igora Royal 6-0 Dark Blonde (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.352,
+      "accuracy_score_pct": 99.3,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-21",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Deep Red Box Dye (Level 5) Seeking Neutral Level 7 Sand Blonde",
+      "clinical_challenge": "Red artificial dye is highly resistant; requires green/ash counter-colorimetry.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Medium Blonde Brown (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.343,
+      "accuracy_score_pct": 99.31,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-22",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Faded Supermarket Metallic Brown (Level 4) to Level 7 Copper Gold",
+      "clinical_challenge": "Removal of dull artificial dye without leaving dark mineral bands.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Majirel 7.43 Copper Golden Blonde (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Note: Underlying raw warmth was exposed during Stage 1 pre-lightening. If residual orange exceeds Level 7, blend with 10\u201315% ash/cool nuance (e.g. 7/1 or 7/13) to achieve honey caramel rather than brassy orange. Process for 15\u201320 minutes without heat under visual control. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.363,
+      "accuracy_score_pct": 99.27,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-23",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Direct Dye Saturated Fuchsia on Bleached Hair to Neutral Level 6 Brunette",
+      "clinical_challenge": "Direct dye stains porous keratin fibers; gentle non-peroxide decapage before deposit.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Pure Perfection 7/40 Medium Blonde Intense Copper (20.0g)",
+            "Dark Blonde Pure Natural (40.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Dark Blonde Pure Natural (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.345,
+      "accuracy_score_pct": 99.31,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-24",
+      "category": "ARTIFICIAL_COLOR_REMOVAL_DECAPAGE",
+      "title": "Over-Deposited Level 3 Artificial Brunette Cleansed to Level 5 Warm Mocha",
+      "clinical_challenge": "Gentle lightener wash (13V Soft Blonde Cream) to lift 2 levels of artificial depth.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.331,
+      "accuracy_score_pct": 99.34,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-25",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Tri-Zone Multi-Band (Roots L2 Virgin, Mid L5 Oxidized, Ends L8 Porous Bleach)",
+      "clinical_challenge": "Tri-zone staggered porosity & lift differential. Risk of over-processing fragile ends.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.378,
+      "accuracy_score_pct": 99.24,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-26",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Quad-Zone Correction: Roots L3 Virgin, Band 1 L4 Tint, Band 2 L7 Brass, Ends L9 Porous",
+      "clinical_challenge": "Complex 4-tier banding. Requires staggered bowls with differential peroxide percentages.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.345,
+      "accuracy_score_pct": 99.31,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-27",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Grown-Out Balayage (L3 Regrowth, L7 Brass, L10 Tips) to Seamless Color Melt",
+      "clinical_challenge": "Demarcation line softening with shadow root formula feathering into light ends.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Majirel 7 Blonde (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.383,
+      "accuracy_score_pct": 99.23,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-28",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Over-Toned Dark Violet Ends (Level 5) with Hot Brassy Regrowth (Level 8)",
+      "clinical_challenge": "Reversing inverted tone density: over-saturated dark porous tips with light raw roots.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Igora Royal 7-450 Medium Blonde Beige Gold Natural (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.394,
+      "accuracy_score_pct": 99.21,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-29",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Uneven Striped Foil Highlights on Dark Base to Low-Contrast Soft Hazelnut (L6)",
+      "clinical_challenge": "Melting high-contrast zebra stripes into unified commercial brunette dimension.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 45,
+          "products": [
+            "Dark Blonde Gold (15.0g)",
+            "Dark Blonde Pure Natural (45.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Dark Blonde Pure Natural (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.35,
+      "accuracy_score_pct": 99.3,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-30",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Patchy Bleach Spots from At-Home Lightening to Even Level 7 Honey",
+      "clinical_challenge": "Correcting erratic splotches with spot toning and balancing developer volumes.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Medium Blonde Gold (60.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Medium Blonde Gold (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Medium Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.36,
+      "accuracy_score_pct": 99.28,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-31",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Tri-Zone Staggered Porosity with High Porosity Ends (0.85) and Low Porosity Roots",
+      "clinical_challenge": "Preventing flash dye grabbing on porous ends while ensuring proper penetration at roots.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 3,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Majirel 5.3 Light Golden Brown (15.0g)",
+            "Majirel 5 Light Brown (45.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Majirel 5 Light Brown (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Majirel 5 Light Brown (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.343,
+      "accuracy_score_pct": 99.31,
+      "passed": true,
+      "notes": "Accurate formulation with 3 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-32",
+      "category": "MULTI_BANDED_CORRECTIVE",
+      "title": "Extreme Root-to-Tip Porosity Differential with 3 Distinct Formulation Bowls",
+      "clinical_challenge": "Bowl 1 for 3 levels lift; Bowl 2 for 1 level deposit; Bowl 3 for acidic glaze.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 40,
+          "products": [
+            "Blondor Multi-Blonde Powder (30.0g)"
+          ],
+          "instructions": "Apply to mid-lengths and ends first if artificial colour is present. Process under visual inspection. Apply to regrowth roots once mid-lengths reach half-target lift. Rinse thoroughly, do not shampoo aggressively."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 20,
+          "products": [
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply evenly from roots to ends on towel-dried, pre-lightened hair. Process for 15\u201320 minutes without heat until desired tone refinement is achieved. Emulsify and rinse."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.36,
+      "accuracy_score_pct": 99.28,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-33",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Bleached Level 9 Porous Blonde Dropping to Deep Burgundy Red (Level 5 Tint-Back)",
+      "clinical_challenge": "Dropping 4 levels on bleached hair. Absence of pheomelanin causes muddy/hollow washout.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Light Brown Red Ash (30.0g)"
+          ],
+          "instructions": "Apply pre-pigmenting filler evenly to previously lightened / porous sections. Process for 10\u201315 minutes. Scrape or blot off excess product thoroughly with a towel. DO NOT rinse or shampoo before Stage 2 target deposit."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 30,
+          "products": [
+            "Pure Perfection 5/0 Light Brown (30.0g)",
+            "Light Brown Intense Red Violet (30.0g)"
+          ],
+          "instructions": "Apply target mixture directly over blotted Stage 1 filler from roots to ends. Ensure saturated, even saturation. Process for 25\u201335 minutes without heat. Emulsify with lukewarm water, rinse thoroughly, and apply acidic colour post-treatment."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.313,
+      "accuracy_score_pct": 99.37,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-34",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Over-Processed Level 10 Platinum Blonde Tinting Back to Level 4 Rich Espresso",
+      "clinical_challenge": "Massive 6-level depth drop. Mandatory 2-stage repigmentation to restore yellow and orange undertone.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Medium Brown Intense Red (30.0g)"
+          ],
+          "instructions": "Apply pre-pigmenting filler evenly to previously lightened / porous sections. Process for 10\u201315 minutes. Scrape or blot off excess product thoroughly with a towel. DO NOT rinse or shampoo before Stage 2 target deposit."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 30,
+          "products": [
+            "Pure Perfection 4/0 Medium Brown (30.0g)",
+            "Medium Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply target mixture directly over blotted Stage 1 filler from roots to ends. Ensure saturated, even saturation. Process for 25\u201335 minutes without heat. Emulsify with lukewarm water, rinse thoroughly, and apply acidic colour post-treatment."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.316,
+      "accuracy_score_pct": 99.37,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-35",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Bleached Level 9 Pale Yellow Canvas Dropping to Level 6 Warm Hazelnut",
+      "clinical_challenge": "Filling down 3 levels with Level 7 copper-gold filler to prevent translucent drabness.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Majirel 6.46 Dark Copper Red Blonde (20.0g)",
+            "Majirel 6 Dark Blonde (40.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Majirel 6 Dark Blonde (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.361,
+      "accuracy_score_pct": 99.28,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-36",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Compromised Level 8 Bleached Ends Tinting to Level 5 Cool Ash",
+      "clinical_challenge": "Direct ash over raw yellow causes hideous khaki green. Warm pre-pigment required first.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Igora Royal 5-57 Light Brown Gold Copper (20.0g)",
+            "Target Shade (40.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Target Shade (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.36,
+      "accuracy_score_pct": 99.28,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-37",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "2-Stage Tint-Back on High Porosity Hair with Acidic Post-Color Sealing",
+      "clinical_challenge": "Low pH sealing to prevent premature dye elution after repigmentation.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Light Brown Red Ash (30.0g)"
+          ],
+          "instructions": "Apply pre-pigmenting filler evenly to previously lightened / porous sections. Process for 10\u201315 minutes. Scrape or blot off excess product thoroughly with a towel. DO NOT rinse or shampoo before Stage 2 target deposit."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 30,
+          "products": [
+            "Pure Perfection 5/0 Light Brown (30.0g)",
+            "Light Brown Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply target mixture directly over blotted Stage 1 filler from roots to ends. Ensure saturated, even saturation. Process for 25\u201335 minutes without heat. Emulsify with lukewarm water, rinse thoroughly, and apply acidic colour post-treatment."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.341,
+      "accuracy_score_pct": 99.32,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-38",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Heat-Damaged Bleached Canvas Dropping to Level 7 Caramel with Demi-Permanent",
+      "clinical_challenge": "Alkaline permanent dye would shred cuticle; acidic demi (1.9%) deposit required.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Medium Blonde Natural Gold (15.0g)",
+            "Medium Blonde Natural Gold (45.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Medium Blonde Natural Gold (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.378,
+      "accuracy_score_pct": 99.24,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-39",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Highly Porous Stripped Hair Absorbing Dye Irregularly (Porosity Equalizer)",
+      "clinical_challenge": "Irregular cuticular degradation causing patchy absorption without equalization pre-spray.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Majirel 6.3 Dark Golden Blonde (15.0g)",
+            "Majirel 6 Dark Blonde (45.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Majirel 6 Dark Blonde (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.369,
+      "accuracy_score_pct": 99.26,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-40",
+      "category": "TINT_BACK_REPIGMENTATION",
+      "title": "Bleached Level 10 Tips Repigmented with Warm Gold Water Filler prior to 6/73",
+      "clinical_challenge": "Water filler technique restoring lost yellow-gold matrix without swelling cuticle.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Pure Perfection 7/40 Medium Blonde Intense Copper (30.0g)"
+          ],
+          "instructions": "Apply pre-pigmenting filler evenly to previously lightened / porous sections. Process for 10\u201315 minutes. Scrape or blot off excess product thoroughly with a towel. DO NOT rinse or shampoo before Stage 2 target deposit."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 6,
+          "time_mins": 30,
+          "products": [
+            "Pure Perfection 6/0 Dark Blonde (30.0g)",
+            "Dark Blonde Pure Natural (30.0g)"
+          ],
+          "instructions": "Apply target mixture directly over blotted Stage 1 filler from roots to ends. Ensure saturated, even saturation. Process for 25\u201335 minutes without heat. Emulsify with lukewarm water, rinse thoroughly, and apply acidic colour post-treatment."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.381,
+      "accuracy_score_pct": 99.24,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-41",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Brassy Bleached Level 8 Orange Canvas to Neutral Smoky Ash Cendr\u00e9 (L7)",
+      "clinical_challenge": "Direct 180\u00b0 colour wheel opposition to counteract 60\u00b0 orange hue angle without green shift.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Medium Blonde Ash Pearl (60.0g)",
+            "Intense Ash (2.5g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Medium Blonde Ash Pearl (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.569,
+      "accuracy_score_pct": 98.86,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-42",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Raw Level 9 Yellow NRP Neutralized with Violet Pearl Counter-Agent",
+      "clinical_challenge": "Precision violet/pearl balance opposing 90\u00b0 yellow hue vector.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Very Light Blonde Cendre Violet (60.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Very Light Blonde Cendre Violet (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.248,
+      "accuracy_score_pct": 99.5,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-43",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Accidental Green/Khaki Cast After Ash-on-Bleach Corrected with Soft Copper/Red",
+      "clinical_challenge": "Correcting accidental green hue shift using complementary red/copper reflect.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Light Blonde Brown Gold (60.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Light Blonde Brown Gold (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.31,
+      "accuracy_score_pct": 99.38,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-44",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Level 6 Warm Brassy Gold to Crisp Cool Pearl Neutral Beige (Level 6)",
+      "clinical_challenge": "Same-depth neutralization without darkening below Level 6. Zero-lift 10V developer.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "SAME_LEVEL_COLOURING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Dark Blonde Cendre Ash (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 6/91 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.553,
+      "accuracy_score_pct": 98.89,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-45",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Chlorine / Hard Water Mineral Green Discoloration Corrected to Level 8 Honey Gold",
+      "clinical_challenge": "Chelation detox pre-treatment warning followed by warm corrective deposit.",
+      "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+      "actual_status": "REQUIRES_PROFESSIONAL_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 4,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": null,
+          "time_mins": 10,
+          "products": [
+            "Wella Invigo Aqua Pure Chelating Treatment (20.0g)"
+          ],
+          "instructions": "Spray evenly from roots to ends on dry hair prior to service. Comb through for uniform saturation. Air-dry or towel-blot excess. Do not rinse."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Light Blonde Gold (60.0g)"
+          ],
+          "instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls."
+        },
+        {
+          "stage": 3,
+          "developer_vol": 10,
+          "time_mins": 25,
+          "products": [
+            "Light Blonde Gold (45.0g)"
+          ],
+          "instructions": "Apply Bowl 2 to mid-lengths, feathering upward into the root boundary line. Process for 15 minutes concurrent with roots."
+        },
+        {
+          "stage": 4,
+          "developer_vol": 6,
+          "time_mins": 15,
+          "products": [
+            "Light Blonde Gold (30.0g)"
+          ],
+          "instructions": "Apply Bowl 3 through ends during the final 10\u201315 minutes of service. Gently emulsify with lukewarm water to seal the cuticle and equalize tonal reflection without mechanical friction."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [
+        "SAFETY_HARD_WATER_METAL_DEPOSIT"
+      ],
+      "delta_e00_parity": 0.308,
+      "accuracy_score_pct": 99.38,
+      "passed": true,
+      "notes": "Correctly flagged with safety review warning SAFETY_HARD_WATER_METAL_DEPOSIT (4 stage(s))."
+    },
+    {
+      "case_id": "DIFF-46",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Level 10 Heat-Damaged Ultra-Porous Hair to Radiant Champagne Gloss",
+      "clinical_challenge": "Zero-ammonia acidic glaze (pH 6.5) preventing instant over-toning on compromised fiber.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 2,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Lightest Blonde Pearl Violet (60.0g)"
+          ],
+          "instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2."
+        },
+        {
+          "stage": 2,
+          "developer_vol": 20,
+          "time_mins": 20,
+          "products": [
+            "Lightest Blonde Pearl Violet (60.0g)"
+          ],
+          "instructions": "Apply Bowl 2 through lengths and ends during the final 15\u201320 minutes."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.848,
+      "accuracy_score_pct": 98.3,
+      "passed": true,
+      "notes": "Accurate formulation with 2 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-47",
+      "category": "TONE_NEUTRALIZATION_COLORIMETRY",
+      "title": "Level 5 Red-Orange Exposed NRP Neutralized with Green-Ash Matte Counter-Toner",
+      "clinical_challenge": "Neutralizing raw 30\u00b0 red-orange warmth using matte green/ash counter-reflect.",
+      "expected_status": "ELIGIBLE_FOR_REVIEW",
+      "actual_status": "ELIGIBLE_FOR_REVIEW",
+      "service_classification": "SAME_LEVEL_COLOURING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 20,
+          "time_mins": 35,
+          "products": [
+            "Target Shade (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Schwarzkopf Professional Igora Royal Oil Developer 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [],
+      "delta_e00_parity": 0.342,
+      "accuracy_score_pct": 99.32,
+      "passed": true,
+      "notes": "Accurate formulation with 1 stage(s) generated (ELIGIBLE_FOR_REVIEW)."
+    },
+    {
+      "case_id": "DIFF-48",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Documented PPD / Hair Dye Allergy History",
+      "clinical_challenge": "Documented history of oxidative dye allergy. Immediate anaphylactic / severe dermatitis risk.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "LIFTING",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_ALLERGY_KNOWN_HISTORY"
+      ],
+      "safety_warnings": [
+        "SAFETY_ALLERGY_48H_PATCH_TEST"
+      ],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_ALLERGY_KNOWN_HISTORY"
+    },
+    {
+      "case_id": "DIFF-49",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Active Scalp Lesions, Broken Skin & Dermatitis",
+      "clinical_challenge": "Open wounds or active eczema on scalp. Direct chemical contact causes severe chemical burns.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "LIFTING",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_SCALP_INTEGRITY"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_SCALP_INTEGRITY"
+    },
+    {
+      "case_id": "DIFF-50",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Metallic Salts / Henna Treated Hair Attempting Persulfate Bleach",
+      "clinical_challenge": "Exothermic reaction between metallic salts and persulfate lightener causing smoking and hair melt.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_HENNA_METALLIC_SALTS"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_HENNA_METALLIC_SALTS"
+    },
+    {
+      "case_id": "DIFF-51",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Chemically Relaxed (Sodium Hydroxide / Lye) Hair Requesting Bleach Lift",
+      "clinical_challenge": "Lanthionization from sodium hydroxide relaxer destroys cysteine bridges. Bleaching dissolves fiber.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_SODIUM_HYDROXIDE_BLEACH"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_SODIUM_HYDROXIDE_BLEACH"
+    },
+    {
+      "case_id": "DIFF-52",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Chemically Permed (Ammonium Thioglycolate) Hair Requesting 4-Level High Lift",
+      "clinical_challenge": "Aggressive lifting on permed hair shears cleaved disulfide bonds, causing severe fiber disintegration.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "LIFTING",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_PERM_BLEACH_CONTRAINDICATION"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_PERM_BLEACH_CONTRAINDICATION"
+    },
+    {
+      "case_id": "DIFF-53",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Severely Damaged Hair with Snapping / Fiber Breakage Requesting Chemical Lift",
+      "clinical_challenge": "Severe structural cortex damage. Any further oxidative lift results in catastrophic hair breakage.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "MULTI_STAGE_PROCESS",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_SODIUM_HYDROXIDE_BLEACH",
+        "SAFETY_SEVERELY_DAMAGED_FIBER"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_SEVERELY_DAMAGED_FIBER"
+    },
+    {
+      "case_id": "DIFF-54",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Abraded Scalp with Bleach High Lift Request",
+      "clinical_challenge": "Direct contact with alkaline persulfate lightener on abraded scalp causes severe chemical burns.",
+      "expected_status": "BLOCKED",
+      "actual_status": "BLOCKED",
+      "service_classification": "LIFTING",
+      "stages_count": 0,
+      "stages_detail": [],
+      "safety_blocked": [
+        "SAFETY_SCALP_INTEGRITY"
+      ],
+      "safety_warnings": [],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly blocked with expected rule SAFETY_SCALP_INTEGRITY"
+    },
+    {
+      "case_id": "DIFF-55",
+      "category": "SAFETY_CONTRAINDICATIONS_GATING",
+      "title": "Pending / Refused 48h Allergy Alert Test with Oxidative Dye",
+      "clinical_challenge": "Mandatory 48-hour patch test unconfirmed; application triggers professional review safety gate.",
+      "expected_status": "REQUIRES_PROFESSIONAL_REVIEW",
+      "actual_status": "REQUIRES_PROFESSIONAL_REVIEW",
+      "service_classification": "LIFTING",
+      "stages_count": 1,
+      "stages_detail": [
+        {
+          "stage": 1,
+          "developer_vol": 30,
+          "time_mins": 35,
+          "products": [
+            "Dark Blonde Gold (60.0g)"
+          ],
+          "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 6/3 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
+        }
+      ],
+      "safety_blocked": [],
+      "safety_warnings": [
+        "SAFETY_ALLERGY_48H_PATCH_TEST"
+      ],
+      "delta_e00_parity": null,
+      "accuracy_score_pct": 100.0,
+      "passed": true,
+      "notes": "Correctly flagged with safety review warning SAFETY_ALLERGY_48H_PATCH_TEST (1 stage(s))."
+    }
+  ]
+}

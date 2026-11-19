@@ -39,16 +39,16 @@ export const TONE_CURVES: Record<ToneFamily, ToneColorCurve> = {
   NATURAL: {
     hueDeg: 30,
     levels: {
-      1: { base: "#211f1e", shadow: "#181615", highlight: "#32302f" },
-      2: { base: "#302b28", shadow: "#211d1a", highlight: "#44403d" },
-      3: { base: "#3e342d", shadow: "#2a221c", highlight: "#564c45" },
-      4: { base: "#503f32", shadow: "#36281e", highlight: "#6d5b4f" },
-      5: { base: "#654d39", shadow: "#433020", highlight: "#876f5c" },
-      6: { base: "#7c5f43", shadow: "#513a24", highlight: "#a4876c" },
-      7: { base: "#967652", shadow: "#60472b", highlight: "#c6a583" },
-      8: { base: "#b49265", shadow: "#705734", highlight: "#eccaa0" },
-      9: { base: "#cdb086", shadow: "#7e6948", highlight: "#fff0c8" },
-      10: { base: "#ddc9a7", shadow: "#86775c", highlight: "#fff1d1" },
+      1: { base: "#141210", shadow: "#090807", highlight: "#24201c" },
+      2: { base: "#1e1915", shadow: "#100d0b", highlight: "#322a23" },
+      3: { base: "#2c221e", shadow: "#18120f", highlight: "#44362e" },
+      4: { base: "#3d2d24", shadow: "#221812", highlight: "#5c4638" },
+      5: { base: "#543d32", shadow: "#30211a", highlight: "#7a5c4a" },
+      6: { base: "#755742", shadow: "#463224", highlight: "#9e7a5e" },
+      7: { base: "#9e7b5c", shadow: "#644c36", highlight: "#c6a07a" },
+      8: { base: "#c4a47c", shadow: "#886c4c", highlight: "#e4c69e" },
+      9: { base: "#e2c39a", shadow: "#aa8c66", highlight: "#f8e0be" },
+      10: { base: "#f3dec2", shadow: "#c4ac8e", highlight: "#fff4e1" },
     },
   },
 
@@ -294,6 +294,33 @@ export const TONE_CURVES: Record<ToneFamily, ToneColorCurve> = {
 };
 
 /**
+ * Underlying Pigment (Raw Contributing Undertone) Curves across Levels 1–10.
+ * Conforms to International Color Chart (ICC) and salon decolorization physics.
+ * When hair is bleached / pre-lightened, melanin is chemically dissolved, exposing
+ * the raw underlying warm pigments.
+ */
+export const UNDERTONE_CURVES: Record<
+  UniversalLevel,
+  { base: string; shadow: string; highlight: string; name: string; nameHi: string; toneFamily: ToneFamily }
+> = {
+  1: { base: "#220a06", shadow: "#100302", highlight: "#3a120b", name: "Black / Dark Red", nameHi: "Black / Dark Red", toneFamily: "NATURAL" },
+  2: { base: "#380f08", shadow: "#1c0603", highlight: "#56180e", name: "Dark Red", nameHi: "Dark Red", toneFamily: "RED" },
+  3: { base: "#58160a", shadow: "#300a04", highlight: "#802010", name: "Deep Red", nameHi: "Deep Red", toneFamily: "RED" },
+  4: { base: "#7c220c", shadow: "#461205", highlight: "#aa3214", name: "Red", nameHi: "Red", toneFamily: "RED" },
+  5: { base: "#a63810", shadow: "#621e07", highlight: "#d44c18", name: "Red-Orange", nameHi: "Red-Orange", toneFamily: "COPPER" },
+  6: { base: "#c65415", shadow: "#7a3209", highlight: "#ef7022", name: "Orange", nameHi: "Orange", toneFamily: "COPPER" },
+  7: { base: "#de7c1a", shadow: "#8e4c0c", highlight: "#ffa02e", name: "Yellow-Orange (Gold-Copper)", nameHi: "Yellow-Orange (Gold-Copper)", toneFamily: "GOLD" },
+  8: { base: "#e8a82a", shadow: "#9e6e12", highlight: "#ffcc48", name: "Yellow (Gold)", nameHi: "Yellow (Gold)", toneFamily: "YELLOW" },
+  9: { base: "#f2cf58", shadow: "#b29230", highlight: "#ffe47e", name: "Pale Yellow", nameHi: "Pale Yellow", toneFamily: "YELLOW" },
+  10: { base: "#fbf0a8", shadow: "#c8bc6e", highlight: "#fffad2", name: "Extra Pale Yellow / Platinum Raw", nameHi: "Extra Pale Yellow / Platinum Raw", toneFamily: "YELLOW" },
+};
+
+export function getUndertoneColor(level: UniversalLevel) {
+  const lvl = (Math.max(1, Math.min(10, level)) || 7) as UniversalLevel;
+  return UNDERTONE_CURVES[lvl] || UNDERTONE_CURVES[7];
+}
+
+/**
  * Computes exact calibrated hair colorimetry for any depth level and tone reflect combination.
  */
 export function computeHairColorimetry(
@@ -363,14 +390,14 @@ export function applyMetamerism(hex: string, mode: "DAYLIGHT" | "WARM" | "COOL")
   if (mode === "DAYLIGHT") {
     return hex;
   } else if (mode === "WARM") {
-    const wr = Math.min(255, Math.round(r * 1.12));
-    const wg = Math.min(255, Math.round(g * 1.04));
-    const wb = Math.max(0, Math.round(b * 0.84));
+    const wr = Math.min(255, Math.round(r * 1.025));
+    const wg = Math.min(255, Math.round(g * 1.008));
+    const wb = Math.max(0, Math.round(b * 0.975));
     return rgbToHex(wr, wg, wb);
   } else if (mode === "COOL") {
-    const cr = Math.max(0, Math.round(r * 0.93));
-    const cg = Math.min(255, Math.round(g * 1.015));
-    const cb = Math.min(255, Math.round(b * 1.11));
+    const cr = Math.max(0, Math.round(r * 0.975));
+    const cg = Math.min(255, Math.round(g * 1.005));
+    const cb = Math.min(255, Math.round(b * 1.025));
     return rgbToHex(cr, cg, cb);
   }
   return hex;

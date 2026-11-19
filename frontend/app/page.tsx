@@ -322,10 +322,10 @@ export default function HomePage() {
                 1️⃣
               </span>
               <h3 className="text-base font-black text-white">
-                1. Touch Hair on Screen
+                1. Select Hair Zones
               </h3>
               <p className="text-xs text-neutral-400 leading-relaxed">
-                Tap the hair zones on the avatar: roots, mid-lengths, and ends. Flag any henna or previous color.
+                Choose the hair zones: roots, mid-lengths, and ends. Flag any henna or previous color.
               </p>
             </div>
 

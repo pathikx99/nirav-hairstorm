@@ -1,0 +1,46 @@
+[
+  {
+    "rule_code": "WELLA-PURE-PERFECTION-MIX",
+    "product_family": "Pure Perfection",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Pure Perfection",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0
+      },
+      "example": "60g Pure Perfection + 60g Welloxon Perfect"
+    },
+    "source_section": "Pure Perfection Mixing & Usage Guidelines",
+    "source_doc_key": "pure_perfection_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-PURE-PERFECTION-TIME",
+    "product_family": "Pure Perfection",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Pure Perfection"
+    },
+    "actions": {
+      "standard_time_minutes": 35,
+      "time_range": "30\u201340 min without heat, 15\u201325 min with heat",
+      "grey_coverage_time_minutes": 40,
+      "heat_permitted": true
+    },
+    "source_section": "Pure Perfection Processing Time",
+    "source_doc_key": "pure_perfection_technical_folder",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

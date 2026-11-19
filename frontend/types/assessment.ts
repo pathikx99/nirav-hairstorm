@@ -20,6 +20,7 @@ export interface HairRegionInput {
   observed_level: UniversalLevel;
   observed_undertone?: ToneFamily | null;
   existing_artificial_colour: boolean;
+  is_bleached?: boolean;
   grey_percentage: number;
   porosity: Porosity;
   condition: HairCondition;

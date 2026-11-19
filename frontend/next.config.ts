@@ -33,15 +33,7 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      {
-        source: "/diagnostics_p3/:path*",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate=604800",
-          },
-        ],
-      },
+
     ];
   },
 };

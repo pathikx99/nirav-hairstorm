@@ -16,15 +16,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "07d1882a-c2c2-4582-b79c-605f42021531",
+      "formulation_id": "483f5a4b-ece5-47be-8487-1f8972d619e9",
       "status": "BLOCKED",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "681e2bf4-ebd4-4778-a5a2-477bec9c4219",
-      "target_colour_id": "5a373860-0b4d-4e84-8a68-6c8098079f93",
+      "assessment_id": "99ff2aa8-f6a3-4acc-9e75-63d38680c833",
+      "target_colour_id": "e6b61077-dcf5-4f25-9e76-c4755ce25099",
       "service_classification": "LIFTING",
       "stages": [],
       "regions": [],
@@ -70,7 +70,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:51.597576Z"
+      "evaluated_at": "2026-11-19T13:41:29.003815Z"
     }
   },
   {
@@ -96,19 +96,19 @@
           "10/1 (60.0g)",
           "0/11 (1.0g)"
         ],
-        "instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes."
+        "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 10/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
       }
     ],
     "raw": {
-      "formulation_id": "2fd6bb35-3f7a-4bc3-a46f-bd9f7a48e4d0",
+      "formulation_id": "3f9fc370-c0e1-4913-b38a-8add553ebe27",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "ff393d54-f522-4c10-972e-09201afcbbc5",
-      "target_colour_id": "e55db316-e553-4cc3-8b79-9a66ceb641b6",
+      "assessment_id": "07719000-9c9f-4ef9-ba2b-3e82c35cf3f8",
+      "target_colour_id": "b60bfe6f-2322-4b0f-8672-80c2724906f4",
       "service_classification": "LIFTING",
       "stages": [
         {
@@ -123,9 +123,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Lightest Blonde Ash",
-              "shade_id": "a85bf4a2-8145-4ab3-a3dc-86d86bf0e2de",
+              "shade_id": "aebf5629-3369-42d8-8214-0f2f17bd2cd4",
               "shade_code": "10/1",
               "shade_name": "Lightest Blonde Ash",
               "parts": "1.0",
@@ -136,9 +136,9 @@
             },
             {
               "product_type": "SPECIAL_MIX",
-              "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+              "product_id": "5676c9c3-b0c6-4af2-9c2f-0a1e8a22159d",
               "product_name": "Intense Ash",
-              "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+              "shade_id": "23275674-ae97-4ed4-8eac-1ff03de42664",
               "shade_code": "0/11",
               "shade_name": "Intense Ash",
               "parts": "0.05",
@@ -149,7 +149,7 @@
             }
           ],
           "developer": {
-            "developer_id": "ffdb88fa-ca22-496e-9480-fb384abb1b6d",
+            "developer_id": "0aad35fb-6e78-492e-b4e8-d1f31dfd7779",
             "developer_name": "Welloxon Perfect 9% (30 Vol)",
             "concentration_percent": "9.0",
             "volume_in_vol": 30,
@@ -158,9 +158,9 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
-          "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+          "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 10/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
           "rules_applied": [
             "ON-SCALP-30V-CAP",
             "WELLA-KP-MIX-STANDARD"
@@ -190,9 +190,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Lightest Blonde Ash",
-                  "shade_id": "a85bf4a2-8145-4ab3-a3dc-86d86bf0e2de",
+                  "shade_id": "aebf5629-3369-42d8-8214-0f2f17bd2cd4",
                   "shade_code": "10/1",
                   "shade_name": "Lightest Blonde Ash",
                   "parts": "1.0",
@@ -203,9 +203,9 @@
                 },
                 {
                   "product_type": "SPECIAL_MIX",
-                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_id": "5676c9c3-b0c6-4af2-9c2f-0a1e8a22159d",
                   "product_name": "Intense Ash",
-                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_id": "23275674-ae97-4ed4-8eac-1ff03de42664",
                   "shade_code": "0/11",
                   "shade_name": "Intense Ash",
                   "parts": "0.05",
@@ -216,7 +216,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "ffdb88fa-ca22-496e-9480-fb384abb1b6d",
+                "developer_id": "0aad35fb-6e78-492e-b4e8-d1f31dfd7779",
                 "developer_name": "Welloxon Perfect 9% (30 Vol)",
                 "concentration_percent": "9.0",
                 "volume_in_vol": 30,
@@ -225,9 +225,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 10/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "ON-SCALP-30V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -261,9 +261,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Lightest Blonde Ash",
-                  "shade_id": "a85bf4a2-8145-4ab3-a3dc-86d86bf0e2de",
+                  "shade_id": "aebf5629-3369-42d8-8214-0f2f17bd2cd4",
                   "shade_code": "10/1",
                   "shade_name": "Lightest Blonde Ash",
                   "parts": "1.0",
@@ -274,9 +274,9 @@
                 },
                 {
                   "product_type": "SPECIAL_MIX",
-                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_id": "5676c9c3-b0c6-4af2-9c2f-0a1e8a22159d",
                   "product_name": "Intense Ash",
-                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_id": "23275674-ae97-4ed4-8eac-1ff03de42664",
                   "shade_code": "0/11",
                   "shade_name": "Intense Ash",
                   "parts": "0.05",
@@ -287,7 +287,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "ffdb88fa-ca22-496e-9480-fb384abb1b6d",
+                "developer_id": "0aad35fb-6e78-492e-b4e8-d1f31dfd7779",
                 "developer_name": "Welloxon Perfect 9% (30 Vol)",
                 "concentration_percent": "9.0",
                 "volume_in_vol": 30,
@@ -296,9 +296,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 10/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "ON-SCALP-30V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -332,9 +332,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Lightest Blonde Ash",
-                  "shade_id": "a85bf4a2-8145-4ab3-a3dc-86d86bf0e2de",
+                  "shade_id": "aebf5629-3369-42d8-8214-0f2f17bd2cd4",
                   "shade_code": "10/1",
                   "shade_name": "Lightest Blonde Ash",
                   "parts": "1.0",
@@ -345,9 +345,9 @@
                 },
                 {
                   "product_type": "SPECIAL_MIX",
-                  "product_id": "4ebda9e4-3f6f-4a12-9c3b-aa89ad7123c5",
+                  "product_id": "5676c9c3-b0c6-4af2-9c2f-0a1e8a22159d",
                   "product_name": "Intense Ash",
-                  "shade_id": "19683f48-8ad4-4753-9c5e-d1220d235257",
+                  "shade_id": "23275674-ae97-4ed4-8eac-1ff03de42664",
                   "shade_code": "0/11",
                   "shade_name": "Intense Ash",
                   "parts": "0.05",
@@ -358,7 +358,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "ffdb88fa-ca22-496e-9480-fb384abb1b6d",
+                "developer_id": "0aad35fb-6e78-492e-b4e8-d1f31dfd7779",
                 "developer_name": "Welloxon Perfect 9% (30 Vol)",
                 "concentration_percent": "9.0",
                 "volume_in_vol": 30,
@@ -367,9 +367,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 10/1 and 60.0g of Welloxon Perfect 9% (30 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "ON-SCALP-30V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -441,7 +441,7 @@
       "exposed_underlying_pigment": "Level 10 PALE_YELLOW",
       "counter_toner_recommendation": "Exposed PALE_YELLOW natural undertone: add 2\u20133g Violet / Pearl counter-neutralizer per 60g formula to cancel brassiness and lock in target ASH reflect.",
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:51.694934Z"
+      "evaluated_at": "2026-11-19T13:41:29.177391Z"
     }
   },
   {
@@ -480,15 +480,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "56170853-dc26-48c6-83fe-d613426316e3",
+      "formulation_id": "bf1e8006-65b1-488b-8bdc-e3196a60a409",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "722589de-dae1-4a29-a973-9a7d2c62cff6",
-      "target_colour_id": "18d91214-5d05-463d-9027-c8bf8ca492ae",
+      "assessment_id": "563f6f3d-e492-42cd-881b-690727defcee",
+      "target_colour_id": "8d51cf8d-2a54-460c-9ad0-92d14c8a943c",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -516,7 +516,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -548,9 +548,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Medium Blonde Gold",
-              "shade_id": "857de4ab-39fa-4815-aa12-32a336af20af",
+              "shade_id": "7ff51d3c-9c50-4744-9a98-565535f8b684",
               "shade_code": "7/3",
               "shade_name": "Medium Blonde Gold",
               "parts": "1.0",
@@ -561,7 +561,7 @@
             }
           ],
           "developer": {
-            "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+            "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
             "developer_name": "Welloxon Perfect 1.9% (Pastel)",
             "concentration_percent": "1.900",
             "volume_in_vol": 6,
@@ -614,7 +614,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -646,9 +646,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Medium Blonde Gold",
-                  "shade_id": "857de4ab-39fa-4815-aa12-32a336af20af",
+                  "shade_id": "7ff51d3c-9c50-4744-9a98-565535f8b684",
                   "shade_code": "7/3",
                   "shade_name": "Medium Blonde Gold",
                   "parts": "1.0",
@@ -659,7 +659,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -716,7 +716,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -748,9 +748,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Medium Blonde Gold",
-                  "shade_id": "857de4ab-39fa-4815-aa12-32a336af20af",
+                  "shade_id": "7ff51d3c-9c50-4744-9a98-565535f8b684",
                   "shade_code": "7/3",
                   "shade_name": "Medium Blonde Gold",
                   "parts": "1.0",
@@ -761,7 +761,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -818,7 +818,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -850,9 +850,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Medium Blonde Gold",
-                  "shade_id": "857de4ab-39fa-4815-aa12-32a336af20af",
+                  "shade_id": "7ff51d3c-9c50-4744-9a98-565535f8b684",
                   "shade_code": "7/3",
                   "shade_name": "Medium Blonde Gold",
                   "parts": "1.0",
@@ -863,7 +863,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -943,7 +943,7 @@
       "exposed_underlying_pigment": "Level 7 ORANGE_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:51.792020Z"
+      "evaluated_at": "2026-11-19T13:41:29.316207Z"
     }
   },
   {
@@ -982,15 +982,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "cf681922-f419-4ab5-a484-cc8a65cb1de0",
+      "formulation_id": "cdb82875-2819-46ce-a1fe-05cf52c78f0b",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "1af9a851-d6f5-45ad-b431-5b353296de50",
-      "target_colour_id": "c7987749-7282-4422-885a-4ed5c8363d15",
+      "assessment_id": "e7532a92-1a3b-4f57-8eec-12b8fadc7e5c",
+      "target_colour_id": "df7afccb-a2c8-4057-89b0-49a6d0eae7f6",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -1003,9 +1003,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Light Blonde Gold",
-              "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+              "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
               "shade_code": "8/3",
               "shade_name": "Light Blonde Gold",
               "parts": "1.0",
@@ -1016,7 +1016,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -1025,7 +1025,7 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
           "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
           "rules_applied": [
@@ -1047,9 +1047,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Light Blonde Gold",
-              "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+              "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
               "shade_code": "8/3",
               "shade_name": "Light Blonde Gold",
               "parts": "1.0",
@@ -1060,7 +1060,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.000",
             "volume_in_vol": 20,
@@ -1099,9 +1099,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1112,7 +1112,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1121,7 +1121,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -1143,9 +1143,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1156,7 +1156,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -1199,9 +1199,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1212,7 +1212,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1221,7 +1221,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -1243,9 +1243,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1256,7 +1256,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -1299,9 +1299,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1312,7 +1312,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1321,7 +1321,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -1343,9 +1343,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Light Blonde Gold",
-                  "shade_id": "3cf7f40d-d996-4a1f-afc1-873ef5debe4a",
+                  "shade_id": "89256093-7ce8-4195-95a4-92b0a7b54198",
                   "shade_code": "8/3",
                   "shade_name": "Light Blonde Gold",
                   "parts": "1.0",
@@ -1356,7 +1356,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -1436,7 +1436,7 @@
       "exposed_underlying_pigment": "Level 8 YELLOW_GOLD",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:51.880743Z"
+      "evaluated_at": "2026-11-19T13:41:29.478491Z"
     }
   },
   {
@@ -1461,19 +1461,19 @@
         "products": [
           "6/xx (60.0g)"
         ],
-        "instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes."
+        "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
       }
     ],
     "raw": {
-      "formulation_id": "07864547-caa9-48b9-89c0-9b440675cf9e",
+      "formulation_id": "45511cc8-64bd-4c5f-8557-b3447f7b1ae5",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "4ba2ddeb-2b42-432b-820b-463768472198",
-      "target_colour_id": "be333021-5820-439a-98ab-547cd47a0694",
+      "assessment_id": "bc4f841b-55ac-45da-b5a7-c96f708717ee",
+      "target_colour_id": "39534fd2-40d6-42ef-9655-2ad33d6cfed4",
       "service_classification": "LIFTING",
       "stages": [
         {
@@ -1501,7 +1501,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -1510,9 +1510,9 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
-          "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+          "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
           "rules_applied": [
             "WELLA-KP-DEV-LIFT-STANDARD",
             "WELLA-KP-MIX-STANDARD"
@@ -1555,7 +1555,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1564,9 +1564,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "WELLA-KP-DEV-LIFT-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
@@ -1613,7 +1613,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1622,9 +1622,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "WELLA-KP-DEV-LIFT-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
@@ -1671,7 +1671,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1680,9 +1680,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of colour and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "WELLA-KP-DEV-LIFT-STANDARD",
                 "WELLA-KP-MIX-STANDARD"
@@ -1753,7 +1753,7 @@
       "exposed_underlying_pigment": "Level 6 ORANGE",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:51.970289Z"
+      "evaluated_at": "2026-11-19T13:41:29.672944Z"
     }
   },
   {
@@ -1778,19 +1778,19 @@
         "products": [
           "9/3 (60.0g)"
         ],
-        "instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes."
+        "instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9/3 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
       }
     ],
     "raw": {
-      "formulation_id": "45631208-ce7f-42cd-8303-05288b470ea6",
+      "formulation_id": "fe11b3f7-dde9-4c3a-bbab-8330aa9762f4",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "ccc39ae9-337f-47be-9de6-5eb03abad767",
-      "target_colour_id": "4312e1cc-3be0-47df-b565-07982a6cdc76",
+      "assessment_id": "e0a49301-647a-473b-8093-cca54962f180",
+      "target_colour_id": "6a4da13d-68ec-4805-b7d0-b5cb668ca943",
       "service_classification": "LIFTING",
       "stages": [
         {
@@ -1805,9 +1805,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Very Light Blonde Gold",
-              "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+              "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
               "shade_code": "9/3",
               "shade_name": "Very Light Blonde Gold",
               "parts": "1.0",
@@ -1818,7 +1818,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -1827,9 +1827,9 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
-          "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+          "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9/3 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
           "rules_applied": [
             "FINE-FRAGILE-20V-CAP",
             "WELLA-KP-MIX-STANDARD"
@@ -1859,9 +1859,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -1872,7 +1872,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1881,9 +1881,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9/3 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "FINE-FRAGILE-20V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -1917,9 +1917,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -1930,7 +1930,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1939,9 +1939,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9/3 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "FINE-FRAGILE-20V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -1975,9 +1975,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -1988,7 +1988,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -1997,9 +1997,9 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
-              "application_instructions": "Apply mixture systematically to regrowth / roots first. If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10\u201315 minutes.",
+              "application_instructions": "Step 1 \u2022 PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\nStep 2 \u2022 DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh 60.0g of 9/3 and 60.0g of Welloxon Perfect 6% (20 Vol) (1:1 ratio). Whisk with colour whisk until completely homogeneous.\nStep 3 \u2022 APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10\u201315 minutes.\nStep 4 \u2022 PROCESSING: Dwell for 35 minutes at room temperature. Do NOT apply artificial heat.\nStep 5 \u2022 EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner.",
               "rules_applied": [
                 "FINE-FRAGILE-20V-CAP",
                 "WELLA-KP-MIX-STANDARD"
@@ -2068,7 +2068,7 @@
       "exposed_underlying_pigment": "Level 9 YELLOW",
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:52.135169Z"
+      "evaluated_at": "2026-11-19T13:41:29.778984Z"
     }
   },
   {
@@ -2118,15 +2118,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "1e704af8-abd6-481a-a4bf-fd76527dc881",
+      "formulation_id": "da389c67-7058-4381-8931-52301b7820f7",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "02665de5-df42-4cbf-b4f0-f80ddab9bcd9",
-      "target_colour_id": "73b83626-bf82-4415-82af-9336928ea817",
+      "assessment_id": "d58ba380-ff58-4e03-a402-a686fc7ac467",
+      "target_colour_id": "f866e871-1595-44f0-b5ea-d939132e3f2f",
       "service_classification": "SAME_LEVEL_COLOURING",
       "stages": [
         {
@@ -2139,11 +2139,11 @@
           "products": [
             {
               "product_type": "PURE_NATURAL",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-              "product_name": "Dark Blonde Pure Natural",
-              "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+              "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+              "product_name": "Pure Perfection 6/0 Dark Blonde",
+              "shade_id": "263b961c-6886-4168-998c-4eab3b233ce0",
               "shade_code": "6/0",
-              "shade_name": "Dark Blonde Pure Natural",
+              "shade_name": "Pure Perfection 6/0 Dark Blonde",
               "parts": "0.33",
               "weight_grams": "20.0",
               "length_cm": null,
@@ -2152,9 +2152,9 @@
             },
             {
               "product_type": "SHADE",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+              "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
               "product_name": "Dark Blonde Pure Natural",
-              "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+              "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
               "shade_code": "6/0",
               "shade_name": "Dark Blonde Pure Natural",
               "parts": "0.67",
@@ -2165,7 +2165,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -2174,7 +2174,7 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
           "application_instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls.",
           "rules_applied": [
@@ -2195,9 +2195,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+              "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
               "product_name": "Dark Blonde Pure Natural",
-              "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+              "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
               "shade_code": "6/0",
               "shade_name": "Dark Blonde Pure Natural",
               "parts": "1.0",
@@ -2238,9 +2238,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+              "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
               "product_name": "Dark Blonde Pure Natural",
-              "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+              "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
               "shade_code": "6/0",
               "shade_name": "Dark Blonde Pure Natural",
               "parts": "1.0",
@@ -2251,7 +2251,7 @@
             }
           ],
           "developer": {
-            "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+            "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
             "developer_name": "Welloxon Perfect 1.9% (Pastel)",
             "concentration_percent": "1.900",
             "volume_in_vol": 6,
@@ -2290,11 +2290,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 6/0 Dark Blonde",
+                  "shade_id": "263b961c-6886-4168-998c-4eab3b233ce0",
                   "shade_code": "6/0",
-                  "shade_name": "Dark Blonde Pure Natural",
+                  "shade_name": "Pure Perfection 6/0 Dark Blonde",
                   "parts": "0.33",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -2303,9 +2303,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "0.67",
@@ -2316,7 +2316,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -2325,7 +2325,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls.",
               "rules_applied": [
@@ -2346,9 +2346,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2389,9 +2389,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2402,7 +2402,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -2445,11 +2445,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 6/0 Dark Blonde",
+                  "shade_id": "263b961c-6886-4168-998c-4eab3b233ce0",
                   "shade_code": "6/0",
-                  "shade_name": "Dark Blonde Pure Natural",
+                  "shade_name": "Pure Perfection 6/0 Dark Blonde",
                   "parts": "0.33",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -2458,9 +2458,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "0.67",
@@ -2471,7 +2471,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -2480,7 +2480,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls.",
               "rules_applied": [
@@ -2501,9 +2501,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2544,9 +2544,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2557,7 +2557,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -2600,11 +2600,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 6/0 Dark Blonde",
+                  "shade_id": "263b961c-6886-4168-998c-4eab3b233ce0",
                   "shade_code": "6/0",
-                  "shade_name": "Dark Blonde Pure Natural",
+                  "shade_name": "Pure Perfection 6/0 Dark Blonde",
                   "parts": "0.33",
                   "weight_grams": "20.0",
                   "length_cm": null,
@@ -2613,9 +2613,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "0.67",
@@ -2626,7 +2626,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -2635,7 +2635,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 with a fine tint brush to roots / regrowth only (approx. 1 to 1.5 inches from scalp). Process for 20 minutes before applying mid-lengths and ends bowls.",
               "rules_applied": [
@@ -2656,9 +2656,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2699,9 +2699,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Dark Blonde Pure Natural",
-                  "shade_id": "527afba4-70b0-4241-816a-7fc1f0f8f5c7",
+                  "shade_id": "7d33c8f3-2a03-47d1-91f6-a51e2c1fde8d",
                   "shade_code": "6/0",
                   "shade_name": "Dark Blonde Pure Natural",
                   "parts": "1.0",
@@ -2712,7 +2712,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -2786,14 +2786,14 @@
         "guarantee_disclaimer": "Predicted results are theoretical estimations based on verified manufacturer guidelines and do not constitute a chemical guarantee of final colour. Strand tests remain mandatory."
       },
       "source_references": [
-        "Koleston Perfect Usage Guidelines Page 2 - Coloring grey hair",
-        "Salon Zonal Color Formulation Manual \u2014 Tri-Bowl Technique"
+        "Salon Zonal Color Formulation Manual \u2014 Tri-Bowl Technique",
+        "Koleston Perfect Usage Guidelines Page 2 - Coloring grey hair"
       ],
       "technique": "ALL_OVER",
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:52.232069Z"
+      "evaluated_at": "2026-11-19T13:41:29.937498Z"
     }
   },
   {
@@ -2832,15 +2832,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "f410f141-1d69-4542-be82-459d0100578c",
+      "formulation_id": "754b90fc-c098-4ac1-bd4f-cf5d5057303c",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "481ee197-210a-488f-9038-d5c359e4de43",
-      "target_colour_id": "05af9cd0-dbd2-4004-be19-e4d176818bbe",
+      "assessment_id": "75461fbd-5464-457c-b2e6-b312c5156971",
+      "target_colour_id": "8b66b66a-a09d-4cae-8be9-befca98f0ac9",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -2853,9 +2853,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Very Light Blonde Gold",
-              "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+              "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
               "shade_code": "9/3",
               "shade_name": "Very Light Blonde Gold",
               "parts": "1.0",
@@ -2866,7 +2866,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.0",
             "volume_in_vol": 20,
@@ -2875,7 +2875,7 @@
           },
           "mixing_ratio_text": "1:1",
           "development_time_minutes": 35,
-          "development_time_range": "30\u201340 min without heat",
+          "development_time_range": "30\u201335 min without heat",
           "heat_permitted": false,
           "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
           "rules_applied": [
@@ -2897,9 +2897,9 @@
           "products": [
             {
               "product_type": "SHADE",
-              "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+              "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
               "product_name": "Very Light Blonde Gold",
-              "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+              "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
               "shade_code": "9/3",
               "shade_name": "Very Light Blonde Gold",
               "parts": "1.0",
@@ -2910,7 +2910,7 @@
             }
           ],
           "developer": {
-            "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+            "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
             "developer_name": "Welloxon Perfect 6% (20 Vol)",
             "concentration_percent": "6.000",
             "volume_in_vol": 20,
@@ -2949,9 +2949,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -2962,7 +2962,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -2971,7 +2971,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -2993,9 +2993,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -3006,7 +3006,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -3049,9 +3049,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -3062,7 +3062,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -3071,7 +3071,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -3093,9 +3093,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -3106,7 +3106,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -3149,9 +3149,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -3162,7 +3162,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.0",
                 "volume_in_vol": 20,
@@ -3171,7 +3171,7 @@
               },
               "mixing_ratio_text": "1:1",
               "development_time_minutes": 35,
-              "development_time_range": "30\u201340 min without heat",
+              "development_time_range": "30\u201335 min without heat",
               "heat_permitted": false,
               "application_instructions": "Apply Bowl 1 to regrowth roots. Dwell 20 minutes before applying Bowl 2.",
               "rules_applied": [
@@ -3193,9 +3193,9 @@
               "products": [
                 {
                   "product_type": "SHADE",
-                  "product_id": "547dfbe9-9586-439b-9b1b-58bb4138d2a6",
+                  "product_id": "8dcc851d-3dbd-4980-a6d0-fb7eaf1e3c27",
                   "product_name": "Very Light Blonde Gold",
-                  "shade_id": "c15268d3-2e88-412d-886e-ba769ab0f8ed",
+                  "shade_id": "5d8085c0-6eb2-4e02-9946-65fa9e9cb543",
                   "shade_code": "9/3",
                   "shade_name": "Very Light Blonde Gold",
                   "parts": "1.0",
@@ -3206,7 +3206,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "2b788c4e-360e-43e5-827e-f0c6e4413008",
+                "developer_id": "74b6e5f3-abd0-4dce-8c03-1c16dc36585f",
                 "developer_name": "Welloxon Perfect 6% (20 Vol)",
                 "concentration_percent": "6.000",
                 "volume_in_vol": 20,
@@ -3286,7 +3286,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:52.323748Z"
+      "evaluated_at": "2026-11-19T13:41:30.052612Z"
     }
   },
   {
@@ -3326,15 +3326,15 @@
       }
     ],
     "raw": {
-      "formulation_id": "45806209-5a60-4de1-bd10-828175a3b937",
+      "formulation_id": "7fbb1cdf-a6ac-435e-94d5-d18592d6ff75",
       "status": "ELIGIBLE_FOR_REVIEW",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "8336b13f-5d62-42a5-88ad-b8de63896dbd",
-      "target_colour_id": "bad3b2e6-1f16-4226-9ae4-fdbe9f7dd6e3",
+      "assessment_id": "c42966ef-bb92-49c9-ac6b-3e004719e019",
+      "target_colour_id": "9e82aa8e-2edb-49c3-8447-5c581c461257",
       "service_classification": "MULTI_STAGE_PROCESS",
       "stages": [
         {
@@ -3362,7 +3362,7 @@
             }
           ],
           "developer": {
-            "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+            "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
             "developer_name": "Welloxon Perfect 1.9% (Pastel)",
             "concentration_percent": "1.900",
             "volume_in_vol": 6,
@@ -3393,11 +3393,11 @@
           "products": [
             {
               "product_type": "PURE_NATURAL",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-              "product_name": "Black Pure Natural",
-              "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+              "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+              "product_name": "Pure Perfection 2/0 Black",
+              "shade_id": "7f19086e-6d79-448e-a1d6-82e4e4d74adb",
               "shade_code": "2/0",
-              "shade_name": "Black Pure Natural",
+              "shade_name": "Pure Perfection 2/0 Black",
               "parts": "0.5",
               "weight_grams": "30.0",
               "length_cm": null,
@@ -3406,9 +3406,9 @@
             },
             {
               "product_type": "SHADE",
-              "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+              "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
               "product_name": "Black Pure Natural",
-              "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+              "shade_id": "6e42fe3e-ebb0-4c00-9bb1-b6202d380f34",
               "shade_code": "2/0",
               "shade_name": "Black Pure Natural",
               "parts": "0.5",
@@ -3419,7 +3419,7 @@
             }
           ],
           "developer": {
-            "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+            "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
             "developer_name": "Welloxon Perfect 1.9% (Pastel)",
             "concentration_percent": "1.900",
             "volume_in_vol": 6,
@@ -3472,7 +3472,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3503,11 +3503,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 2/0 Black",
+                  "shade_id": "7f19086e-6d79-448e-a1d6-82e4e4d74adb",
                   "shade_code": "2/0",
-                  "shade_name": "Black Pure Natural",
+                  "shade_name": "Pure Perfection 2/0 Black",
                   "parts": "0.5",
                   "weight_grams": "30.0",
                   "length_cm": null,
@@ -3516,9 +3516,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "shade_id": "6e42fe3e-ebb0-4c00-9bb1-b6202d380f34",
                   "shade_code": "2/0",
                   "shade_name": "Black Pure Natural",
                   "parts": "0.5",
@@ -3529,7 +3529,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3586,7 +3586,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3617,11 +3617,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 2/0 Black",
+                  "shade_id": "7f19086e-6d79-448e-a1d6-82e4e4d74adb",
                   "shade_code": "2/0",
-                  "shade_name": "Black Pure Natural",
+                  "shade_name": "Pure Perfection 2/0 Black",
                   "parts": "0.5",
                   "weight_grams": "30.0",
                   "length_cm": null,
@@ -3630,9 +3630,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "shade_id": "6e42fe3e-ebb0-4c00-9bb1-b6202d380f34",
                   "shade_code": "2/0",
                   "shade_name": "Black Pure Natural",
                   "parts": "0.5",
@@ -3643,7 +3643,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3700,7 +3700,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3731,11 +3731,11 @@
               "products": [
                 {
                   "product_type": "PURE_NATURAL",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
-                  "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "product_id": "9aef7e55-d580-4178-b770-f8d5621f6c92",
+                  "product_name": "Pure Perfection 2/0 Black",
+                  "shade_id": "7f19086e-6d79-448e-a1d6-82e4e4d74adb",
                   "shade_code": "2/0",
-                  "shade_name": "Black Pure Natural",
+                  "shade_name": "Pure Perfection 2/0 Black",
                   "parts": "0.5",
                   "weight_grams": "30.0",
                   "length_cm": null,
@@ -3744,9 +3744,9 @@
                 },
                 {
                   "product_type": "SHADE",
-                  "product_id": "161707e1-ab89-4914-b476-8a8619139fc3",
+                  "product_id": "6de6a5b7-ea0d-4ac6-a3f6-2be3a80fc52b",
                   "product_name": "Black Pure Natural",
-                  "shade_id": "092a9309-c0b9-423c-a6e3-4c3d91dbb82c",
+                  "shade_id": "6e42fe3e-ebb0-4c00-9bb1-b6202d380f34",
                   "shade_code": "2/0",
                   "shade_name": "Black Pure Natural",
                   "parts": "0.5",
@@ -3757,7 +3757,7 @@
                 }
               ],
               "developer": {
-                "developer_id": "e4f6d1e5-eabc-4f76-a28b-0fb4532fbd0f",
+                "developer_id": "3f5cce69-ba52-41e8-b03a-c755247c8e31",
                 "developer_name": "Welloxon Perfect 1.9% (Pastel)",
                 "concentration_percent": "1.900",
                 "volume_in_vol": 6,
@@ -3836,7 +3836,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:52.477990Z"
+      "evaluated_at": "2026-11-19T13:41:30.163123Z"
     }
   },
   {
@@ -3856,15 +3856,15 @@
     "stages_count": 0,
     "stages": [],
     "raw": {
-      "formulation_id": "66b9d6ee-6883-40c9-944a-48e6e46aa4c4",
+      "formulation_id": "32fd360c-93ef-45c9-8060-ddf8120669c0",
       "status": "BLOCKED",
       "market": "IN",
-      "manufacturer_id": "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
+      "manufacturer_id": "1a244796-a9b0-4e43-b408-093af964c7c3",
       "manufacturer_name": "Wella Professionals",
-      "catalogue_version_id": "e8e51475-4771-4e8d-959c-44846358245a",
+      "catalogue_version_id": "0ae485b2-2df9-4801-946b-341e6ace1789",
       "engine_version": "1.0",
-      "assessment_id": "de9658a1-5f32-4e81-861e-ccff2618e9b0",
-      "target_colour_id": "7389704c-f9ac-42ab-9030-f0d318f3cc78",
+      "assessment_id": "8a454336-c847-4132-8d91-340237c69608",
+      "target_colour_id": "568692bb-7cff-4544-8432-f050cdf0aa65",
       "service_classification": "LIFTING",
       "stages": [],
       "regions": [],
@@ -3918,7 +3918,7 @@
       "exposed_underlying_pigment": null,
       "counter_toner_recommendation": null,
       "chemical_equivalence": "NOT_ESTABLISHED",
-      "evaluated_at": "2026-11-15T23:17:52.584458Z"
+      "evaluated_at": "2026-11-19T13:41:30.310318Z"
     }
   }
 ]

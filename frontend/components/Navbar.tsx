@@ -6,7 +6,7 @@ import { useApp } from "../context/AppContext";
 
 export function Navbar() {
   const pathname = usePathname();
-  const { mode, setMode, consultationMode, setConsultationMode } = useApp();
+  const { mode, setMode } = useApp();
 
   const navLinks = [
     { href: "/", label: "Home", icon: "🏠" },
@@ -61,24 +61,8 @@ export function Navbar() {
           </nav>
         </div>
 
-        {/* Mode Switchers: Express vs Pro + Stylist vs Chemist */}
+        {/* Stylist vs Chemist Toggle */}
         <div className="flex items-center gap-1.5 sm:gap-2">
-          {/* Express vs Pro Toggle */}
-          <button
-            type="button"
-            onClick={() => setConsultationMode(consultationMode === "EXPRESS" ? "PRO" : "EXPRESS")}
-            className={`rounded-xl border px-2.5 py-1.5 text-xs font-black transition-all shadow-sm active:scale-95 flex items-center gap-1 ${
-              consultationMode === "EXPRESS"
-                ? "border-emerald-500 bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-500"
-                : "border-purple-500 bg-purple-500/20 text-purple-300 ring-1 ring-purple-500"
-            }`}
-            title="Toggle Express Consultation (Fast) or Pro Lab Mode (Comprehensive)"
-          >
-            <span>{consultationMode === "EXPRESS" ? "⚡" : "🔬"}</span>
-            <span className="hidden xs:inline">{consultationMode === "EXPRESS" ? "Express" : "Pro Lab"}</span>
-          </button>
-
-          {/* Stylist vs Chemist Toggle */}
           <button
             type="button"
             onClick={handleToggleMode}

@@ -365,11 +365,11 @@ export function VisualCameraScanModal({
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => handleSelectSample("/models/model_front.jpg")}
+              onClick={() => handleSelectSample("/avatar/avatar_front_model.jpg")}
               className="p-2 rounded-xl bg-neutral-950 border border-neutral-800 hover:border-amber-400 text-left flex items-center gap-2.5 transition-all"
             >
               <img
-                src="/models/model_front.jpg"
+                src="/avatar/avatar_front_model.jpg"
                 alt="Client Front"
                 className="w-9 h-9 rounded-lg object-cover border border-white/20"
               />
@@ -381,11 +381,11 @@ export function VisualCameraScanModal({
 
             <button
               type="button"
-              onClick={() => handleSelectSample("/models/model_back.jpg")}
+              onClick={() => handleSelectSample("/avatar/avatar_back_model.jpg")}
               className="p-2 rounded-xl bg-neutral-950 border border-neutral-800 hover:border-amber-400 text-left flex items-center gap-2.5 transition-all"
             >
               <img
-                src="/models/model_back.jpg"
+                src="/avatar/avatar_back_model.jpg"
                 alt="Client Back"
                 className="w-9 h-9 rounded-lg object-cover border border-white/20"
               />

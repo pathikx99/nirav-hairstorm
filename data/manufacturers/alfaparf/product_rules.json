@@ -1,0 +1,118 @@
+[
+  {
+    "rule_code": "ALFAPARF-EOC-MIX-STANDARD",
+    "product_family": "Evolution of the Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Evolution of the Color",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.5
+      },
+      "example": "60g Evolution of the Color + 90ml Oxid'o"
+    },
+    "source_section": "Evolution of the Color Technical Folder - Mixing Guidelines",
+    "source_doc_key": "evolution_of_the_color_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "ALFAPARF-EOC-MIX-PLATINUM",
+    "product_family": "Evolution of the Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Evolution of the Color",
+      "shade_series": "Platinum"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 2.0
+      },
+      "recommended_developer": "Oxid'o 40 Vol (12%)",
+      "development_time_minutes": 55,
+      "example": "60g Platinum + 120ml Oxid'o 40 Vol"
+    },
+    "source_section": "Platinum Series Technical Guidelines",
+    "source_doc_key": "evolution_of_the_color_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "ALFAPARF-EOC-HARMONIZER-MIX",
+    "product_family": "Evolution of the Color",
+    "service_type": "TONER",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 3,
+    "conditions": {
+      "product_line": "Evolution of the Color",
+      "shade_series": "Harmonizer"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 2.0
+      },
+      "developer_choices": {
+        "5 Vol": "Tone with minimal lightening",
+        "10-20 Vol": "Tone and gently lighten uneven bleached bases"
+      },
+      "development_time_minutes": 20
+    },
+    "source_section": "Harmonizer Post-Bleaching Toners Guidelines",
+    "source_doc_key": "evolution_of_the_color_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "ALFAPARF-EOC-TIME",
+    "product_family": "Evolution of the Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 4,
+    "conditions": {
+      "product_line": "Evolution of the Color"
+    },
+    "actions": {
+      "standard_time_minutes": 35,
+      "platinum_time_minutes": 55,
+      "heat_permitted": false
+    },
+    "source_section": "Evolution of the Color Development Times",
+    "source_doc_key": "evolution_of_the_color_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "ALFAPARF-EOC-GREY-COVERAGE",
+    "product_family": "Evolution of the Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "GREY_COVERAGE",
+    "market": "IN",
+    "priority": 5,
+    "conditions": {
+      "product_line": "Evolution of the Color",
+      "grey_percentage_min": 30
+    },
+    "actions": {
+      "natural_series": "Use Naturali, Naturali Bahia (NB), or Naturali Intensi (NI)",
+      "intense_natural_mix": "Mix 40% Natural Intensi + 60% Fashion shade to maintain tone vibrancy",
+      "cover_reds": "Use 5.6, 6.6, 7.6 directly or in equal parts with warm fashion series"
+    },
+    "source_section": "Evolution of the Color Grey Coverage Protocol",
+    "source_doc_key": "evolution_of_the_color_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

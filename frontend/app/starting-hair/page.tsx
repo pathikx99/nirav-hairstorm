@@ -9,10 +9,6 @@ import {
 } from "../../types/assessment";
 import { ToneFamily, UniversalLevel } from "../../types/uhcr";
 import { useApp } from "../../context/AppContext";
-import { RegionAssessmentCard } from "../../features/assessment/RegionAssessmentCard";
-import { HistoryChecklist } from "../../features/assessment/HistoryChecklist";
-import { PhotoAnalysisModal } from "../../features/assessment/PhotoAnalysisModal";
-import { InteractiveHeadAvatar } from "../../components/visual/InteractiveHeadAvatar";
 import { HairStrandMacroStudio } from "../../components/visual/HairStrandMacroStudio";
 import { RealisticHairSwatch } from "../../components/visual/RealisticHairSwatch";
 import { VisualGreySelector } from "../../components/visual/VisualGreySelector";
@@ -22,10 +18,12 @@ import { StickyBottomBar } from "../../components/StickyBottomBar";
 
 export default function StartingHairPage() {
   const router = useRouter();
-  const { mode, consultationMode, setConsultationMode, lightingMode, setLightingMode } = useApp();
+  const {
+    lightingMode,
+    setLightingMode,
+  } = useApp();
   const [photoModalOpen, setPhotoModalOpen] = useState(false);
   const [activeZone, setActiveZone] = useState<"ROOTS" | "MID_LENGTHS" | "ENDS">("ROOTS");
-  const [previewTab, setPreviewTab] = useState<"AVATAR" | "STRAND">("AVATAR");
   const [safetyExpanded, setSafetyExpanded] = useState(false);
 
   const [roots, setRoots] = useState<HairRegionInput>({
@@ -33,6 +31,7 @@ export default function StartingHairPage() {
     observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
+    is_bleached: false,
     grey_percentage: 0,
     porosity: "NORMAL",
     condition: "HEALTHY",
@@ -45,6 +44,7 @@ export default function StartingHairPage() {
     observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
+    is_bleached: false,
     grey_percentage: 0,
     porosity: "NORMAL",
     condition: "HEALTHY",
@@ -57,6 +57,7 @@ export default function StartingHairPage() {
     observed_level: 1,
     observed_undertone: "NATURAL",
     existing_artificial_colour: false,
+    is_bleached: false,
     grey_percentage: 0,
     porosity: "NORMAL",
     condition: "HEALTHY",
@@ -133,7 +134,7 @@ export default function StartingHairPage() {
     setEnds((prev) => ({ ...prev, ...pEnds }));
   };
 
-  const [syncAllZones, setSyncAllZones] = useState(false);
+  const [syncAllZones, setSyncAllZones] = useState(true);
 
   const currentRegion =
     activeZone === "ROOTS"
@@ -159,12 +160,13 @@ export default function StartingHairPage() {
   };
 
   const handleApplyToAllZones = () => {
-            setRoots((prev) => ({
+    setRoots((prev) => ({
       ...prev,
       observed_level: currentRegion.observed_level,
       observed_undertone: currentRegion.observed_undertone,
       grey_percentage: currentRegion.grey_percentage,
       existing_artificial_colour: currentRegion.existing_artificial_colour,
+      is_bleached: currentRegion.is_bleached,
     }));
     setMidLengths((prev) => ({
       ...prev,
@@ -172,6 +174,7 @@ export default function StartingHairPage() {
       observed_undertone: currentRegion.observed_undertone,
       grey_percentage: currentRegion.grey_percentage,
       existing_artificial_colour: currentRegion.existing_artificial_colour,
+      is_bleached: currentRegion.is_bleached,
     }));
     setEnds((prev) => ({
       ...prev,
@@ -179,244 +182,42 @@ export default function StartingHairPage() {
       observed_undertone: currentRegion.observed_undertone,
       grey_percentage: currentRegion.grey_percentage,
       existing_artificial_colour: currentRegion.existing_artificial_colour,
+      is_bleached: currentRegion.is_bleached,
     }));
   };
 
-  const handleQuickPreset = (preset: "VIRGIN_BLACK" | "VIRGIN_BROWN" | "GREY_ROOTS" | "COLOURED_ENDS" | "HENNA") => {
-        if (preset === "VIRGIN_BLACK") {
-            const r: HairRegionInput = { region: "ROOTS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
-      setRoots(r);
-      setMidLengths({ ...r, region: "MID_LENGTHS", is_on_scalp: false });
-      setEnds({ ...r, region: "ENDS", is_on_scalp: false });
-      setSyncAllZones(false);
-    } else if (preset === "VIRGIN_BROWN") {
-            const r: HairRegionInput = { region: "ROOTS", observed_level: 4, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
-      setRoots(r);
-      setMidLengths({ ...r, region: "MID_LENGTHS", is_on_scalp: false });
-      setEnds({ ...r, region: "ENDS", is_on_scalp: false });
-      setSyncAllZones(false);
-    } else if (preset === "GREY_ROOTS") {
-            setRoots({ region: "ROOTS", observed_level: 4, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 50, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true });
-      setMidLengths({ region: "MID_LENGTHS", observed_level: 4, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 15, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true });
-      setEnds({ region: "ENDS", observed_level: 4, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true });
-      setSyncAllZones(false);
-    } else if (preset === "COLOURED_ENDS") {
-            setRoots({ region: "ROOTS", observed_level: 4, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true });
-      setMidLengths({ region: "MID_LENGTHS", observed_level: 6, observed_undertone: "COPPER", existing_artificial_colour: true, grey_percentage: 0, porosity: "HIGH", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true });
-      setEnds({ region: "ENDS", observed_level: 6, observed_undertone: "COPPER", existing_artificial_colour: true, grey_percentage: 0, porosity: "HIGH", condition: "HEALTHY", is_on_scalp: false, colourist_confirmed: true });
-      setSyncAllZones(false);
-    } else if (preset === "HENNA") {
-            setHistory((prev) => ({ ...prev, has_metallic_salts_or_henna: true }));
-    }
-  };
+
 
   const levels: UniversalLevel[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  // Visual Stylist View (Default)
-  if (mode === "STYLIST") {
-    return (
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-6 pb-28 sm:pb-24">
-        {/* Top Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-neutral-800 pb-5">
-          <div>
-            <span className="text-xs font-black text-amber-400 uppercase tracking-widest">
-              Step 1 of 3 • Hair Assessment
-            </span>
-            <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2">
-              <span>👤</span> Customer Hair Check
-            </h1>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              Touch hair zone on avatar to adjust level • Use camera auto-scan if desired
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            
-            <button
-              type="button"
-              onClick={() => setPhotoModalOpen(true)}
-              className="inline-flex items-center gap-2 rounded-2xl bg-amber-500 hover:bg-amber-400 px-4 py-2.5 text-xs font-black text-neutral-950 shadow-lg shadow-amber-500/20 transition-all active:scale-95"
-            >
-              <span>📸</span> AUTO-SCAN WITH CAMERA
-            </button>
-          </div>
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-6 pb-28 sm:pb-24">
+      {/* Top Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-neutral-800 pb-5">
+        <div>
+          <span className="text-xs font-black text-amber-400 uppercase tracking-widest">
+            Step 1 of 3 • Hair Assessment
+          </span>
+          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight flex items-center gap-2">
+            <span>👤</span> Customer Hair Check
+          </h1>
+          <p className="text-xs text-neutral-400 mt-0.5">
+            Select hair zone to adjust level & undertone • Use camera auto-scan if desired
+          </p>
         </div>
 
-        {/* Mode Selector Pill: Express vs Pro Lab */}
-        <div className="flex items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/60 p-3">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-neutral-400">Consultation Flow:</span>
-            <span className="text-xs font-black text-amber-400">
-              {consultationMode === "EXPRESS" ? "⚡ Express 10s Mode" : "🔬 Pro Lab Multi-Zone Mode"}
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <button
-              type="button"
-              onClick={() => setConsultationMode("EXPRESS")}
-              className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-                consultationMode === "EXPRESS"
-                  ? "bg-amber-500 text-neutral-950 shadow-md"
-                  : "bg-neutral-800 text-neutral-400 hover:text-white"
-              }`}
-            >
-              ⚡ Express
-            </button>
-            <button
-              type="button"
-              onClick={() => setConsultationMode("PRO")}
-              className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-                consultationMode === "PRO"
-                  ? "bg-amber-500 text-neutral-950 shadow-md"
-                  : "bg-neutral-800 text-neutral-400 hover:text-white"
-              }`}
-            >
-              🔬 Pro Lab
-            </button>
-          </div>
+        <div className="flex items-center gap-2.5">
+          <button
+            type="button"
+            onClick={() => setPhotoModalOpen(true)}
+            className="inline-flex items-center gap-2 rounded-2xl bg-amber-500 hover:bg-amber-400 px-4 py-2.5 text-xs font-black text-neutral-950 shadow-lg shadow-amber-500/20 transition-all active:scale-95"
+          >
+            <span>📸</span> AUTO-SCAN WITH CAMERA
+          </button>
         </div>
+      </div>
 
-        {/* Express Consultation Quick Card */}
-        {consultationMode === "EXPRESS" && (
-          <div className="rounded-3xl border border-amber-500/40 bg-linear-to-b from-neutral-900 via-neutral-900/90 to-neutral-950 p-6 sm:p-8 shadow-2xl space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-neutral-800 pb-4">
-              <div>
-                <span className="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-widest block">
-                  ⚡ 10-Second Express Salon Check
-                </span>
-                <h2 className="text-xl font-black text-white">
-                  Client Natural Starting Level & Grey Cover
-                </h2>
-              </div>
-              <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 w-fit">
-                Fast Uniform Setup
-              </span>
-            </div>
 
-            {/* Quick Level Selector */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <label className="text-xs font-bold text-white uppercase tracking-wider">
-                  1. Current Starting Depth Level:
-                </label>
-                <span className="text-xs font-mono font-bold text-amber-400">
-                  Level {roots.observed_level} Selected
-                </span>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-2">
-                {levels.map((lvl) => (
-                  <RealisticHairSwatch
-                    key={lvl}
-                    level={lvl}
-                    selected={roots.observed_level === lvl}
-                    onClick={(l) => {
-                      setRoots((prev) => ({ ...prev, observed_level: l }));
-                      setMidLengths((prev) => ({ ...prev, observed_level: l }));
-                      setEnds((prev) => ({ ...prev, observed_level: l }));
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Grey Percentage Pills */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-white uppercase tracking-wider block">
-                2. Grey Hair Percentage:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {[0, 25, 50, 75, 100].map((pct) => (
-                  <button
-                    key={pct}
-                    type="button"
-                    onClick={() => {
-                      setRoots((prev) => ({ ...prev, grey_percentage: pct }));
-                      setMidLengths((prev) => ({ ...prev, grey_percentage: Math.min(pct, 25) }));
-                      setEnds((prev) => ({ ...prev, grey_percentage: 0 }));
-                    }}
-                    className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${
-                      roots.grey_percentage === pct
-                        ? "bg-amber-500 text-neutral-950 shadow-md ring-2 ring-amber-400 scale-[1.02]"
-                        : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
-                    }`}
-                  >
-                    {pct === 0 ? "0% (No Grey)" : `${pct}% Grey`}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Quick Prior Colour Check */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-white uppercase tracking-wider block">
-                3. Previous Artificial Colour:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setRoots((prev) => ({ ...prev, existing_artificial_colour: false }));
-                    setMidLengths((prev) => ({ ...prev, existing_artificial_colour: false }));
-                    setEnds((prev) => ({ ...prev, existing_artificial_colour: false }));
-                  }}
-                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${
-                    !roots.existing_artificial_colour
-                      ? "bg-emerald-500 text-neutral-950 shadow-md ring-2 ring-emerald-400"
-                      : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
-                  }`}
-                >
-                  🌿 Virgin Natural Hair
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setRoots((prev) => ({ ...prev, existing_artificial_colour: false }));
-                    setMidLengths((prev) => ({ ...prev, existing_artificial_colour: true }));
-                    setEnds((prev) => ({ ...prev, existing_artificial_colour: true }));
-                  }}
-                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${
-                    midLengths.existing_artificial_colour
-                      ? "bg-amber-500 text-neutral-950 shadow-md ring-2 ring-amber-400"
-                      : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
-                  }`}
-                >
-                  🎨 Previously Coloured Lengths
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    setHistory((prev) => ({
-                      ...prev,
-                      has_metallic_salts_or_henna: !prev.has_metallic_salts_or_henna,
-                    }))
-                  }
-                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all ${
-                    history.has_metallic_salts_or_henna
-                      ? "bg-rose-600 text-white shadow-md ring-2 ring-rose-400"
-                      : "bg-neutral-800 text-rose-300 border border-rose-900/50 hover:bg-neutral-700"
-                  }`}
-                >
-                  {history.has_metallic_salts_or_henna ? "⚠️ Henna / Mehendi Detected" : "🌿 Henna / Mehendi Used?"}
-                </button>
-              </div>
-            </div>
-
-            {/* Instant Express Proceed Button */}
-            <div className="pt-4 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-xs text-neutral-400">
-                Want multi-zone head mapping? Switch to <strong>Pro Lab Mode</strong> above.
-              </span>
-              <button
-                type="button"
-                onClick={handleSaveAndProceed}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-2xl bg-amber-500 hover:bg-amber-400 px-8 py-3.5 text-sm font-black text-neutral-950 shadow-xl shadow-amber-500/25 transition-all hover:scale-[1.02] active:scale-95"
-              >
-                <span>⚡ PROCEED TO TARGET LOOK</span>
-                <span className="text-lg">➔</span>
-              </button>
-            </div>
-          </div>
-        )}
 
         {/* Safety Warning Banner if Allergy Checked */}
         {history.has_allergy_history && (
@@ -431,145 +232,23 @@ export default function StartingHairPage() {
           </div>
         )}
 
-        {/* Pro Lab Multi-Zone Head Mapping Section */}
-        {consultationMode === "PRO" && (
-          <>
-            {/* Quick Hair Profile Presets (1-Tap Salon Presets) */}
-        <div className="rounded-3xl border border-neutral-800 bg-neutral-900/80 p-4 sm:p-5 space-y-2.5">
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-bold text-neutral-300 uppercase tracking-wider flex items-center gap-1.5">
-              <span>⚡</span> 1-Tap Quick Hair Profiles:
-            </span>
-            <span className="text-[11px] text-neutral-400">
-              Select in 1 tap without manual zone setup
-            </span>
-          </div>
 
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => handleQuickPreset("VIRGIN_BLACK")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 transition-all hover:scale-[1.02]"
-            >
-              <span>🖤</span>
-              <span>Virgin Jet Black (L1)</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickPreset("VIRGIN_BROWN")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 transition-all hover:scale-[1.02]"
-            >
-              <span>🟤</span>
-              <span>Medium Brown Virgin (L4)</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickPreset("GREY_ROOTS")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 transition-all hover:scale-[1.02]"
-            >
-              <span>👵</span>
-              <span>50% Grey at Roots</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickPreset("COLOURED_ENDS")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 transition-all hover:scale-[1.02]"
-            >
-              <span>🎨</span>
-              <span>Dyed Ends (L6 Copper)</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleQuickPreset("HENNA")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-rose-950/50 hover:bg-rose-900/50 text-rose-300 border border-rose-800/60 transition-all hover:scale-[1.02]"
-            >
-              <span>🌿</span>
-              <span>Henna / Mehendi Alert</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                const fresh: HairRegionInput = { region: "ROOTS", observed_level: 1, observed_undertone: "NATURAL", existing_artificial_colour: false, grey_percentage: 0, porosity: "NORMAL", condition: "HEALTHY", is_on_scalp: true, colourist_confirmed: true };
-                setRoots(fresh);
-                setMidLengths({ ...fresh, region: "MID_LENGTHS", is_on_scalp: false });
-                setEnds({ ...fresh, region: "ENDS", is_on_scalp: false });
-                setSyncAllZones(false);
-                try {
-                  const assessment: HairAssessmentInput = {
-                    market: "IN",
-                    roots: fresh,
-                    mid_lengths: { ...fresh, region: "MID_LENGTHS", is_on_scalp: false },
-                    ends: { ...fresh, region: "ENDS", is_on_scalp: false },
-                    history,
-                  };
-                  localStorage.setItem("nh_hair_assessment", JSON.stringify(assessment));
-                } catch {
-                  // ignore
-                }
-              }}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-black bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 transition-all hover:scale-[1.02]"
-              title="Reset all zones to Level 1 Jet Black with 0% grey"
-            >
-              <span>🔄</span>
-              <span>Reset L1 All Over (0% White)</span>
-            </button>
-          </div>
-        </div>
 
-        {/* Dual-Column Interactive Avatar + Zone Swatch Picker */}
+        {/* Dual-Column Interactive Strand Studio + Zone Swatch Picker */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Column 1: Interactive Head Avatar (5 cols) + Hair Strand Macro Studio */}
+          {/* Column 1: Hair Strand Macro Studio (5 cols) */}
           <div className="lg:col-span-5 space-y-3 lg:sticky lg:top-20">
-            {/* View switcher between Avatar Head Map and Macro Strand */}
-            <div className="flex items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/80 p-1.5 shadow-sm">
-              <button
-                type="button"
-                onClick={() => setPreviewTab("AVATAR")}
-                className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 ${
-                  previewTab === "AVATAR"
-                    ? "bg-amber-500 text-neutral-950 shadow-md"
-                    : "text-neutral-400 hover:text-white"
-                }`}
-              >
-                <span>👤</span>
-                <span>Head Map ({activeZone === "ROOTS" ? "Roots" : activeZone === "MID_LENGTHS" ? "Mid" : "Ends"})</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setPreviewTab("STRAND")}
-                className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 ${
-                  previewTab === "STRAND"
-                    ? "bg-amber-500 text-neutral-950 shadow-md"
-                    : "text-neutral-400 hover:text-white"
-                }`}
-              >
-                <span>🔬</span>
-                <span>Strand Texture</span>
-              </button>
-            </div>
-
-            {previewTab === "AVATAR" ? (
-              <InteractiveHeadAvatar
-                activeRegion={activeZone}
-                onSelectRegion={(zone) => {
-                  setActiveZone(zone);
-                  setSyncAllZones(false);
-                }}
-                roots={roots}
-                midLengths={midLengths}
-                ends={ends}
-              />
-            ) : (
-              <HairStrandMacroStudio
-                level={currentRegion.observed_level || 5}
-                primaryTone={(currentRegion.observed_undertone as ToneFamily) || "NATURAL"}
-                greyPercentage={currentRegion.grey_percentage || 0}
-                lightingMode={lightingMode}
-                onLightingModeChange={setLightingMode}
-                showLightingComparison={true}
-                className="w-full"
-              />
-            )}
+            <HairStrandMacroStudio
+              level={currentRegion.observed_level || 5}
+              primaryTone={(currentRegion.observed_undertone as ToneFamily) || "NATURAL"}
+              greyPercentage={currentRegion.grey_percentage || 0}
+              isBleached={currentRegion.is_bleached}
+              lightingMode={lightingMode}
+              onLightingModeChange={setLightingMode}
+              zoneLabel={activeZone === "ROOTS" ? "Zone 1: Roots" : activeZone === "MID_LENGTHS" ? "Zone 2: Mid-Lengths" : "Zone 3: Ends"}
+              showLightingComparison={false}
+              className="w-full"
+            />
           </div>
 
           {/* Column 2: Swatch & Detail Picker for Active Zone (7 cols) */}
@@ -628,20 +307,89 @@ export default function StartingHairPage() {
               </div>
             </div>
 
+            {/* Zone Selector Tabs (Roots / Mid-Lengths / Ends) */}
+            <div className="flex items-center gap-2 p-1.5 bg-neutral-950/80 rounded-2xl border border-neutral-800/80">
+              <button
+                type="button"
+                onClick={() => setActiveZone("ROOTS")}
+                className={`flex-1 py-2 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  activeZone === "ROOTS"
+                    ? "bg-amber-500 text-neutral-950 shadow-md shadow-amber-500/20"
+                    : "text-neutral-400 hover:text-white hover:bg-neutral-900"
+                }`}
+              >
+                <span>🌱</span>
+                <span>Zone 1: Roots</span>
+                <span className="text-[10px] opacity-80 font-mono">L{roots.observed_level}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveZone("MID_LENGTHS")}
+                className={`flex-1 py-2 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  activeZone === "MID_LENGTHS"
+                    ? "bg-amber-500 text-neutral-950 shadow-md shadow-amber-500/20"
+                    : "text-neutral-400 hover:text-white hover:bg-neutral-900"
+                }`}
+              >
+                <span>〰️</span>
+                <span>Zone 2: Mid-Lengths</span>
+                <span className="text-[10px] opacity-80 font-mono">L{midLengths.observed_level}</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveZone("ENDS")}
+                className={`flex-1 py-2 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  activeZone === "ENDS"
+                    ? "bg-amber-500 text-neutral-950 shadow-md shadow-amber-500/20"
+                    : "text-neutral-400 hover:text-white hover:bg-neutral-900"
+                }`}
+              >
+                <span>✨</span>
+                <span>Zone 3: Ends</span>
+                <span className="text-[10px] opacity-80 font-mono">L{ends.observed_level}</span>
+              </button>
+            </div>
+
             {/* Realistic Hair Swatches (Levels 1 to 10) */}
             <div className="space-y-3">
-              <label className="text-xs font-bold text-neutral-300 block">
-                Hair Depth Level (Select Depth Level 1–10):
-              </label>
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-bold text-neutral-300 block">
+                  Hair Depth Level (Select Depth Level 1–10):
+                </label>
+                {currentRegion.is_bleached && (
+                  <span className="text-[10px] font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/30">
+                    ⚡ Showing Raw Exposed Undertones
+                  </span>
+                )}
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                 {levels.map((lvl) => (
                   <RealisticHairSwatch
                     key={lvl}
                     level={lvl}
+                    isBleached={currentRegion.is_bleached}
                     selected={currentRegion.observed_level === lvl}
-                    onClick={(l) =>
-                      setCurrentRegion({ ...currentRegion, observed_level: l })
-                    }
+                    onClick={(l) => {
+                      const undertonesByLevel: Record<number, ToneFamily> = {
+                        1: "NATURAL",
+                        2: "RED",
+                        3: "RED",
+                        4: "RED",
+                        5: "COPPER",
+                        6: "COPPER",
+                        7: "GOLD",
+                        8: "GOLD",
+                        9: "GOLD",
+                        10: "NATURAL",
+                      };
+                      setCurrentRegion({
+                        ...currentRegion,
+                        observed_level: l,
+                        observed_undertone: currentRegion.is_bleached
+                          ? undertonesByLevel[l] || "GOLD"
+                          : currentRegion.observed_undertone,
+                      });
+                    }}
                   />
                 ))}
               </div>
@@ -654,6 +402,76 @@ export default function StartingHairPage() {
                 setCurrentRegion({ ...currentRegion, grey_percentage: pct })
               }
             />
+
+            {/* Bleached / Pre-lightened Check */}
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold text-white block">
+                    Is this hair bleached or pre-lightened?
+                  </span>
+                  {currentRegion.is_bleached && (
+                    <span className="text-[10px] font-black bg-amber-500 text-neutral-950 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      ⚡ Undertone Active
+                    </span>
+                  )}
+                </div>
+                <span className="text-xs text-neutral-400 block mt-0.5">
+                  If bleached, raw underlying warm undertone pigments are exposed and used in formulation.
+                </span>
+              </div>
+              <div className="flex gap-2 shrink-0">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const undertonesByLevel: Record<number, ToneFamily> = {
+                      1: "NATURAL",
+                      2: "RED",
+                      3: "RED",
+                      4: "RED",
+                      5: "COPPER",
+                      6: "COPPER",
+                      7: "GOLD",
+                      8: "GOLD",
+                      9: "GOLD",
+                      10: "NATURAL",
+                    };
+                    const lvl = currentRegion.observed_level || 5;
+                    setCurrentRegion({
+                      ...currentRegion,
+                      is_bleached: true,
+                      existing_artificial_colour: true,
+                      observed_undertone: undertonesByLevel[lvl] || "GOLD",
+                      porosity: "HIGH",
+                      condition: currentRegion.condition === "HEALTHY" ? "MODERATELY_DAMAGED" : currentRegion.condition,
+                    });
+                  }}
+                  className={`px-3.5 py-2 rounded-xl text-xs font-black transition-all ${
+                    currentRegion.is_bleached
+                      ? "bg-amber-500 text-neutral-950 shadow-md ring-2 ring-amber-400"
+                      : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
+                  }`}
+                >
+                  ⚡ YES (Bleached)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setCurrentRegion({
+                      ...currentRegion,
+                      is_bleached: false,
+                    });
+                  }}
+                  className={`px-3.5 py-2 rounded-xl text-xs font-black transition-all ${
+                    !currentRegion.is_bleached
+                      ? "bg-neutral-700 text-white shadow-md ring-1 ring-neutral-400"
+                      : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
+                  }`}
+                >
+                  🌿 NO (Natural / Unbleached)
+                </button>
+              </div>
+            </div>
 
             {/* Artificial Dye Check */}
             <div className="rounded-2xl border border-neutral-800 bg-neutral-950/70 p-4 flex items-center justify-between gap-4">
@@ -669,7 +487,7 @@ export default function StartingHairPage() {
                 <button
                   type="button"
                   onClick={() => {
-                                        setCurrentRegion({
+                    setCurrentRegion({
                       ...currentRegion,
                       existing_artificial_colour: true,
                     });
@@ -685,7 +503,7 @@ export default function StartingHairPage() {
                 <button
                   type="button"
                   onClick={() => {
-                                        setCurrentRegion({
+                    setCurrentRegion({
                       ...currentRegion,
                       existing_artificial_colour: false,
                     });
@@ -702,8 +520,6 @@ export default function StartingHairPage() {
             </div>
           </div>
         </div>
-        </>
-      )}
 
         {/* Collapsible Customer Safety & Chemical History Accordion */}
         <div className="rounded-3xl border border-neutral-800 bg-neutral-900/60 overflow-hidden shadow-lg transition-all">
@@ -872,171 +688,4 @@ export default function StartingHairPage() {
         )}
       </div>
     );
-  }
-
-  // Chemist Mode View (Technical Data)
-  return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-8 pb-28 sm:pb-24">
-      {/* Top Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-neutral-800 pb-5">
-        <div>
-          <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">
-            Step 1 of 3 • Chemist Data Mode
-          </span>
-          <h1 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            Starting Hair Assessment
-          </h1>
-          <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-            Independent assessment of Roots, Mid-lengths, and Ends per UHCR v1 §2.9.
-          </p>
-        </div>
-
-        <button
-          type="button"
-          onClick={() => setPhotoModalOpen(true)}
-          className="inline-flex items-center gap-2 rounded-xl border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 px-4 py-2.5 text-xs font-semibold text-white transition-all shadow-sm"
-        >
-          <span>📸</span> Photo-Assisted Assessment
-        </button>
-      </div>
-
-      {/* Safety Alert if Allergy Checked */}
-      {history.has_allergy_history && (
-        <div className="rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-xs text-rose-300 flex items-start gap-3">
-          <span className="text-lg">⛔</span>
-          <div>
-            <strong className="block font-bold">Safety Invariant Warning:</strong>
-            Prior allergic reaction reported. Automated formulation engine will enforce a hard BLOCKED status on oxidative colour formulas.
-          </div>
-        </div>
-      )}
-
-      {/* Multi-Zone Region Assessments */}
-      <div className="space-y-6">
-        <RegionAssessmentCard
-          title="Roots / Regrowth Region"
-          subtitle="Direct scalp contact zone (typically on-scalp application)."
-          region={roots}
-          onChange={setRoots}
-        />
-
-        <RegionAssessmentCard
-          title="Mid-Lengths Region"
-          subtitle="Intermediate zone between regrowth and ends."
-          region={midLengths}
-          onChange={setMidLengths}
-        />
-
-        <RegionAssessmentCard
-          title="Ends Region"
-          subtitle="Most porous and chemically processed zone; high risk of tonal grab."
-          region={ends}
-          onChange={setEnds}
-        />
-      </div>
-
-      {/* Client Health & Chemical History */}
-      <HistoryChecklist history={history} onChange={setHistory} />
-
-      {/* Action Footer */}
-      <div className="flex justify-between items-center pt-4 border-t border-neutral-800">
-        <span className="text-xs text-neutral-500">
-          Principle 8: Regional variation requires independent technical consideration.
-        </span>
-
-        <button
-          type="button"
-          onClick={handleSaveAndProceed}
-          className="inline-flex items-center gap-2 rounded-xl bg-amber-500 hover:bg-amber-400 px-6 py-3 text-sm font-bold text-neutral-950 shadow-lg shadow-amber-500/20 transition-all hover:scale-[1.02]"
-        >
-          Proceed to Target Colour <span>→</span>
-        </button>
-      </div>
-
-      {/* Sticky Bottom Action Dock */}
-      <StickyBottomBar
-        summary={
-          <>
-            <span className="text-[10px] font-mono text-neutral-400 uppercase font-bold mr-1">
-              Chemist Mode:
-            </span>
-            <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-black text-amber-300">
-              R: L{roots.observed_level} • M: L{midLengths.observed_level} • E: L{ends.observed_level}
-            </span>
-            <span className="px-2.5 py-1 rounded-lg bg-neutral-900 border border-neutral-800 text-xs font-black text-neutral-300">
-              {history.has_allergy_history ? "🛑 Allergy Blocked" : "✓ Formula Safe"}
-            </span>
-          </>
-        }
-        nextAction={{
-          label: "PROCEED TO TARGET COLOUR",
-          onClick: handleSaveAndProceed,
-          icon: "→",
-        }}
-      />
-
-      {/* Photo Assessment Modal */}
-      <PhotoAnalysisModal
-        isOpen={photoModalOpen}
-        onClose={() => setPhotoModalOpen(false)}
-        onApplyPredictions={handleApplyPhotoPredictions}
-      />
-
-      {/* Hard Contraindication Pre-Flight Warning Modal */}
-      {contraindicationWarningOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 animate-in fade-in duration-200">
-          <div className="max-w-lg w-full rounded-3xl border border-rose-500/50 bg-neutral-950 p-6 sm:p-8 shadow-2xl space-y-5 text-left">
-            <div className="flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rose-500/20 text-rose-400 text-2xl border border-rose-500/40">
-                🛑
-              </span>
-              <div>
-                <h3 className="text-base sm:text-lg font-black text-white">
-                  Safety Warning: Hard Contraindication
-                </h3>
-                <p className="text-xs text-rose-300 font-medium">
-                  Critical chemical contraindication detected in client history
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-xs text-rose-200 space-y-2">
-              {history.has_allergy_history && (
-                <p>• <strong>Documented Allergy History:</strong> Oxidative hair dyes (PPD/PTD) carry severe risk of contact dermatitis or anaphylaxis without verified 48h patch testing.</p>
-              )}
-              {history.has_sodium_hydroxide_relaxer && (
-                <p>• <strong>Sodium Hydroxide / Lye Relaxer:</strong> Bleaching or oxidative high-lift over lye relaxers can cause severe structural dissolution and chemical breakage.</p>
-              )}
-              {(history.scalp_condition === "abraded" || history.scalp_condition === "inflamed") && (
-                <p>• <strong>Compromised Scalp Barrier:</strong> Chemical application directly onto abraded or inflamed scalp is strictly prohibited.</p>
-              )}
-              <p className="text-neutral-400 text-[11px] pt-1">
-                You may proceed to preview colors and non-oxidative alternatives, but chemical mixing will remain strictly blocked.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-2">
-              <button
-                type="button"
-                onClick={() => setContraindicationWarningOpen(false)}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-neutral-700 bg-neutral-900 text-xs font-bold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all cursor-pointer"
-              >
-                Return to Assessment
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setContraindicationWarningOpen(false);
-                  executeProceed();
-                }}
-                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-xs font-black text-white shadow-lg shadow-rose-600/30 transition-all cursor-pointer"
-              >
-                Proceed with Safety Notice ➔
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
 }

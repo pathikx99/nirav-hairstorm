@@ -1,0 +1,51 @@
+[
+  {
+    "rule_code": "WELLA-ILLUMINA-MIX",
+    "product_family": "Illumina Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Illumina Color",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0
+      },
+      "glossing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0,
+        "treatment_parts": 1.0
+      },
+      "example": "60g Illumina Color + 60g Welloxon Perfect"
+    },
+    "source_section": "Illumina Color Mixing Guidelines",
+    "source_doc_key": "illumina_color_shade_guide",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "WELLA-ILLUMINA-TIME",
+    "product_family": "Illumina Color",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Illumina Color"
+    },
+    "actions": {
+      "standard_time_minutes": 35,
+      "time_range": "30\u201340 min without heat, 15\u201325 min with Climazon",
+      "glossing_time_minutes": 10,
+      "heat_permitted": true
+    },
+    "source_section": "Illumina Color Development Times",
+    "source_doc_key": "illumina_color_shade_guide",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]

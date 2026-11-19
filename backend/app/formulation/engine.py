@@ -468,8 +468,12 @@ class FormulationEngine:
         stages: list[FormulationStage] = []
         region_plans: list[RegionFormulationPlan] = []
 
-        is_wella = "wella" in manufacturer.name.lower()
-        is_loreal = "l'oréal" in manufacturer.name.lower() or "loreal" in manufacturer.name.lower()
+        m_name_lower = manufacturer.name.lower()
+        is_wella = "wella" in m_name_lower
+        is_loreal = "l'oréal" in m_name_lower or "loreal" in m_name_lower
+        is_schwarzkopf = "schwarzkopf" in m_name_lower
+        is_alfaparf = "alfaparf" in m_name_lower
+        is_proads = "proads" in m_name_lower
 
         # Check if conditions across regions differ
         roots = assessment.roots
@@ -845,9 +849,18 @@ class FormulationEngine:
             rule_code = "FINE-FRAGILE-20V-CAP"
 
         resolved_dev = cls._resolve_developer(developers, req_dev_pct)
-        ratio_parts = Decimal("1.0") if is_wella else Decimal("1.5")
-        if "SPECIAL_BLONDE" in rule_code:
+
+        is_highlift_shade = (
+            "SPECIAL_BLONDE" in rule_code
+            or (target_shade and any(target_shade.shade_code.startswith(pre) for pre in ("12/", "11.", "12-", "10-", "11-", "13.")))
+            or (target_shade and any(p in (target_shade.shade_name or "").lower() for p in ("highlift", "superlift", "platinum", "special blonde")))
+        )
+        if is_highlift_shade:
             ratio_parts = Decimal("2.0")
+        elif is_wella or is_schwarzkopf or is_proads:
+            ratio_parts = Decimal("1.0")
+        else:
+            ratio_parts = Decimal("1.5")
 
         dev_formula = DeveloperComponentFormula(
             developer_id=resolved_dev.id if resolved_dev else None,
@@ -1085,14 +1098,18 @@ class FormulationEngine:
                 source_refs.append("Koleston Perfect Usage Guidelines Page 3 - Special Mix")
 
         # Mixing ratio and dev time
-        mix_ratio = "1:1" if is_wella else "1:1.5"
-        if "SPECIAL_BLONDE" in rule_code:
+        if is_highlift_shade:
             mix_ratio = "1:2"
-            dev_time = 50
-            dev_time_range = "50–60 min without heat"
+            dev_time = 55 if is_alfaparf else 50
+            dev_time_range = f"{dev_time} min without heat"
+        elif is_wella or is_schwarzkopf or is_proads:
+            mix_ratio = "1:1"
+            dev_time = 40 if is_proads else 35
+            dev_time_range = f"{dev_time - 5}–{dev_time} min without heat"
         else:
+            mix_ratio = "1:1.5"
             dev_time = 35
-            dev_time_range = "30–40 min without heat"
+            dev_time_range = "35 min without heat"
 
         # Indian Hair Phenotype Model & Coarse Texture Adjustment
         is_coarse = (
@@ -1113,11 +1130,38 @@ class FormulationEngine:
         # Check if verified product rules specify custom development time or mixing ratio
         for r in rules:
             actions = r.actions if hasattr(r, "actions") and isinstance(r.actions, dict) else {}
+            conditions = r.conditions if hasattr(r, "conditions") and isinstance(r.conditions, dict) else {}
+            is_rule_highlift = (
+                conditions.get("product_family") == "Special Blonde"
+                or conditions.get("shade_series") in ("12/", "Platinum", "Superlift", "Highlift", "12-", "10-", "11.", "13.")
+            )
+            # Skip toner rules, and ensure highlift/standard alignment
+            if conditions.get("service_type") == "TONER" or conditions.get("shade_series") in ("Harmonizers", "Toners", "Pastel"):
+                continue
+            if not is_highlift_shade and is_rule_highlift:
+                continue
+            if is_highlift_shade and not is_rule_highlift:
+                continue
+
             if "development_time_minutes" in actions:
                 dev_time = int(actions["development_time_minutes"])
                 dev_time_range = f"{dev_time} min without heat"
-            if "mixing_ratio" in actions and isinstance(actions["mixing_ratio"], str):
-                mix_ratio = actions["mixing_ratio"]
+
+            if "mixing_ratio" in actions:
+                mr = actions["mixing_ratio"]
+                if isinstance(mr, str):
+                    mix_ratio = mr
+                    if ":" in mr:
+                        try:
+                            parts = mr.split(":")
+                            ratio_parts = Decimal(parts[1]) / Decimal(parts[0])
+                        except Exception:
+                            pass
+                elif isinstance(mr, dict):
+                    c_parts = Decimal(str(mr.get("colour_parts", 1.0)))
+                    d_parts = Decimal(str(mr.get("developer_parts", 1.0)))
+                    ratio_parts = d_parts / c_parts
+                    mix_ratio = f"1:{ratio_parts:g}"
 
         # Porosity & Condition Modifiers
         has_high_porosity = any(
@@ -1507,14 +1551,19 @@ class FormulationEngine:
                 source_refs.append("Salon Zonal Color Formulation Manual — Dual-Bowl Porous Ends Technique")
         else:
             standard_app_instructions = (
-                "Apply mixture systematically to regrowth / roots first. "
-                "If refreshing mid-lengths and ends, emulsify through mid-lengths and ends during the final 10–15 minutes."
+                "Step 1 • PREPARATION: Dry, unwashed hair. Section into 4 equal quadrants with sectioning clips. Apply skin barrier cream around hairline and ears.\n"
+                f"Step 2 • DIGITAL SCALE MIXING: Place bowl on digital scale, tare to 0.0g. Weigh {Decimal('60.0')}g of {target_shade.shade_code if target_shade else 'colour'} and {Decimal('60.0') * ratio_parts}g of {resolved_dev.product_name if resolved_dev else 'developer'} ({mix_ratio} ratio). Whisk with colour whisk until completely homogeneous.\n"
+                "Step 3 • APPLICATION: Using a professional tint brush, apply in fine 0.5 cm slices starting from roots / regrowth. If refreshing lengths, pull through with wide-tooth comb during the final 10–15 minutes.\n"
+                f"Step 4 • PROCESSING: Dwell for {dev_time} minutes at room temperature. Do NOT apply artificial heat.\n"
+                "Step 5 • EMULSIFY & RINSE: Add a small splash of lukewarm water, massage hairline for 2 minutes to lift stains, then rinse until water runs completely clear. Follow with post-colour pH-neutralizing shampoo and conditioner."
             )
             if any(r.condition == HairConditionEnum.SEVERELY_DAMAGED for r in (mid, ends)):
                 standard_app_instructions = (
-                    "Zonal Protection Technique: Apply formula to roots first. "
-                    "CAUTION: Compromised/damaged lengths and ends must NOT be exposed to full-strength alkaline developer. "
-                    "For mid-lengths and ends, dilute remaining mixture 1:1 with clear post-treatment or apply an acidic demi-permanent gloss (6 Vol / 1.9%) during the final 5–10 minutes only."
+                    "Step 1 • PREPARATION & BARRIER: Section into 4 quadrants. Apply porosity equalizer to sensitized lengths.\n"
+                    f"Step 2 • REGROWTH FORMULA: Mix {Decimal('60.0')}g of {target_shade.shade_code if target_shade else 'colour'} with {Decimal('60.0') * ratio_parts}g of {resolved_dev.product_name if resolved_dev else 'developer'} ({mix_ratio} ratio).\n"
+                    "Step 3 • REGROWTH APPLICATION: Apply to new growth roots only. CAUTION: Severely compromised lengths and ends must NOT be exposed to full-strength developer.\n"
+                    f"Step 4 • REFRESH TECHNIQUE: Process roots for {dev_time - 15} minutes. For compromised lengths, dilute remaining mixture 1:1 with clear post-treatment or apply gentle 6 Vol gloss during the final 10 minutes only.\n"
+                    "Step 5 • RINSE & SEAL: Emulsify gently without friction, rinse thoroughly, and apply reconstructive cuticle sealer."
                 )
 
             stage_single = FormulationStage(

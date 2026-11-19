@@ -104,6 +104,10 @@ class HairRegionInput(BaseModel):
         default=False,
         description="Whether this region contains existing artificial dye or pigment.",
     )
+    is_bleached: bool = Field(
+        default=False,
+        description="Whether this region has been bleached or pre-lightened, exposing the raw warm undertone.",
+    )
     grey_percentage: Decimal = Field(
         default=Decimal("0.0"),
         ge=0,

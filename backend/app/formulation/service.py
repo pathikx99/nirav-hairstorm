@@ -67,17 +67,22 @@ class FormulationService:
         # -------------------------------------------------------------------
         if request.mode == ProcessModeEnum.PREFERRED_MANUFACTURER:
             mfg_id = request.manufacturer_id
-            if mfg_id is None:
-                raise HTTPException(
-                    status_code=400,
-                    detail="manufacturer_id is required in PREFERRED_MANUFACTURER mode.",
-                )
+            mfg: Manufacturer | None = None
+            if mfg_id is not None:
+                mfg = await db.get(Manufacturer, mfg_id)
 
-            mfg = await db.get(Manufacturer, mfg_id)
+            if mfg is None:
+                # Resilient fallback: select first active manufacturer
+                stmt = select(Manufacturer).where(
+                    Manufacturer.status == ManufacturerStatusEnum.ACTIVE
+                )
+                res = await db.execute(stmt)
+                mfg = res.scalars().first()
+
             if mfg is None:
                 raise HTTPException(
                     status_code=404,
-                    detail=f"Manufacturer with id {mfg_id} not found.",
+                    detail="No active manufacturer catalogue found in system.",
                 )
 
             return await cls._evaluate_single_manufacturer(

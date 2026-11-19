@@ -181,16 +181,32 @@ export function VisualLookbook({
                 <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(90deg,transparent,transparent_2px,rgba(255,255,255,0.2)_3px,transparent_5px)]" />
 
                 {/* Level / Shade Badge */}
-                <div className="absolute top-3 left-3 rounded-full bg-black/85 backdrop-blur-md px-3 py-1 text-xs font-black text-white border border-white/20">
+                <div className="absolute top-2.5 left-2.5 rounded-full bg-black/85 backdrop-blur-md px-2.5 py-1 text-[11px] font-black text-white border border-white/20 shadow-md">
                   Level {item.level} • {item.shadeCode}
                 </div>
 
-                {/* Technique & Lift Delta Pills */}
-                <div className="absolute top-3 right-3 flex flex-col items-end gap-1.5">
+                {/* Look Tag Badge (e.g. Trending #1, Viral) */}
+                {item.tag && (
+                  <div className="absolute bottom-2.5 left-2.5 rounded-full bg-amber-500 text-neutral-950 px-2.5 py-0.5 text-[9px] font-black shadow-md">
+                    {item.tag}
+                  </div>
+                )}
+
+                {/* Selected Checkmark Badge */}
+                {isSelected && (
+                  <div className="absolute bottom-2.5 right-2.5 flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-neutral-950 font-black text-xs shadow-xl animate-pulse">
+                    ✓
+                  </div>
+                )}
+              </div>
+
+              {/* Look Info & Technique Badges */}
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-1.5 flex-wrap">
                   <span className={`rounded-full px-2 py-0.5 text-[9px] font-black uppercase tracking-wider border ${techBadge.color}`}>
                     {techBadge.label}
                   </span>
-                  <span className="rounded-full bg-black/75 backdrop-blur-md px-2 py-0.5 text-[10px] font-bold text-amber-300 border border-neutral-700" suppressHydrationWarning>
+                  <span className="rounded-full bg-neutral-800/90 px-2 py-0.5 text-[9px] font-bold text-amber-300 border border-neutral-700" suppressHydrationWarning>
                     {levelDelta > 0
                       ? `+${levelDelta} Lift`
                       : levelDelta < 0
@@ -199,24 +215,7 @@ export function VisualLookbook({
                   </span>
                 </div>
 
-                {/* Look Tag Badge (e.g. Trending #1, Viral) */}
-                {item.tag && (
-                  <div className="absolute bottom-3 left-3 rounded-full bg-amber-500 text-neutral-950 px-2.5 py-0.5 text-[10px] font-black shadow-md">
-                    {item.tag}
-                  </div>
-                )}
-
-                {/* Selected Checkmark Badge */}
-                {isSelected && (
-                  <div className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400 text-neutral-950 font-black text-sm shadow-xl animate-pulse">
-                    ✓
-                  </div>
-                )}
-              </div>
-
-              {/* Look Info */}
-              <div className="space-y-1.5">
-                <div className="flex items-start justify-between gap-2">
+                <div className="flex items-start justify-between gap-2 pt-0.5">
                   <h3 className="text-base font-black text-white group-hover:text-amber-400 transition-colors">
                     {item.nameEn}
                   </h3>

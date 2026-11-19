@@ -65,7 +65,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const savedMode = localStorage.getItem("nh_app_mode") as AppMode;
       if (savedMode === "STYLIST" || savedMode === "CHEMIST") setModeState(savedMode);
       const savedConsult = localStorage.getItem("nh_consultation_mode") as ConsultationMode;
-      if (savedConsult === "EXPRESS" || savedConsult === "PRO") setConsultationModeState(savedConsult);
+      if (savedConsult === "PRO") setConsultationModeState("PRO");
+      else setConsultationModeState("PRO");
       const savedTech = localStorage.getItem("nh_active_technique") as ApplicationTechnique;
       if (savedTech) setActiveTechniqueState(savedTech);
       const savedLight = localStorage.getItem("nh_lighting_mode") as LightingMode;
@@ -82,7 +83,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setIsCustomClientPhoto(true);
       } else {
         // Default to real salon client photo
-        setClientPhotoState("/models/model_front.jpg");
+        setClientPhotoState("/avatar/avatar_front_model.jpg");
         setIsCustomClientPhoto(false);
       }
 
@@ -146,7 +147,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       localStorage.setItem("nh_view_angle", newAngle);
       if (!isCustomClientPhoto) {
         // Switch between front and back client model photo
-        const defaultPath = newAngle === "FRONT" ? "/models/model_front.jpg" : "/models/model_back.jpg";
+        const defaultPath = newAngle === "FRONT" ? "/avatar/avatar_front_model.jpg" : "/avatar/avatar_back_model.jpg";
         setClientPhotoState(defaultPath);
         setClientPhotoView(newAngle);
       }

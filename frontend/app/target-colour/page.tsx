@@ -2,18 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ApplicationTechnique, ProcessMode, TargetColourInput } from "../../types/formulation";
+import { ProcessMode, TargetColourInput } from "../../types/formulation";
 import { Manufacturer } from "../../types/manufacturer";
 import { ToneFamily, ToneIntensity, UniversalLevel } from "../../types/uhcr";
 import { HairAssessmentInput } from "../../types/assessment";
-import { useApp, LightingMode } from "../../context/AppContext";
+import { useApp } from "../../context/AppContext";
 import { LevelSelector } from "../../features/colour-selection/LevelSelector";
 import { ToneSelector } from "../../features/colour-selection/ToneSelector";
 import { ModeSelector } from "../../features/colour-selection/ModeSelector";
 import { VisualLookbook } from "../../components/visual/VisualLookbook";
 import { HairColourWheel } from "../../components/visual/HairColourWheel";
 import { ColourAchievementSteps } from "../../components/visual/ColourAchievementSteps";
-import { AvatarZone, RealisticAvatar } from "../../components/visual/RealisticAvatar";
 import { HairStrandMacroStudio } from "../../components/visual/HairStrandMacroStudio";
 import {
   computeHairColorimetry,
@@ -24,35 +23,18 @@ import { getManufacturers } from "../../services/formulationService";
 import { StickyBottomBar } from "../../components/StickyBottomBar";
 
 type SelectionTab = "WHEEL" | "LOOKBOOK" | "SLIDERS" | "STEPS";
-type ColourApplicationTarget = "ALL" | "ROOTS" | "MID_LENGTHS" | "ENDS";
 
 export default function TargetColourPage() {
   const router = useRouter();
   const {
     mode: appMode,
-    activeTechnique,
-    setActiveTechnique,
     lightingMode,
     setLightingMode,
-    skinTone,
-    setSkinTone,
-    viewAngle,
-    setViewAngle,
   } = useApp();
 
   const [activeTab, setActiveTab] = useState<SelectionTab>(() => {
     return appMode === "CHEMIST" ? "SLIDERS" : "WHEEL";
   });
-
-  const [previewTab, setPreviewTab] = useState<"AVATAR" | "STRAND">("AVATAR");
-
-  const [colourTargetZone, setColourTargetZone] = useState<ColourApplicationTarget>("ALL");
-  const [customRootsTone, setCustomRootsTone] = useState<ToneFamily | null>(null);
-  const [customRootsLevel, setCustomRootsLevel] = useState<UniversalLevel | null>(null);
-  const [customMidTone, setCustomMidTone] = useState<ToneFamily | null>(null);
-  const [customMidLevel, setCustomMidLevel] = useState<UniversalLevel | null>(null);
-  const [customEndsTone, setCustomEndsTone] = useState<ToneFamily | null>(null);
-  const [customEndsLevel, setCustomEndsLevel] = useState<UniversalLevel | null>(null);
 
   const [level, setLevel] = useState<UniversalLevel>(7);
   const [primaryTone, setPrimaryTone] = useState<ToneFamily>("COPPER");
@@ -86,24 +68,6 @@ export default function TargetColourPage() {
       if (savedMfg && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(savedMfg)) {
         setSelectedManufacturerId(savedMfg);
       }
-      const savedRoots = localStorage.getItem("nh_custom_roots");
-      if (savedRoots) {
-        const parsed = JSON.parse(savedRoots);
-        if (parsed.level) setCustomRootsLevel(parsed.level);
-        if (parsed.tone) setCustomRootsTone(parsed.tone);
-      }
-      const savedMid = localStorage.getItem("nh_custom_mid");
-      if (savedMid) {
-        const parsed = JSON.parse(savedMid);
-        if (parsed.level) setCustomMidLevel(parsed.level);
-        if (parsed.tone) setCustomMidTone(parsed.tone);
-      }
-      const savedEnds = localStorage.getItem("nh_custom_ends");
-      if (savedEnds) {
-        const parsed = JSON.parse(savedEnds);
-        if (parsed.level) setCustomEndsLevel(parsed.level);
-        if (parsed.tone) setCustomEndsTone(parsed.tone);
-      }
     } catch {
       // ignore
     }
@@ -125,29 +89,43 @@ export default function TargetColourPage() {
       } catch {
         const mock: Manufacturer[] = [
           {
-            id: "531e1113-7fe3-4c6e-a106-96d13f3b3e1d",
+            id: "e7f4535a-a528-49ea-a8ac-a5c8ec538991",
             name: "Wella Professionals India",
             slug: "wella-india",
             supported_markets: ["IN"],
             status: "ACTIVE",
           },
           {
-            id: "83d4171d-fa94-4b14-b646-293e3c4b3944",
+            id: "6d6e2531-4f08-40f2-9309-848e648871b1",
             name: "L'Oréal Professionnel India",
             slug: "loreal-india",
             supported_markets: ["IN"],
             status: "ACTIVE",
           },
           {
-            id: "3c207d16-832c-45be-ba1b-2f882c8a5d61",
+            id: "8aecb983-ad8b-4104-9069-3c1a08554c0b",
             name: "Schwarzkopf Professional India",
             slug: "schwarzkopf-india",
             supported_markets: ["IN"],
             status: "ACTIVE",
           },
+          {
+            id: "69d41060-a79a-4c46-af15-5f8f29b322d0",
+            name: "Alfaparf Milano Professional India",
+            slug: "alfaparf-milano-india",
+            supported_markets: ["IN"],
+            status: "ACTIVE",
+          },
+          {
+            id: "9300688e-8055-459b-b3d3-a474a8bf59f7",
+            name: "Proads Professional India",
+            slug: "proads-professional-india",
+            supported_markets: ["IN"],
+            status: "ACTIVE",
+          },
         ];
         setManufacturers(mock);
-        setSelectedManufacturerId(mock[0].id);
+        setSelectedManufacturerId((prev) => (prev && mock.some((m) => m.id === prev) ? prev : mock[0].id));
       }
     }
     loadMfgs();
@@ -165,23 +143,11 @@ export default function TargetColourPage() {
       localStorage.setItem("nh_target_colour", JSON.stringify(target));
       localStorage.setItem("nh_process_mode", processMode);
       localStorage.setItem("nh_manufacturer_id", selectedManufacturerId);
-      localStorage.setItem("nh_active_technique", activeTechnique);
+      localStorage.setItem("nh_active_technique", "ALL_OVER");
       localStorage.setItem("nh_lighting_mode", lightingMode);
-      if (customRootsLevel && customRootsTone) {
-        localStorage.setItem("nh_custom_roots", JSON.stringify({ level: customRootsLevel, tone: customRootsTone }));
-      } else {
-        localStorage.removeItem("nh_custom_roots");
-      }
-      if (customMidLevel && customMidTone) {
-        localStorage.setItem("nh_custom_mid", JSON.stringify({ level: customMidLevel, tone: customMidTone }));
-      } else {
-        localStorage.removeItem("nh_custom_mid");
-      }
-      if (customEndsLevel && customEndsTone) {
-        localStorage.setItem("nh_custom_ends", JSON.stringify({ level: customEndsLevel, tone: customEndsTone }));
-      } else {
-        localStorage.removeItem("nh_custom_ends");
-      }
+      localStorage.removeItem("nh_custom_roots");
+      localStorage.removeItem("nh_custom_mid");
+      localStorage.removeItem("nh_custom_ends");
     } catch {
       // ignore
     }
@@ -190,33 +156,11 @@ export default function TargetColourPage() {
   };
 
   const handleLevelChange = (newLvl: UniversalLevel) => {
-    if (colourTargetZone === "ROOTS") {
-      setCustomRootsLevel(newLvl);
-      if (!customRootsTone) setCustomRootsTone(primaryTone);
-    } else if (colourTargetZone === "MID_LENGTHS") {
-      setCustomMidLevel(newLvl);
-      if (!customMidTone) setCustomMidTone(primaryTone);
-    } else if (colourTargetZone === "ENDS") {
-      setCustomEndsLevel(newLvl);
-      if (!customEndsTone) setCustomEndsTone(primaryTone);
-    } else {
-      setLevel(newLvl);
-    }
+    setLevel(newLvl);
   };
 
   const handleToneChange = (newTone: ToneFamily) => {
-    if (colourTargetZone === "ROOTS") {
-      setCustomRootsTone(newTone);
-      if (!customRootsLevel) setCustomRootsLevel(level);
-    } else if (colourTargetZone === "MID_LENGTHS") {
-      setCustomMidTone(newTone);
-      if (!customMidLevel) setCustomMidLevel(level);
-    } else if (colourTargetZone === "ENDS") {
-      setCustomEndsTone(newTone);
-      if (!customEndsLevel) setCustomEndsLevel(level);
-    } else {
-      setPrimaryTone(newTone);
-    }
+    setPrimaryTone(newTone);
   };
 
   const handleSelectFromLookbook = (
@@ -224,20 +168,9 @@ export default function TargetColourPage() {
     primary: ToneFamily,
     secondary: ToneFamily | null
   ) => {
-    if (colourTargetZone === "ROOTS") {
-      setCustomRootsLevel(lvl);
-      setCustomRootsTone(primary);
-    } else if (colourTargetZone === "MID_LENGTHS") {
-      setCustomMidLevel(lvl);
-      setCustomMidTone(primary);
-    } else if (colourTargetZone === "ENDS") {
-      setCustomEndsLevel(lvl);
-      setCustomEndsTone(primary);
-    } else {
-      setLevel(lvl);
-      setPrimaryTone(primary);
-      setSecondaryTone(secondary);
-    }
+    setLevel(lvl);
+    setPrimaryTone(primary);
+    setSecondaryTone(secondary);
   };
 
   const handleSelectFromWheel = (
@@ -246,44 +179,11 @@ export default function TargetColourPage() {
     secondary: ToneFamily | null,
     intensity: ToneIntensity
   ) => {
-    if (colourTargetZone === "ROOTS") {
-      setCustomRootsLevel(lvl);
-      setCustomRootsTone(primary);
-    } else if (colourTargetZone === "MID_LENGTHS") {
-      setCustomMidLevel(lvl);
-      setCustomMidTone(primary);
-    } else if (colourTargetZone === "ENDS") {
-      setCustomEndsLevel(lvl);
-      setCustomEndsTone(primary);
-    } else {
-      setLevel(lvl);
-      setPrimaryTone(primary);
-      setSecondaryTone(secondary);
-      setToneIntensity(intensity);
-    }
+    setLevel(lvl);
+    setPrimaryTone(primary);
+    setSecondaryTone(secondary);
+    setToneIntensity(intensity);
   };
-
-  // Active level and tone for whichever zone is currently selected for editing
-  const activeZoneLevel: UniversalLevel =
-    colourTargetZone === "ROOTS"
-      ? (customRootsLevel ?? level)
-      : colourTargetZone === "MID_LENGTHS"
-      ? (customMidLevel ?? level)
-      : colourTargetZone === "ENDS"
-      ? (customEndsLevel ?? level)
-      : level;
-
-  const activeZonePrimaryTone: ToneFamily =
-    colourTargetZone === "ROOTS"
-      ? (customRootsTone ?? primaryTone)
-      : colourTargetZone === "MID_LENGTHS"
-      ? (customMidTone ?? primaryTone)
-      : colourTargetZone === "ENDS"
-      ? (customEndsTone ?? primaryTone)
-      : primaryTone;
-
-  const activeZoneSecondaryTone: ToneFamily | null =
-    colourTargetZone === "ALL" ? secondaryTone : null;
 
   const targetColourObj: TargetColourInput = {
     universal_level: level,
@@ -300,6 +200,7 @@ export default function TargetColourPage() {
   );
 
   const targetShade = getSalonShadeCode(level, primaryTone, secondaryTone);
+  const globalBaseColor = targetColorimetry.baseHex;
 
   // Metamerism-shifted colors for Daylight, Warm Salon, and Cool Indoor previews
   const metaDaylightBase = applyMetamerism(targetColorimetry.baseHex, "DAYLIGHT");
@@ -320,28 +221,6 @@ export default function TargetColourPage() {
       : lightingMode === "COOL"
       ? `linear-gradient(135deg, ${metaCoolShadow} 0%, ${metaCoolBase} 45%, ${metaCoolHighlight} 70%, ${metaCoolShadow} 100%)`
       : `linear-gradient(135deg, ${metaDaylightShadow} 0%, ${metaDaylightBase} 45%, ${metaDaylightHighlight} 70%, ${metaDaylightShadow} 100%)`;
-
-  let customRootsColor: string | undefined = undefined;
-  let customMidColor: string | undefined = undefined;
-  let customEndsColor: string | undefined = undefined;
-  if (customRootsLevel || customRootsTone) {
-    customRootsColor = computeHairColorimetry(
-      customRootsLevel ?? level,
-      customRootsTone ?? primaryTone
-    ).baseHex;
-  }
-  if (customMidLevel || customMidTone) {
-    customMidColor = computeHairColorimetry(
-      customMidLevel ?? level,
-      customMidTone ?? (secondaryTone || primaryTone)
-    ).baseHex;
-  }
-  if (customEndsLevel || customEndsTone) {
-    customEndsColor = computeHairColorimetry(
-      customEndsLevel ?? level,
-      customEndsTone ?? (secondaryTone || primaryTone)
-    ).baseHex;
-  }
 
   const TOP_TRENDING_LOOKS = [
     {
@@ -403,7 +282,7 @@ export default function TargetColourPage() {
         </div>
       </div>
 
-      {/* Streamlined Live Control Hub: Compact Before & After, Lighting, Technique, and Quick Looks */}
+      {/* Streamlined Live Control Hub: Compact Before & After, Target Look and Quick Looks */}
       <div className="rounded-3xl border border-neutral-800 bg-neutral-900/70 p-4 shadow-xl space-y-3" suppressHydrationWarning>
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3" suppressHydrationWarning>
           {/* Left: Live Before & After Transformation Badge */}
@@ -450,79 +329,6 @@ export default function TargetColourPage() {
               </div>
             </div>
           </div>
-
-          {/* Right: Lighting, Technique & Zone Pills */}
-          <div className="flex flex-wrap items-center gap-2">
-            {/* Lighting Metamerism Quick Toggle */}
-            <div className="flex items-center rounded-xl border border-neutral-800 bg-neutral-950 p-1">
-              {[
-                { id: "DAYLIGHT", icon: "☀️", label: "Sun" },
-                { id: "WARM", icon: "💡", label: "Salon" },
-                { id: "COOL", icon: "🏢", label: "Office" },
-              ].map((l) => (
-                <button
-                  key={l.id}
-                  type="button"
-                  onClick={() => setLightingMode(l.id as LightingMode)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer ${
-                    lightingMode === l.id
-                      ? "bg-amber-500 text-neutral-950 shadow-xs font-black"
-                      : "text-neutral-400 hover:text-white"
-                  }`}
-                  title={`${l.label} lighting`}
-                >
-                  <span>{l.icon}</span>
-                  <span className="hidden sm:inline">{l.label}</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Technique Selector */}
-            <div className="flex items-center rounded-xl border border-neutral-800 bg-neutral-950 p-1">
-              {[
-                { id: "ALL_OVER", label: "All-Over" },
-                { id: "SHADOW_ROOT", label: "Shadow Root" },
-                { id: "COLOR_MELT", label: "Melt" },
-                { id: "GLOSS_TONING", label: "Gloss" },
-              ].map((t) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  onClick={() => setActiveTechnique(t.id as ApplicationTechnique)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                    activeTechnique === t.id
-                      ? "bg-rose-500 text-white shadow-xs font-black"
-                      : "text-neutral-400 hover:text-white"
-                  }`}
-                >
-                  {t.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Zone Target Toggle */}
-            <div className="flex items-center rounded-xl border border-neutral-800 bg-neutral-950 p-1">
-              {[
-                { id: "ALL", label: "Global" },
-                { id: "ROOTS", label: "Roots" },
-                { id: "MID_LENGTHS", label: "Mid" },
-                { id: "ENDS", label: "Ends" },
-              ].map((z) => (
-                <button
-                  key={z.id}
-                  type="button"
-                  onClick={() => setColourTargetZone(z.id as ColourApplicationTarget)}
-                  className={`px-2 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
-                    colourTargetZone === z.id
-                      ? "bg-indigo-500 text-white font-black"
-                      : "text-neutral-400 hover:text-white"
-                  }`}
-                >
-                  {z.label}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* 1-Tap Top 5 Salon Picks Strip */}
@@ -536,20 +342,9 @@ export default function TargetColourPage() {
                 key={item.id}
                 type="button"
                 onClick={() => {
-                  if (colourTargetZone === "ROOTS") {
-                    setCustomRootsLevel(item.level);
-                    setCustomRootsTone(item.primaryTone);
-                  } else if (colourTargetZone === "MID_LENGTHS") {
-                    setCustomMidLevel(item.level);
-                    setCustomMidTone(item.primaryTone);
-                  } else if (colourTargetZone === "ENDS") {
-                    setCustomEndsLevel(item.level);
-                    setCustomEndsTone(item.primaryTone);
-                  } else {
-                    setLevel(item.level);
-                    setPrimaryTone(item.primaryTone);
-                    setSecondaryTone(item.secondaryTone);
-                  }
+                  setLevel(item.level);
+                  setPrimaryTone(item.primaryTone);
+                  setSecondaryTone(item.secondaryTone);
                 }}
                 className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-black bg-neutral-950 hover:bg-neutral-800 text-neutral-300 border border-neutral-800 hover:border-neutral-700 transition-all active:scale-95 cursor-pointer"
               >
@@ -616,82 +411,23 @@ export default function TargetColourPage() {
         </button>
       </div>
 
-      {/* Main Dual-View: Sticky Avatar (Left) + Interactive Selector / Steps (Right) */}
+      {/* Main Dual-View: Target Hair Strand Studio (Left) + Interactive Selector / Steps (Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left Column: Sticky Avatar & Strand Studio (5 cols) */}
+        {/* Left Column: Hair Strand Studio & Brand Selector (5 cols) */}
         <div className="lg:col-span-5 space-y-3 lg:sticky lg:top-16">
-          {/* Switcher between 3D Avatar and Hair Strand Zoom */}
-          <div className="flex items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/80 p-1.5 shadow-sm">
-            <button
-              type="button"
-              onClick={() => setPreviewTab("AVATAR")}
-              className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                previewTab === "AVATAR"
-                  ? "bg-amber-500 text-neutral-950 shadow-md"
-                  : "text-neutral-400 hover:text-white"
-              }`}
-            >
-              <span>👤</span>
-              <span>3D Avatar View</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setPreviewTab("STRAND")}
-              className={`flex-1 py-1.5 px-3 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
-                previewTab === "STRAND"
-                  ? "bg-amber-500 text-neutral-950 shadow-md"
-                  : "text-neutral-400 hover:text-white"
-              }`}
-            >
-              <span>🔬</span>
-              <span>Strand Texture</span>
-            </button>
-          </div>
-
-          {previewTab === "AVATAR" ? (
-            <RealisticAvatar
-              level={level}
-              primaryTone={primaryTone}
-              secondaryTone={secondaryTone}
-              intensity={toneIntensity}
-              technique={activeTechnique}
-              lightingMode={lightingMode}
-              onLightingModeChange={setLightingMode}
-              skinTone={skinTone}
-              onSkinToneChange={setSkinTone}
-              viewAngle={viewAngle}
-              onViewAngleChange={setViewAngle}
-              rootsGrey={0}
-              midGrey={0}
-              endsGrey={0}
-              greyPercentage={0}
-              activeRegion={colourTargetZone === "ALL" ? undefined : (colourTargetZone as AvatarZone)}
-              onSelectRegion={(region) => setColourTargetZone(region)}
-              customRootsLevel={customRootsLevel}
-              customRootsTone={customRootsTone}
-              customMidLevel={customMidLevel}
-              customMidTone={customMidTone}
-              customEndsLevel={customEndsLevel}
-              customEndsTone={customEndsTone}
-              customRootsColor={customRootsColor}
-              customMidColor={customMidColor}
-              customEndsColor={customEndsColor}
-              onLevelChange={handleLevelChange}
-              className="w-full"
-            />
-          ) : (
-            <HairStrandMacroStudio
-              level={level}
-              primaryTone={primaryTone}
-              secondaryTone={secondaryTone}
-              intensity={toneIntensity}
-              technique={activeTechnique}
-              lightingMode={lightingMode}
-              onLightingModeChange={setLightingMode}
-              showLightingComparison={true}
-              className="w-full"
-            />
-          )}
+          <HairStrandMacroStudio
+            level={level}
+            primaryTone={primaryTone}
+            secondaryTone={secondaryTone}
+            intensity={toneIntensity}
+            technique="ALL_OVER"
+            lightingMode={lightingMode}
+            onLightingModeChange={setLightingMode}
+            customColor={globalBaseColor}
+            zoneLabel={targetShade.name}
+            showLightingComparison={false}
+            className="w-full"
+          />
 
           {/* Compact Salon Brand Selector directly underneath preview */}
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900/70 p-3 flex items-center justify-between gap-2 shadow-sm">
@@ -718,34 +454,13 @@ export default function TargetColourPage() {
         </div>
 
         {/* Right Column: Active Interactive Selector (7 cols) */}
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-7 space-y-4">
           {activeTab === "WHEEL" && (
             <div className="space-y-4">
-              {colourTargetZone !== "ALL" && (
-                <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-between">
-                  <span className="text-xs font-bold text-white flex items-center gap-1.5">
-                    <span>🎯</span> Setting Hue for:{" "}
-                    <span className="text-amber-400 font-black">
-                      {colourTargetZone === "ROOTS"
-                        ? "Roots (Zone 1)"
-                        : colourTargetZone === "MID_LENGTHS"
-                        ? "Mid-Lengths (Zone 2)"
-                        : "Ends (Zone 3)"}
-                    </span>
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setColourTargetZone("ALL")}
-                    className="text-[10px] font-bold text-amber-400 hover:underline cursor-pointer"
-                  >
-                    Switch to All-Over
-                  </button>
-                </div>
-              )}
               <HairColourWheel
-                selectedLevel={activeZoneLevel}
-                selectedPrimaryTone={activeZonePrimaryTone}
-                selectedSecondaryTone={activeZoneSecondaryTone}
+                selectedLevel={level}
+                selectedPrimaryTone={primaryTone}
+                selectedSecondaryTone={secondaryTone}
                 onSelect={handleSelectFromWheel}
               />
             </div>
@@ -753,30 +468,9 @@ export default function TargetColourPage() {
 
           {activeTab === "LOOKBOOK" && (
             <div className="space-y-4">
-              {colourTargetZone !== "ALL" && (
-                <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-between">
-                  <span className="text-xs font-bold text-white flex items-center gap-1.5">
-                    <span>🎯</span> Applying Preset Look To:{" "}
-                    <span className="text-amber-400 font-black">
-                      {colourTargetZone === "ROOTS"
-                        ? "Roots (Zone 1)"
-                        : colourTargetZone === "MID_LENGTHS"
-                        ? "Mid-Lengths (Zone 2)"
-                        : "Ends (Zone 3)"}
-                    </span>
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => setColourTargetZone("ALL")}
-                    className="text-[10px] font-bold text-amber-400 hover:underline cursor-pointer"
-                  >
-                    Switch to All-Over
-                  </button>
-                </div>
-              )}
               <VisualLookbook
-                selectedLevel={activeZoneLevel}
-                selectedPrimaryTone={activeZonePrimaryTone}
+                selectedLevel={level}
+                selectedPrimaryTone={primaryTone}
                 onSelectLook={handleSelectFromLookbook}
                 startingLevel={startingLevel}
               />
@@ -785,38 +479,13 @@ export default function TargetColourPage() {
 
           {activeTab === "SLIDERS" && (
             <div className="space-y-6">
-              <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-between">
-                <span className="text-xs font-bold text-white flex items-center gap-1.5">
-                  <span>🎯</span> Editing Sliders For:{" "}
-                  <span className="text-amber-400 font-black">
-                    {colourTargetZone === "ALL"
-                      ? "All Hair (Global)"
-                      : colourTargetZone === "ROOTS"
-                      ? "Roots (Zone 1)"
-                      : colourTargetZone === "MID_LENGTHS"
-                      ? "Mid-Lengths (Zone 2)"
-                      : "Ends (Zone 3)"}
-                  </span>
-                </span>
-                {colourTargetZone !== "ALL" && (
-                  <button
-                    type="button"
-                    onClick={() => setColourTargetZone("ALL")}
-                    className="text-[10px] font-bold text-amber-400 hover:underline cursor-pointer"
-                  >
-                    Switch to All-Over
-                  </button>
-                )}
-              </div>
-              <LevelSelector selectedLevel={activeZoneLevel} onChange={handleLevelChange} />
+              <LevelSelector selectedLevel={level} onChange={handleLevelChange} />
               <ToneSelector
-                primaryTone={activeZonePrimaryTone}
-                secondaryTone={activeZoneSecondaryTone}
+                primaryTone={primaryTone}
+                secondaryTone={secondaryTone}
                 toneIntensity={toneIntensity}
                 onPrimaryToneChange={handleToneChange}
-                onSecondaryToneChange={(sec) => {
-                  if (colourTargetZone === "ALL") setSecondaryTone(sec);
-                }}
+                onSecondaryToneChange={setSecondaryTone}
                 onToneIntensityChange={setToneIntensity}
               />
               <ModeSelector

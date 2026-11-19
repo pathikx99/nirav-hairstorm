@@ -1,0 +1,38 @@
+{
+  "manufacturer": {
+    "name": "Alfaparf Milano Professional",
+    "slug": "alfaparf-milano-india",
+    "country_of_origin": "Italy",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://www.alfaparfmilanopro.com",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "product_line": {
+    "name": "Evolution of the Color",
+    "service_type": "PERMANENT_COLOUR"
+  },
+  "product": {
+    "name": "Evolution of the Color Permanent Cosmetic Colour",
+    "code": "ALFAPARF-EOC"
+  },
+  "source_documents": [
+    {
+      "key": "evolution_of_the_color_manual",
+      "title": "Alfaparf Milano Professional Evolution of the Color Digital Technical Manual & Shade Guide",
+      "publisher": "Alfaparf Milano Professional (Beauty & Business S.p.A.)",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

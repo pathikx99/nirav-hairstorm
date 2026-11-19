@@ -1,0 +1,38 @@
+{
+  "manufacturer": {
+    "name": "Wella Professionals",
+    "slug": "wella-india",
+    "country_of_origin": "Germany",
+    "supported_markets": {
+      "IN": true
+    },
+    "website": "https://www.wella.com",
+    "status": "ACTIVE"
+  },
+  "catalogue_version": {
+    "market": "IN",
+    "version": "1.0",
+    "status": "PUBLISHED"
+  },
+  "product_line": {
+    "name": "Pure Perfection",
+    "service_type": "PERMANENT_COLOUR"
+  },
+  "product": {
+    "name": "Pure Perfection Ammonia-Free Permanent Cream Hair Color",
+    "code": "WELLA-PURE-PERFECTION-MAIN"
+  },
+  "source_documents": [
+    {
+      "key": "pure_perfection_technical_folder",
+      "title": "Wella Professionals Pure Perfection Ammonia-Free Permanent Cream Color Technical Folder",
+      "publisher": "Wella Professionals",
+      "document_type": "TECHNICAL_MANUAL",
+      "market": "IN",
+      "language": "en",
+      "document_version": "1.0",
+      "permission_status": "GRANTED",
+      "verification_status": "VERIFIED"
+    }
+  ]
+}

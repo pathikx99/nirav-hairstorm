@@ -208,6 +208,55 @@ class ShadeMappingEngine:
             product_line = product.product_line
             manufacturer = product_line.manufacturer
 
+            # Calibrated Match Accuracy Percentage
+            rounded_dist = round(comp_dist, 4)
+            if rounded_dist == 0.0:
+                accuracy_pct = 100
+            else:
+                accuracy_pct = max(50, min(99, int(round((1.0 - 1.25 * rounded_dist) * 100))))
+
+            # Brand-Specific Substitution Recipe Formulation
+            m_name_lower = manufacturer.name.lower()
+            is_cand_highlift = (
+                any(shade.shade_code.startswith(pre) for pre in ("12/", "11.", "12-", "10-", "11-", "13."))
+                or (shade.shade_name and any(p in shade.shade_name.lower() for p in ("highlift", "superlift", "platinum", "special blonde")))
+            )
+
+            if is_cand_highlift:
+                cand_ratio = "1:2"
+                cand_time = 55 if "alfaparf" in m_name_lower else 50
+                cand_dev = "40 Vol (12%) Highlift Developer"
+            elif "wella" in m_name_lower:
+                cand_ratio = "1:1"
+                cand_time = 35
+                cand_dev = "Welloxon Perfect 20 Vol (6%)"
+            elif "schwarzkopf" in m_name_lower:
+                cand_ratio = "1:1"
+                cand_time = 35
+                cand_dev = "Igora Royal Oil Developer 6% (20 Vol)"
+            elif "proads" in m_name_lower:
+                cand_ratio = "1:1"
+                cand_time = 40
+                cand_dev = "Proads Developer 20 Vol (6%)"
+            elif "alfaparf" in m_name_lower:
+                cand_ratio = "1:1.5"
+                cand_time = 35
+                cand_dev = "Oxid'o 20 Vol (6%) Cream Developer"
+            else:  # l'oréal
+                cand_ratio = "1:1.5"
+                cand_time = 35
+                cand_dev = "Oxydant Crème 20 Vol (6%)"
+
+            if cand_ratio == "1:1":
+                cand_recipe = f"Mix 60g {shade.shade_code} + 60g {cand_dev} (1:1). Process {cand_time} min."
+            elif cand_ratio == "1:1.5":
+                cand_recipe = f"Mix 60g {shade.shade_code} + 90g {cand_dev} (1:1.5). Process {cand_time} min."
+            else:  # 1:2
+                cand_recipe = f"Mix 60g {shade.shade_code} + 120g {cand_dev} (1:2). Process {cand_time} min."
+
+            if target_secondary is not None and cand_secondary is None and cand_primary == target_primary:
+                cand_recipe += f" (For exact tone: Add 15g {target_secondary.value} tone to 45g base)."
+
             candidates.append(
                 CandidateShadeResult(
                     manufacturer=manufacturer.name,
@@ -232,9 +281,14 @@ class ShadeMappingEngine:
                     mapping_status=mapping.verification_status,
                     chemical_equivalence=ChemicalEquivalenceEnum.NOT_ESTABLISHED,
                     confidence=conf,
-                    composite_distance=round(comp_dist, 4),
+                    composite_distance=rounded_dist,
                     level_distance=d_l,
                     tone_distance=round(d_t, 4),
+                    accuracy_percentage=accuracy_pct,
+                    substitution_recipe=cand_recipe,
+                    recommended_developer=cand_dev,
+                    mixing_ratio=cand_ratio,
+                    processing_time_minutes=cand_time,
                 )
             )
 

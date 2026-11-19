@@ -1,0 +1,74 @@
+[
+  {
+    "product_name": "Welloxon Perfect Pastel 1.9% (6 Vol)",
+    "concentration_percent": 1.9,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "refreshing_mid_ends",
+        "toning"
+      ],
+      "volume_equivalent": 6
+    },
+    "source_doc_key": "pure_perfection_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 4% (13 Vol)",
+    "concentration_percent": 4.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "same_depth_or_darker"
+      ],
+      "volume_equivalent": 13
+    },
+    "source_doc_key": "pure_perfection_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 6% (20 Vol)",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "1_level_lift",
+        "gray_coverage"
+      ],
+      "volume_equivalent": 20
+    },
+    "source_doc_key": "pure_perfection_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 9% (30 Vol)",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "2_levels_lift"
+      ],
+      "volume_equivalent": 30
+    },
+    "source_doc_key": "pure_perfection_technical_folder",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Welloxon Perfect 12% (40 Vol)",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "3_levels_lift"
+      ],
+      "volume_equivalent": 40
+    },
+    "source_doc_key": "pure_perfection_technical_folder",
+    "verification_status": "VERIFIED"
+  }
+]

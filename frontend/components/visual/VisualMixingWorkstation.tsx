@@ -402,15 +402,13 @@ export function VisualMixingWorkstation({
                   🖌️
                 </span>
                 <div>
-                  <h4 className="text-sm font-black text-white">
-                    Where to apply with tint brush:
+                  <h4 className="text-sm font-black text-white flex items-center gap-2">
+                    <span>Target Zones:</span>
+                    <span className="text-amber-400 font-mono text-xs">{stage.target_regions.join(" + ")}</span>
                   </h4>
-                  <p className="text-xs text-amber-200 mt-0.5">
-                    {stage.target_regions.join(" + ")}
-                  </p>
-                  <p className="text-[11px] text-neutral-300 mt-1">
+                  <div className="text-xs text-neutral-200 mt-2 whitespace-pre-line leading-relaxed bg-black/40 rounded-xl p-3 border border-neutral-800/80 font-sans">
                     {stage.application_instructions}
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

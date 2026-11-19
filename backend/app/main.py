@@ -52,6 +52,34 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
                     directory=sk_dir,
                     market="IN",
                 )
+            ap_dir = Path("data/manufacturers/alfaparf")
+            if ap_dir.exists():
+                await CatalogueImporter.import_from_directory(
+                    session=session,
+                    directory=ap_dir,
+                    market="IN",
+                )
+            pr_dir = Path("data/manufacturers/proads")
+            if pr_dir.exists():
+                await CatalogueImporter.import_from_directory(
+                    session=session,
+                    directory=pr_dir,
+                    market="IN",
+                )
+            il_dir = Path("data/manufacturers/wella_illumina")
+            if il_dir.exists():
+                await CatalogueImporter.import_from_directory(
+                    session=session,
+                    directory=il_dir,
+                    market="IN",
+                )
+            pp_dir = Path("data/manufacturers/wella_pure_perfection")
+            if pp_dir.exists():
+                await CatalogueImporter.import_from_directory(
+                    session=session,
+                    directory=pp_dir,
+                    market="IN",
+                )
 
     yield
 

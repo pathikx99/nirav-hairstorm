@@ -1,0 +1,83 @@
+[
+  {
+    "product_name": "Alfaparf Milano Oxid'o 5 Vol (1.5%) Cream Developer",
+    "concentration_percent": 1.5,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "tone_on_tone",
+        "harmonizer_toning",
+        "minimal_lightening",
+        "pastel_toning"
+      ],
+      "volume_equivalent": 5
+    },
+    "source_doc_key": "evolution_of_the_color_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Alfaparf Milano Oxid'o 10 Vol (3%) Cream Developer",
+    "concentration_percent": 3.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "tone_on_tone",
+        "darkening",
+        "same_depth_colouring",
+        "harmonizer_gently_lightening"
+      ],
+      "volume_equivalent": 10
+    },
+    "source_doc_key": "evolution_of_the_color_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Alfaparf Milano Oxid'o 20 Vol (6%) Cream Developer",
+    "concentration_percent": 6.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "1_level_lift",
+        "grey_coverage",
+        "coverage_and_tone"
+      ],
+      "volume_equivalent": 20
+    },
+    "source_doc_key": "evolution_of_the_color_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Alfaparf Milano Oxid'o 30 Vol (9%) Cream Developer",
+    "concentration_percent": 9.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "2_levels_lift",
+        "vibrant_reds",
+        "fashion_shades"
+      ],
+      "volume_equivalent": 30
+    },
+    "source_doc_key": "evolution_of_the_color_manual",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "product_name": "Alfaparf Milano Oxid'o 40 Vol (12%) Cream Developer",
+    "concentration_percent": 12.0,
+    "concentration_type": "PERCENTAGE",
+    "market": "IN",
+    "intended_use": {
+      "services": [
+        "3_levels_lift",
+        "platinum_series_4_to_5_levels_lift"
+      ],
+      "volume_equivalent": 40
+    },
+    "source_doc_key": "evolution_of_the_color_manual",
+    "verification_status": "VERIFIED"
+  }
+]

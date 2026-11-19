@@ -191,14 +191,14 @@ export function PhotoAnalysisModal({
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => handleLoadSample("/models/model_front.jpg")}
+                onClick={() => handleLoadSample("/avatar/avatar_front_model.jpg")}
                 className="px-2.5 py-1 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-[11px] font-bold"
               >
                 Front Client
               </button>
               <button
                 type="button"
-                onClick={() => handleLoadSample("/models/model_back.jpg")}
+                onClick={() => handleLoadSample("/avatar/avatar_back_model.jpg")}
                 className="px-2.5 py-1 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-white text-[11px] font-bold"
               >
                 Back Client

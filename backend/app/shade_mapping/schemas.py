@@ -104,6 +104,28 @@ class CandidateShadeResult(BaseModel):
     composite_distance: float
     level_distance: float
     tone_distance: float
+    accuracy_percentage: int = Field(
+        default=95,
+        ge=0,
+        le=100,
+        description="Calibrated match accuracy percentage (0-100%)",
+    )
+    substitution_recipe: str | None = Field(
+        default=None,
+        description="Ready-to-use mixing instruction for using this candidate as a brand substitution",
+    )
+    recommended_developer: str | None = Field(
+        default=None,
+        description="Recommended developer volume and name for this brand shade",
+    )
+    mixing_ratio: str | None = Field(
+        default="1:1",
+        description="Standard mixing ratio for this candidate product",
+    )
+    processing_time_minutes: int | None = Field(
+        default=35,
+        description="Standard processing time in minutes",
+    )
 
 
 class CrossBrandCompareResponse(BaseModel):

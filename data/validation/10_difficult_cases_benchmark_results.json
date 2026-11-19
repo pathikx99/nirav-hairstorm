@@ -1,0 +1,372 @@
+[
+  {
+    "case_number": 1,
+    "title": "Virgin Raven Black (L1) to Platinum / Pearl Blonde (L10)",
+    "difficulty_profile": "Extreme 9-Level Lift & Dense Eumelanin Deposition. Max chemical oxidation stress.",
+    "starting_canvas": "Roots/Lengths Level 1 Virgin, 0% grey, low porosity, coarse diameter.",
+    "target_look": "Level 10 Pearl Blonde 10/86 (.21 Cendr\u00e9)",
+    "avatar_hex": "#dedfe5",
+    "strand_hex": "#dfe0e6",
+    "target_cielab": [
+      88.67859811028045,
+      1.4603508721254266,
+      -3.902443409818246
+    ],
+    "avatar_cielab": [
+      88.90448762874884,
+      0.7568701374739417,
+      -3.044503868126869
+    ],
+    "strand_cielab": [
+      89.25805617411727,
+      0.756159024422387,
+      -3.041961221244982
+    ],
+    "delta_e_avatar_target": 1.201,
+    "delta_e_strand_target": 1.249,
+    "delta_e_avatar_strand_parity": 0.223,
+    "formulation_steps": [
+      "Step 1 (Lightening): On scalp Blondor Multi-Blonde Powder + Welloxon 20 Vol (6%) 1:2. Process 45 min under visual inspection until pale yellow Level 10 NRP.",
+      "Step 2 (Acidic Glaze Toning): Illumina Color 10/86 (30g) + Welloxon Pastel 1.9% (60g) 1:2 on damp hair to neutralize pale yellow NRP without touching natural base.",
+      "Step 3 (Post-Chemical Lock): Wella Color Motion+ Post-Color Treatment to arrest oxidation and seal cuticular plates."
+    ],
+    "developer_and_ratio": "Step 1: 20 Vol (6%) 1:2 | Step 2: Pastel 1.9% 1:2",
+    "processing_time_min": 60,
+    "safety_gating": "STRICT GATING: 40 Vol on-scalp prohibited. Mandatory 48h patch test and hair elasticity test.",
+    "accuracy_score_pct": 97.64,
+    "verdict": "FLAGGED"
+  },
+  {
+    "case_number": 2,
+    "title": "100% Resistant Glassy Canities (Grey) to Rich Chocolate Warm Brown (L5)",
+    "difficulty_profile": "Zero Melanin Absence & Resistant Cuticle. Risk of translucent/hollow hot roots.",
+    "starting_canvas": "Roots: 100% Glassy White/Grey (0 melanin), Mid/Ends: Level 5 Faded Brown.",
+    "target_look": "Level 5 Chocolate Natural Gold 5/73 (5.37)",
+    "avatar_hex": "#5d3e2c",
+    "strand_hex": "#5f3d2a",
+    "target_cielab": [
+      29.412151094608795,
+      11.57248237754946,
+      17.316618016244455
+    ],
+    "avatar_cielab": [
+      29.298036643774566,
+      11.21084510860229,
+      16.513208865956198
+    ],
+    "strand_cielab": [
+      29.255765262284335,
+      12.564686886786303,
+      17.770501303914155
+    ],
+    "delta_e_avatar_target": 0.484,
+    "delta_e_strand_target": 0.781,
+    "delta_e_avatar_strand_parity": 1.091,
+    "formulation_steps": [
+      "Step 1 (Formulation Intermixing): 50% Natural Base (Koleston Perfect 5/0, 30g) + 50% Fashion Shade (Koleston Perfect 5/73, 30g).",
+      "Step 2 (Developer Selection): Welloxon Perfect 20 Vol (6%) 1:1 (60g) for optimal cuticle swelling and maximum dye molecule polymerisation.",
+      "Step 3 (Application): Apply first to most resistant hairline/crown areas with zero dilution. Process for full 45 min."
+    ],
+    "developer_and_ratio": "Welloxon Perfect 20 Vol (6%) 1:1",
+    "processing_time_min": 45,
+    "safety_gating": "Natural base .0 intermixed at 1:1 required; fashion-only contraindicated for >50% canities.",
+    "accuracy_score_pct": 96.55,
+    "verdict": "FLAGGED"
+  },
+  {
+    "case_number": 3,
+    "title": "Brassy Bleached Level 8 Orange Canvas to Neutral Smoky Ash Cendr\u00e9 (L7)",
+    "difficulty_profile": "Counteracting Intense Orange NRP without Khaki/Green Shifting or Drabness.",
+    "starting_canvas": "Level 8 Bleached, exposed raw orange-yellow pheomelanin undertone.",
+    "target_look": "Level 7 Smoky Ash Cendr\u00e9 7/1 (.1 Blue-Ash Anti-Orange)",
+    "avatar_hex": "#646369",
+    "strand_hex": "#62646a",
+    "target_cielab": [
+      42.148424980411036,
+      1.2804923234110421,
+      -3.387144043171575
+    ],
+    "avatar_cielab": [
+      42.235536644597154,
+      1.662253961812743,
+      -3.2487014771634737
+    ],
+    "strand_cielab": [
+      42.38647025295547,
+      0.5195568056766131,
+      -3.653913208082793
+    ],
+    "delta_e_avatar_target": 0.569,
+    "delta_e_strand_target": 1.166,
+    "delta_e_avatar_strand_parity": 1.718,
+    "formulation_steps": [
+      "Step 1 (Colorimetry Neutralization): Koleston Perfect 7/1 (45g) + 0/88 Special Mix Blue (2g) to directly oppose 60\u00b0 orange hue angle on colour wheel.",
+      "Step 2 (Deposit Developer): Welloxon Perfect 10 Vol (3%) 1:1 (47g) for tone deposit without creating unwanted underlying warmth.",
+      "Step 3 (Processing): Apply from root to tip; process 25 min under direct visual monitoring."
+    ],
+    "developer_and_ratio": "Welloxon Perfect 10 Vol (3%) 1:1",
+    "processing_time_min": 25,
+    "safety_gating": "High-porosity ends monitor at 15 min; blue-ash counteragent calibrated to avoid green drift.",
+    "accuracy_score_pct": 95.0,
+    "verdict": "FLAGGED"
+  },
+  {
+    "case_number": 4,
+    "title": "Severe Multi-Band Hair (Roots L2 Virgin, Mid L5 Oxidized, Ends L8 Porous Bleach)",
+    "difficulty_profile": "Tri-Zone Staggered Porosity & Lift Differential. Risk of over-processing ends.",
+    "starting_canvas": "Roots: L2 Virgin (0-2\") | Mid: L5 Faded Tint (2-6\") | Ends: L8 Bleached/Porous (6+\")",
+    "target_look": "Harmonious Level 6 Golden Caramel Color Melt (6/73)",
+    "avatar_hex": "#7e5835",
+    "strand_hex": "#7d5937",
+    "target_cielab": [
+      40.58407646439191,
+      11.141125854206486,
+      25.62857722903261
+    ],
+    "avatar_cielab": [
+      40.69173316963471,
+      11.50683788519305,
+      26.365283150429075
+    ],
+    "strand_cielab": [
+      40.86670230366401,
+      10.637844422652948,
+      25.40108935161076
+    ],
+    "delta_e_avatar_target": 0.378,
+    "delta_e_strand_target": 0.45,
+    "delta_e_avatar_strand_parity": 0.679,
+    "formulation_steps": [
+      "Bowl 1 (Roots - 4 levels lift): Koleston Perfect 6/73 (40g) + Welloxon 30 Vol 9% (40g) 1:1. Process 40 min.",
+      "Bowl 2 (Mid - 1 level lift): Koleston Perfect 6/73 (40g) + Welloxon 20 Vol 6% (40g) 1:1. Process 30 min.",
+      "Bowl 3 (Ends - Deposit Only / Porous): Color Touch 6/73 (30g) + Color Touch Emulsion 1.9% (60g) 1:2. Process 15 min."
+    ],
+    "developer_and_ratio": "Bowl 1: 30 Vol 1:1 | Bowl 2: 20 Vol 1:1 | Bowl 3: Pastel 1.9% 1:2",
+    "processing_time_min": 40,
+    "safety_gating": "Staggered application protocol strictly enforced; never pull Bowl 1 formula onto Level 8 ends.",
+    "accuracy_score_pct": 97.74,
+    "verdict": "PASSED (SUPERIOR \u0394E\u2080\u2080 \u2264 1.0)"
+  },
+  {
+    "case_number": 5,
+    "title": "Level 4 Natural Base to Level 7 Fiery Copper (High Reflect Vibrancy)",
+    "difficulty_profile": "Harmonizing 3 Levels of Lift with Natural Orange Undertone without Browning Out.",
+    "starting_canvas": "Level 4 Natural Medium Brown, 0% grey, thick density.",
+    "target_look": "Level 7 Fiery Copper Gold 7/43 (7.43)",
+    "avatar_hex": "#a74a25",
+    "strand_hex": "#a64823",
+    "target_cielab": [
+      42.76606341500183,
+      36.09174331697596,
+      39.54993655968059
+    ],
+    "avatar_cielab": [
+      43.13615048128219,
+      36.018097151071736,
+      39.46789824954096
+    ],
+    "strand_cielab": [
+      42.559881540223,
+      36.55986902419189,
+      39.849886374213426
+    ],
+    "delta_e_avatar_target": 0.341,
+    "delta_e_strand_target": 0.262,
+    "delta_e_avatar_strand_parity": 0.569,
+    "formulation_steps": [
+      "Step 1 (Synergy Formulation): Koleston Perfect 7/43 (50g) + 0/43 Copper Booster (10g) synergizing with Level 7 natural orange NRP.",
+      "Step 2 (Lifting Developer): Welloxon Perfect 30 Vol (9%) 1:1 (60g) providing clean 3 levels of lift from L4 to L7.",
+      "Step 3 (Zone Timing): Apply to lengths & ends first (20 min), then apply fresh mix to scalp roots (20 min) to prevent hot root."
+    ],
+    "developer_and_ratio": "Welloxon Perfect 30 Vol (9%) 1:1",
+    "processing_time_min": 40,
+    "safety_gating": "Scalp root timing offset required to avoid hot roots due to scalp thermal radiation.",
+    "accuracy_score_pct": 98.07,
+    "verdict": "PASSED (SUPERIOR \u0394E\u2080\u2080 \u2264 1.0)"
+  },
+  {
+    "case_number": 6,
+    "title": "Previously Box-Dyed Dark Level 3 Tint to Level 6 Warm Amber (Tint Over Tint)",
+    "difficulty_profile": "Tint Cannot Lift Tint Rule. Direct oxidative dye will cause severe hot roots.",
+    "starting_canvas": "Level 3 Artificial Color Buildup on lengths; 1\" Level 4 natural regrowth.",
+    "target_look": "Level 6 Golden Amber 6/34 (6.34)",
+    "avatar_hex": "#8d562f",
+    "strand_hex": "#8b572d",
+    "target_cielab": [
+      41.89103617447008,
+      18.475065656022778,
+      32.168870342951536
+    ],
+    "avatar_cielab": [
+      42.038577637223504,
+      18.989227463065305,
+      31.823959622048402
+    ],
+    "strand_cielab": [
+      41.994091237952084,
+      17.37707656252502,
+      32.79737329834593
+    ],
+    "delta_e_avatar_target": 0.484,
+    "delta_e_strand_target": 0.958,
+    "delta_e_avatar_strand_parity": 1.419,
+    "formulation_steps": [
+      "Step 1 (Color Decapage / Cleansing): Blondor Soft Blonde Cream (30g) + Welloxon 13 Vol 4% (60g) + Warm Water (30g). Cleanse dark mid/ends to Level 6 orange-gold NRP.",
+      "Step 2 (Regrowth Lift): Koleston Perfect 6/34 (30g) + Welloxon 20 Vol 6% (30g) 1:1 applied to roots.",
+      "Step 3 (Lengths Toning Deposit): Color Touch 6/34 (40g) + Emulsion 1.9% (80g) 1:2 applied to cleansed mid/ends for 20 min."
+    ],
+    "developer_and_ratio": "Stage 1: Decapage 13 Vol | Stage 2: 20 Vol 1:1 | Stage 3: Demi 1.9% 1:2",
+    "processing_time_min": 55,
+    "safety_gating": "Strict 'Tint cannot lift tint' contraindication triggered; Decapage protocol required.",
+    "accuracy_score_pct": 95.73,
+    "verdict": "FLAGGED"
+  },
+  {
+    "case_number": 7,
+    "title": "Bleached Level 9 Porous Blonde Dropping to Deep Burgundy Red (L5 Tint-Back)",
+    "difficulty_profile": "Repigmentation / Filling Down 4 Levels. Risk of hollow muddy violet fade.",
+    "starting_canvas": "Level 9 Pale Yellow bleached hair, high porosity (0.8), fragile elasticity.",
+    "target_look": "Level 5 Deep Burgundy Red-Violet 5/46 (5.46)",
+    "avatar_hex": "#6a1b36",
+    "strand_hex": "#691c34",
+    "target_cielab": [
+      23.819830687450718,
+      36.54731432568334,
+      3.3708617615892167
+    ],
+    "avatar_cielab": [
+      24.0489652383376,
+      36.98036026044371,
+      3.0387909442830097
+    ],
+    "strand_cielab": [
+      23.94261361660847,
+      36.02371161884935,
+      4.233239151728164
+    ],
+    "delta_e_avatar_target": 0.313,
+    "delta_e_strand_target": 0.575,
+    "delta_e_avatar_strand_parity": 0.829,
+    "formulation_steps": [
+      "Stage 1 (Repigmentation Filler): Color Touch 7/43 (20g) + Warm Water (40g) 1:2. Sponge into porous lengths to restore missing Level 6/7 copper-gold pheomelanin.",
+      "Stage 2 (Target Tone Deposit): Without rinsing Stage 1, apply Koleston Perfect 5/46 (40g) + Welloxon 10 Vol 3% (40g) 1:1.",
+      "Stage 3 (Processing & Sealing): Process 30 min. Rinse and apply Acidic Sealer (pH 4.5)."
+    ],
+    "developer_and_ratio": "Stage 1: Water Filler 1:2 | Stage 2: 10 Vol (3%) 1:1",
+    "processing_time_min": 40,
+    "safety_gating": "Repigmentation mandatory when dropping >= 3 levels on porous hair to prevent green/drab wash-out.",
+    "accuracy_score_pct": 97.46,
+    "verdict": "PASSED (SUPERIOR \u0394E\u2080\u2080 \u2264 1.0)"
+  },
+  {
+    "case_number": 8,
+    "title": "Level 6 Warm Brassy Gold to Crisp Cool Pearl Neutral Beige (L6)",
+    "difficulty_profile": "Precision Same-Depth Neutralization Without Darkening Below Level 6.",
+    "starting_canvas": "Level 6 Natural / Faded Gold Undertone, normal porosity.",
+    "target_look": "Level 6 Pearl Cendr\u00e9 / Cool Beige 6/81 (.21)",
+    "avatar_hex": "#6e6661",
+    "strand_hex": "#6d6762",
+    "target_cielab": [
+      43.67887143603892,
+      1.7945589570507736,
+      3.8122064397183686
+    ],
+    "avatar_cielab": [
+      43.77194212371016,
+      2.1994020929291813,
+      3.958204158143286
+    ],
+    "strand_cielab": [
+      43.99350000354233,
+      1.3874408139386563,
+      3.6608567216157684
+    ],
+    "delta_e_avatar_target": 0.553,
+    "delta_e_strand_target": 0.635,
+    "delta_e_avatar_strand_parity": 1.129,
+    "formulation_steps": [
+      "Step 1 (Neutralizing Formula): Koleston Perfect 6/81 (50g) + 0/88 Pearl-Ash Concentrate (1.5g) to neutralize exact 90\u00b0 yellow-gold hue vector.",
+      "Step 2 (Deposit Developer): Welloxon Perfect 10 Vol (3%) 1:1 (51.5g) ensuring zero lift of natural melanin.",
+      "Step 3 (Timing): Process for exactly 25 min at room temperature (no heat)."
+    ],
+    "developer_and_ratio": "Welloxon Perfect 10 Vol (3%) 1:1",
+    "processing_time_min": 25,
+    "safety_gating": "Zero artificial lift required; developer capped at 10 Vol to preserve underlying depth.",
+    "accuracy_score_pct": 96.35,
+    "verdict": "FLAGGED"
+  },
+  {
+    "case_number": 9,
+    "title": "60% Salt-and-Pepper Regrowth (L4 Base) to Honey Blonde (L8) + Shadow Root",
+    "difficulty_profile": "Simultaneous 4-Level Lift + 100% Resistant White Coverage with Seamless Melt.",
+    "starting_canvas": "Roots: 60% White + 40% Level 4 Natural Base | Mid/Ends: Level 7 Faded Honey.",
+    "target_look": "Dimensional Level 8 Honey Blonde 8/38 with Natural Level 6 Shadow Root",
+    "avatar_hex": "#c99c5d",
+    "strand_hex": "#c89a5b",
+    "target_cielab": [
+      66.8980354040822,
+      9.316940761260495,
+      39.190591453577525
+    ],
+    "avatar_cielab": [
+      67.26738855444773,
+      9.280823428712836,
+      39.14908208855641
+    ],
+    "strand_cielab": [
+      66.63307989903434,
+      9.77561061387866,
+      39.384054087426534
+    ],
+    "delta_e_avatar_target": 0.297,
+    "delta_e_strand_target": 0.382,
+    "delta_e_avatar_strand_parity": 0.612,
+    "formulation_steps": [
+      "Zone 1 (Shadow Root & Canities): Koleston Perfect 6/0 (20g) + 6/73 (20g) + Welloxon 20 Vol 6% (40g) 1:1 on 0-1.5\" regrowth.",
+      "Zone 2 (Blonde Blend Balayage): Blondor Freelights (30g) + Freelights Developer 30 Vol 9% (40g) hand-painted on mid-lengths.",
+      "Zone 3 (All-Over Honey Gloss): Illumina Color 8/38 (40g) + Welloxon Pastel 1.9% (80g) 1:2 for 15 min."
+    ],
+    "developer_and_ratio": "Zone 1: 20 Vol 1:1 | Zone 2: Freelights 30 Vol | Zone 3: Pastel 1.9% 1:2",
+    "processing_time_min": 45,
+    "safety_gating": "Opaque root formula blended with feathering brush to prevent demarcation line.",
+    "accuracy_score_pct": 98.02,
+    "verdict": "PASSED (SUPERIOR \u0394E\u2080\u2080 \u2264 1.0)"
+  },
+  {
+    "case_number": 10,
+    "title": "Level 10 Heat-Damaged Ultra-Porous Hair to Radiant Champagne Gloss",
+    "difficulty_profile": "Compromised Cuticle & Instantaneous Over-Toning Risk. Low pH Acidic Delivery.",
+    "starting_canvas": "Level 10 Bleached, high porosity (0.9), heat styling cuticular erosion.",
+    "target_look": "Level 10 Champagne Iridescent Gloss 10/96 (.96 Violet/Cendr\u00e9)",
+    "avatar_hex": "#e5e1dc",
+    "strand_hex": "#e6e0dd",
+    "target_cielab": [
+      89.45712297301951,
+      0.9944294999719161,
+      2.5539425005532523
+    ],
+    "avatar_cielab": [
+      89.70872848550212,
+      0.47859172579783893,
+      2.9193007506815194
+    ],
+    "strand_cielab": [
+      89.5590937702514,
+      1.509612148512085,
+      2.1868324799561467
+    ],
+    "delta_e_avatar_target": 0.848,
+    "delta_e_strand_target": 0.83,
+    "delta_e_avatar_strand_parity": 1.665,
+    "formulation_steps": [
+      "Step 1 (Pre-Treat Porosity Equalizer): Apply Wella Service Color Equalizer spray to smooth irregular cuticular porosity.",
+      "Step 2 (Non-Ammonia Acidic Glaze): Color Touch Relights / Shinefinity 09/96 (40g) + Shinefinity Bottle Activator 1.9% (40g) 1:1 (pH 6.5 gentle buffer).",
+      "Step 3 (Visual Flash Toning): Process 10-15 min max with continuous visual inspection at the shampoo basin."
+    ],
+    "developer_and_ratio": "Shinefinity Acidic Activator 1.9% 1:1",
+    "processing_time_min": 15,
+    "safety_gating": "Permanent alkaline dye strictly contraindicated; zero-ammonia zero-lift acidic glaze required.",
+    "accuracy_score_pct": 95.0,
+    "verdict": "FLAGGED"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "rule_code": "PROADS-MIX-STANDARD",
+    "product_family": "Absolute Premium",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 1,
+    "conditions": {
+      "product_line": "Absolute Premium",
+      "service_type": "PERMANENT_COLOUR"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 1.0
+      },
+      "example": "60g Proads Color Cream + 60g Proads Developer"
+    },
+    "source_section": "PROADS Permanent Hair Color Chart - Instructions",
+    "source_doc_key": "proads_color_chart_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "PROADS-MIX-SUPERLIFT",
+    "product_family": "Absolute Premium",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "MIXING_RATIO",
+    "market": "IN",
+    "priority": 2,
+    "conditions": {
+      "product_line": "Absolute Premium",
+      "series": "Superlift"
+    },
+    "actions": {
+      "mixing_ratio": {
+        "colour_parts": 1.0,
+        "developer_parts": 2.0
+      },
+      "recommended_developer": "PROADS Developer 12% 40VOL",
+      "exposure_time_minutes": 60,
+      "example": "60g Superlift + 120g 40VOL Developer"
+    },
+    "source_section": "PROADS Superlift Series Guidelines",
+    "source_doc_key": "proads_color_chart_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "PROADS-TIME",
+    "product_family": "Absolute Premium",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "PROCESSING_TIME",
+    "market": "IN",
+    "priority": 3,
+    "conditions": {
+      "product_line": "Absolute Premium"
+    },
+    "actions": {
+      "standard_time_minutes": 35,
+      "grey_coverage_time_minutes": 45,
+      "superlift_time_minutes": 60,
+      "heat_permitted": false
+    },
+    "source_section": "PROADS How to Choose Oxidizing Cream Table",
+    "source_doc_key": "proads_color_chart_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  },
+  {
+    "rule_code": "PROADS-GREY-COVERAGE",
+    "product_family": "Absolute Premium",
+    "service_type": "PERMANENT_COLOUR",
+    "rule_type": "GREY_COVERAGE",
+    "market": "IN",
+    "priority": 4,
+    "conditions": {
+      "product_line": "Absolute Premium",
+      "grey_percentage_min": 30
+    },
+    "actions": {
+      "developer": "20 VOLUME (6%)",
+      "natural_shades": "Use Natural (.0) or Intense Natural (.00) series in 1:1 ratio with fashion nuances",
+      "exposure_time": "Up to 45 minutes for resistant grey hair"
+    },
+    "source_section": "PROADS Grey Coverage Instructions",
+    "source_doc_key": "proads_color_chart_manual",
+    "rule_version": "1.0",
+    "verification_status": "VERIFIED"
+  }
+]
